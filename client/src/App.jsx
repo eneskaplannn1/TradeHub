@@ -1,0 +1,61 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+
+import RootLayout from "./pages/RootLayout/RootLayout";
+import Products from "./pages/RootLayout/Products";
+import Cart from "./pages/RootLayout/Cart";
+import Account from "./pages/RootLayout/Account";
+import Favorites from "./pages/RootLayout/Favorites";
+
+import SignUp from "./pages/Authentication/SignUp";
+import ForgetPassword from "./pages/Authentication/ForgetPassword";
+import Login from "./pages/Authentication/Login";
+import UnAuthorized from "./pages/Authentication/UnAuthorized";
+import PageNotFound from "./pages/Error/pageNotFound";
+import ProductDetail from "./pages/RootLayout/ProductDetail";
+import Orders from "./pages/RootLayout/Orders";
+import OrderDetail from "./pages/RootLayout/OrderDetail";
+import GlobalStyle from "./styles/globalStyles";
+import ConfirmAccount from "./pages/Authentication/ConfirmAccount";
+
+const client = new QueryClient();
+
+function App() {
+  return (
+    <QueryClientProvider client={client}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <GlobalStyle />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<RootLayout />}>
+            <Route index element={<Navigate replace to="/products" />} />
+
+            <Route path="/products" index element={<Products />} />
+            <Route
+              path="/products/:pruductId"
+              index
+              element={<ProductDetail />}
+            />
+            <Route path="/cart" element={<Cart />} />
+
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/orders/:orderDetail" element={<OrderDetail />} />
+
+            <Route path="/favourites" element={<Favorites />} />
+            <Route path="/account" element={<Account />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="confirmAccount" element={<ConfirmAccount />} />
+          <Route path="forgetPassword" element={<ForgetPassword />} />
+          <Route path="unAuthorized" element={<UnAuthorized />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
+}
+
+export default App;
