@@ -1,13 +1,23 @@
 import { Outlet } from "react-router-dom";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import { styled } from "styled-components";
+import ProductList from "../../components/product-list";
+
+const StyledMain = styled.main`
+  height: 200vh;
+  padding: 1rem 8rem;
+`;
 
 function RootLayout() {
   return (
     <>
-      <header>this is header</header>
-      <main>
+      <Header />
+      <ProductList />
+      <StyledMain>
         <Outlet />
-      </main>
-      <footer>this is footer</footer>
+      </StyledMain>
+      <Footer />
     </>
   );
 }

@@ -29,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
   --color-zinc-900: #09090b;
 
   --color-green-100: #dcfce7;
+  --color-green-500: #51cf66;
+  --color-green-600: #40c057;
   --color-green-700: #15803d;
 
   --color-red-100: #f87171;
@@ -45,8 +47,6 @@ const GlobalStyle = createGlobalStyle`
   --border-radius-sm: 5px;
   --border-radius-md: 7px;
   --border-radius-lg: 9px;
-
-
 }
 
 
@@ -69,11 +69,13 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--color-zinc-900);
 
-  transition: color 0.3s, background-color 0.3s;
+  transition: all 0.4s ease;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
 }
+
+
 
 input,
 button,
@@ -93,17 +95,10 @@ button {
 
 select:disabled,
 input:disabled {
-  background-color: var(--color-grey-200);
-  color: var(--color-grey-500);
+  background-color: var(--color-zinc-200);
+  color: var(--color-zinc-500);
 }
 
-input:focus,
-button:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--color-brand-600);
-  outline-offset: -1px;
-}
 
 /* Parent selector, finally 😃 */
 button:has(svg) {
@@ -133,8 +128,6 @@ h6 {
 img {
   max-width: 100%;
 
-  /* For dark mode */
-  filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
 

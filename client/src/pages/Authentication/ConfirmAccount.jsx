@@ -1,5 +1,7 @@
+import ConfirmAccountContainer from "../../container/Auth/confirm-account";
+
 function ConfirmAccount() {
-  return <div>Confirm Your account</div>;
+  return <ConfirmAccountContainer />;
 }
 
 export default ConfirmAccount;

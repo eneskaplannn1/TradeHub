@@ -1,5 +1,7 @@
+import ForgetPasswordContainer from "../../container/Auth/forget-password";
+
 function ForgetPassword() {
-  return <div>forget password</div>;
+  return <ForgetPasswordContainer />;
 }
 
 export default ForgetPassword;

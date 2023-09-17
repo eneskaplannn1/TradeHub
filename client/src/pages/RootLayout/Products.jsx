@@ -1,5 +1,7 @@
+import Hero from "../../components/hero";
+
 function Products() {
-  return <div>Main Page</div>;
+  return <Hero />;
 }
 
 export default Products;

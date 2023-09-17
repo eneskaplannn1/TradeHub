@@ -23,12 +23,30 @@ const sizes = {
 };
 
 const variations = {
-  login: css`
+  blue: css`
     background: var(--color-blue-700);
     color: #fff;
 
     &:hover {
       background-color: var(--color-blue-800);
+      transform: translateY(-5px);
+    }
+  `,
+  orange: css`
+    background: var(--color-orange-700);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--color-orange-800);
+      transform: translateY(-5px);
+    }
+  `,
+  green: css`
+    background: var(--color-green-500);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--color-green-600);
       transform: translateY(-5px);
     }
   `,
