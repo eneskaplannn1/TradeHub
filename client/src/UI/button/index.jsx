@@ -50,6 +50,15 @@ const variations = {
       transform: translateY(-5px);
     }
   `,
+  pagination: css`
+    background: var(--color-green-500);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--color-green-600);
+      transform: translateY(-5px);
+    }
+  `,
 };
 
 const Button = styled.button`

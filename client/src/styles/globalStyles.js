@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   --color-red-100: #f87171;
   --color-red-700: #b91c1c;
   --color-red-800: #991b1b;
+  --color-red-900: #ff0000;
 
   --color-blue-600: #60a5fa;
   --color-blue-700: #4d61fc;
@@ -127,7 +128,7 @@ h6 {
 
 img {
   max-width: 100%;
-
+  height: 100%;
 }
 
 

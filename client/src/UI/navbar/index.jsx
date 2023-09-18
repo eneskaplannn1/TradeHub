@@ -12,7 +12,6 @@ const StyledNavbar = styled.nav`
     justify-content: space-between;
 
     padding: 0 4rem;
-
     font-size: 21px;
 
     li {
@@ -21,10 +20,10 @@ const StyledNavbar = styled.nav`
       justify-content: center;
 
       transition: all 0.2s ease;
-
       gap: 0.2rem;
 
       &:hover {
+        cursor: pointer;
         color: var(--color-orange-800);
       }
     }

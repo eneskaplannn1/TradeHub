@@ -15,6 +15,8 @@ const StyledProductList = styled.div`
       justify-content: space-between;
 
       li {
+        border-bottom: 3px solid var(--color-zinc-0);
+
         &:hover {
           border-bottom: 3px solid var(--color-orange-700);
           color: var(--color-orange-700);
@@ -30,25 +32,25 @@ function ProductList() {
       <nav>
         <ul>
           <li>
-            <NavLink>Kadın</NavLink>
+            <NavLink to="/fashion-women">Women</NavLink>
           </li>
           <li>
-            <NavLink>Erkek</NavLink>
+            <NavLink to="/fashion-men">Man</NavLink>
           </li>
           <li>
-            <NavLink>Elektronik</NavLink>
+            <NavLink to="/fashion-unisex">Unisex</NavLink>
           </li>
           <li>
-            <NavLink>Kıyafet</NavLink>
+            <NavLink to="/electronic">Electronic</NavLink>
           </li>
           <li>
-            <NavLink>Ayakkabı</NavLink>
+            <NavLink to="/sneakers">Sneakers</NavLink>
           </li>
           <li>
-            <NavLink>Çok Satanlar</NavLink>
+            <NavLink to="/best-sellers">Best Sellers</NavLink>
           </li>
           <li>
-            <NavLink>Yeni Gelenler</NavLink>
+            <NavLink to="/new-products">New Products</NavLink>
           </li>
         </ul>
       </nav>
