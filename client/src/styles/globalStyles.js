@@ -62,6 +62,14 @@ const GlobalStyle = createGlobalStyle`
   transition: background-color 0.3s, border 0.3s;
 }
 
+.active {
+  color:red;
+
+  svg {
+    color: red;
+  }
+}
+
 html {
   font-size: 62.5%;
 }

@@ -27,6 +27,7 @@ import ConfirmAccount from "./pages/Authentication/ConfirmAccount";
 
 import GlobalStyle from "./styles/globalStyles";
 import { StyledAuthContainer } from "./UI/Auth";
+import Layout from "./components/layout";
 
 const client = new QueryClient();
 
@@ -46,13 +47,18 @@ function App() {
               index
               element={<ProductDetail />}
             />
-            <Route path="/cart" element={<Cart />} />
 
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/orders/:orderDetail" element={<OrderDetail />} />
+            <Route element={<Layout />}>
+              <Route path="/favorites" element={<Favorites />} />
+              <Route path="/cart" element={<Cart />} />
 
-            <Route path="/favorites" element={<Favorites />} />
-            <Route path="/account" element={<Account />} />
+              <Route path="/account/orders" element={<Account />} />
+              <Route path="/orders" element={<Account />} />
+              <Route
+                path="/account/orders/:orderDetail"
+                element={<OrderDetail />}
+              />
+            </Route>
           </Route>
           <Route
             element={

@@ -1,5 +1,7 @@
+import AccountContainer from "../../container/RootLayout/AccountContainer";
+
 function Account() {
-  return <div>Account Page</div>;
+  return <AccountContainer />;
 }
 
 export default Account;

@@ -1,7 +1,7 @@
-import Hero from "../../components/hero";
+import ProductContainer from "../../container/Product";
 
 function Products() {
-  return <Hero />;
+  return <ProductContainer />;
 }
 
 export default Products;

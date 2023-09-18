@@ -7,6 +7,7 @@ const StyledLogo = styled.img`
   &:hover {
   }
 `;
+
 function Logo() {
   return <StyledLogo src="logomak_logo.png" />;
 }

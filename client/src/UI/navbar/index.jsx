@@ -15,12 +15,13 @@ const StyledNavbar = styled.nav`
     font-size: 21px;
 
     li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
       transition: all 0.2s ease;
       gap: 0.2rem;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
       &:hover {
         cursor: pointer;
@@ -35,16 +36,22 @@ function Navbar() {
     <StyledNavbar>
       <ul>
         <li>
-          <RiAccountCircleLine />
-          <NavLink to="/account">Account</NavLink>
+          <NavLink to="/account/orders">
+            <RiAccountCircleLine />
+            Account
+          </NavLink>
         </li>
         <li>
-          <AiOutlineHeart />
-          <NavLink to="/favorites">Favorites</NavLink>
+          <NavLink to="/favorites">
+            <AiOutlineHeart />
+            Favorites
+          </NavLink>
         </li>
         <li>
-          <AiOutlineShoppingCart />
-          <NavLink to="/cart">My Cart</NavLink>
+          <NavLink to="/cart">
+            <AiOutlineShoppingCart />
+            My Cart
+          </NavLink>
         </li>
       </ul>
     </StyledNavbar>

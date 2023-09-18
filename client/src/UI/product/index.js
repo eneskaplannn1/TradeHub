@@ -18,7 +18,6 @@ const ProductSummary = styled.div`
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-zinc-100);
 `;
-
 const ProductHead = styled.div`
   display: flex;
   align-items: center;
@@ -110,11 +109,11 @@ const StyledProductFooter = styled.div`
 `;
 
 export {
-  ProductHead,
-  ProductSummary,
-  StyledCargoHead,
   StyledProductContainer,
+  ProductSummary,
+  ProductHead,
+  StyledCargoHead,
   StyledProductFavorite,
-  StyledProductFooter,
   StyledProductImage,
+  StyledProductFooter,
 };

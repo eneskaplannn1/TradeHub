@@ -1,9 +1,5 @@
-import Skeleton from "../skeleton/index";
-
 import { BsBox } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-
-import Pagination from "../pagination";
 import {
   ProductHead,
   ProductSummary,
@@ -14,7 +10,9 @@ import {
   StyledProductImage,
 } from "../../UI/product";
 
-function Hero() {
+import Pagination from "../../components/pagination";
+
+function ProductContainer() {
   return (
     <>
       <StyledProductContainer>
@@ -58,4 +56,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default ProductContainer;

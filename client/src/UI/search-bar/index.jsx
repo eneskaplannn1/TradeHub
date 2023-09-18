@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import Input from "../form/input/input";
 import { ImSearch } from "react-icons/im";
-import Button from "../button";
 
 const StyledSearchBar = styled.div`
   position: relative;
