@@ -31,7 +31,7 @@ function Sidebar() {
             </li>
             <li>
               <TbMessages />
-              <NavLink to="/my-evaluates">Değerlendirmelerim</NavLink>
+              <NavLink to="/account/reviews">Değerlendirmelerim</NavLink>
             </li>
           </ul>
         </StyledBox>
@@ -41,7 +41,9 @@ function Sidebar() {
           <ul>
             <li>
               <AiOutlineUser />
-              <NavLink to="/account/user-info">Kullanıcı Bilgilerim</NavLink>
+              <NavLink to="/account/user-information">
+                Kullanıcı Bilgilerim
+              </NavLink>
             </li>
             <li>
               <SlLocationPin />
