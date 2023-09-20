@@ -9,7 +9,7 @@ const StyledLogo = styled.img`
 `;
 
 function Logo() {
-  return <StyledLogo src="logomak_logo.png" />;
+  return <StyledLogo src="/logomak_logo.png" />;
 }
 
 export default Logo;

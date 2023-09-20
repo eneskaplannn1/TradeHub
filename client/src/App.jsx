@@ -21,13 +21,14 @@ import Login from "./pages/Authentication/Login";
 import UnAuthorized from "./pages/Authentication/UnAuthorized";
 import PageNotFound from "./pages/Error/pageNotFound";
 import ProductDetail from "./pages/RootLayout/ProductDetail";
-import Orders from "./pages/RootLayout/Orders";
 import OrderDetail from "./pages/RootLayout/OrderDetail";
 import ConfirmAccount from "./pages/Authentication/ConfirmAccount";
+import Reviews from "./pages/RootLayout/Reviews";
 
 import GlobalStyle from "./styles/globalStyles";
 import { StyledAuthContainer } from "./UI/Auth";
 import Layout from "./components/layout";
+import Address from "./pages/RootLayout/Address";
 
 const client = new QueryClient();
 
@@ -41,6 +42,7 @@ function App() {
           <Route element={<RootLayout />}>
             <Route index element={<Navigate replace to="/products" />} />
 
+            {/* Product routes */}
             <Route path="/products" index element={<Products />} />
             <Route
               path="/products/:pruductId"
@@ -48,18 +50,25 @@ function App() {
               element={<ProductDetail />}
             />
 
+            {/* Account and Spesific Routes */}
             <Route element={<Layout />}>
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/cart" element={<Cart />} />
 
-              <Route path="/account/orders" element={<Account />} />
-              <Route path="/orders" element={<Account />} />
-              <Route
-                path="/account/orders/:orderDetail"
-                element={<OrderDetail />}
-              />
+              <Route path="/account">
+                <Route index path="/account/orders" element={<Account />} />
+                <Route
+                  path="/account/orders/:orderDetail"
+                  element={<OrderDetail />}
+                />
+                <Route path="/account/reviews" element={<Reviews />} />
+                <Route path="/account/user-address" element={<Address />} />
+                <Route path="/account/user-information" element={<Reviews />} />
+              </Route>
             </Route>
           </Route>
+
+          {/* Authentication routes */}
           <Route
             element={
               <StyledAuthContainer>
