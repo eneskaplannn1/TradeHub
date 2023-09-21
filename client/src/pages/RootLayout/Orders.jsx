@@ -1,5 +1,7 @@
+import OrderContainer from "../../container/RootLayout/OrderContainer";
+
 function Orders() {
-  return <div>Orders</div>;
+  return <OrderContainer />;
 }
 
 export default Orders;

@@ -12,7 +12,7 @@ import {
 import RootLayout from "./pages/RootLayout/RootLayout";
 import Products from "./pages/RootLayout/Products";
 import Cart from "./pages/RootLayout/Cart";
-import Account from "./pages/RootLayout/Account";
+import Orders from "./pages/RootLayout/Orders";
 import Favorites from "./pages/RootLayout/Favorites";
 
 import SignUp from "./pages/Authentication/SignUp";
@@ -29,6 +29,7 @@ import GlobalStyle from "./styles/globalStyles";
 import { StyledAuthContainer } from "./UI/Auth";
 import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
+import Account from "./pages/RootLayout/Account";
 
 const client = new QueryClient();
 
@@ -56,14 +57,14 @@ function App() {
               <Route path="/cart" element={<Cart />} />
 
               <Route path="/account">
-                <Route index path="/account/orders" element={<Account />} />
+                <Route index path="/account/orders" element={<Orders />} />
                 <Route
                   path="/account/orders/:orderDetail"
                   element={<OrderDetail />}
                 />
                 <Route path="/account/reviews" element={<Reviews />} />
                 <Route path="/account/user-address" element={<Address />} />
-                <Route path="/account/user-information" element={<Reviews />} />
+                <Route path="/account/user-information" element={<Account />} />
               </Route>
             </Route>
           </Route>

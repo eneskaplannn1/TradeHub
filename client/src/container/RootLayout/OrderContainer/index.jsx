@@ -1,10 +1,10 @@
 import SearchBar from "../../../UI/search-bar";
 import StyledBox from "../../../components/box";
-import StyledBoxTemplate from "../../../components/box-template.jsx";
+import StyledBoxTemplate from "../../../components/box-template.jsx/index.jsx";
 import StyledOrderFilter from "../../../UI/order/order-filter";
 import Order from "../../../components/order/index";
 
-function AccountContainer() {
+function OrderContainer() {
   return (
     <>
       <StyledBoxTemplate>
@@ -44,4 +44,4 @@ function AccountContainer() {
   );
 }
 
-export default AccountContainer;
+export default OrderContainer;

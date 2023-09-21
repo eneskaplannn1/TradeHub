@@ -1,7 +1,7 @@
-import AccountContainer from "../../container/RootLayout/AccountContainer";
+import AccontContainer from "../../container/RootLayout/Account";
 
 function Account() {
-  return <AccountContainer />;
+  return <AccontContainer />;
 }
 
 export default Account;

@@ -1,5 +1,7 @@
+import FavoriteContainer from "../../container/RootLayout/Favorite";
+
 function Favorites() {
-  return <div>Favourites page</div>;
+  return <FavoriteContainer />;
 }
 
 export default Favorites;
