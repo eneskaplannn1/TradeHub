@@ -12,7 +12,7 @@ const StyledAddressContainer = styled.main`
 
 function AddressContainer() {
   return (
-    <StyledBoxTemplate>
+    <>
       <StyledBoxTemplate>
         <h1>My Address Information</h1>
       </StyledBoxTemplate>
@@ -22,7 +22,7 @@ function AddressContainer() {
         <Address />
         <Address />
       </StyledAddressContainer>
-    </StyledBoxTemplate>
+    </>
   );
 }
 

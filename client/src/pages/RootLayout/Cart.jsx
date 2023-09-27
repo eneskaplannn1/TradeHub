@@ -1,5 +1,7 @@
+import CartContainer from "../../container/Cart";
+
 function Cart() {
-  return <div>Your Cart</div>;
+  return <CartContainer />;
 }
 
 export default Cart;

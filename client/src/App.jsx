@@ -51,10 +51,13 @@ function App() {
               element={<ProductDetail />}
             />
 
+            {/* Product route */}
+            <Route path="/cart" element={<Cart />} />
+
             {/* Account and Spesific Routes */}
+
             <Route element={<Layout />}>
               <Route path="/favorites" element={<Favorites />} />
-              <Route path="/cart" element={<Cart />} />
 
               <Route path="/account">
                 <Route index path="/account/orders" element={<Orders />} />

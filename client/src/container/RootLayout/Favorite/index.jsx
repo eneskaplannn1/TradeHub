@@ -13,22 +13,20 @@ const StyledFavoriteList = styled.div`
 `;
 function FavoriteContainer() {
   return (
-    <StyledBoxTemplate>
-      <StyledFavoriteContainer>
-        <StyledBoxTemplate>
-          <h1>Favorite List</h1>
-        </StyledBoxTemplate>
-        <StyledFavoriteList>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-        </StyledFavoriteList>
-      </StyledFavoriteContainer>
-    </StyledBoxTemplate>
+    <StyledFavoriteContainer>
+      <StyledBoxTemplate>
+        <h1>Favorite List</h1>
+      </StyledBoxTemplate>
+      <StyledFavoriteList>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+      </StyledFavoriteList>
+    </StyledFavoriteContainer>
   );
 }
 

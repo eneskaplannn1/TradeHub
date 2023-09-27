@@ -2,17 +2,28 @@ import { css, styled } from "styled-components";
 
 const variations = {
   login: css`
+    padding: 0.8rem;
     border-bottom: 2px solid var(--color-zinc-200);
     &:focus {
       border-bottom: 2px solid var(--color-blue-600);
     }
   `,
   searchBar: css`
+    padding: 0.8rem;
     background-color: var(--color-zinc-50);
 
     &:focus {
       background-color: #fff;
       border: 1px solid var(--color-orange-800);
+    }
+  `,
+  update: css`
+    padding: 0.4rem;
+    border: 1px solid var(--color-zinc-300);
+
+    &:focus {
+      background-color: var(--color-zinc-50);
+      border: 1px solid var(--color-orange-400);
     }
   `,
 };
@@ -22,7 +33,6 @@ const Input = styled.input`
   border: none;
   border-radius: var(--border-radius-lg);
 
-  padding: 0.8rem;
   color: black;
 
   ${(props) => variations[props.variation]}

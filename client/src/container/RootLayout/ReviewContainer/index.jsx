@@ -12,7 +12,7 @@ const StyledReviewContainer = styled.main`
 
 function ReviewContainer() {
   return (
-    <StyledBoxTemplate>
+    <>
       <StyledBoxTemplate>
         <h1>Enes Kaplan's reviews</h1>
       </StyledBoxTemplate>
@@ -25,7 +25,7 @@ function ReviewContainer() {
         <ProductReview />
         <ProductReview />
       </StyledReviewContainer>
-    </StyledBoxTemplate>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { styled } from "styled-components";
 import Sidebar from "../sidebar";
+import StyledBoxTemplate from "../box-template.jsx";
 
 const StyledLayout = styled.div`
   display: grid;
@@ -13,7 +14,9 @@ function Layout() {
     <StyledLayout>
       <Sidebar />
       <section>
-        <Outlet />
+        <StyledBoxTemplate>
+          <Outlet />
+        </StyledBoxTemplate>
       </section>
     </StyledLayout>
   );
