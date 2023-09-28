@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 import { StyledItemContainer } from "../../UI/item";
-import Item from "../../components/item";
+// import Item from "../../components/item";
 import ItemSidebar from "../../components/item-sidebar";
+import Item from "../../components/item";
 
 const StyledCartContainer = styled.section`
   padding: 0 3.2rem;
@@ -14,9 +15,9 @@ function CartContainer() {
   return (
     <StyledCartContainer>
       <StyledItemContainer>
-        {/* <Item />
         <Item />
-        <Item /> */}
+        <Item />
+        <Item />
       </StyledItemContainer>
       <ItemSidebar />
     </StyledCartContainer>
