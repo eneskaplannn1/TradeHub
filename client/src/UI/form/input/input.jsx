@@ -26,6 +26,15 @@ const variations = {
       border: 1px solid var(--color-orange-400);
     }
   `,
+  counter: css`
+    border: 1px solid var(--color-zinc-300);
+    border-radius: 0;
+    width: 50px;
+    padding: 0 0.3rem;
+
+    font-size: 16px;
+    text-align: center;
+  `,
 };
 
 const Input = styled.input`

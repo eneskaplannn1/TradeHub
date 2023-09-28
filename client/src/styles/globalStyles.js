@@ -23,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
   --color-zinc-300: #ced4da;
   --color-zinc-400: #adb5bd;
   --color-zinc-500:#868e96;
-  --color-zinc-700: #495057;
-  --color-zinc-600: #3f3f46;
+  --color-zinc-600: #495057;
+  --color-zinc-700: #3f3f46;
   --color-zinc-800: #18181b;
   --color-zinc-900: #09090b;
 
@@ -82,6 +82,8 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
+
+  background-color: #fefefe;
 }
 
 

@@ -15,13 +15,11 @@ const sizes = {
     font-weight: 600;
     text-align: center;
   `,
-
   medium: css`
     font-size: 1.4rem;
     padding: 1.2rem 1.6rem;
     font-weight: 500;
   `,
-
   large: css`
     font-size: 1.6rem;
     padding: 1.2rem 2.4rem;
@@ -64,6 +62,19 @@ const variations = {
     &:hover {
       background-color: var(--color-green-600);
       transform: translateY(-5px);
+    }
+  `,
+  counter: css`
+    text-align: center;
+    width: 40px;
+
+    border: 1px solid var(--color-zinc-300);
+    border-radius: 0;
+
+    color: var(--color-orange-500);
+
+    &:hover {
+      background-color: var(--color-zinc-300);
     }
   `,
 };
