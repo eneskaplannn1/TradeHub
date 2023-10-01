@@ -46,7 +46,7 @@ function App() {
             {/* Product routes */}
             <Route path="/products" index element={<Products />} />
             <Route
-              path="/products/:pruductId"
+              path="/products/:productCategory"
               index
               element={<ProductDetail />}
             />

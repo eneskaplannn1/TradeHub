@@ -32,25 +32,25 @@ function ProductList() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/fashion-women">Women</NavLink>
+            <NavLink to="/products/fashion-women">Women</NavLink>
           </li>
           <li>
-            <NavLink to="/fashion-men">Man</NavLink>
+            <NavLink to="/products/fashion-men">Man</NavLink>
           </li>
           <li>
-            <NavLink to="/fashion-unisex">Unisex</NavLink>
+            <NavLink to="/products/fashion-unisex">Unisex</NavLink>
           </li>
           <li>
-            <NavLink to="/electronic">Electronic</NavLink>
+            <NavLink to="/products/electronic">Electronic</NavLink>
           </li>
           <li>
-            <NavLink to="/sneakers">Sneakers</NavLink>
+            <NavLink to="/products/sneakers">Sneakers</NavLink>
           </li>
           <li>
-            <NavLink to="/best-sellers">Best Sellers</NavLink>
+            <NavLink to="/products/best-sellers">Best Sellers</NavLink>
           </li>
           <li>
-            <NavLink to="/new-products">New Products</NavLink>
+            <NavLink to="/products/new-products">New Products</NavLink>
           </li>
         </ul>
       </nav>

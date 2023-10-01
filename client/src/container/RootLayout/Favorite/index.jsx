@@ -21,10 +21,6 @@ function FavoriteContainer() {
         <Product />
         <Product />
         <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
       </StyledFavoriteList>
     </StyledFavoriteContainer>
   );
