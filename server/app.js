@@ -9,10 +9,13 @@ const xss = require("xss-clean");
 const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 
-// const AppError = require("./utilits/errFeatures");
-// const globalErrorHandler = require("./contollers/errorController");
+const AppError = require("./utils/errFeatures");
+const globalErrorHandler = require("./controllers/errorController");
 
-// const bookingRouter = require("./routes/bookingRoutes");
+const userRouter = require("./routes/userRoutes");
+const orderRouter = require("./routes/orderRoutes");
+const productRouter = require("./routes/productRoutes");
+// const bookingRouter = require("./routes/bookingRouter");
 
 const path = require("path");
 
@@ -67,13 +70,16 @@ app.use(cookieParser());
 // app.use(morgan('dev'));
 
 // ! Routes
-// app.use("/api/v1/users", userRouter);
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/products", productRouter);
+app.use("/api/v1/orders", orderRouter);
+// app.use("/api/v1/bookings", bookingRouter);
 
-// app.all("*", (req, res, next) => {
-//   next(new AppError(`Cant find ${req.originalUrl} on this server`, 404));
-// });
+app.all("*", (req, res, next) => {
+  next(new AppError(`Cant find ${req.originalUrl} on this server`, 404));
+});
 
 //! Error Handling
-// app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 
 module.exports = app;

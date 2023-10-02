@@ -33,6 +33,6 @@ OrderSchema.pre(/^find/, function (next) {
   next();
 });
 
-const Booking = mongoose.model("Booking", bookingSchema);
+const Order = mongoose.model("Order", OrderSchema);
 
-module.exports = Booking;
+module.exports = Order;

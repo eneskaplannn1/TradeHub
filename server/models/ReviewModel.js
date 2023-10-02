@@ -26,3 +26,6 @@ const ReviewSchema = new mongoose.Schema({
     require: [true, "A review must have a Customer"],
   },
 });
+
+const Review = mongoose.model("Review", ReviewSchema);
+module.exports = Review;
