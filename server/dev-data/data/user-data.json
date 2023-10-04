@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "651c13579e355fab64a43145",
+    "name": "Ava Miller",
+    "email": "ava_miller@gmail.com",
+    "password": "pass1234",
+    "role": "seller",
+    "verified": true
+  },
+  {
+    "_id": "651c13579e355fab64a43146",
+    "name": "Benjamin Anderson",
+    "email": "benjamin_anderson@gmail.com",
+    "password": "pass1234",
+    "role": "seller",
+    "verified": true
+  },
+  {
+    "_id": "651c13579e355fab64a43147",
+    "name": "Ava Thompson",
+    "email": "ava_thompson@gmail.com",
+    "password": "pass1234",
+    "role": "seller",
+    "verified": true
+  },
+  {
+    "_id": "651c13579e355fab64a43144",
+    "name": "Sophie Green",
+    "email": "sophie_green@gmail.com",
+    "password": "pass1234",
+    "role": "seller",
+    "verified": true
+  },
+  {
+    "_id": "651c13579e355fab64a43148",
+    "name": "Michael Davis",
+    "email": "micheal_devis@gmail.com",
+    "password": "pass1234",
+    "role": "seller",
+    "verified": true
+  }
+]

@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const ProductSchema = new mongoose.Schema({
   brand: String,
-  product: String,
+  productDesc: String,
   price: Number,
   amount: Number,
   discount: Number,
@@ -10,12 +10,10 @@ const ProductSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
-  categories: [
-    {
-      type: String,
-      enum: ["men", "women", "electronic", "sneakers", "unisex"],
-    },
-  ],
+  category: {
+    type: String,
+    enum: ['cosmetic', 'fitness', 'electronic', 'sneakers', 'clothing'],
+  },
   ratingsAverage: {
     type: Number,
     default: 3.7,
@@ -27,14 +25,14 @@ const ProductSchema = new mongoose.Schema({
   },
   seller: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-    require: [true, "A product must have a Seller"],
+    ref: 'User',
+    require: [true, 'A product must have a Seller'],
   },
   photo: {
     type: String,
-    default: "default.jpg",
+    default: 'default.jpg',
   },
 });
 
-const Product = mongoose.model("Product", ProductSchema);
+const Product = mongoose.model('Product', ProductSchema);
 module.exports = Product;
