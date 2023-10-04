@@ -12,5 +12,43 @@ exports.deleteProduct = factory.deleteOne(Product);
 //   const { category } = req.query;
 // });
 
-exports.getLatestProducts = 'hello world';
-exports.getMostRatedProducts = 'hello worldd';
+exports.getLatestProducts = catchAsync(async (req, res, next) => {
+  const latestProducts = await Product.aggregate([
+    {
+      $match: {
+        createdAt: {
+          $gte: new Date(`2023-10-${new Date().getDate() - 3}`),
+        },
+      },
+    },
+  ]);
+  res.status(200).json({
+    status: 'success',
+    doc: latestProducts,
+  });
+});
+
+exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
+  const products = await Product.aggregate([
+    {
+      $match: {
+        ratingsAverage: {
+          $gte: 4.9,
+        },
+      },
+    },
+    {
+      $sort: {
+        price: 1,
+      },
+    },
+  ]);
+
+  res.json({
+    status: 'success',
+    results: products.length,
+    documents: {
+      products,
+    },
+  });
+});

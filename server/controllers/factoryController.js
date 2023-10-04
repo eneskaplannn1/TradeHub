@@ -9,6 +9,7 @@ exports.getAll = (Model) =>
     // const doc = Model.find();
     let filter = {};
     if (req.query.category) filter = { category: req.query.category };
+    if (req.query.seller) filter = { seller: req.query.seller };
 
     const feautures = new ApiFeatures(Model.find(filter), req.query)
       .filter()

@@ -11,17 +11,18 @@ const fs = require('fs');
 const user = JSON.parse(
   fs.readFileSync(`${__dirname}/user-data.json`, 'utf-8')
 );
-const product = JSON.parse(
-  fs.readFileSync(`${__dirname}/product/electronic-product-data.json`, 'utf-8')
+const products = JSON.parse(
+  fs.readFileSync(`${__dirname}/product-data.json`, 'utf-8')
 );
 
+console.log(__dirname);
 connectToDatabase();
 
 const importData = async () => {
   try {
     console.log('Creating data');
     await User.create(user, { validateBeforeSave: false });
-    // await Product.create(product, { validateBeforeSave: false });
+    await Product.create(products, { validateBeforeSave: false });
 
     console.log('Data created');
     process.exit();
