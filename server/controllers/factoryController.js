@@ -7,9 +7,17 @@ exports.getAll = (Model) =>
     // products için get all fonksiyonu çok gelişmiş olmalı bunun için de apiFeatures dosyasına derin bir bakış atmak lazım
     // filter ,sort , pagination kısmını halledeceğim
     // const doc = Model.find();
+
     let filter = {};
-    if (req.query.category) filter = { category: req.query.category };
-    if (req.query.seller) filter = { seller: req.query.seller };
+    // Define an array of allowed query parameters
+    const allowedQueryParams = ['category', 'seller', 'customer'];
+    // Loop through the allowed query parameters
+    allowedQueryParams.forEach((param) => {
+      if (req.query[param]) {
+        // Add the filter condition dynamically based on the query parameter
+        filter[param] = req.query[param];
+      }
+    });
 
     const feautures = new ApiFeatures(Model.find(filter), req.query)
       .filter()

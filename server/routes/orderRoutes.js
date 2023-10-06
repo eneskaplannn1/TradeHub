@@ -2,11 +2,11 @@ const express = require('express');
 const OrderController = require('./../controllers/orderController');
 const orderRouter = express.Router();
 
-//get orders of spesific customer
-
 // get-total-sales . this route will be spesific to seller to analyze order amounts and prices
 
-// /userOrders/:userId
+orderRouter.route('/sale-details').get(OrderController.saleDetails);
+
+orderRouter.route('/user-orders/:userId');
 
 orderRouter
   .route('/')

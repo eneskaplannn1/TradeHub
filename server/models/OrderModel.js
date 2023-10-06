@@ -3,36 +3,37 @@ const mongoose = require('mongoose');
 const OrderSchema = new mongoose.Schema({
   products: [
     {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Product',
-      required: [true, 'Order must belong to a Tour!'],
+      product: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Product',
+        required: [true, 'Order must have product!'],
+      },
+      amount: Number,
     },
   ],
   customer: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
-    required: [true, 'Order must belong to a User!'],
+    required: [true, 'Order must belong to a Customer!'],
   },
   totalPrice: {
     type: Number,
-    require: [true, 'Order must have a price.'],
+    required: [true, 'Order must have a total price.'],
   },
-  orderDate: {
+  createdAt: {
     type: Date,
     default: Date.now(),
   },
-  paid: {
-    type: Boolean,
-    default: true,
+  orderStatus: {
+    type: String,
+    enum: ['pending', 'shipped', 'delivered'],
   },
-});
-
-OrderSchema.pre(/^find/, function (next) {
-  this.populate('user').populate({
-    path: 'tour',
-    select: 'name',
-  });
-  next();
+  //! handle this later in the project
+  // address: {
+  //   type: mongoose.Schema.ObjectId,
+  //   ref: 'Adress',
+  //   required: [true, 'Order must have a address!'],
+  // },
 });
 
 const Order = mongoose.model('Order', OrderSchema);
