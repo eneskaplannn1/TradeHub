@@ -9,6 +9,7 @@ const OrderSchema = new mongoose.Schema({
         required: [true, 'Order must have product!'],
       },
       amount: Number,
+      // _id: false,
     },
   ],
   customer: {

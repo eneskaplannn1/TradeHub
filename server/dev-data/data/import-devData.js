@@ -3,6 +3,7 @@ require('dotenv').config({ path: './config.env' });
 const connectToDatabase = require('../../utils/connectDB');
 const User = require('../../models/UserModel');
 const Product = require('../../models/ProductModel');
+const Order = require('../../models/OrderModel');
 
 const fs = require('fs');
 
@@ -14,6 +15,9 @@ const user = JSON.parse(
 const products = JSON.parse(
   fs.readFileSync(`${__dirname}/product-data.json`, 'utf-8')
 );
+const orders = JSON.parse(
+  fs.readFileSync(`${__dirname}/order-data.json`, 'utf-8')
+);
 
 console.log(__dirname);
 connectToDatabase();
@@ -21,8 +25,9 @@ connectToDatabase();
 const importData = async () => {
   try {
     console.log('Creating data');
-    await User.create(user, { validateBeforeSave: false });
-    await Product.create(products, { validateBeforeSave: false });
+    // await User.create(user, { validateBeforeSave: false });
+    await Order.create(orders, { validateBeforeSave: false });
+    // await Product.create(products, { validateBeforeSave: false });
 
     console.log('Data created');
     process.exit();
@@ -34,7 +39,7 @@ const importData = async () => {
 const DeleteDatas = async () => {
   try {
     await User.deleteMany();
-    await Product.deleteMany();
+    // await Product.deleteMany();
     console.log('Data Deleted');
 
     process.exit();

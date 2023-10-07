@@ -1,17 +1,8 @@
 [
   {
-    "_id": "651c13579e355fab64a43145",
-    "name": "Ava Miller",
-    "email": "ava_miller@gmail.com",
-    "password": "pass1234",
-    "role": "seller",
-    "verified": true
-  },
-  {
     "_id": "651c13579e355fab64a43146",
     "name": "Benjamin Anderson",
     "email": "benjamin_anderson@gmail.com",
-    "password": "pass1234",
     "role": "seller",
     "verified": true
   },
@@ -19,7 +10,6 @@
     "_id": "651c13579e355fab64a43147",
     "name": "Ava Thompson",
     "email": "ava_thompson@gmail.com",
-    "password": "pass1234",
     "role": "seller",
     "verified": true
   },
@@ -27,7 +17,6 @@
     "_id": "651c13579e355fab64a43144",
     "name": "Sophie Green",
     "email": "sophie_green@gmail.com",
-    "password": "pass1234",
     "role": "seller",
     "verified": true
   },
@@ -35,8 +24,85 @@
     "_id": "651c13579e355fab64a43148",
     "name": "Michael Davis",
     "email": "micheal_devis@gmail.com",
-    "password": "pass1234",
     "role": "seller",
+    "verified": true
+  },
+  {
+    "_id": "651c13579e355fab64a43145",
+    "name": "Ava Miller",
+    "email": "ava_miller@gmail.com",
+    "role": "seller",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b6e",
+    "name": "John Smith",
+    "email": "john.smith@example.com",
+    "role": "customer",
+    "verified": true
+  },
+
+  {
+    "_id": "65210ada721470af64c64b71",
+    "name": "David Wilson",
+    "email": "david.wilson@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b72",
+    "name": "Jennifer Lee",
+    "email": "jennifer.lee@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b73",
+    "name": "Robert Johnson",
+    "email": "robert.johnson@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b74",
+    "name": "Amanda Clark",
+    "email": "amanda.clark@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b75",
+    "name": "Daniel Davis",
+    "email": "daniel.davis@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b76",
+    "name": "Lisa Martin",
+    "email": "lisa.martin@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b77",
+    "name": "Matthew Wilson",
+    "email": "matthew.wilson@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b6f",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@example.com",
+    "role": "customer",
+    "verified": true
+  },
+  {
+    "_id": "65210ada721470af64c64b70",
+    "name": "Emily Brown",
+    "email": "emily.brown@example.com",
+    "role": "customer",
     "verified": true
   }
 ]

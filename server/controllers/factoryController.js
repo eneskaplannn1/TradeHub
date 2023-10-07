@@ -5,8 +5,6 @@ const AppError = require('../utils/errFeatures');
 exports.getAll = (Model) =>
   catchAsync(async (req, res) => {
     // products için get all fonksiyonu çok gelişmiş olmalı bunun için de apiFeatures dosyasına derin bir bakış atmak lazım
-    // filter ,sort , pagination kısmını halledeceğim
-    // const doc = Model.find();
 
     let filter = {};
     // Define an array of allowed query parameters
@@ -35,7 +33,6 @@ exports.getAll = (Model) =>
       },
     });
   });
-
 exports.getOne = (Model, Populate) => {
   return catchAsync(async (req, res, next) => {
     // get document by id
