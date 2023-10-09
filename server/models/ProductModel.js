@@ -4,8 +4,12 @@ const ProductSchema = new mongoose.Schema({
   brand: String,
   productDesc: String,
   price: Number,
-  amount: Number,
+  quantity: Number,
   discount: Number,
+  sold: {
+    type: Number,
+    default: 0,
+  },
   createdAt: {
     type: Date,
     default: Date.now(),

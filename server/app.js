@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 const AppError = require('./utils/errFeatures');
@@ -23,6 +24,13 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // !Global Middlewares
+
+app.use(
+  cors({
+    origin: ['http://localhost:5173'],
+    methods: ['POST', 'PATCH', 'GET', 'DELETE', 'PUT'],
+  })
+);
 
 // Serving Static Files
 app.use(express.static(path.join(__dirname, 'public')));

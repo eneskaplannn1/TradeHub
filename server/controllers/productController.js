@@ -12,6 +12,10 @@ exports.deleteProduct = factory.deleteOne(Product);
 //   const { category } = req.query;
 // });
 
+exports.addFavorites = catchAsync(async (req, res, next) => {
+  return 'hello world';
+});
+
 exports.getLatestProducts = catchAsync(async (req, res, next) => {
   const latestProducts = await Product.aggregate([
     {

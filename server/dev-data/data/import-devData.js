@@ -25,8 +25,8 @@ connectToDatabase();
 const importData = async () => {
   try {
     console.log('Creating data');
-    // await User.create(user, { validateBeforeSave: false });
-    await Order.create(orders, { validateBeforeSave: false });
+    await User.create(user, { validateBeforeSave: false });
+    // await Order.create(orders, { validateBeforeSave: false });
     // await Product.create(products, { validateBeforeSave: false });
 
     console.log('Data created');

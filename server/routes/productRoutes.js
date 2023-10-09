@@ -2,6 +2,10 @@ const express = require('express');
 const ProductController = require('./../controllers/productController');
 const productRouter = express.Router();
 
+/**
+ //TODO productRouter.route('/add-to-favorite').post(ProductController.addToFavorites);
+**/
+
 productRouter
   .route('/get-latest-products')
   .get(ProductController.getLatestProducts);

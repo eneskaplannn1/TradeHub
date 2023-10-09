@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
+import { ToastContainer } from "react-toastify";
 import {
   BrowserRouter,
   Navigate,
@@ -38,6 +38,18 @@ function App() {
     <QueryClientProvider client={client}>
       <ReactQueryDevtools initialIsOpen={false} />
       <GlobalStyle />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="light"
+      />
       <BrowserRouter>
         <Routes>
           <Route element={<RootLayout />}>
