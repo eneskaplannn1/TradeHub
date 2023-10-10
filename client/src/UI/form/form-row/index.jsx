@@ -39,6 +39,7 @@ const Label = styled.label`
   color: var(--color-zinc-500);
 `;
 const Error = styled.span`
+  text-align: left;
   font-size: 1.4rem;
   color: var(--color-red-700);
 `;

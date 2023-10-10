@@ -3,8 +3,7 @@ import { CiLogin } from "react-icons/ci";
 import { AiFillEye } from "react-icons/ai";
 import { IoMailOpenOutline } from "react-icons/io5";
 
-import { NavLink, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { NavLink } from "react-router-dom";
 import {
   StyledAuthHead,
   StyledContainer,
@@ -14,45 +13,15 @@ import FormRowVertical from "../../../UI/form/form-row";
 import Input from "../../../UI/form/input/input";
 import Button from "../../../UI/button";
 
-import { useForm } from "react-hook-form";
-import { useMutation } from "@tanstack/react-query";
-import { handleLogin } from "../../../services/apiAuth";
+import useLogin from "../../../hooks/useLogin";
 
 function LoginContainer() {
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
 
-  const {
-    register,
-    handleSubmit,
-    // formState: { errors },
-  } = useForm({
-    defaultValues: {
-      email: "benjamin_anderson@gmail.com",
-      password: "pass1234",
-    },
-  });
-
-  const { mutate } = useMutation({
-    mutationFn: handleLogin,
-    mutationKey: ["login"],
-    onSuccess: (data) => {
-      if (!data) return;
-      // console.log(data);
-      toast("deneme");
-      navigate("/");
-
-      // login(data.data.data.user, data.data.token);
-    },
-    onError: (err) => {
-      console.log(err);
-    },
-  });
-
-  function handleSubmitForm(data) {
-    mutate(data);
-  }
-
+  const { register, handleSubmit, handleSubmitForm, errors, isLoading } =
+    useLogin();
+  // console.log(errors);
+  // console.log(isLoading);
   return (
     <StyledContainer variation="md">
       <StyledAuthHead>
@@ -61,21 +30,27 @@ function LoginContainer() {
         <span>Sign into your account</span>
       </StyledAuthHead>
       <form onSubmit={handleSubmit(handleSubmitForm)}>
-        <FormRowVertical label="Email">
-          <Input id="email" type="email" {...register("email")} />
+        <FormRowVertical label="Email" error={errors?.email?.message}>
+          <Input
+            id="email"
+            type="email"
+            {...register("email", { required: "Enter your email" })}
+          />
           <IoMailOpenOutline />
         </FormRowVertical>
-        <FormRowVertical label="Password">
+        <FormRowVertical label="Password" error={errors?.password?.message}>
           <Input
             id="password"
-            {...register("password")}
+            {...register("password", { required: "Enter your password" })}
             type={`${showPassword ? "text" : "password"}`}
           />
           <AiFillEye onClick={() => setShowPassword((prev) => !prev)} />
         </FormRowVertical>
         <FormRowVertical>
           <NavLink to="/forgetPassword">Forget Password?</NavLink>
-          <Button variation="blue">Login</Button>
+          <Button variation="blue">
+            {isLoading ? "Logging in..." : "Login"}
+          </Button>
         </FormRowVertical>
       </form>
       <StyledFooter>

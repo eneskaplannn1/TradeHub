@@ -58,14 +58,15 @@ const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
-    httpOnly: true,
+    httpOnly: false,
+    withCredentials: true,
+    secure: true,
+    sameSite: 'None',
   };
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
   user.password = undefined;
   res.cookie('jwt', token, cookieOptions);
-
-  // console.log(res);
 
   res.status(statusCode).json({
     status: 'success',
@@ -84,10 +85,8 @@ exports.login = catchAsync(async (req, res, next) => {
   let isCorrectPassword;
 
   const user = await User.findOne({ email }).select('+password');
-  console.log(user);
   if (user) {
     isCorrectPassword = await user.correctPassword(password, user.password);
-    console.log(isCorrectPassword);
   }
 
   if (!user || !isCorrectPassword) {

@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   --color-orange-700: #f76707;
   --color-orange-800: #e8590c;
   --color-orange-900: #d9480f;
- 
+
   --color-zinc-0: #fff;
   --color-zinc-50: #f1f3f5;
   --color-zinc-100:#e9ecef;

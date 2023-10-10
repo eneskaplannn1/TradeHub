@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import { useSelector } from "react-redux";
 import { TfiEmail } from "react-icons/tfi";
 import { StyledAuthHead, StyledContainer } from "../../../UI/Auth";
 
@@ -15,6 +15,8 @@ const StyledBody = styled.div`
 `;
 
 function ConfirmAccountContainer() {
+  const { verifyUserEmail } = useSelector((state) => state.auth);
+  // console.log(verifyUserEmail);
   return (
     <StyledContainer variation="md">
       <StyledAuthHead>
@@ -23,7 +25,7 @@ function ConfirmAccountContainer() {
       </StyledAuthHead>
       <StyledBody>
         <h5>
-          A verification code has been send to <br /> K88817029@gmail.com
+          A verification code has been send to <br /> {verifyUserEmail}
         </h5>
         <p>
           Please check your inbox and enter the verification code below to

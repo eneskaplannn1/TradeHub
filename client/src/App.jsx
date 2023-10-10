@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
 import {
   BrowserRouter,
   Navigate,
@@ -38,17 +38,28 @@ function App() {
     <QueryClientProvider client={client}>
       <ReactQueryDevtools initialIsOpen={false} />
       <GlobalStyle />
-      <ToastContainer
+      <Toaster
         position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable={false}
-        pauseOnHover={false}
-        theme="light"
+        gutter={12}
+        containerStyle={{ margin: "12px" }}
+        toastOptions={{
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 3500,
+          },
+          loading: {
+            duration: 3000,
+          },
+          style: {
+            fontSize: "1rem",
+            maxWidth: "500px",
+            padding: "16px 24px",
+            color: "white",
+            backgroundColor: "grey",
+          },
+        }}
       />
       <BrowserRouter>
         <Routes>

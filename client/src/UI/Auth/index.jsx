@@ -55,7 +55,7 @@ const StyledAuthHead = styled.div`
     margin: auto;
     width: 4rem;
     height: 4rem;
-    color: var(--color-blue-600);
+    color: var(--color-blue-700);
   }
 
   span {
@@ -64,12 +64,18 @@ const StyledAuthHead = styled.div`
 `;
 
 const StyledFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 0.6rem;
   p {
     color: var(--color-zinc-500);
   }
   a {
-    color: var(--color-orange-900);
+    color: var(--color-blue-700);
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
