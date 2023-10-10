@@ -1,6 +1,6 @@
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/errFeatures');
-// const Email = require("../utils/email");
+// const Email = require('../utils/email');
 
 const User = require('../models/UserModel');
 
@@ -23,6 +23,8 @@ exports.signup = catchAsync(async (req, res, next) => {
 
   // send non-special token to users email
   try {
+    const url = `${req.protocol}://${req.get('host')}/verify-account/${token}`;
+    // await new Email(newUser, url).verifyAccount();
     res.status(200).json({
       status: 'success',
       newUser,

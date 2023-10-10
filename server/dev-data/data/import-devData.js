@@ -15,19 +15,20 @@ const user = JSON.parse(
 const products = JSON.parse(
   fs.readFileSync(`${__dirname}/product-data.json`, 'utf-8')
 );
+console.log(products);
 const orders = JSON.parse(
   fs.readFileSync(`${__dirname}/order-data.json`, 'utf-8')
 );
 
-console.log(__dirname);
+// console.log(__dirname);
 connectToDatabase();
 
 const importData = async () => {
   try {
     console.log('Creating data');
-    await User.create(user, { validateBeforeSave: false });
+    // await User.create(user, { validateBeforeSave: false });
     // await Order.create(orders, { validateBeforeSave: false });
-    // await Product.create(products, { validateBeforeSave: false });
+    await Product.create(products, { validateBeforeSave: false });
 
     console.log('Data created');
     process.exit();
