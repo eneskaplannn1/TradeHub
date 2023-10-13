@@ -1,7 +1,6 @@
 [
   {
     "_id": "651da76a1d1dc9be6197c1c6",
-    "cargoCharge": true,
     "brand": "Adidas",
     "productDesc": "Adidas Ultraboost Running Shoes",
     "price": 149.99,
@@ -16,7 +15,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1c7",
-    "cargoCharge": true,
     "brand": "Levi's",
     "productDesc": "Levi's 501 Original Fit Jeans",
     "price": 59.99,
@@ -26,12 +24,11 @@
     "ratingsAverage": 4.7,
     "ratingsQuantity": 200,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1c8",
-    "cargoCharge": true,
     "brand": "H&M",
     "productDesc": "H&M Slim Fit Suit",
     "price": 199.99,
@@ -41,12 +38,11 @@
     "ratingsAverage": 4.6,
     "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1c9",
-    "cargoCharge": true,
     "brand": "Zara",
     "productDesc": "Zara Trench Coat",
     "price": 89.99,
@@ -56,12 +52,11 @@
     "ratingsAverage": 4.4,
     "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1ca",
-    "cargoCharge": true,
     "brand": "GAP",
     "productDesc": "GAP Crewneck Sweater",
     "price": 39.99,
@@ -71,12 +66,11 @@
     "ratingsAverage": 4.9,
     "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1c5",
-    "cargoCharge": true,
     "brand": "Nike",
     "productDesc": "Nike Air Max 270 Sneakers",
     "price": 129.99,
@@ -91,7 +85,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1cd",
-    "cargoCharge": true,
     "brand": "Calvin Klein",
     "productDesc": "Calvin Klein Boxer Briefs (3-Pack)",
     "price": 24.99,
@@ -101,12 +94,11 @@
     "ratingsAverage": 4.6,
     "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1ce",
-    "cargoCharge": true,
     "brand": "Puma",
     "productDesc": "Puma Essential Hoodie",
     "price": 44.99,
@@ -116,12 +108,11 @@
     "ratingsAverage": 4.5,
     "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1cf",
-    "cargoCharge": true,
     "brand": "Forever 21",
     "productDesc": "Forever 21 Floral Dress",
     "price": 29.99,
@@ -131,12 +122,11 @@
     "ratingsAverage": 4.7,
     "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d0",
-    "cargoCharge": true,
     "brand": "Under Armour",
     "productDesc": "Under Armour HeatGear Leggings",
     "price": 34.99,
@@ -146,12 +136,11 @@
     "ratingsAverage": 4.8,
     "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d1",
-    "cargoCharge": true,
     "brand": "Old Navy",
     "productDesc": "Old Navy High-Rise Jeans",
     "price": 34.99,
@@ -166,7 +155,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1d2",
-    "cargoCharge": true,
     "brand": "ASOS",
     "productDesc": "ASOS Bomber Jacket",
     "price": 49.99,
@@ -176,12 +164,11 @@
     "ratingsAverage": 4.7,
     "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d3",
-    "cargoCharge": true,
     "brand": "Gap Kids",
     "productDesc": "Gap Kids Graphic T-Shirt",
     "price": 14.99,
@@ -191,12 +178,11 @@
     "ratingsAverage": 4.5,
     "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d4",
-    "cargoCharge": true,
     "brand": "Zara Kids",
     "productDesc": "Zara Kids Denim Shorts",
     "price": 19.99,
@@ -206,12 +192,11 @@
     "ratingsAverage": 4.6,
     "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d5",
-    "cargoCharge": true,
     "brand": "H&M Kids",
     "productDesc": "H&M Kids Hoodie",
     "price": 24.99,
@@ -221,12 +206,11 @@
     "ratingsAverage": 4.8,
     "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d7",
-    "cargoCharge": true,
     "brand": "Uniqlo",
     "productDesc": "Uniqlo Ultra Light Down Jacket",
     "price": 59.99,
@@ -236,12 +220,11 @@
     "ratingsAverage": 4.9,
     "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d6",
-    "cargoCharge": true,
     "brand": "Columbia",
     "productDesc": "Columbia Waterproof Jacket",
     "price": 79.99,
@@ -251,12 +234,11 @@
     "ratingsAverage": 4.7,
     "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d8",
-    "cargoCharge": true,
     "brand": "American Eagle",
     "productDesc": "American Eagle Plaid Shirt",
     "price": 39.99,
@@ -266,12 +248,11 @@
     "ratingsAverage": 4.6,
     "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
     "_id": "651da76a1d1dc9be6197c1d9",
-    "cargoCharge": true,
     "brand": "Nike",
     "productDesc": "Nike Air Max 270 Sneakers",
     "price": 129.99,
@@ -285,7 +266,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1da",
-    "cargoCharge": true,
     "brand": "Adidas",
     "productDesc": "Adidas Ultraboost Running Shoes",
     "category": "sneakers",
@@ -300,7 +280,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1db",
-    "cargoCharge": true,
     "brand": "Puma",
     "productDesc": "Puma RS-X Retro Sneakers",
     "category": "sneakers",
@@ -315,7 +294,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1cb",
-    "cargoCharge": true,
     "brand": "Tommy Hilfiger",
     "productDesc": "Tommy Hilfiger Polo Shirt",
     "category": "clothing",
@@ -330,7 +308,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1cc",
-    "cargoCharge": true,
     "brand": "Ralph Lauren",
     "category": "clothing",
     "productDesc": "Ralph Lauren Classic Fit Shirt",
@@ -345,7 +322,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1de",
-    "cargoCharge": true,
     "brand": "Reebok",
     "category": "sneakers",
     "productDesc": "Reebok Classic Leather Sneakers",
@@ -360,7 +336,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1df",
-    "cargoCharge": true,
     "brand": "Vans",
     "category": "sneakers",
     "productDesc": "Vans Old Skool Skate Shoes",
@@ -375,7 +350,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e0",
-    "cargoCharge": true,
     "brand": "Skechers",
     "category": "sneakers",
     "productDesc": "Skechers D'Lites Sneakers",
@@ -390,7 +364,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e1",
-    "cargoCharge": true,
     "brand": "Fila",
     "category": "sneakers",
     "productDesc": "Fila Disruptor II Sneakers",
@@ -405,7 +378,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e2",
-    "cargoCharge": true,
     "brand": "Under Armour",
     "category": "sneakers",
     "productDesc": "Under Armour Charged Assert 8 Running Shoes",
@@ -420,7 +392,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e3",
-    "cargoCharge": true,
     "brand": "ASICS",
     "category": "sneakers",
     "productDesc": "ASICS Gel-Kayano 27 Running Shoes",
@@ -435,7 +406,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e4",
-    "cargoCharge": true,
     "brand": "Brooks",
     "category": "sneakers",
     "productDesc": "Brooks Ghost 13 Running Shoes",
@@ -450,7 +420,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e5",
-    "cargoCharge": true,
     "brand": "Saucony",
     "category": "sneakers",
     "productDesc": "Saucony Kinvara 12 Running Shoes",
@@ -465,7 +434,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e6",
-    "cargoCharge": true,
     "brand": "Merrell",
     "category": "sneakers",
     "productDesc": "Merrell Moab 2 Vent Hiking Shoes",
@@ -480,7 +448,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e7",
-    "cargoCharge": true,
     "brand": "Fitbit",
     "productDesc": "Fitbit Charge 4 Fitness Tracker",
     "price": 149.99,
@@ -495,7 +462,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e8",
-    "cargoCharge": true,
     "brand": "Garmin",
     "productDesc": "Garmin Forerunner 945 Smartwatch",
     "price": 549.99,
@@ -510,7 +476,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1e9",
-    "cargoCharge": true,
     "brand": "Apple",
     "productDesc": "Apple Watch Series 6",
     "price": 399.99,
@@ -525,7 +490,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1ea",
-    "cargoCharge": true,
     "brand": "Fitbit",
     "productDesc": "Fitbit Versa 3 Smartwatch",
     "price": 199.99,
@@ -540,7 +504,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1eb",
-    "cargoCharge": true,
     "brand": "Xiaomi",
     "productDesc": "Xiaomi Mi Band 6 Fitness Tracker",
     "price": 39.99,
@@ -555,7 +518,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1ec",
-    "cargoCharge": true,
     "brand": "Bowflex",
     "productDesc": "Bowflex SelectTech 552 Dumbbells",
     "price": 299.99,
@@ -570,7 +532,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1ed",
-    "cargoCharge": false,
     "brand": "NordicTrack",
     "productDesc": "NordicTrack T Series Treadmill",
     "price": 899.99,
@@ -585,7 +546,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1ee",
-    "cargoCharge": false,
     "brand": "Reebok",
     "productDesc": "Reebok Step Aerobic Platform",
     "price": 49.99,
@@ -600,7 +560,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1ef",
-    "cargoCharge": false,
     "brand": "Under Armour",
     "productDesc": "Under Armour HeatGear Compression Shirt",
     "price": 34.99,
@@ -615,7 +574,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f0",
-    "cargoCharge": false,
     "brand": "Nike",
     "productDesc": "Nike Free RN 5.0 Running Shoes",
     "price": 99.99,
@@ -630,7 +588,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f1",
-    "cargoCharge": false,
     "brand": "ProForm",
     "productDesc": "ProForm Hybrid Trainer Elliptical",
     "price": 499.99,
@@ -645,7 +602,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f2",
-    "cargoCharge": false,
     "brand": "JBL",
     "productDesc": "JBL Endurance Peak II Wireless Earbuds",
     "price": 79.99,
@@ -660,7 +616,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f3",
-    "cargoCharge": false,
     "brand": "GoFit",
     "productDesc": "GoFit Adjustable Ankle Weights",
     "price": 19.99,
@@ -675,7 +630,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f4",
-    "cargoCharge": false,
     "brand": "Polar",
     "productDesc": "Polar H10 Heart Rate Monitor",
     "price": 89.99,
@@ -690,7 +644,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f5",
-    "cargoCharge": false,
     "brand": "Everlast",
     "productDesc": "Everlast Powercore Dual Bag and Stand",
     "price": 199.99,
@@ -705,7 +658,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f6",
-    "cargoCharge": false,
     "brand": "Gaiam",
     "productDesc": "Gaiam Essentials Thick Yoga Mat",
     "price": 29.99,
@@ -720,7 +672,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1dc",
-    "cargoCharge": false,
     "brand": "New Balance",
     "category": "sneakers",
     "productDesc": "New Balance 990v5 Sneakers",
@@ -735,7 +686,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1dd",
-    "cargoCharge": false,
     "brand": "Converse",
     "category": "sneakers",
     "productDesc": "Converse Chuck Taylor All Star High Top",
@@ -750,7 +700,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f9",
-    "cargoCharge": false,
     "brand": "TheraBand",
     "productDesc": "TheraBand Resistance Bands Set",
     "price": 29.99,
@@ -765,7 +714,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1fa",
-    "cargoCharge": false,
     "brand": "TriggerPoint",
     "productDesc": "TriggerPoint GRID Foam Roller",
     "price": 34.99,
@@ -780,7 +728,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1fb",
-    "cargoCharge": false,
     "brand": "Samsung",
     "productDesc": "Samsung Galaxy S21",
     "price": 999.99,
@@ -795,7 +742,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1fc",
-    "cargoCharge": false,
     "brand": "Apple",
     "productDesc": "iPhone 13 Pro",
     "price": 1299.99,
@@ -810,7 +756,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1fd",
-    "cargoCharge": false,
     "brand": "Sony",
     "productDesc": "PlayStation 5",
     "price": 499.99,
@@ -826,7 +771,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1fe",
-    "cargoCharge": false,
     "brand": "Dell",
     "productDesc": "Dell XPS 13 Laptop",
     "price": 1199.99,
@@ -842,7 +786,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1ff",
-    "cargoCharge": false,
     "brand": "LG",
     "productDesc": "LG OLED TV",
     "price": 1499.99,
@@ -858,7 +801,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c200",
-    "cargoCharge": false,
     "brand": "Logitech",
     "productDesc": "Logitech G Pro Wireless Mouse",
     "price": 79.99,
@@ -874,7 +816,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c201",
-    "cargoCharge": false,
     "brand": "Intel",
     "productDesc": "Intel Core i9-11900K CPU",
     "price": 499.99,
@@ -890,7 +831,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c202",
-    "cargoCharge": false,
     "brand": "NVIDIA",
     "productDesc": "NVIDIA GeForce RTX 3080 GPU",
     "price": 799.99,
@@ -906,7 +846,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c203",
-    "cargoCharge": false,
     "brand": "Bose",
     "productDesc": "Bose QuietComfort 35 II Headphones",
     "price": 299.99,
@@ -922,7 +861,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c204",
-    "cargoCharge": false,
     "brand": "Amazon",
     "productDesc": "Amazon Echo Show 10",
     "price": 249.99,
@@ -938,7 +876,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c205",
-    "cargoCharge": false,
     "brand": "Sony",
     "productDesc": "Sony WH-1000XM4 Wireless Headphones",
     "price": 299.99,
@@ -954,7 +891,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c206",
-    "cargoCharge": false,
     "brand": "Microsoft",
     "productDesc": "Xbox Series X Console",
     "price": 499.99,
@@ -970,7 +906,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c207",
-    "cargoCharge": false,
     "brand": "Canon",
     "productDesc": "Canon EOS 5D Mark IV DSLR Camera",
     "price": 2499.99,
@@ -986,7 +921,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c209",
-    "cargoCharge": false,
     "brand": "Samsung",
     "productDesc": "Samsung QLED 4K TV",
     "price": 1399.99,
@@ -1002,7 +936,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c208",
-    "cargoCharge": false,
     "brand": "Apple",
     "productDesc": "MacBook Pro 16-inch",
     "price": 2399.99,
@@ -1018,7 +951,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c20a",
-    "cargoCharge": false,
     "brand": "Nest",
     "productDesc": "Google Nest Thermostat",
     "price": 199.99,
@@ -1034,7 +966,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c20b",
-    "cargoCharge": false,
     "brand": "HP",
     "productDesc": "HP Spectre x360 Laptop",
     "price": 1199.99,
@@ -1050,7 +981,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c20c",
-    "cargoCharge": false,
     "brand": "Bose",
     "productDesc": "Bose SoundLink Revolve+ Speaker",
     "price": 199.99,
@@ -1066,7 +996,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c20d",
-    "cargoCharge": false,
     "brand": "AMD",
     "productDesc": "AMD Ryzen 9 5900X CPU",
     "price": 549.99,
@@ -1082,7 +1011,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c20f",
-    "cargoCharge": false,
     "brand": "DJI",
     "productDesc": "DJI Mavic Air 2 Drone",
     "price": 799.99,
@@ -1098,7 +1026,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c20e",
-    "cargoCharge": false,
     "brand": "GoPro",
     "productDesc": "GoPro Hero 9 Black Action Camera",
     "price": 349.99,
@@ -1114,7 +1041,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c210",
-    "cargoCharge": false,
     "brand": "Amazon",
     "productDesc": "Amazon Kindle Paperwhite",
     "price": 129.99,
@@ -1130,7 +1056,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c211",
-    "cargoCharge": false,
     "brand": "Razer",
     "productDesc": "Razer BlackWidow Elite Gaming Keyboard",
     "price": 169.99,
@@ -1146,7 +1071,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c212",
-    "cargoCharge": false,
     "brand": "ASUS",
     "productDesc": "ASUS ROG Swift Gaming Monitor",
     "price": 699.99,
@@ -1162,7 +1086,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c213",
-    "cargoCharge": false,
     "brand": "Fitbit",
     "productDesc": "Fitbit Charge 4 Fitness Tracker",
     "price": 149.99,
@@ -1178,7 +1101,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c215",
-    "cargoCharge": false,
     "brand": "Sony",
     "productDesc": "Sony PlayStation VR",
     "price": 299.99,
@@ -1194,7 +1116,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c214",
-    "cargoCharge": false,
     "brand": "Anker",
     "productDesc": "Anker PowerCore 26800 Portable Charger",
     "price": 59.99,
@@ -1210,7 +1131,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c217",
-    "cargoCharge": false,
     "brand": "Logitech",
     "productDesc": "Logitech MX Master 3 Wireless Mouse",
     "price": 99.99,
@@ -1226,7 +1146,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c216",
-    "cargoCharge": false,
     "brand": "Garmin",
     "productDesc": "Garmin Forerunner 945 Smartwatch",
     "price": 549.99,
@@ -1242,7 +1161,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c218",
-    "cargoCharge": false,
     "brand": "L'Oréal",
     "productDesc": "L'Oréal Paris false Match Foundation",
     "price": 12.99,
@@ -1257,7 +1175,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c219",
-    "cargoCharge": false,
     "brand": "Maybelline",
     "productDesc": "Maybelline New York Mascara",
     "price": 7.99,
@@ -1272,7 +1189,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c21a",
-    "cargoCharge": true,
     "brand": "Revlon",
     "productDesc": "Revlon ColorStay Lipstick",
     "price": 9.99,
@@ -1287,7 +1203,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f7",
-    "cargoCharge": true,
     "brand": "Skechers",
     "productDesc": "Skechers GoWalk 5 Walking Shoes",
     "price": 59.99,
@@ -1302,7 +1217,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c21d",
-    "cargoCharge": true,
     "brand": "Nyx",
     "productDesc": "Nyx Professional Makeup Eyeshadow Palette",
     "price": 11.99,
@@ -1317,7 +1231,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c21c",
-    "cargoCharge": true,
     "brand": "Covergirl",
     "productDesc": "Covergirl Clean Matte BB Cream",
     "price": 6.99,
@@ -1332,7 +1245,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c21e",
-    "cargoCharge": true,
     "brand": "Clinique",
     "productDesc": "Clinique Dramatically Different Moisturizing Gel",
     "price": 24.99,
@@ -1347,7 +1259,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c21f",
-    "cargoCharge": true,
     "brand": "Estée Lauder",
     "productDesc": "Estée Lauder Double Wear Foundation",
     "price": 39.99,
@@ -1362,7 +1273,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c1f8",
-    "cargoCharge": true,
     "brand": "Sunny Health & Fitness",
     "productDesc": "Sunny Health & Fitness SF-RW5515 Rowing Machine",
     "price": 399.99,
@@ -1377,7 +1287,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c221",
-    "cargoCharge": true,
     "brand": "Urban Decay",
     "productDesc": "Urban Decay Naked3 Eyeshadow Palette",
     "price": 54.99,
@@ -1392,7 +1301,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c222",
-    "cargoCharge": true,
     "brand": "Olay",
     "productDesc": "Olay Regenerist Micro-Sculpting Cream",
     "price": 29.99,
@@ -1407,7 +1315,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c223",
-    "cargoCharge": true,
     "brand": "MAC",
     "productDesc": "MAC Cosmetics Matte Lipstick",
     "price": 16.99,
@@ -1422,7 +1329,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c224",
-    "cargoCharge": true,
     "brand": "Too Faced",
     "productDesc": "Too Faced Better Than Sex Mascara",
     "price": 21.99,
@@ -1437,7 +1343,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c226",
-    "cargoCharge": true,
     "brand": "Tarte",
     "productDesc": "Tarte Shape Tape Concealer",
     "price": 19.99,
@@ -1452,7 +1357,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c225",
-    "cargoCharge": true,
     "brand": "E.L.F.",
     "productDesc": "E.L.F. Cosmetics Poreless Putty Primer",
     "price": 8.99,
@@ -1467,7 +1371,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c227",
-    "cargoCharge": true,
     "brand": "Kylie Cosmetics",
     "productDesc": "Kylie Cosmetics Lip Kit",
     "price": 22.99,
@@ -1482,7 +1385,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c22a",
-    "cargoCharge": true,
     "brand": "Milani",
     "productDesc": "Milani Baked Blush",
     "price": 9.99,
@@ -1497,7 +1399,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c228",
-    "cargoCharge": true,
     "brand": "NARS",
     "productDesc": "NARS Radiant Creamy Concealer",
     "price": 25.99,
@@ -1512,7 +1413,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c229",
-    "cargoCharge": true,
     "brand": "Physicians Formula",
     "productDesc": "Physicians Formula Butter Bronzer",
     "price": 13.99,
@@ -1527,7 +1427,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c22c",
-    "cargoCharge": true,
     "brand": "Wet n Wild",
     "productDesc": "Wet n Wild MegaGlo Highlighter",
     "price": 3.99,
@@ -1542,7 +1441,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c22b",
-    "cargoCharge": true,
     "brand": "Rimmel",
     "productDesc": "Rimmel Stay Matte Pressed Powder",
     "price": 4.99,
@@ -1557,7 +1455,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c22d",
-    "cargoCharge": true,
     "brand": "Essence",
     "productDesc": "Essence Lash Princess Mascara",
     "price": 4.49,
@@ -1572,7 +1469,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c22e",
-    "cargoCharge": true,
     "brand": "Physicians Formula",
     "productDesc": "Physicians Formula Eye Booster Eyeliner",
     "price": 9.99,
@@ -1587,7 +1483,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c22f",
-    "cargoCharge": true,
     "brand": "Milani",
     "productDesc": "Milani Conceal + Perfect Foundation",
     "price": 9.99,
@@ -1602,7 +1497,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c21b",
-    "cargoCharge": true,
     "brand": "Neutrogena",
     "productDesc": "Neutrogena Hydro Boost Gel Cream",
     "price": 14.99,
@@ -1617,7 +1511,6 @@
   },
   {
     "_id": "651da76a1d1dc9be6197c220",
-    "cargoCharge": true,
     "brand": "Burt's Bees",
     "productDesc": "Burt's Bees Lip Balm",
     "price": 3.99,

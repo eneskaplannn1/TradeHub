@@ -6,7 +6,12 @@ const ProductSchema = new mongoose.Schema({
   price: Number,
   quantity: Number,
   discount: Number,
-  cargoCharge: Boolean,
+  cargoCharge: {
+    type: Boolean,
+    default: () => {
+      return Math.random() >= 0.5;
+    },
+  },
   sold: {
     type: Number,
     default: 0,

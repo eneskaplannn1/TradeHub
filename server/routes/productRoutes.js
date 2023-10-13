@@ -8,7 +8,7 @@ const productRouter = express.Router();
 
 productRouter
   .route('/get-latest-products')
-  .get(ProductController.getLatestProducts);
+  .get(ProductController.getProductsCreatedOver7DaysAgo);
 
 productRouter
   .route('/get-best-rated-products')

@@ -30,6 +30,7 @@ import { StyledAuthContainer } from "./UI/Auth";
 import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
+import ProductCategory from "./pages/RootLayout/ProductCategory";
 
 const client = new QueryClient();
 
@@ -69,10 +70,16 @@ function App() {
             {/* Product routes */}
             <Route path="/products" index element={<Products />} />
             <Route
-              path="/products/:productCategory"
+              path="/products/:category"
+              index
+              element={<ProductCategory />}
+            />
+            {/* //! deprecated
+            <Route
+              path="/product/:productId"
               index
               element={<ProductDetail />}
-            />
+            /> */}
 
             {/* Product route */}
             <Route path="/cart" element={<Cart />} />

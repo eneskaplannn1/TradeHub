@@ -3,8 +3,10 @@ import { styled } from "styled-components";
 
 const StyledLogo = styled(NavLink)`
   margin: auto;
+  display: flex;
+  align-items: center;
   img {
-    height: 8rem;
+    height: 6rem;
     opacity: 0.7;
     transition: 0.4s ease;
     &:hover {

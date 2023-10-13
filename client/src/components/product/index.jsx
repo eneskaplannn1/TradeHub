@@ -10,31 +10,38 @@ import {
   StyledProductImage,
 } from "../../UI/product";
 
-function Product() {
+function Product({ product }) {
+  const isNew =
+    Date.now("2022-04-04T17:56:58.347Z") > Date.now() - 3 * 24 * 60 * 60 * 1000;
+
   return (
     <ProductSummary>
       <ProductHead>
-        <StyledCargoHead>
-          <BsBox />
-          <p>Free cargo</p>
-        </StyledCargoHead>
+        {!product.cargoCharge && (
+          <StyledCargoHead>
+            <BsBox />
+            <p>Free cargo</p>
+          </StyledCargoHead>
+        )}
         <StyledProductFavorite>
           <AiOutlineHeart />
         </StyledProductFavorite>
       </ProductHead>
       <StyledProductImage>
-        <div>
-          <span>
-            Yeni <br /> ürün
-          </span>
-        </div>
-        <img src="product.jpg" />
+        {isNew && (
+          <div>
+            <span>
+              Yeni <br /> ürün
+            </span>
+          </div>
+        )}
+        <img src="/product.jpg" />
       </StyledProductImage>
       <StyledProductFooter>
         <p>
-          <span>Anker</span> q30 headphone
+          <span>{product.brand}</span> {product.productDesc}
         </p>
-        <p>2500TL</p>
+        <p>{product.price}$</p>
       </StyledProductFooter>
     </ProductSummary>
   );

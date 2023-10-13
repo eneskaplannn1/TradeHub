@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { styled } from "styled-components";
 import ProductList from "../../components/product-list";
 
@@ -17,7 +16,6 @@ function RootLayout() {
       <StyledMain>
         <Outlet />
       </StyledMain>
-      {/* <Footer /> */}
     </>
   );
 }

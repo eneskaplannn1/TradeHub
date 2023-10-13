@@ -15,7 +15,6 @@ const user = JSON.parse(
 const products = JSON.parse(
   fs.readFileSync(`${__dirname}/product-data.json`, 'utf-8')
 );
-console.log(products);
 const orders = JSON.parse(
   fs.readFileSync(`${__dirname}/order-data.json`, 'utf-8')
 );
@@ -36,11 +35,10 @@ const importData = async () => {
     console.log(err.message);
   }
 };
-
 const DeleteDatas = async () => {
   try {
-    await User.deleteMany();
-    // await Product.deleteMany();
+    // await User.deleteMany();
+    await Product.deleteMany();
     console.log('Data Deleted');
 
     process.exit();

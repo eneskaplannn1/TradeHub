@@ -1,22 +1,32 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import {
-  getAllProducts,
-  getProductsByCategory,
-} from "../../services/apiProducts";
 
 import { StyledProductContainer } from "../../UI/product";
 import Pagination from "../../components/pagination";
 import Product from "../../components/product";
 import Skeleton from "../../components/skeleton";
+import {
+  getBestRatedProducts,
+  getNewProducts,
+  getProductsByCategory,
+} from "../../services/apiProducts";
 
-function ProductContainer() {
+function ProductCategory() {
+  const { category } = useParams();
+  console.log(category);
+
   const { data, isLoading } = useQuery({
-    queryFn: getAllProducts,
-    queryKey: ["products"],
+    queryFn: () => {
+      return category === "best-rated"
+        ? getBestRatedProducts()
+        : category === "new-products"
+        ? getNewProducts()
+        : getProductsByCategory(category);
+    },
+    queryKey: ["products", category],
   });
 
-  console.log(data?.data?.data?.document);
+  // console.log(data?.data?.data?.document);
 
   return (
     <>
@@ -34,4 +44,4 @@ function ProductContainer() {
   );
 }
 
-export default ProductContainer;
+export default ProductCategory;

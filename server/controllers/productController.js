@@ -16,6 +16,31 @@ exports.addFavorites = catchAsync(async (req, res, next) => {
   return 'hello world';
 });
 
+exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
+  const products = await Product.aggregate([
+    {
+      $match: {
+        ratingsAverage: {
+          $gte: 4.8,
+        },
+      },
+    },
+    {
+      $sort: {
+        price: 1,
+      },
+    },
+  ]);
+
+  res.json({
+    status: 'success',
+    results: products.length,
+    data: {
+      document: products,
+    },
+  });
+});
+
 exports.getLatestProducts = catchAsync(async (req, res, next) => {
   const latestProducts = await Product.aggregate([
     {
@@ -32,18 +57,24 @@ exports.getLatestProducts = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
+exports.getProductsCreatedOver7DaysAgo = catchAsync(async (req, res, next) => {
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 3);
+  // sevenDaysAgo.setHours(0, 0, 0, 0); // Set time to midnight
+
   const products = await Product.aggregate([
     {
       $match: {
-        ratingsAverage: {
-          $gte: 4.9,
+        createdAt: {
+          $gte: new Date(
+            `${sevenDaysAgo.getFullYear()}-${sevenDaysAgo.getMonth()}-${sevenDaysAgo.getDate()}`
+          ),
         },
       },
     },
     {
       $sort: {
-        price: 1,
+        createdAt: 1, // Sorting in ascending order (oldest first)
       },
     },
   ]);
@@ -51,8 +82,8 @@ exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
   res.json({
     status: 'success',
     results: products.length,
-    documents: {
-      products,
+    data: {
+      document: products,
     },
   });
 });

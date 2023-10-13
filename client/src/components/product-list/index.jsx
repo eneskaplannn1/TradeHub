@@ -47,7 +47,7 @@ function ProductList() {
             <NavLink to="/products/cosmetic">Cosmetic</NavLink>
           </li>
           <li>
-            <NavLink to="/products/best-sellers">Best Sellers</NavLink>
+            <NavLink to="/products/best-rated">Best Rated</NavLink>
           </li>
           <li>
             <NavLink to="/products/new-products">New Products</NavLink>
