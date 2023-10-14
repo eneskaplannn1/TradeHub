@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import Button from "../../UI/button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const StyledPagination = styled.div`
   display: flex;
@@ -21,20 +22,26 @@ const StyledPagination = styled.div`
   }
 `;
 
-function Pagination() {
+function Pagination({ results }) {
+  const location = useLocation();
+
+  const search = useLocation().search;
+  const searchParams = new URLSearchParams(search);
+  let page = searchParams.get("page");
+  if (!page) page = 1;
+
   return (
     <StyledPagination>
-      <div>
-        <Button variation="orange">
-          <FaArrowLeft />
-          Previous Page
+      <a href={`${location.pathname}?page=${Number(page) - 1}`}>
+        <Button variation="orange" disabled={page === "1"}>
+          <FaArrowLeft /> Previous Page
         </Button>
-      </div>
-      <div>
-        <Button variation="orange">
+      </a>
+      <a href={`${location.pathname}?page=${Number(page) + 1}`}>
+        <Button variation="orange" disabled={results < 20 ? true : false}>
           Next Page <FaArrowRight />
         </Button>
-      </div>
+      </a>
     </StyledPagination>
   );
 }

@@ -1,22 +1,173 @@
+import { styled } from "styled-components";
+import Button from "../../UI/button";
+import { AiOutlineHeart } from "react-icons/ai";
+import StarRating from "../../UI/star";
+import { StyledProductFavorite } from "../../UI/product";
+import {
+  StyledButtonContainer,
+  StyledImageContainer,
+  StyledProductDescription,
+  StyledProductDetail,
+  StyledProductInfo,
+  StyledProductPrice,
+  StyledReviewSummary,
+} from "../../UI/product-detail";
+import {
+  StyledProductReviewContainer,
+  StyledProductReviews,
+  StyledReview,
+  StyledReviewHead,
+  StyledReviews,
+} from "../../UI/review";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { getProduct } from "../../services/apiProducts";
 import Skeleton from "../../components/skeleton";
-import { StyledProductContainer } from "../../UI/product";
-import Pagination from "../../components/pagination";
 
 function ProductDetail() {
-  const { productCategory } = useParams();
+  const { productId } = useParams();
+  console.log(productId);
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["product", productId],
+    queryFn: () => getProduct(productId),
+  });
+
+  // Check if 'doc' exists before destructuring
+  const productData = data?.data?.data?.doc || {};
+
+  const {
+    brand,
+    productDesc,
+    price,
+    quantity,
+    ratingsAverage,
+    ratingsQuantity,
+    category,
+    cargoCharge,
+    sold,
+  } = productData;
 
   return (
     <>
-      <h1>{productCategory}</h1>
-      <StyledProductContainer>
-        {Array(20)
-          .fill(null)
-          .map((_, index) => (
-            <Skeleton key={index} height={480} />
-          ))}
-      </StyledProductContainer>
-      <Pagination />
+      <StyledProductDetail>
+        {isLoading ? (
+          <Skeleton width={359} height={500} />
+        ) : (
+          <StyledImageContainer>
+            <img src={`/productImage/${category}.jpg`} />
+          </StyledImageContainer>
+        )}
+        {isLoading ? (
+          <Skeleton width={540} height={300} />
+        ) : (
+          <StyledProductInfo>
+            <StyledProductDescription>
+              <span>{brand}</span> {productDesc}
+            </StyledProductDescription>
+            <StyledReviewSummary>
+              <div className="rating">
+                <span>{ratingsAverage}</span>
+                <StarRating
+                  maxRating={5}
+                  height={24}
+                  width={24}
+                  averageRating={ratingsAverage}
+                />
+              </div>
+              <div>
+                <span>2000</span> reviews
+              </div>
+              <div className="hearth">
+                <AiOutlineHeart />
+                <span>2000</span> favorites
+              </div>
+            </StyledReviewSummary>
+            <StyledProductPrice>{price} USD</StyledProductPrice>
+            <StyledButtonContainer>
+              <Button size="xsmall" variation="orange">
+                Add to the card
+              </Button>
+              <StyledProductFavorite>
+                <AiOutlineHeart />
+              </StyledProductFavorite>
+            </StyledButtonContainer>
+          </StyledProductInfo>
+        )}
+      </StyledProductDetail>
+      <StyledProductReviewContainer>
+        <h1>Product Reviews</h1>
+        <StyledProductReviews>
+          <StyledReviewHead>
+            <div className="rating">
+              <span>{ratingsAverage}</span>
+              <StarRating
+                maxRating={5}
+                width={40}
+                height={40}
+                averageRating={ratingsAverage}
+              />
+            </div>
+            <div>| {ratingsQuantity} Review </div>
+          </StyledReviewHead>
+          <StyledReviews>
+            <StyledReview>
+              <div className="header">
+                <StarRating
+                  height={32}
+                  width={32}
+                  isEditing={false}
+                  averageRating={4}
+                  maxRating={5}
+                />
+                <div>Best Product Ever</div>
+              </div>
+              <div className="footer">
+                <div>Enes Kaplan</div>
+                <div>
+                  | <span style={{ marginLeft: "1rem" }}></span> 24 October 2022
+                </div>
+              </div>
+            </StyledReview>
+            <StyledReview>
+              <div className="header">
+                <StarRating
+                  height={32}
+                  width={32}
+                  isEditing={false}
+                  averageRating={4}
+                  maxRating={5}
+                />
+                <div>Best Product Ever</div>
+              </div>
+              <div className="footer">
+                <div>Enes Kaplan</div>
+                <div>
+                  | <span style={{ marginLeft: "1rem" }}></span> 24 October 2022
+                </div>
+              </div>
+            </StyledReview>
+            <StyledReview>
+              <div className="header">
+                <StarRating
+                  height={32}
+                  width={32}
+                  isEditing={false}
+                  averageRating={4}
+                  maxRating={5}
+                />
+                <div>Best Product Ever</div>
+              </div>
+              <div className="footer">
+                <div>Enes Kaplan</div>
+                <div>
+                  | <span style={{ marginLeft: "1rem" }}></span> 24 October 2022
+                </div>
+              </div>
+            </StyledReview>
+          </StyledReviews>
+        </StyledProductReviews>
+      </StyledProductReviewContainer>
     </>
   );
 }

@@ -74,12 +74,11 @@ function App() {
               index
               element={<ProductCategory />}
             />
-            {/* //! deprecated
             <Route
               path="/product/:productId"
               index
               element={<ProductDetail />}
-            /> */}
+            />
 
             {/* Product route */}
             <Route path="/cart" element={<Cart />} />

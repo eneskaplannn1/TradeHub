@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import { StyledProductContainer } from "../../UI/product";
 import Pagination from "../../components/pagination";
@@ -12,21 +12,24 @@ import {
 } from "../../services/apiProducts";
 
 function ProductCategory() {
+  const search = useLocation().search;
+  const searchParams = new URLSearchParams(search);
+  let page = searchParams.get("page");
+  if (!page) page = 1;
+  if (Number(page) < 1) page = 1;
   const { category } = useParams();
-  console.log(category);
 
   const { data, isLoading } = useQuery({
     queryFn: () => {
       return category === "best-rated"
-        ? getBestRatedProducts()
+        ? getBestRatedProducts(page)
         : category === "new-products"
-        ? getNewProducts()
-        : getProductsByCategory(category);
+        ? getNewProducts(page)
+        : getProductsByCategory(category, page);
     },
     queryKey: ["products", category],
   });
-
-  // console.log(data?.data?.data?.document);
+  // console.log(data);
 
   return (
     <>
@@ -39,7 +42,7 @@ function ProductCategory() {
               return <Product product={prod} key={index} />;
             })}
       </StyledProductContainer>
-      <Pagination />
+      <Pagination results={data?.data?.data?.document?.length} />
     </>
   );
 }

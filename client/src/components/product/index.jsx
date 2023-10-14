@@ -9,10 +9,20 @@ import {
   StyledProductFooter,
   StyledProductImage,
 } from "../../UI/product";
+import { NavLink } from "react-router-dom";
 
 function Product({ product }) {
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const productCreatedAt = new Date(product.createdAt);
+
   const isNew =
-    Date.now("2022-04-04T17:56:58.347Z") > Date.now() - 3 * 24 * 60 * 60 * 1000;
+    new Date(
+      `${productCreatedAt.getFullYear()}-${productCreatedAt.getMonth()}-${productCreatedAt.getDate()}`
+    ) >
+    new Date(
+      `${sevenDaysAgo.getFullYear()}-${sevenDaysAgo.getMonth()}-${sevenDaysAgo.getDate()}`
+    );
 
   return (
     <ProductSummary>
@@ -35,7 +45,7 @@ function Product({ product }) {
             </span>
           </div>
         )}
-        <img src="/product.jpg" />
+        <img src={`/productImage/${product.category}.jpg`} />
       </StyledProductImage>
       <StyledProductFooter>
         <p>
@@ -43,6 +53,7 @@ function Product({ product }) {
         </p>
         <p>{product.price}$</p>
       </StyledProductFooter>
+      <NavLink className="navigation" to={`/product/${product._id}`}></NavLink>
     </ProductSummary>
   );
 }

@@ -5,9 +5,8 @@ const userController = require('../controllers/userController');
 const userRouter = Router();
 
 userRouter.get('/logUserIn', authController.logUserIn);
-// Todo signup
 userRouter.post('/signup', authController.signup);
-// Todo verifyAccount
+userRouter.get('/email', authController.sendEmail);
 
 // for teacher login post /login?userType=teacher
 // for user login post /login

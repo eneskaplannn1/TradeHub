@@ -17,6 +17,13 @@ exports.addFavorites = catchAsync(async (req, res, next) => {
 });
 
 exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
+  let page = 1;
+  let limit = 20;
+  if (req.params.page) {
+    page = req.params.page;
+  }
+
+  const skip = (page - 1) * limit;
   const products = await Product.aggregate([
     {
       $match: {
@@ -30,6 +37,12 @@ exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
         price: 1,
       },
     },
+    {
+      $skip: skip,
+    },
+    {
+      $limit: limit,
+    },
   ]);
 
   res.json({
@@ -41,27 +54,16 @@ exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getLatestProducts = catchAsync(async (req, res, next) => {
-  const latestProducts = await Product.aggregate([
-    {
-      $match: {
-        createdAt: {
-          $gte: new Date(`2023-10-${new Date().getDate() - 3}`),
-        },
-      },
-    },
-  ]);
-  res.status(200).json({
-    status: 'success',
-    doc: latestProducts,
-  });
-});
-
 exports.getProductsCreatedOver7DaysAgo = catchAsync(async (req, res, next) => {
   const sevenDaysAgo = new Date();
   sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 3);
   // sevenDaysAgo.setHours(0, 0, 0, 0); // Set time to midnight
-
+  let page = 1;
+  let limit = 20;
+  if (req.query.page) {
+    page = req.query.page;
+  }
+  const skip = (page - 1) * limit;
   const products = await Product.aggregate([
     {
       $match: {
@@ -77,6 +79,12 @@ exports.getProductsCreatedOver7DaysAgo = catchAsync(async (req, res, next) => {
         createdAt: 1, // Sorting in ascending order (oldest first)
       },
     },
+    {
+      $skip: skip,
+    },
+    {
+      $limit: limit,
+    },
   ]);
 
   res.json({
@@ -87,3 +95,19 @@ exports.getProductsCreatedOver7DaysAgo = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+// exports.getLatestProducts = catchAsync(async (req, res, next) => {
+//   const latestProducts = await Product.aggregate([
+//     {
+//       $match: {
+//         createdAt: {
+//           $gte: new Date(`2023-10-${new Date().getDate() - 3}`),
+//         },
+//       },
+//     },
+//   ]);
+//   res.status(200).json({
+//     status: 'success',
+//     doc: latestProducts,
+//   });
+// });

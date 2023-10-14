@@ -1,11 +1,63 @@
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/errFeatures');
-// const Email = require('../utils/email');
+const Email = require('../utils/email');
 
 const User = require('../models/UserModel');
 
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
+
+const Mailgun = require('mailgun-js');
+
+exports.sendEmail = async (req, res, next) => {
+  const newUser = {
+    _id: '651c13579e355fab64a43145',
+    name: 'Ava Miller',
+    email: 'ava_miller@gmail.com',
+    role: 'seller',
+    verified: true,
+    password: 'pass1234',
+  };
+  const mailgun = new Mailgun({
+    apiKey: process.env.MAILGUN_API_KEY,
+    domain: process.env.MAILGUN_DOMAIN,
+    port: 587,
+  });
+  console.log(1);
+
+  mailgun.messages().send(
+    {
+      from: 'k88817029@gmail.com',
+      to: 'k88817028@gmail.com',
+      subject: 'Hello from Mailgu',
+      html: '<h1>Deneme<h1/>',
+    },
+    (error, body) => {
+      console.log(2);
+      if (error) {
+        console.log(error);
+        console.log(error.message);
+        res.status(404).send({
+          message: 'something went wrong',
+        });
+      } else {
+        res.send({
+          message: 'Email send successfully',
+        });
+      }
+    }
+  );
+  // try {
+  //   const url = `${req.protocol}://${req.get('host')}/deneme`;
+  //   await new Email(newUser, url).verifyAccount();
+  //   res.status(200).json({
+  //     status: 'success',
+  //     newUser,
+  //   });
+  // } catch (err) {
+  //   console.log(err);
+  // }
+};
 
 exports.signup = catchAsync(async (req, res, next) => {
   const newUser = await User.create({

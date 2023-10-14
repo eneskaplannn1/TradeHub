@@ -1,6 +1,19 @@
 // const nodemailer = require('nodemailer');
 // const nodemailMailgun = require('nodemailer-mailgun-transport');
-// const { htmlToText } = require('html-to-text');
+// const mg = require('mailgun-js');
+
+// const mailgun = () =>
+//   mg({
+//     apiKey: process.env.MAILGUN_API_KEY,
+//     domain: process.env.MAILGUN_DOMAIN,
+//   });
+
+// mailgun().messages().send({
+//   from: 'k88817029@gmail.com EnesKaplan',
+//   to: 'k88817028@gmail.com',
+//   subject: 'welcome',
+//   html: '<h1>Deneme<h1/>',
+// });
 
 // module.exports = class Email {
 //   constructor(user, url) {

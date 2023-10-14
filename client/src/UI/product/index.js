@@ -10,18 +10,27 @@ const StyledProductContainer = styled.div`
 `;
 
 const ProductSummary = styled.div`
+  position: relative;
   display: grid;
-  grid-template-rows: 3fr 12fr 3.6fr;
+  grid-template-rows: 2fr 10fr 3.6fr;
   width: 100%;
-  height: 30rem;
+  height: 40rem;
 
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-zinc-100);
+
+  .navigation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
 `;
 const ProductHead = styled.div`
+  height: 100%;
   display: flex;
   align-items: center;
-
   position: relative;
 
   padding: 0.2rem 0.4rem;
@@ -41,6 +50,7 @@ const StyledCargoHead = styled.div`
 `;
 
 const StyledProductFavorite = styled.div`
+  z-index: 100;
   cursor: pointer;
   position: absolute;
   right: 0.4rem;
@@ -66,10 +76,9 @@ const StyledProductImage = styled.div`
   position: relative;
 
   div {
+    position: absolute;
     width: 60px;
     height: 60px;
-
-    position: absolute;
 
     top: 0.4rem;
     left: 0.4rem;
@@ -90,11 +99,12 @@ const StyledProductImage = styled.div`
 
   img {
     border-radius: var(--border-radius-sm);
+    object-fit: cover; /* Resmi div'e tamamen sığdırır ve oranı korur */
   }
 `;
 const StyledProductFooter = styled.div`
   p {
-    font-size: 18px;
+    font-size: 20px;
     padding: 0.4rem 0.6rem;
     &:first-of-type {
       span {
