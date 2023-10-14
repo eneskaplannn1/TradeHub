@@ -1,4 +1,9 @@
-import { styled } from "styled-components";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { getProduct } from "../../services/apiProducts";
+import { toast } from "react-hot-toast";
+
 import Button from "../../UI/button";
 import { AiOutlineHeart } from "react-icons/ai";
 import StarRating from "../../UI/star";
@@ -19,34 +24,54 @@ import {
   StyledReviewHead,
   StyledReviews,
 } from "../../UI/review";
-import { useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { getProduct } from "../../services/apiProducts";
 import Skeleton from "../../components/skeleton";
+import { addProductToCart } from "../../features/product/productSlice";
 
 function ProductDetail() {
+  const dispatch = useDispatch();
+
   const { productId } = useParams();
-  console.log(productId);
 
   const { data, isLoading } = useQuery({
     queryKey: ["product", productId],
     queryFn: () => getProduct(productId),
   });
 
-  // Check if 'doc' exists before destructuring
   const productData = data?.data?.data?.doc || {};
 
   const {
     brand,
     productDesc,
     price,
-    quantity,
+    quantity, // change this name  to meaningful one
     ratingsAverage,
     ratingsQuantity,
     category,
     cargoCharge,
     sold,
   } = productData;
+
+  const handleAddCart = function () {
+    dispatch(
+      addProductToCart({
+        productId,
+        brand,
+        productDesc,
+        category,
+        price,
+        quantity: 1,
+      })
+    );
+    console.log({
+      productId,
+      brand,
+      productDesc,
+      category,
+      price,
+      quantity: 1,
+    });
+    toast.success("Product added to cart successfully");
+  };
 
   return (
     <>
@@ -85,7 +110,11 @@ function ProductDetail() {
             </StyledReviewSummary>
             <StyledProductPrice>{price} USD</StyledProductPrice>
             <StyledButtonContainer>
-              <Button size="xsmall" variation="orange">
+              <Button
+                size="xsmall"
+                variation="orange"
+                onClick={() => handleAddCart()}
+              >
                 Add to the card
               </Button>
               <StyledProductFavorite>

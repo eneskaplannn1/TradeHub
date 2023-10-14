@@ -7,23 +7,25 @@ import {
   StyledItemHead,
 } from "../../UI/item";
 
-function Item() {
+function Item({ product }) {
   return (
     <StyledItemContainer>
       <StyledItem>
         <StyledItemHead>
           <div>
             Seller:
-            <span>Anker</span>
+            <span>{product?.brand}</span>
           </div>
         </StyledItemHead>
         <StyledItemBody>
-          <img src="/product.jpg" />
+          <img src={`/productImage/${product?.category}.jpg`} />
           <div className="product">
-            <span>Anker</span> SoundCore Space Q45 Kulak Üstü Bluetooth Kulaklık
+            <span>{product?.brand}</span> {product?.productDesc}
           </div>
-          <Counter />
-          <div className="price">2000TL</div>
+          <Counter quantity={product?.quantity} product={product} />
+          <div className="price">
+            {(product?.price * product?.quantity).toFixed(1)} $
+          </div>
           <BsTrash />
         </StyledItemBody>
       </StyledItem>

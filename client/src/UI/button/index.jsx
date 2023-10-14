@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 const sizes = {
   xsmall: css`
     font-size: 1rem;
-    padding: 5px 15px;
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
@@ -24,6 +23,13 @@ const sizes = {
     font-size: 1.6rem;
     padding: 1.2rem 2.4rem;
     font-weight: 500;
+  `,
+  amount: css`
+    padding: 5px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
   `,
 };
 
@@ -76,6 +82,15 @@ const variations = {
     &:hover {
       background-color: var(--color-zinc-300);
     }
+  `,
+  amount: css`
+    text-align: center;
+    width: 60px;
+
+    border: 1px solid var(--color-zinc-300);
+    border-radius: 0;
+
+    color: var(--color-orange-500);
   `,
 };
 

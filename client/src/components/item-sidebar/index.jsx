@@ -46,7 +46,7 @@ const StyledSummaryFooter = styled.div`
   font-weight: bold;
 `;
 
-function ItemSidebar() {
+function ItemSidebar({ cart }) {
   return (
     <StyledItemSidebar>
       <StyledOrderSummary>

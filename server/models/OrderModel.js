@@ -8,7 +8,7 @@ const OrderSchema = new mongoose.Schema({
         ref: 'Product',
         required: [true, 'Order must have product!'],
       },
-      amount: Number,
+      quantity: Number,
       // _id: false,
     },
   ],
