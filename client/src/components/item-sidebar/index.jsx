@@ -55,8 +55,9 @@ const StyledSummaryFooter = styled.div`
 function ItemSidebar({ cart }) {
   const { mutate, isLoading } = useMutation({
     mutationFn: handleOrder,
-    mutationKey: ["handleBooking"],
+    mutationKey: ["handleOrder"],
   });
+
   const handlePaymentSession = function () {
     // console.log(cart);
     mutate(cart);
@@ -69,7 +70,7 @@ function ItemSidebar({ cart }) {
           <div>
             <div>Sum of Products</div>
             <div className="number">
-              {cart.totalPrice ? cart.totalPrice.toFixed(0) : 0}$
+              {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(0)) : 0}$
             </div>
           </div>
           <div>
@@ -83,7 +84,7 @@ function ItemSidebar({ cart }) {
         </StyledSummaryBody>
         <StyledSummaryFooter>
           <div>Total Price</div>
-          {cart.totalPrice ? cart.totalPrice.toFixed(0) : 0}$
+          {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(0)) : 0}$
         </StyledSummaryFooter>
       </StyledOrderSummary>
       <Button onClick={() => handlePaymentSession()} variation="orange">

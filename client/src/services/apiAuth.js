@@ -22,5 +22,13 @@ const handleSignUp = async (data) => {
     throw new Error(err.response.data.message);
   }
 };
+const handleLoginWithCookie = async function () {
+  try {
+    return await customRequest.get("/users/logUserIn");
+  } catch (err) {
+    // console.log(err.response.data);
+    throw new Error(err.response.data.message);
+  }
+};
 
-export { handleLogin, handleSignUp };
+export { handleLogin, handleSignUp, handleLoginWithCookie };

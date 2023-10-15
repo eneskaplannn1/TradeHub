@@ -3,12 +3,16 @@ import { useForm } from "react-hook-form";
 import { handleLogin } from "../services/apiAuth";
 import { logUserIn } from "../features/auth/authSlice";
 import { toast } from "react-hot-toast";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function useLogin() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const location = useLocation();
+  const { user } = useSelector((store) => store.auth);
+
+  if (user) navigate(location?.state?.from ? location.state.from : "/");
 
   const {
     register,

@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider, useQuery } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 import {
@@ -31,12 +31,25 @@ import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
-
-const client = new QueryClient();
+import { handleLoginWithCookie } from "./services/apiAuth";
+import RequiredAuth from "./features/auth/requiredAuth";
+import { useDispatch } from "react-redux";
+import { logUserIn } from "./features/auth/authSlice";
 
 function App() {
+  const dispatch = useDispatch();
+  const { data, isLoading } = useQuery({
+    queryFn: handleLoginWithCookie,
+    queryKey: ["login"],
+  });
+  console.log(data);
+
+  if (data?.data) {
+    dispatch(logUserIn(data?.data));
+  }
+
   return (
-    <QueryClientProvider client={client}>
+    <>
       <ReactQueryDevtools initialIsOpen={false} />
       <GlobalStyle />
       <Toaster
@@ -64,7 +77,13 @@ function App() {
       />
       <BrowserRouter>
         <Routes>
-          <Route element={<RootLayout />}>
+          <Route
+            element={
+              <RequiredAuth allowedRoles={["customer", "seller"]}>
+                <RootLayout />
+              </RequiredAuth>
+            }
+          >
             <Route index element={<Navigate replace to="/products" />} />
 
             {/* Product routes */}
@@ -118,7 +137,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </QueryClientProvider>
+    </>
   );
 }
 

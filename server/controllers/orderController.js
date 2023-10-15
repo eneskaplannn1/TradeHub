@@ -60,8 +60,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     payment_method_types: ['card'],
     success_url: `http://localhost:5173/account/orders`,
     cancel_url: `http://localhost:5173/cart`, // ! handle here later
-    customer_email: 'john.smith@example.com',
-    client_reference_id: '651da76a1d1dc9be6197c1cb',
+    customer_email: 'john.smith@example.com', //! handle later
+    client_reference_id: '651da76a1d1dc9be6197c1cb', //! handle later
     mode: 'payment',
     line_items: transformedProducts,
   });

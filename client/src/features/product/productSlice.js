@@ -2,25 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: {
-    products: [
-      {
-        brand: "Maybelline",
-        category: "cosmetic",
-        price: 7.99,
-        productDesc: "Maybelline New York Mascara",
-        productId: "651da76a1d1dc9be6197c219",
-        quantity: 2,
-      },
-      {
-        brand: "Nike",
-        category: "sneakers",
-        price: 129.99,
-        productDesc: "Nike Air Max 270 Sneakers",
-        productId: "651da76a1d1dc9be6197c1c5",
-        quantity: 1,
-      },
-    ],
-    totalPrice: null,
+    products: [],
+    totalPrice: 0,
     customer: null,
   },
 };
@@ -39,9 +22,11 @@ const productSlice = createSlice({
       if (item) {
         item.quantity++;
         state.cart.totalPrice += Number(item.price);
+        localStorage.setItem("cart", JSON.stringify(state.cart));
       } else {
         state.cart.products.push(action.payload);
         state.cart.totalPrice += Number(action.payload.price);
+        localStorage.setItem("cart", JSON.stringify(state.cart));
       }
     },
     removeProductFromCart: (state, action) => {
@@ -55,9 +40,11 @@ const productSlice = createSlice({
           (product) => product.productId !== action.payload.productId
         );
         state.cart.totalPrice -= Number(item.price);
+        localStorage.setItem("cart", JSON.stringify(state.cart));
       } else {
         item.quantity -= 1;
         state.cart.totalPrice -= Number(item.price);
+        localStorage.setItem("cart", JSON.stringify(state.cart));
       }
       //   state.cart.filter((product) => {
       //     return product._id !== action.payload;
@@ -66,9 +53,17 @@ const productSlice = createSlice({
     clearCart(state) {
       state.cart = initialState;
     },
+    setCartData(state, action) {
+      state.cart = action.payload;
+    },
   },
 });
 
-export const { addProductToCart, removeProductFromCart } = productSlice.actions;
+export const {
+  addProductToCart,
+  removeProductFromCart,
+  setCartData,
+  clearCart,
+} = productSlice.actions;
 
 export default productSlice.reducer;

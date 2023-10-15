@@ -4,16 +4,16 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
   /* Orange */
-  --color-orange-0: #fff4e6;
+  --color-orange-0: #fff9db;
   --color-orange-50: #ffe8cc;
   --color-orange-100: #ffd8a8;
-  --color-orange-200: #fed7aa;
-  --color-orange-300: #fdba74;
-  --color-orange-400: #ffa94d;  
-  --color-orange-500: #ff922b;
-  --color-orange-600: #c2410c;
-  --color-orange-700: #f76707;
-  --color-orange-800: #e8590c;
+  --color-orange-200: #ffc078;
+  --color-orange-300: #ffa94d;
+  --color-orange-400: #ff922b;  
+  --color-orange-500: #fd7e14;
+  --color-orange-600: #f76707;
+  --color-orange-700: #e8590c;
+  --color-orange-800: #d9480f;
   --color-orange-900: #d9480f;
 
   --color-zinc-0: #fff;

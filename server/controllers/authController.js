@@ -23,7 +23,6 @@ exports.sendEmail = async (req, res, next) => {
     domain: process.env.MAILGUN_DOMAIN,
     port: 587,
   });
-  console.log(1);
 
   mailgun.messages().send(
     {
@@ -114,8 +113,7 @@ const createSendToken = (user, statusCode, res) => {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
     httpOnly: false,
     withCredentials: true,
-    secure: true,
-    sameSite: 'None',
+    SameSite: 'None',
   };
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
@@ -213,7 +211,6 @@ exports.protect = catchAsync(async (req, res, next) => {
 
 exports.logUserIn = catchAsync(async (req, res, next) => {
   let token;
-
   // Check if the request header contains the "Authorization" header with a Bearer token
   if (req.headers.authorization?.startsWith('Bearer')) {
     token = req.headers.authorization.split(' ')[1];
@@ -230,7 +227,6 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
       new AppError('You are not logged in! Please log in to get access', 401)
     );
   }
-
   // Verify the token using the JWT_SECRET and decode its payload
   const decoded = await jwt.verify(token, process.env.JWT_SECRET);
 

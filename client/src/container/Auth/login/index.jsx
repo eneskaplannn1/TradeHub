@@ -20,8 +20,7 @@ function LoginContainer() {
 
   const { register, handleSubmit, handleSubmitForm, errors, isLoading } =
     useLogin();
-  // console.log(errors);
-  // console.log(isLoading);
+
   return (
     <StyledContainer variation="md">
       <StyledAuthHead>

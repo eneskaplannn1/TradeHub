@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 function Product({ product }) {
   const sevenDaysAgo = new Date();
   sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-  const productCreatedAt = new Date(product.createdAt);
+  const productCreatedAt = new Date(product?.createdAt);
 
   const isNew =
     new Date(
@@ -45,7 +45,7 @@ function Product({ product }) {
             </span>
           </div>
         )}
-        <img src={`/productImage/${product.category}.jpg`} />
+        <img loading="lazy" src={`/productImage/${product.category}.png`} />
       </StyledProductImage>
       <StyledProductFooter>
         <p>
