@@ -18,7 +18,7 @@ function Item({ product }) {
           </div>
         </StyledItemHead>
         <StyledItemBody>
-          <img loading="lazy" src={`/productImage/${product?.category}.jpg`} />
+          <img loading="lazy" src={`/productImage/${product?.category}.png`} />
           <div className="product">
             <span>{product?.brand}</span> {product?.productDesc}
           </div>
