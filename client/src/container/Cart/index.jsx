@@ -15,15 +15,14 @@ const StyledCartContainer = styled.section`
 function CartContainer() {
   const { cart } = useSelector((store) => store.cart);
   console.log(cart);
-  console.log();
   return (
     <StyledCartContainer>
       <StyledItemContainer>
-        {cart.length === 0 ? (
+        {cart.products.length === 0 ? (
           //! design a decent components
           <h1>You do not have any product in your cart</h1>
         ) : (
-          cart.map((product) => {
+          cart.products.map((product) => {
             return <Item key={product.productId} product={product} />;
           })
         )}

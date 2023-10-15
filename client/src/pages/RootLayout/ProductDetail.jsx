@@ -62,14 +62,14 @@ function ProductDetail() {
         quantity: 1,
       })
     );
-    console.log({
-      productId,
-      brand,
-      productDesc,
-      category,
-      price,
-      quantity: 1,
-    });
+    // console.log({
+    //   productId,
+    //   brand,
+    //   productDesc,
+    //   category,
+    //   price,
+    //   quantity: 1,
+    // });
     toast.success("Product added to cart successfully");
   };
 

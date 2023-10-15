@@ -84,6 +84,7 @@ const handleExpiredJWT = () =>
 
 module.exports = (err, req, res, next) => {
   let error = Object.assign(err); // ! çözüm 2
+  console.log(error);
 
   // console.log(error);
   if (error.name === 'Error') error = handleError(error);

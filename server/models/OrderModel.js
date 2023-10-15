@@ -25,6 +25,7 @@ const OrderSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  //! createdAt den itibaren 1 gün geçince shipped 1 gün daha geçince delivered olacak
   orderStatus: {
     type: String,
     enum: ['pending', 'shipped', 'delivered'],

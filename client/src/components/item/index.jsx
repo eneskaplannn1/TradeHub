@@ -24,7 +24,7 @@ function Item({ product }) {
           </div>
           <Counter quantity={product?.quantity} product={product} />
           <div className="price">
-            {(product?.price * product?.quantity).toFixed(1)} $
+            {(product?.price * product?.quantity).toFixed(0)} $
           </div>
           <BsTrash />
         </StyledItemBody>

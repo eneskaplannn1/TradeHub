@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 import Button from "../../UI/button";
+import { useMutation } from "@tanstack/react-query";
+import { handleOrder } from "../../services/apiOrders";
 
 const StyledItemSidebar = styled.aside`
   display: flex;
@@ -44,9 +46,21 @@ const StyledSummaryFooter = styled.div`
   padding-top: 0.5rem;
   text-align: end;
   font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 function ItemSidebar({ cart }) {
+  const { mutate, isLoading } = useMutation({
+    mutationFn: handleOrder,
+    mutationKey: ["handleBooking"],
+  });
+  const handlePaymentSession = function () {
+    // console.log(cart);
+    mutate(cart);
+  };
   return (
     <StyledItemSidebar>
       <StyledOrderSummary>
@@ -54,20 +68,27 @@ function ItemSidebar({ cart }) {
         <StyledSummaryBody>
           <div>
             <div>Sum of Products</div>
-            <div className="number">2000TL</div>
+            <div className="number">
+              {cart.totalPrice ? cart.totalPrice.toFixed(0) : 0}$
+            </div>
           </div>
           <div>
             <div>Cargo charge </div>
-            <div className="number">50TL</div>
+            <div className="number">0$</div>
           </div>
           <div>
             <div>Discount</div>
-            <div className="discount number">120TL</div>
+            <div className="discount number">0$</div>
           </div>
         </StyledSummaryBody>
-        <StyledSummaryFooter>1.524,75 TL</StyledSummaryFooter>
+        <StyledSummaryFooter>
+          <div>Total Price</div>
+          {cart.totalPrice ? cart.totalPrice.toFixed(0) : 0}$
+        </StyledSummaryFooter>
       </StyledOrderSummary>
-      <Button variation="orange">Proceed to checkout</Button>
+      <Button onClick={() => handlePaymentSession()} variation="orange">
+        {isLoading ? "Processing checkout.." : "Proceed to checkout"}
+      </Button>
     </StyledItemSidebar>
   );
 }
