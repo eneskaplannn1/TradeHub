@@ -10,20 +10,29 @@ import {
   StyledProductFooter,
   StyledProductImage,
 } from "../../UI/product";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { addProductToFavorites } from "../../services/apiProducts";
+import checkIsNewProduct from "../../utils/checkNewProduct";
+import { useSelector } from "react-redux";
 
 function Product({ product }) {
-  const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-  const productCreatedAt = new Date(product?.createdAt);
+  const user = useSelector((store) => store.auth.user);
+  const queryClient = useQueryClient();
+  const isNew = checkIsNewProduct(product.createdAt);
 
-  const isNew =
-    new Date(
-      `${productCreatedAt.getFullYear()}-${productCreatedAt.getMonth()}-${productCreatedAt.getDate()}`
-    ) >
-    new Date(
-      `${sevenDaysAgo.getFullYear()}-${sevenDaysAgo.getMonth()}-${sevenDaysAgo.getDate()}`
-    );
+  const { mutate } = useMutation({
+    mutationFn: addProductToFavorites,
+    mutationKey: ["addFavorites", product._id],
+    onSuccess: () => {
+      return queryClient.invalidateQueries(["login"]);
+    },
+  });
 
+  const handleAddFavorites = function () {
+    mutate(product._id);
+  };
+
+  const selected = user.favorites.includes(product._id);
   return (
     <ProductSummary>
       <ProductHead>
@@ -33,7 +42,7 @@ function Product({ product }) {
             <p>Free cargo</p>
           </StyledCargoHead>
         )}
-        <StyledProductFavorite>
+        <StyledProductFavorite selected={selected} onClick={handleAddFavorites}>
           <AiOutlineHeart />
         </StyledProductFavorite>
       </ProductHead>

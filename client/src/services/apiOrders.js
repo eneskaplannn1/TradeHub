@@ -1,8 +1,11 @@
 import customRequest from "../utils/customRequest";
 
-const handleOrder = async function (cart) {
+const handleOrder = async function ({ cart, customerId }) {
   try {
-    const res = await customRequest.post("/orders/create-order", cart);
+    const res = await customRequest.post("/orders/create-order", {
+      cart,
+      customerId,
+    });
     // console.log(res.data.session);
     window.location.assign(res.data.session.url);
     return res;

@@ -1,5 +1,6 @@
 const factory = require('../controllers/factoryController');
 const Product = require('../models/ProductModel');
+const User = require('../models/UserModel');
 const catchAsync = require('../utils/catchAsync');
 
 exports.getAllProducts = factory.getAll(Product);
@@ -13,7 +14,30 @@ exports.deleteProduct = factory.deleteOne(Product);
 // });
 
 exports.addFavorites = catchAsync(async (req, res, next) => {
-  return 'hello world';
+  // productın idsini almam lazım
+
+  const { productId } = req.params;
+
+  // productId, kullanıcının favorites dizisinde zaten var mı kontrol edin
+  const isFavorite = req.user.favorites.includes(productId);
+
+  let updatedUser;
+
+  if (isFavorite) {
+    updatedUser = await User.findByIdAndUpdate(req.user._id, {
+      $pull: { favorites: productId },
+    });
+  } else {
+    updatedUser = await User.findByIdAndUpdate(req.user._id, {
+      $push: { favorites: productId },
+    });
+  }
+  res.status(200).json({
+    status: 'success',
+    updatedUser,
+  });
+
+  // useri save ediyorum ve bitiyor
 });
 
 exports.getBestRatedProducts = catchAsync(async (req, res, next) => {

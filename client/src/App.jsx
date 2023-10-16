@@ -8,6 +8,10 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import RequiredAuth from "./features/auth/requiredAuth";
+import { useDispatch } from "react-redux";
+import { logUserIn } from "./features/auth/authSlice";
+import { handleLoginWithCookie } from "./services/apiAuth";
 
 import RootLayout from "./pages/RootLayout/RootLayout";
 import Products from "./pages/RootLayout/Products";
@@ -31,10 +35,6 @@ import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
-import { handleLoginWithCookie } from "./services/apiAuth";
-import RequiredAuth from "./features/auth/requiredAuth";
-import { useDispatch } from "react-redux";
-import { logUserIn } from "./features/auth/authSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,7 +42,6 @@ function App() {
     queryFn: handleLoginWithCookie,
     queryKey: ["login"],
   });
-  // console.log(data);
 
   if (data?.data) {
     dispatch(logUserIn(data?.data));

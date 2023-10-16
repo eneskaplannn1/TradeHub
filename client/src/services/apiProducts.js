@@ -1,7 +1,6 @@
 import customRequest from "../utils/customRequest";
 
 const getAllProducts = async function (page) {
-  // console.log(`/products${page ? "?page=" + page : ""}`);
   try {
     const res = await customRequest(`/products${page ? "?page=" + page : ""}`);
     return res;
@@ -18,7 +17,6 @@ const getProduct = async function (id) {
   }
 };
 const getProductsByCategory = async function (category, page) {
-  // console.log(page);
   try {
     const res = await customRequest(
       `/products?category=${category}&page=${page}`
@@ -49,10 +47,22 @@ const getNewProducts = async function (page) {
   }
 };
 
+const addProductToFavorites = async function (productId) {
+  try {
+    const res = await customRequest(
+      `/products/add-product-to-favorites/${productId}`
+    );
+    return res;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
 export {
   getAllProducts,
   getProductsByCategory,
   getBestRatedProducts,
   getNewProducts,
   getProduct,
+  addProductToFavorites,
 };

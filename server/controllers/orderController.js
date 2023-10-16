@@ -1,6 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const factory = require('../controllers/factoryController');
 const Order = require('../models/OrderModel');
+const User = require('../models/UserModel');
 const Product = require('../models/ProductModel');
 const catchAsync = require('../utils/catchAsync');
 
@@ -39,9 +40,10 @@ exports.saleDetails = catchAsync((req, res, next) => {
 });
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
-  // const product = await Product.findById(req.params.productId);
-
-  const transformedProducts = req.body.products.map((product) => {
+  const product = await Product.findById(req.params.productId);
+  const user = await User.findById(req.body.customerId);
+  console.log(user);
+  const transformedProducts = req.body.cart.products.map((product) => {
     return {
       quantity: product.quantity,
       price_data: {
@@ -54,13 +56,12 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       },
     };
   });
-  console.log(transformedProducts);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     success_url: `http://localhost:5173/account/orders`,
     cancel_url: `http://localhost:5173/cart`, // ! handle here later
-    customer_email: 'john.smith@example.com', //! handle later
+    customer_email: user.email, //! handle later
     client_reference_id: '651da76a1d1dc9be6197c1cb', //! handle later
     mode: 'payment',
     line_items: transformedProducts,

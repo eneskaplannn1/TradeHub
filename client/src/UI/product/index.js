@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 
 const StyledProductContainer = styled.div`
   display: grid;
@@ -49,7 +49,7 @@ const StyledCargoHead = styled.div`
   gap: 0.2rem;
 `;
 
-const StyledProductFavorite = styled.div`
+const StyledProductFavorite = styled.button`
   z-index: 100;
   cursor: pointer;
   position: absolute;
@@ -65,11 +65,24 @@ const StyledProductFavorite = styled.div`
 
   border: 1px solid var(--color-zinc-800);
 
+  .selected {
+    background-color: var(--color-orange-700);
+  }
+
   &:hover {
     border: 1px solid var(--color-zinc-0);
     color: var(--color-zinc-0);
     background-color: var(--color-orange-700);
   }
+
+  ${(props) =>
+    props.selected
+      ? css`
+          background-color: var(--color-orange-700);
+          color: var(--color-zinc-0);
+          border: 1px solid var(--color-zinc-0);
+        `
+      : css``}
 `;
 
 const StyledProductImage = styled.div`

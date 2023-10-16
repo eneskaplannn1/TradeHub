@@ -34,6 +34,11 @@ const UserSchema = new mongoose.Schema({
     default: false,
   },
   specialToken: String,
+  favorites: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+    },
+  ],
 });
 
 // UserSchema.pre(/^find/, function (next) {

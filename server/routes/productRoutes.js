@@ -1,10 +1,17 @@
 const express = require('express');
 const ProductController = require('./../controllers/productController');
+const AuthController = require('./../controllers/authController');
 const productRouter = express.Router();
 
 /**
  //TODO productRouter.route('/add-to-favorite').post(ProductController.addToFavorites);
 **/
+
+productRouter.get(
+  '/add-product-to-favorites/:productId',
+  AuthController.protect,
+  ProductController.addFavorites
+);
 
 productRouter
   .route('/get-latest-products')

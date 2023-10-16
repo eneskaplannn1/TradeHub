@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import Button from "../../UI/button";
 import { useMutation } from "@tanstack/react-query";
 import { handleOrder } from "../../services/apiOrders";
+import { useSelector } from "react-redux";
 
 const StyledItemSidebar = styled.aside`
   display: flex;
@@ -53,6 +54,7 @@ const StyledSummaryFooter = styled.div`
 `;
 
 function ItemSidebar({ cart }) {
+  const { _id } = useSelector((store) => store.auth.user);
   const { mutate, isLoading } = useMutation({
     mutationFn: handleOrder,
     mutationKey: ["handleOrder"],
@@ -60,7 +62,7 @@ function ItemSidebar({ cart }) {
 
   const handlePaymentSession = function () {
     // console.log(cart);
-    mutate(cart);
+    mutate({ cart, customerId: _id });
   };
   return (
     <StyledItemSidebar>
