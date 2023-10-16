@@ -58,7 +58,7 @@ function App() {
         containerStyle={{ margin: "12px" }}
         toastOptions={{
           success: {
-            duration: 200,
+            duration: 2000,
           },
           error: {
             duration: 3500,
@@ -101,12 +101,10 @@ function App() {
 
             {/* Product route */}
             <Route path="/cart" element={<Cart />} />
-
+            <Route path="/favorites" element={<Favorites />} />
             {/* Account and Spesific Routes */}
 
             <Route element={<Layout />}>
-              <Route path="/favorites" element={<Favorites />} />
-
               <Route path="/account">
                 <Route index path="/account/orders" element={<Orders />} />
                 <Route

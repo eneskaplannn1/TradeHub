@@ -6,6 +6,7 @@ import {
   StyledItemContainer,
   StyledItemHead,
 } from "../../UI/item";
+import Modal from "../../UI/modal";
 
 function Item({ product }) {
   return (
@@ -26,7 +27,16 @@ function Item({ product }) {
           <div className="price">
             {(product?.price * product?.quantity).toFixed(0)} $
           </div>
-          <BsTrash />
+          <Modal>
+            <Modal.Open opens="delete-product">
+              <button>
+                <BsTrash />
+              </button>
+            </Modal.Open>
+            <Modal.Window name="delete-product">
+              <h1>hello world</h1>
+            </Modal.Window>
+          </Modal>
         </StyledItemBody>
       </StyledItem>
     </StyledItemContainer>

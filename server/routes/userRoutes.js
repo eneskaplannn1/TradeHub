@@ -12,7 +12,7 @@ userRouter.get('/email', authController.sendEmail);
 // for user login post /login
 
 userRouter.post('/login', authController.login);
-userRouter.get('/logout', authController.logout);
+userRouter.post('/logout', authController.logout);
 userRouter.post('/forgotPassword', authController.forgotPassword);
 userRouter.post('/resetPassword/:resetToken', authController.resetPassword);
 

@@ -10,6 +10,15 @@ const handleLogin = async (data) => {
     throw new Error(err.response.data.message);
   }
 };
+const handleLogout = async () => {
+  try {
+    // console.log(res);
+    return await customRequest.post("/users/logout");
+  } catch (err) {
+    // console.log(err.response.data);
+    throw new Error(err);
+  }
+};
 const handleSignUp = async (data) => {
   // console.log(data);
   try {
@@ -31,4 +40,4 @@ const handleLoginWithCookie = async function () {
   }
 };
 
-export { handleLogin, handleSignUp, handleLoginWithCookie };
+export { handleLogin, handleSignUp, handleLoginWithCookie, handleLogout };

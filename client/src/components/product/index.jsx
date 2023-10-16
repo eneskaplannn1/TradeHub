@@ -27,7 +27,7 @@ function Product({ product }) {
   return (
     <ProductSummary>
       <ProductHead>
-        {!product.cargoCharge && (
+        {!product?.cargoCharge && (
           <StyledCargoHead>
             <BsBox />
             <p>Free cargo</p>
@@ -45,15 +45,15 @@ function Product({ product }) {
             </span>
           </div>
         )}
-        <img loading="lazy" src={`/productImage/${product.category}.png`} />
+        <img src={`/productImage/${product?.category}.png`} />
       </StyledProductImage>
       <StyledProductFooter>
         <p>
-          <span>{product.brand}</span> {product.productDesc}
+          <span>{product?.brand}</span> {product?.productDesc}
         </p>
-        <p>{product.price}$</p>
+        <p>{product?.price}$</p>
       </StyledProductFooter>
-      <NavLink className="navigation" to={`/product/${product._id}`}></NavLink>
+      <NavLink className="navigation" to={`/product/${product?._id}`}></NavLink>
     </ProductSummary>
   );
 }

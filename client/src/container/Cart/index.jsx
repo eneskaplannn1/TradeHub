@@ -28,7 +28,6 @@ function CartContainer() {
     <StyledCartContainer>
       <StyledItemContainer>
         {cart?.products?.length === 0 ? (
-          //! design a decent components
           <h1>You do not have any product in your cart</h1>
         ) : (
           cart.products.map((product) => {
