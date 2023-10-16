@@ -10,26 +10,18 @@ import {
   getNewProducts,
   getProductsByCategory,
 } from "../../services/apiProducts";
+import useProductCategory from "../../hooks/useProductCategory";
 
 function ProductCategory() {
+  const { category } = useParams();
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);
   let page = searchParams.get("page");
+
   if (!page) page = 1;
   if (Number(page) < 1) page = 1;
-  const { category } = useParams();
 
-  const { data, isLoading } = useQuery({
-    queryFn: () => {
-      return category === "best-rated"
-        ? getBestRatedProducts(page)
-        : category === "new-products"
-        ? getNewProducts(page)
-        : getProductsByCategory(category, page);
-    },
-    queryKey: ["products", category],
-  });
-  // console.log(data);
+  const { data, isLoading } = useProductCategory(category, page);
 
   return (
     <>

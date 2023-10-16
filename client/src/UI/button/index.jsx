@@ -43,6 +43,15 @@ const variations = {
       transform: translateY(-5px);
     }
   `,
+  red: css`
+    background: var(--color-red-700);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--color-red-800);
+      transform: translateY(-5px);
+    }
+  `,
   orange: css`
     background: var(--color-orange-700);
     color: #fff;

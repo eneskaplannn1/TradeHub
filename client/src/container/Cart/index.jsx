@@ -6,6 +6,7 @@ import Item from "../../components/item";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setCartData } from "../../features/product/productSlice";
+import NoProduct from "../../components/product/no-product";
 
 const StyledCartContainer = styled.section`
   padding: 0 3.2rem;
@@ -28,7 +29,7 @@ function CartContainer() {
     <StyledCartContainer>
       <StyledItemContainer>
         {cart?.products?.length === 0 ? (
-          <h1>You do not have any product in your cart</h1>
+          <NoProduct />
         ) : (
           cart.products.map((product) => {
             return <Item key={product.productId} product={product} />;

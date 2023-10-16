@@ -1,6 +1,7 @@
+import { NavLink } from "react-router-dom";
+
 import { BsBox } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-
 import {
   ProductHead,
   ProductSummary,
@@ -9,7 +10,6 @@ import {
   StyledProductFooter,
   StyledProductImage,
 } from "../../UI/product";
-import { NavLink } from "react-router-dom";
 
 function Product({ product }) {
   const sevenDaysAgo = new Date();

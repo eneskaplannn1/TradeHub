@@ -22,8 +22,6 @@ function ReviewContainer() {
         <ProductReview />
         <ProductReview />
         <ProductReview />
-        <ProductReview />
-        <ProductReview />
       </StyledReviewContainer>
     </>
   );

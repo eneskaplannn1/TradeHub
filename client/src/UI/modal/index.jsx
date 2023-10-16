@@ -12,8 +12,8 @@ const StyledOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
   z-index: 1000;
   transition: all 0.4s ease;
 `;
@@ -48,7 +48,7 @@ const StyledModal = styled.div`
 
   overflow: auto;
 
-  background-color: #18212f;
+  background-color: var(--color-zinc-600);
   color: white;
   border-radius: 8px;
   transition: all 0.4s ease;

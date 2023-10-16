@@ -1,4 +1,4 @@
-import { QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 import {
@@ -38,11 +38,11 @@ import { logUserIn } from "./features/auth/authSlice";
 
 function App() {
   const dispatch = useDispatch();
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryFn: handleLoginWithCookie,
     queryKey: ["login"],
   });
-  console.log(data);
+  // console.log(data);
 
   if (data?.data) {
     dispatch(logUserIn(data?.data));

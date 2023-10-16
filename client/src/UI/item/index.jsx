@@ -67,4 +67,28 @@ const StyledItemBody = styled.div`
   }
 `;
 
-export { StyledItemContainer, StyledItem, StyledItemHead, StyledItemBody };
+const StyledDeleteItemTemplate = styled.div`
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    color: var(--color-orange-800);
+  }
+  .container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+`;
+
+export {
+  StyledItemContainer,
+  StyledItem,
+  StyledItemHead,
+  StyledItemBody,
+  StyledDeleteItemTemplate,
+};

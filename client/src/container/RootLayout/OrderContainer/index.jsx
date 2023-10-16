@@ -38,8 +38,6 @@ function OrderContainer() {
       <Order />
       <Order />
       <Order />
-      <Order />
-      <Order />
     </>
   );
 }
