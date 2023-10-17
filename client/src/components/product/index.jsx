@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 import { BsBox } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -18,13 +19,19 @@ import { useSelector } from "react-redux";
 function Product({ product }) {
   const user = useSelector((store) => store.auth.user);
   const queryClient = useQueryClient();
-  const isNew = checkIsNewProduct(product.createdAt);
+  const isNew = checkIsNewProduct(product?.createdAt);
 
   const { mutate } = useMutation({
     mutationFn: addProductToFavorites,
     mutationKey: ["addFavorites", product._id],
-    onSuccess: () => {
-      return queryClient.invalidateQueries(["login"]);
+    onSuccess: (data) => {
+      if (!data.data.isFavorite) {
+        toast.loading("Product adding to favorites... ");
+      } else {
+        toast.loading("Product removing from favorites...");
+      }
+      queryClient.invalidateQueries(["login"]);
+      queryClient.invalidateQueries(["favorites"]);
     },
   });
 

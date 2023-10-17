@@ -16,6 +16,14 @@ const getProduct = async function (id) {
     throw new Error(err);
   }
 };
+const getUsersFavorites = async function (userId) {
+  try {
+    const res = await customRequest(`/users/${userId}`);
+    return res;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
 const getProductsByCategory = async function (category, page) {
   try {
     const res = await customRequest(
@@ -65,4 +73,5 @@ export {
   getNewProducts,
   getProduct,
   addProductToFavorites,
+  getUsersFavorites,
 };

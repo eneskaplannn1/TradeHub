@@ -10,6 +10,7 @@ const handleLogin = async (data) => {
     throw new Error(err.response.data.message);
   }
 };
+
 const handleLogout = async () => {
   try {
     // console.log(res);

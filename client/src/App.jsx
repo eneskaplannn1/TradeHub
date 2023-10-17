@@ -63,7 +63,7 @@ function App() {
             duration: 3500,
           },
           loading: {
-            duration: 3000,
+            duration: 500,
           },
           style: {
             fontSize: "1rem",
