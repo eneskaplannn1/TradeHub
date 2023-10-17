@@ -10,12 +10,7 @@ import Skeleton from "../../../components/skeleton";
 const StyledFavoriteContainer = styled.div`
   padding: 1rem;
 `;
-const StyledFavoriteList = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  padding: 1rem;
-`;
+
 function FavoriteContainer() {
   const user = useSelector((store) => store.auth.user);
   const { data, isLoading } = useQuery({

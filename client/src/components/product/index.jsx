@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { toast } from "react-hot-toast";
 
 import { BsBox } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -11,33 +10,15 @@ import {
   StyledProductFooter,
   StyledProductImage,
 } from "../../UI/product";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { addProductToFavorites } from "../../services/apiProducts";
 import checkIsNewProduct from "../../utils/checkNewProduct";
 import { useSelector } from "react-redux";
+import useFavorites from "../../hooks/useFavorites";
 
 function Product({ product }) {
   const user = useSelector((store) => store.auth.user);
-  const queryClient = useQueryClient();
   const isNew = checkIsNewProduct(product?.createdAt);
 
-  const { mutate } = useMutation({
-    mutationFn: addProductToFavorites,
-    mutationKey: ["addFavorites", product._id],
-    onSuccess: (data) => {
-      if (!data.data.isFavorite) {
-        toast.loading("Product adding to favorites... ");
-      } else {
-        toast.loading("Product removing from favorites...");
-      }
-      queryClient.invalidateQueries(["login"]);
-      queryClient.invalidateQueries(["favorites"]);
-    },
-  });
-
-  const handleAddFavorites = function () {
-    mutate(product._id);
-  };
+  const { handleAddFavorites } = useFavorites({ product });
 
   const selected = user.favorites.includes(product._id);
   return (

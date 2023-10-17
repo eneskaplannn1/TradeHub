@@ -1,4 +1,7 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addProductToCart } from "../../features/product/productSlice";
+import { toast } from "react-hot-toast";
+import useFavorites from "../../hooks/useFavorites";
 
 import {
   StyledButtonContainer,
@@ -14,14 +17,15 @@ import Button from "../../UI/button";
 import StarRating from "../../UI/star";
 import { AiOutlineHeart } from "react-icons/ai";
 import { StyledProductFavorite } from "../../UI/product";
-import { addProductToCart } from "../../features/product/productSlice";
-import { toast } from "react-hot-toast";
 
 function ProductDetailContainer({ productData, isLoading }) {
-  const dispatch = useDispatch();
+  const user = useSelector((store) => store.auth.user);
 
+  const dispatch = useDispatch();
   //prettier-ignore
-  const {brand,productDesc,price,ratingsAverage,category} = productData; //! sold , cargoCharge ve quantity i destruct etmedim
+  const {brand,productDesc,price,ratingsAverage,category} = productData;
+
+  const { handleAddFavorites } = useFavorites({ product: productData });
 
   const handleAddCart = function () {
     dispatch(
@@ -36,6 +40,9 @@ function ProductDetailContainer({ productData, isLoading }) {
     );
     toast.success("Product added to cart successfully");
   };
+
+  const selected = user.favorites.includes(productData._id);
+  console.log(productData);
 
   return (
     <StyledProductDetail>
@@ -80,7 +87,10 @@ function ProductDetailContainer({ productData, isLoading }) {
             >
               Add to the card
             </Button>
-            <StyledProductFavorite>
+            <StyledProductFavorite
+              selected={selected}
+              onClick={handleAddFavorites}
+            >
               <AiOutlineHeart />
             </StyledProductFavorite>
           </StyledButtonContainer>
