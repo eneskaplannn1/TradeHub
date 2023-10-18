@@ -4,7 +4,7 @@ import { toast } from "react-hot-toast";
 
 function useFavorites({ product }) {
   const queryClient = useQueryClient();
-  console.log(product);
+
   const { mutate } = useMutation({
     mutationFn: addProductToFavorites,
     mutationKey: ["addFavorites", product?._id],

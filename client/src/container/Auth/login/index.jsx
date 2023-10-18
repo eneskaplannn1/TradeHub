@@ -43,7 +43,12 @@ function LoginContainer() {
             {...register("password", { required: "Enter your password" })}
             type={`${showPassword ? "text" : "password"}`}
           />
-          <AiFillEye onClick={() => setShowPassword((prev) => !prev)} />
+          <AiFillEye
+            onClick={(e) => {
+              e.preventDefault(); // Prevent the default form submission
+              setShowPassword((prev) => !prev);
+            }}
+          />
         </FormRowVertical>
         <FormRowVertical>
           <NavLink to="/forgetPassword">Forget Password?</NavLink>

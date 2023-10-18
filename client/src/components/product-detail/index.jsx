@@ -42,7 +42,7 @@ function ProductDetailContainer({ productData, isLoading }) {
   };
 
   const selected = user.favorites.includes(productData._id);
-  console.log(productData);
+  // console.log(productData);
 
   return (
     <StyledProductDetail>

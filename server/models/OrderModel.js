@@ -21,7 +21,7 @@ const OrderSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Order must have a total price.'],
   },
-  createdAt: {
+  createdAt: { 
     type: Date,
     default: Date.now(),
   },
