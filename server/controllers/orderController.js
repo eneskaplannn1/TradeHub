@@ -66,6 +66,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     mode: 'payment',
     line_items: transformedProducts,
   });
+  console.log(session);
 
   res.status(200).json({
     status: 'success',

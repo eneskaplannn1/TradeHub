@@ -18,11 +18,12 @@ const variations = {
     }
   `,
   update: css`
-    padding: 0.4rem;
+    font-size: 1.3rem;
+    padding: 0.3rem;
     border: 1px solid var(--color-zinc-300);
 
     &:focus {
-      background-color: var(--color-zinc-50);
+      background-color: var(--color-zinc-0);
       border: 1px solid var(--color-orange-400);
     }
   `,

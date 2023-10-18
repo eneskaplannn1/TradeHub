@@ -4,7 +4,6 @@ const initialState = {
   cart: {
     products: [],
     totalPrice: 0,
-    customer: null,
   },
 };
 
@@ -57,7 +56,8 @@ const productSlice = createSlice({
       }
     },
     clearCart(state) {
-      state.cart = initialState;
+      console.log(1);
+      state.cart = { products: [], totalPrice: 0 };
     },
     setCartData(state, action) {
       state.cart = action.payload;

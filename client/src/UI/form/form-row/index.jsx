@@ -2,18 +2,10 @@ import { styled } from "styled-components";
 
 const StyledFormRow = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 0.8fr 1.3fr 1fr;
 
   margin-top: 15px;
-  padding: 0 20px;
-
-  a {
-    text-align: left;
-    font-size: 20px;
-    color: var(--color-blue-800);
-    text-decoration: underline;
-  }
 
   &:focus-within {
     label {
@@ -36,11 +28,15 @@ const StyledFormRow = styled.div`
 
 const Label = styled.label`
   text-align: left;
-  color: var(--color-zinc-500);
+  color: var(--color-zinc-700);
+  font-size: 22px;
 `;
 const Error = styled.span`
-  text-align: left;
-  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5rem;
+  font-size: 1.3rem;
   color: var(--color-red-700);
 `;
 

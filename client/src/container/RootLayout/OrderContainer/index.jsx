@@ -3,8 +3,19 @@ import StyledBox from "../../../components/box";
 import StyledBoxTemplate from "../../../components/box-template.jsx/index.jsx";
 import StyledOrderFilter from "../../../UI/order/order-filter";
 import Order from "../../../components/order/index";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../../../features/product/productSlice";
 
 function OrderContainer() {
+  const dispatch = useDispatch();
+  const urlParams = new URLSearchParams(window.location.search);
+  const clear = urlParams.get("clear");
+
+  if (clear) {
+    console.log(1);
+    dispatch(clearCart());
+  }
+
   return (
     <>
       <StyledBoxTemplate>

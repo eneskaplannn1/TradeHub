@@ -6,7 +6,6 @@ const handleOrder = async function ({ cart, customerId }) {
       cart,
       customerId,
     });
-    // console.log(res.data.session);
     window.location.assign(res.data.session.url);
     return res;
   } catch (err) {

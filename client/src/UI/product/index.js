@@ -34,9 +34,33 @@ const ProductHead = styled.div`
   position: relative;
 
   padding: 0.2rem 0.4rem;
+
+  .new {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+    top: 0.4rem;
+    left: 0.4rem;
+
+    background-color: red;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 12px;
+      color: white;
+      font-weight: bold;
+    }
+  }
 `;
 
 const StyledCargoHead = styled.div`
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
 
@@ -88,7 +112,7 @@ const StyledProductFavorite = styled.button`
 const StyledProductImage = styled.div`
   position: relative;
 
-  div {
+  .new {
     position: absolute;
     width: 60px;
     height: 60px;

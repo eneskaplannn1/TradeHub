@@ -19,24 +19,30 @@ function Product({ product }) {
   const isNew = checkIsNewProduct(product?.createdAt);
 
   const { handleAddFavorites } = useFavorites({ product });
-
   const selected = user.favorites.includes(product._id);
+
   return (
     <ProductSummary>
       <ProductHead>
-        {!product?.cargoCharge && (
+        {!product?.cargoCharge ? (
           <StyledCargoHead>
             <BsBox />
             <p>Free cargo</p>
           </StyledCargoHead>
+        ) : (
+          <div className="new">
+            <span>
+              Yeni <br /> ürün
+            </span>
+          </div>
         )}
         <StyledProductFavorite selected={selected} onClick={handleAddFavorites}>
           <AiOutlineHeart />
         </StyledProductFavorite>
       </ProductHead>
       <StyledProductImage>
-        {isNew && (
-          <div>
+        {isNew && !product?.cargoCharge && (
+          <div className="new">
             <span>
               Yeni <br /> ürün
             </span>
