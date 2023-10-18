@@ -1,12 +1,30 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
+
+const variations = {
+  flex: css`
+    display: flex;
+    flex-direction: column;
+  `,
+  grid: css`
+    display: grid;
+    grid-template-columns: 0.8fr 1.3fr 1fr;
+  `,
+};
 
 const StyledFormRow = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: 0.8fr 1.3fr 1fr;
+
+  ${(props) => variations[props.variation]}
 
   margin-top: 15px;
+  padding: 0 20px;
 
+  a {
+    text-align: left;
+    font-size: 20px;
+    color: var(--color-blue-800);
+    text-decoration: underline;
+  }
   &:focus-within {
     label {
       color: var(--color-blue-600);
@@ -31,6 +49,7 @@ const Label = styled.label`
   color: var(--color-zinc-700);
   font-size: 22px;
 `;
+
 const Error = styled.span`
   display: flex;
   align-items: center;
@@ -40,9 +59,9 @@ const Error = styled.span`
   color: var(--color-red-700);
 `;
 
-function FormRowVertical({ label, error, children }) {
+function FormRowVertical({ label, error, children, variation }) {
   return (
-    <StyledFormRow>
+    <StyledFormRow variation={variation}>
       {label && <Label htmlFor={label.toLowerCase()}>{label}</Label>}
       {children}
       {error && <Error>{error}</Error>}

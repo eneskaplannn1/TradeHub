@@ -354,8 +354,8 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 });
 
 exports.updatePassword = catchAsync(async (req, res, next) => {
-  const user = User.findById(req.user._id).select('+password');
-
+  const user = await User.findById(req.user._id).select('+password');
+  console.log(user);
   if (!user) next(new AppError('No user found with corresponding id', 404));
 
   // console.log(user);

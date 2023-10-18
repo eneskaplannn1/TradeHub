@@ -8,10 +8,11 @@ function useUpdateUser() {
   const user = useSelector((store) => store.auth.user);
   const { mutate, isLoading } = useMutation({
     mutationFn: updateUserData,
-    mutationKey: ["updae-user"],
+    mutationKey: ["update-user"],
     onSuccess: () => {
       toast.success("user updated successfully");
     },
+    onError: (err) => toast.error(err.message),
   });
 
   const {

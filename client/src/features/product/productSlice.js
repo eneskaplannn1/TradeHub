@@ -29,10 +29,10 @@ const productSlice = createSlice({
       }
     },
     removeProductFromCart: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       const item = state.cart.products.find((product) => {
-        console.log(product.productId);
-        console.log(action.payload.product.productId);
+        // console.log(product.productId);
+        // console.log(action.payload.product.productId);
         return product.productId === action.payload.product.productId;
       });
 
@@ -56,7 +56,7 @@ const productSlice = createSlice({
       }
     },
     clearCart(state) {
-      console.log(1);
+      // console.log(1);
       state.cart = { products: [], totalPrice: 0 };
     },
     setCartData(state, action) {

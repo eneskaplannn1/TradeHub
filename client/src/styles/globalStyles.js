@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .active {
-  color:red;
+  color:var(--color-orange-900);
 
   svg {
     color: red;

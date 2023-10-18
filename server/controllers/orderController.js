@@ -42,7 +42,7 @@ exports.saleDetails = catchAsync((req, res, next) => {
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   const product = await Product.findById(req.params.productId);
   const user = await User.findById(req.body.customerId);
-  console.log(user);
+  // console.log(user);
   const transformedProducts = req.body.cart.products.map((product) => {
     return {
       quantity: product.quantity,
@@ -66,7 +66,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     mode: 'payment',
     line_items: transformedProducts,
   });
-  console.log(session);
+  // console.log(session);
 
   res.status(200).json({
     status: 'success',

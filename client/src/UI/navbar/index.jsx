@@ -16,7 +16,7 @@ const StyledNavbar = styled.nav`
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 2rem;
+    padding: 0 1rem;
     font-size: 21px;
 
     li {
@@ -42,12 +42,12 @@ function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { mutate, isLoading } = useMutation({
+  const { mutate } = useMutation({
     mutationFn: handleLogout,
     mutationKey: ["logout"],
     onSuccess: () => {
-      dispatch(logout);
-      toast.success("Logging out...");
+      dispatch(logout());
+      toast.loading("Logging out...");
       navigate("/login");
     },
   });
@@ -55,6 +55,7 @@ function Navbar() {
   const handleLogoutUser = function () {
     mutate();
   };
+
   return (
     <StyledNavbar>
       <ul>

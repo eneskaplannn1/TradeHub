@@ -34,14 +34,17 @@ function useLogin() {
       dispatch(logUserIn(data.data.data.user));
       navigate("/");
       toast.success("Logged in successfully");
+      // console.log(2);
     },
     onError: (err) => {
+      console.log(3);
       // console.log(err.message);
       toast.error(err.message);
     },
   });
 
   function handleSubmitForm(data) {
+    // console.log(data);
     mutate(data);
   }
   return {

@@ -38,9 +38,9 @@ exports.getOne = (Model, ...Populate) => {
     // get document by id
     let query = Model.findById(req.params.id);
     if (Populate) query = query.populate(...Populate);
-    console.log(...Populate);
+    // console.log(...Populate);
     const doc = await query;
-    console.log(doc);
+    // console.log(doc);
     if (!doc) return next(new AppError('No document find by that id', 404));
 
     res.status(200).json({

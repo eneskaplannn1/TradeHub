@@ -9,7 +9,7 @@ const handleOrder = async function ({ cart, customerId }) {
     window.location.assign(res.data.session.url);
     return res;
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     throw new Error(err);
   }
 };

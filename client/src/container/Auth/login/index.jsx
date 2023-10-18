@@ -29,7 +29,11 @@ function LoginContainer() {
         <span>Sign into your account</span>
       </StyledAuthHead>
       <form onSubmit={handleSubmit(handleSubmitForm)}>
-        <FormRowVertical label="Email" error={errors?.email?.message}>
+        <FormRowVertical
+          variation="flex"
+          label="Email"
+          error={errors?.email?.message}
+        >
           <Input
             id="email"
             type="email"
@@ -37,7 +41,11 @@ function LoginContainer() {
           />
           <IoMailOpenOutline />
         </FormRowVertical>
-        <FormRowVertical label="Password" error={errors?.password?.message}>
+        <FormRowVertical
+          variation="flex"
+          label="Password"
+          error={errors?.password?.message}
+        >
           <Input
             id="password"
             {...register("password", { required: "Enter your password" })}
@@ -50,7 +58,7 @@ function LoginContainer() {
             }}
           />
         </FormRowVertical>
-        <FormRowVertical>
+        <FormRowVertical variation="flex">
           <NavLink to="/forgetPassword">Forget Password?</NavLink>
           <Button variation="blue">
             {isLoading ? "Logging in..." : "Login"}

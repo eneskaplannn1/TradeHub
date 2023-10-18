@@ -12,7 +12,11 @@ function UpdateUserDataForm() {
     <StyledForm>
       <h3>Update User Data</h3>
       <form onSubmit={handleSubmit(handleSubmitForm)}>
-        <FormRowVertical label="Name" error={errors?.name?.message}>
+        <FormRowVertical
+          variation="grid"
+          label="Name"
+          error={errors?.name?.message}
+        >
           <Input
             id="name"
             variation="update"
@@ -22,7 +26,11 @@ function UpdateUserDataForm() {
             {...register("name", { required: "Enter your name" })}
           />
         </FormRowVertical>
-        <FormRowVertical label="Email" error={errors?.email?.message}>
+        <FormRowVertical
+          variation="grid"
+          label="Email"
+          error={errors?.email?.message}
+        >
           <Input
             id="email"
             variation="update"

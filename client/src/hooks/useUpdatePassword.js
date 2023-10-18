@@ -1,28 +1,45 @@
+import { useForm } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query";
+import { useSelector } from "react-redux";
+import { updateUserPassword } from "../services/apiUser";
+import { toast } from "react-hot-toast";
+
 function useUpdatePassword() {
-  //   const user = useSelector((store) => store.auth.user);
-  //   const { mutate, isLoading } = useMutation({
-  //     mutationFn: updateUserData,
-  //     mutationKey: ["updae-user"],
-  //     onSuccess: () => {
-  //       toast.success("user updated successfully");
-  //     },
-  //   });
+  const { mutate, isLoading } = useMutation({
+    mutationFn: updateUserPassword,
+    mutationKey: ["update-user-pass"],
+    onSuccess: () => {
+      toast.success("User password updated successfully");
+      reset();
+    },
+    onError: (err) => {
+      console.log(err);
+      toast.error(err.message);
+    },
+  });
 
-  //   const {
-  //     handleSubmit,
-  //     register,
-  //     formState: { errors },
-  //   } = useForm({
-  //     defaultValues: {
-  //       name: user.name,
-  //       email: user.email,
-  //     },
-  //   });
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+    getValues,
+    reset,
+  } = useForm();
 
-  //   const handleSubmitForm = function (data) {
-  //     mutate({ data, userId: user._id });
-  //   };
-  return <div></div>;
+  const handleSubmitForm = function (data) {
+    mutate({
+      password: data.password,
+      newPassword: data.newPassword,
+    });
+  };
+  return {
+    register,
+    handleSubmit,
+    handleSubmitForm,
+    isLoading,
+    errors,
+    getValues,
+  };
 }
 
 export default useUpdatePassword;

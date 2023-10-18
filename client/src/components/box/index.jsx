@@ -17,9 +17,10 @@ const variations = {
         display: flex;
         align-items: center;
         gap: 0.2rem;
-
+        border-radius: 8px;
         &:hover {
           background-color: var(--color-orange-200);
+          border-radius: 8px;
         }
       }
     }
