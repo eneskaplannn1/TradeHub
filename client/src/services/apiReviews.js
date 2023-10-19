@@ -10,6 +10,16 @@ const createReview = async function (data) {
     throw new Error(err.response.data.message);
   }
 };
+const getReviews = async function () {
+  try {
+    const res = await customRequest(`/reviews`);
+    console.log(res);
+    return res;
+  } catch (err) {
+    console.log(err);
+    throw new Error(err.response.data.message);
+  }
+};
 
 // const updateReview = async function (data) {
 //   try {
@@ -22,4 +32,4 @@ const createReview = async function (data) {
 //   }
 // };
 
-export { createReview };
+export { createReview, getReviews };

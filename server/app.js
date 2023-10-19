@@ -64,7 +64,6 @@ app.use(xss());
 app.use(
   hpp({
     whitelist: [
-      //   "duration",
       //   "price",
     ],
   })
@@ -84,7 +83,6 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/orders', orderRouter);
 app.use('/api/v1/reviews', reviewRouter);
-// app.use("/api/v1/bookings", bookingRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl} on this server`, 404));

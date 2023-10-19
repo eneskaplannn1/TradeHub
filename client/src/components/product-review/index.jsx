@@ -25,7 +25,7 @@ const StyledProductReviewFooter = styled.div`
   }
 `;
 
-function ProductReview() {
+function ProductReview({ review }) {
   return (
     <StyledBoxTemplate>
       <StyledProductReview>
@@ -37,9 +37,10 @@ function ProductReview() {
         <StyledProductReviewFooter>
           <img src="/product.jpg" />
           <div>
-            <span>Anker</span> q30 headphone
+            <span>{review?.product?.brand} </span>{" "}
+            {review?.product?.productDesc}
           </div>
-          <div>Best headphone I ever had</div>
+          <div>{review?.review}</div>
         </StyledProductReviewFooter>
       </StyledProductReview>
     </StyledBoxTemplate>

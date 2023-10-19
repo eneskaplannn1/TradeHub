@@ -26,7 +26,16 @@ const ReviewSchema = new mongoose.Schema({
     require: [true, 'A review must have a Customer'],
   },
 });
+
 ReviewSchema.index({ product: 1, customer: 1 }, { unique: true });
+
+ReviewSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: 'product',
+    select: 'category productDesc _id brand ',
+  });
+  next();
+});
 
 const Review = mongoose.model('Review', ReviewSchema);
 module.exports = Review;

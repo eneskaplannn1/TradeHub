@@ -3,43 +3,55 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 
-const UserSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'User must have a name'],
-  },
-  email: {
-    type: String,
-    required: [true, 'User must have a email'],
-    unique: true,
-    lowercase: true,
-    validate: [validator.isEmail, 'Please provide a valid email'],
-  },
-  role: {
-    type: String,
-    enum: ['customer', 'seller', 'admin'],
-    default: 'customer',
-  },
-  password: {
-    type: String,
-    required: [true, 'Please tell us your password!'],
-    minlength: 8,
-    select: false,
-  },
-  passwordChangedAt: Date,
-  passwordResetToken: String,
-  passwordResetExpires: Date,
-  verified: {
-    type: Boolean,
-    default: false,
-  },
-  specialToken: String,
-  favorites: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Product',
+const UserSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, 'User must have a name'],
     },
-  ],
+    email: {
+      type: String,
+      required: [true, 'User must have a email'],
+      unique: true,
+      lowercase: true,
+      validate: [validator.isEmail, 'Please provide a valid email'],
+    },
+    role: {
+      type: String,
+      enum: ['customer', 'seller', 'admin'],
+      default: 'customer',
+    },
+    password: {
+      type: String,
+      required: [true, 'Please tell us your password!'],
+      minlength: 8,
+      select: false,
+    },
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
+    verified: {
+      type: Boolean,
+      default: false,
+    },
+    specialToken: String,
+    favorites: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+      },
+    ],
+  },
+  {
+    toJSON: { virtuals: true }, // virtual değerini postmanda göstermek için
+    toObject: { virtuals: true }, // virtual değerlerini console'da göstermek için
+  }
+);
+
+UserSchema.virtual('reviews', {
+  ref: 'Review',
+  foreignField: 'customer',
+  localField: '_id',
 });
 
 // UserSchema.pre(/^find/, function (next) {

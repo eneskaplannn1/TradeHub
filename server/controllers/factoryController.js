@@ -37,7 +37,8 @@ exports.getOne = (Model, ...Populate) => {
   return catchAsync(async (req, res, next) => {
     // get document by id
     let query = Model.findById(req.params.id);
-    if (Populate) query = query.populate(...Populate);
+    console.log(...Populate);
+    if (Populate) query = query.populate(Populate);
     // console.log(...Populate);
     const doc = await query;
     // console.log(doc);
