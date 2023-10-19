@@ -19,6 +19,7 @@ const productRouter = require('./routes/productRoutes');
 // const bookingRouter = require("./routes/bookingRouter");
 
 const path = require('path');
+const reviewRouter = require('./routes/reviewRoutes');
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -82,6 +83,7 @@ app.use(cookieParser());
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/orders', orderRouter);
+app.use('/api/v1/reviews', reviewRouter);
 // app.use("/api/v1/bookings", bookingRouter);
 
 app.all('*', (req, res, next) => {

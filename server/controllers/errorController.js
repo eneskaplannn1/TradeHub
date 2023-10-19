@@ -73,8 +73,16 @@ const handleValidationErr = (err) => {
 };
 
 const handleDuplicateVal = (err) => {
-  const value = Object.values(err.keyValue)[0];
-  const message = `This email has already been taken: ${value}. Use another value.`;
+  let value;
+  let message;
+  console.log(Object.values(err)[2].product);
+  if (Object.values(err)[2].product) {
+    message = 'You cannot make more than one comment for a product';
+    return new AppError(message, 400);
+  }
+
+  value = Object.values(err.keyValue)[0];
+  message = `This email has already been taken: ${value}. Use another value.`;
   return new AppError(message, 400);
 };
 
@@ -84,16 +92,13 @@ const handleExpiredJWT = () =>
 
 module.exports = (err, req, res, next) => {
   let error = Object.assign(err); // ! çözüm 2
-  console.log(error);
-
+  // console.log(Object.values(err));
   // console.log(error);
   if (error.name === 'Error') error = handleError(error);
   if (error.name === 'CastError') error = handleCastError(error);
   if (error.name === 'ValidationError') error = handleValidationErr(error);
   if (error.code === 11000) error = handleDuplicateVal(error);
-
   if (error.name === 'JsonWebTokenError') error = handleInvalidJWT(error);
-
   if (error.name === 'TokenExpiredError') error = handleExpiredJWT(error);
 
   sendErrorProduction(error, req, res);

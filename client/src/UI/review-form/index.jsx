@@ -1,9 +1,7 @@
 import { styled } from "styled-components";
-import FormRowVertical from "../form/form-row";
-import Input from "../form/input/input";
 import Button from "../button";
 import StarRating from "../star";
-import { useState } from "react";
+import useReviews from "../../hooks/useReviews";
 
 const StyledReviewFormContainer = styled.div`
   color: black;
@@ -21,7 +19,7 @@ const StyledReviewFormContainer = styled.div`
 
     input {
       width: 100%;
-      /* padding:    ; */
+      padding: 1rem;
       outline: none;
       border: none;
 
@@ -43,23 +41,19 @@ const StyledReviewFormContainer = styled.div`
 `;
 
 function ReviewForm({ productData, onCloseModal }) {
-  //   console.log(productData);
-  const [rating, setRating] = useState();
-
-  const handleRating = function (reviewRating) {
-    console.log(reviewRating);
-    setRating(reviewRating);
-  };
-  console.log(rating);
+  const { handleSubmit, handleSubmitForm, handleRating, register } = useReviews(
+    { productData, onCloseModal }
+  );
 
   return (
     <StyledReviewFormContainer>
       <h3>
         Make a review about <span>{productData.productDesc}</span>{" "}
       </h3>
-      <form>
-        <label>Review</label>
-        <input type="text" />
+      <form onSubmit={handleSubmit(handleSubmitForm)}>
+        <label htmlFor="review">Review</label>
+        <input id="review" type="text" {...register("review")} />
+        <h3>Rate the product</h3>
         <StarRating
           maxRating={5}
           width={80}

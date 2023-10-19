@@ -4,6 +4,7 @@ const connectToDatabase = require('../../utils/connectDB');
 const User = require('../../models/UserModel');
 const Product = require('../../models/ProductModel');
 const Order = require('../../models/OrderModel');
+const Review = require('../../models/ReviewModel');
 
 const fs = require('fs');
 
@@ -38,7 +39,8 @@ const importData = async () => {
 const DeleteDatas = async () => {
   try {
     // await User.deleteMany();
-    await Product.deleteMany();
+    // await Product.deleteMany();
+    await Review.deleteMany();
     console.log('Data Deleted');
 
     process.exit();
