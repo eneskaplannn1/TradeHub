@@ -11,12 +11,18 @@ const StyledOverlay = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
+  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
   z-index: 1000;
   transition: all 0.4s ease;
 `;
+
+const positions = {
+  marginTop: css`
+    margin-top: 50vh;
+  `,
+};
 
 const variations = {
   small: css`
@@ -43,12 +49,10 @@ const variations = {
 const StyledModal = styled.div`
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 25%;
   transform: translate(-50%, -50%);
 
-  overflow: auto;
-
-  background-color: var(--color-zinc-600);
+  background-color: #fff;
   color: white;
   border-radius: 8px;
   transition: all 0.4s ease;
@@ -67,34 +71,35 @@ const StyledModal = styled.div`
     position: absolute;
     top: 1.2rem;
     right: 1.8rem;
+    height: 3rem;
+    width: 3rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-color: inherit;
-    padding: 0.4rem;
-    border-radius: 5px;
+    border-radius: 50%;
 
     border: none;
     outline: none;
 
-    transform: translateX(0.8rem);
     transition: all 0.3s;
 
+    padding: 1rem;
     svg {
-      width: 1.2rem;
-      height: 1.2rem;
       color: #9ca3af;
     }
-
-    :hover {
+    &:hover {
       background-color: #263756;
+      svg {
+        color: var(--color-zinc-100);
+      }
     }
   }
 
   ${(props) => variations[props.variation]}
+  ${(props) => positions[props.position]}
 `;
+
 StyledModal.defaultProps = {
   variation: "large",
 };
@@ -120,14 +125,14 @@ function Open({ children, opens: opendWindowName }) {
   return cloneElement(children, { onClick: () => open(opendWindowName) });
 }
 
-function Window({ children, name, variation }) {
+function Window({ children, name, variation, position }) {
   const { openName, close } = useContext(modalContext);
   // const ref = useOutsideClick(close);
 
   if (name !== openName) return;
   return createPortal(
     <StyledOverlay>
-      <StyledModal variation={variation}>
+      <StyledModal variation={variation} position={position}>
         <button className="close" onClick={close}>
           <ImCross />
         </button>

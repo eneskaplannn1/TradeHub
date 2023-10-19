@@ -14,6 +14,7 @@ export default function StarRating({
   height,
   isEditing,
   averageRating = 0,
+  handleRating,
 }) {
   const [rating, setRating] = useState(averageRating);
   const [tempRating, setTempRating] = useState();
@@ -26,6 +27,7 @@ export default function StarRating({
             <Star
               onHandleClick={() => {
                 isEditing ? setRating(i + 1) : "";
+                isEditing ? handleRating(i + 1) : "";
               }}
               key={i}
               handleMouseEnter={() => {

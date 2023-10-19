@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
 const StyledProductList = styled.div`
+  width: 100vw;
   padding: 0 12rem 1rem;
   height: 3.2rem;
 

@@ -9,18 +9,9 @@ import {
 } from "../../UI/item";
 import Modal from "../../UI/modal";
 import Button from "../../UI/button";
-import { useDispatch } from "react-redux";
-import { removeProductFromCart } from "../../features/product/productSlice";
-import { toast } from "react-hot-toast";
+import DeleteItem from "../delete-item";
 
 function Item({ product }) {
-  const dispatch = useDispatch();
-
-  const handleDeleteProduct = function () {
-    dispatch(removeProductFromCart({ product, all: true }));
-    toast.success("Product removed from cart");
-  };
-
   return (
     <StyledItemContainer>
       <StyledItem>
@@ -46,18 +37,7 @@ function Item({ product }) {
               </button>
             </Modal.Open>
             <Modal.Window variation="small" name="delete-product">
-              <StyledDeleteItemTemplate>
-                <div className="info">
-                  Are you sure you wanna delete all the
-                  <span> {product.productDesc}</span>
-                </div>
-                <div className="container">
-                  <Button variation="red">Cancel</Button>
-                  <Button variation="green" onClick={handleDeleteProduct}>
-                    Delete all
-                  </Button>
-                </div>
-              </StyledDeleteItemTemplate>
+              <DeleteItem product={product} />
             </Modal.Window>
           </Modal>
         </StyledItemBody>

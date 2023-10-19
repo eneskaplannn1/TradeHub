@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 import ProductList from "../../components/product-list";
 
 const StyledMain = styled.main`
-  height: 200vh;
   padding: 1rem 8rem;
 `;
 

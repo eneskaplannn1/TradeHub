@@ -1,3 +1,5 @@
+import Button from "../../UI/button";
+import Modal from "../../UI/modal";
 import {
   StyledProductReviewContainer,
   StyledProductReviews,
@@ -5,6 +7,7 @@ import {
   StyledReviewHead,
   StyledReviews,
 } from "../../UI/review";
+import ReviewForm from "../../UI/review-form";
 import StarRating from "../../UI/star";
 
 function ReviewContainer({ productData }) {
@@ -24,6 +27,18 @@ function ReviewContainer({ productData }) {
             />
           </div>
           <div>| {ratingsQuantity} Review </div>
+          <Modal>
+            <Modal.Open opens="create-review">
+              <Button variation="orange">Add Review</Button>
+            </Modal.Open>
+            <Modal.Window
+              position="marginTop"
+              variation="medium"
+              name="create-review"
+            >
+              <ReviewForm productData={productData} />
+            </Modal.Window>
+          </Modal>
         </StyledReviewHead>
         <StyledReviews>
           <StyledReview>

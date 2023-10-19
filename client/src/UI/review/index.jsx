@@ -14,6 +14,8 @@ const StyledProductReviews = styled.div`
 const StyledReviewHead = styled.div`
   padding: 3rem 2rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2rem;
   border-bottom: 1px solid var(--color-zinc-200);
 
