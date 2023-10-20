@@ -37,6 +37,7 @@ import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
 
 function App() {
+  console.log(1);
   const dispatch = useDispatch();
   const { data } = useQuery({
     queryFn: handleLoginWithCookie,
