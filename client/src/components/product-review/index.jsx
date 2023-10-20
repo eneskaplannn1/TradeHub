@@ -19,6 +19,10 @@ const StyledProductReviewFooter = styled.div`
   align-items: center;
   font-size: 1rem;
   padding: 2rem 0 0;
+
+  span {
+    font-weight: bold;
+  }
   img {
     width: 75px;
     border-radius: 50%;
@@ -35,7 +39,7 @@ function ProductReview({ review }) {
           <div>Review</div>
         </StyledProductReviewHead>
         <StyledProductReviewFooter>
-          <img src="/product.jpg" />
+          <img src={`/productImage/${review?.product?.category}.png`} />
           <div>
             <span>{review?.product?.brand} </span>
             {review?.product?.productDesc}
