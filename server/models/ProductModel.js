@@ -27,7 +27,7 @@ const ProductSchema = new mongoose.Schema(
     },
     ratingsAverage: {
       type: Number,
-      default: 3.7,
+      default: 0,
       set: (val) => Math.round(val * 10) / 10,
     },
     ratingsQuantity: {

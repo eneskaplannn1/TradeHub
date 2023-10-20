@@ -6,8 +6,6 @@
     "price": 149.99,
     "quantity": 40,
     "discount": 5,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43147",
     "category": "sneakers",
     "photo": "default.jpg"
@@ -19,8 +17,6 @@
     "price": 59.99,
     "quantity": 100,
     "discount": 15,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 200,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -32,8 +28,6 @@
     "price": 199.99,
     "quantity": 20,
     "discount": 0,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -45,8 +39,6 @@
     "price": 89.99,
     "quantity": 60,
     "discount": 20,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -58,8 +50,6 @@
     "price": 39.99,
     "quantity": 75,
     "discount": 8,
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -71,8 +61,6 @@
     "price": 129.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43147",
     "category": "sneakers",
     "photo": "default.jpg"
@@ -84,8 +72,6 @@
     "price": 24.99,
     "quantity": 150,
     "discount": 5,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -97,8 +83,6 @@
     "price": 44.99,
     "quantity": 40,
     "discount": 15,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -110,8 +94,6 @@
     "price": 29.99,
     "quantity": 70,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -123,8 +105,6 @@
     "price": 34.99,
     "quantity": 60,
     "discount": 8,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -136,8 +116,6 @@
     "price": 34.99,
     "quantity": 90,
     "discount": 5,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43147",
     "category": "sneakers",
     "photo": "default.jpg"
@@ -149,8 +127,6 @@
     "price": 49.99,
     "quantity": 50,
     "discount": 12,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -162,8 +138,6 @@
     "price": 14.99,
     "quantity": 80,
     "discount": 15,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -175,8 +149,6 @@
     "price": 19.99,
     "quantity": 100,
     "discount": 10,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -188,8 +160,6 @@
     "price": 24.99,
     "quantity": 60,
     "discount": 8,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -201,8 +171,6 @@
     "price": 59.99,
     "quantity": 30,
     "discount": 10,
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -214,8 +182,6 @@
     "price": 79.99,
     "quantity": 40,
     "discount": 5,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -227,8 +193,6 @@
     "price": 39.99,
     "quantity": 50,
     "discount": 15,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43147",
     "category": "clothing",
     "photo": "default.jpg"
@@ -240,8 +204,6 @@
     "price": 129.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -253,8 +215,6 @@
     "price": 149.99,
     "quantity": 40,
     "discount": 5,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -266,8 +226,6 @@
     "price": 79.99,
     "quantity": 60,
     "discount": 15,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -279,8 +237,6 @@
     "price": 49.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43147",
     "photo": "default.jpg"
   },
@@ -292,8 +248,6 @@
     "price": 79.99,
     "quantity": 30,
     "discount": 12,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43147",
     "photo": "default.jpg"
   },
@@ -305,8 +259,6 @@
     "price": 64.99,
     "quantity": 90,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -318,8 +270,6 @@
     "price": 59.99,
     "quantity": 80,
     "discount": 15,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -331,8 +281,6 @@
     "price": 49.99,
     "quantity": 110,
     "discount": 8,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -344,8 +292,6 @@
     "price": 69.99,
     "quantity": 70,
     "discount": 10,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 45,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -357,8 +303,6 @@
     "price": 74.99,
     "quantity": 100,
     "discount": 5,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -370,8 +314,6 @@
     "price": 159.99,
     "quantity": 60,
     "discount": 8,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 30,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -383,8 +325,6 @@
     "price": 129.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 35,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -396,8 +336,6 @@
     "price": 109.99,
     "quantity": 40,
     "discount": 12,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 25,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -409,8 +347,6 @@
     "price": 99.99,
     "quantity": 55,
     "discount": 15,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 55,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -421,8 +357,6 @@
     "price": 149.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -434,8 +368,6 @@
     "price": 549.99,
     "quantity": 30,
     "discount": 5,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -447,8 +379,6 @@
     "price": 399.99,
     "quantity": 40,
     "discount": 0,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 200,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -460,8 +390,6 @@
     "price": 199.99,
     "quantity": 35,
     "discount": 15,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -473,8 +401,6 @@
     "price": 39.99,
     "quantity": 60,
     "discount": 20,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -486,8 +412,6 @@
     "price": 299.99,
     "quantity": 20,
     "discount": 8,
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 30,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -499,8 +423,6 @@
     "price": 899.99,
     "quantity": 15,
     "discount": 10,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -512,8 +434,6 @@
     "price": 49.99,
     "quantity": 40,
     "discount": 12,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -525,8 +445,6 @@
     "price": 34.99,
     "quantity": 75,
     "discount": 5,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -538,8 +456,6 @@
     "price": 99.99,
     "quantity": 45,
     "discount": 10,
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -551,8 +467,6 @@
     "price": 499.99,
     "quantity": 20,
     "discount": 8,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -564,8 +478,6 @@
     "price": 79.99,
     "quantity": 50,
     "discount": 15,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -577,8 +489,6 @@
     "price": 19.99,
     "quantity": 100,
     "discount": 0,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -590,8 +500,6 @@
     "price": 89.99,
     "quantity": 25,
     "discount": 8,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -603,8 +511,6 @@
     "price": 199.99,
     "quantity": 15,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -616,8 +522,6 @@
     "price": 29.99,
     "quantity": 60,
     "discount": 5,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -630,8 +534,6 @@
     "price": 174.99,
     "quantity": 30,
     "discount": 8,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -643,8 +545,6 @@
     "price": 54.99,
     "quantity": 120,
     "discount": 12,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -655,8 +555,6 @@
     "price": 29.99,
     "quantity": 50,
     "discount": 15,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -668,8 +566,6 @@
     "price": 34.99,
     "quantity": 40,
     "discount": 8,
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 30,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -682,8 +578,6 @@
     "quantity": 50,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43145",
     "photo": "default.jpg"
   },
@@ -695,8 +589,6 @@
     "quantity": 30,
     "discount": 5,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43145",
     "photo": "default.jpg"
   },
@@ -708,8 +600,6 @@
     "quantity": 20,
     "discount": 0,
     "category": "electronic",
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 200,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -722,8 +612,6 @@
     "quantity": 25,
     "discount": 8,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -736,8 +624,6 @@
     "quantity": 15,
     "discount": 12,
     "category": "electronic",
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -750,8 +636,6 @@
     "quantity": 40,
     "discount": 15,
     "category": "electronic",
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -764,8 +648,6 @@
     "quantity": 10,
     "discount": 0,
     "category": "electronic",
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 30,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -778,8 +660,6 @@
     "quantity": 10,
     "discount": 5,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -792,8 +672,6 @@
     "quantity": 20,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -806,8 +684,6 @@
     "quantity": 30,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -820,8 +696,6 @@
     "quantity": 30,
     "discount": 15,
     "category": "electronic",
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -834,8 +708,6 @@
     "quantity": 25,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 180,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -848,8 +720,6 @@
     "quantity": 10,
     "discount": 5,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -862,8 +732,6 @@
     "quantity": 15,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -876,8 +744,6 @@
     "quantity": 20,
     "discount": 8,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -890,8 +756,6 @@
     "quantity": 40,
     "discount": 5,
     "category": "electronic",
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -904,8 +768,6 @@
     "quantity": 20,
     "discount": 12,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -918,8 +780,6 @@
     "quantity": 25,
     "discount": 15,
     "category": "electronic",
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -932,8 +792,6 @@
     "quantity": 10,
     "discount": 0,
     "category": "electronic",
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -946,8 +804,6 @@
     "quantity": 15,
     "discount": 5,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -960,8 +816,6 @@
     "quantity": 30,
     "discount": 8,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -974,8 +828,6 @@
     "quantity": 50,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -988,8 +840,6 @@
     "quantity": 25,
     "discount": 5,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1002,8 +852,6 @@
     "quantity": 20,
     "discount": 12,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1016,8 +864,6 @@
     "quantity": 40,
     "discount": 15,
     "category": "electronic",
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1030,8 +876,6 @@
     "quantity": 10,
     "discount": 0,
     "category": "electronic",
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 30,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1044,8 +888,6 @@
     "quantity": 50,
     "discount": 8,
     "category": "electronic",
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1058,8 +900,6 @@
     "quantity": 30,
     "discount": 12,
     "category": "electronic",
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 40,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1072,8 +912,6 @@
     "quantity": 15,
     "discount": 10,
     "category": "electronic",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43145",
 
     "photo": "default.jpg"
@@ -1085,8 +923,6 @@
     "price": 12.99,
     "quantity": 100,
     "discount": 5,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1098,8 +934,6 @@
     "price": 7.99,
     "quantity": 80,
     "discount": 10,
-    "ratingsAverage": 4.3,
-    "ratingsQuantity": 150,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1111,8 +945,6 @@
     "price": 9.99,
     "quantity": 70,
     "discount": 8,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1124,8 +956,6 @@
     "price": 59.99,
     "quantity": 35,
     "discount": 12,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -1137,8 +967,6 @@
     "price": 11.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1150,8 +978,6 @@
     "price": 6.99,
     "quantity": 120,
     "discount": 15,
-    "ratingsAverage": 4.2,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1163,8 +989,6 @@
     "price": 24.99,
     "quantity": 40,
     "discount": 5,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1176,8 +1000,6 @@
     "price": 39.99,
     "quantity": 30,
     "discount": 8,
-    "ratingsAverage": 4.9,
-    "ratingsQuantity": 50,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1189,8 +1011,6 @@
     "price": 399.99,
     "quantity": 20,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
     "photo": "default.jpg"
@@ -1202,8 +1022,6 @@
     "price": 54.99,
     "quantity": 20,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1215,8 +1033,6 @@
     "price": 29.99,
     "quantity": 45,
     "discount": 15,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1228,8 +1044,6 @@
     "price": 16.99,
     "quantity": 65,
     "discount": 8,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 60,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1241,8 +1055,6 @@
     "price": 21.99,
     "quantity": 50,
     "discount": 10,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 70,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1254,8 +1066,6 @@
     "price": 19.99,
     "quantity": 60,
     "discount": 8,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 75,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1267,8 +1077,6 @@
     "price": 8.99,
     "quantity": 90,
     "discount": 12,
-    "ratingsAverage": 4.3,
-    "ratingsQuantity": 110,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1280,8 +1088,6 @@
     "price": 22.99,
     "quantity": 35,
     "discount": 10,
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 55,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1293,8 +1099,6 @@
     "price": 9.99,
     "quantity": 70,
     "discount": 12,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 80,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1306,8 +1110,6 @@
     "price": 25.99,
     "quantity": 40,
     "discount": 5,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 45,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1319,8 +1121,6 @@
     "price": 13.99,
     "quantity": 55,
     "discount": 10,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 65,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1332,8 +1132,6 @@
     "price": 3.99,
     "quantity": 180,
     "discount": 20,
-    "ratingsAverage": 4.3,
-    "ratingsQuantity": 110,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1345,8 +1143,6 @@
     "price": 4.99,
     "quantity": 120,
     "discount": 15,
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 100,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1358,8 +1154,6 @@
     "price": 4.49,
     "quantity": 160,
     "discount": 10,
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 130,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1371,8 +1165,6 @@
     "price": 9.99,
     "quantity": 100,
     "discount": 8,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 140,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1384,8 +1176,6 @@
     "price": 9.99,
     "quantity": 75,
     "discount": 5,
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 160,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1397,8 +1187,6 @@
     "price": 14.99,
     "quantity": 60,
     "discount": 12,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 90,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"
@@ -1410,8 +1198,6 @@
     "price": 3.99,
     "quantity": 150,
     "discount": 0,
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 120,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
     "photo": "default.jpg"

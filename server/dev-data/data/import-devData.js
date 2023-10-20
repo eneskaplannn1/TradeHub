@@ -36,10 +36,11 @@ const importData = async () => {
     console.log(err.message);
   }
 };
+
 const DeleteDatas = async () => {
   try {
     // await User.deleteMany();
-    // await Product.deleteMany();
+    await Product.deleteMany();
     await Review.deleteMany();
     console.log('Data Deleted');
 

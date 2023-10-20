@@ -22,9 +22,11 @@ function useCreateReviews({ onCloseModal, productData }) {
   const { mutate } = useMutation({
     mutationKey: ["create-review"],
     mutationFn: createReview,
-    onSuccess: () => {
+    onSuccess: async () => {
       toast.success("You successfully commented on the product");
-      queryClient.invalidateQueries(["reviews"]);
+      await queryClient.invalidateQueries(["reviews"]);
+      await queryClient.invalidateQueries(["product", productData._id]);
+
       onCloseModal();
     },
     onError: (err) => {
