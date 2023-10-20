@@ -21,14 +21,14 @@ const productRouter = require('./routes/productRoutes');
 const path = require('path');
 const reviewRouter = require('./routes/reviewRoutes');
 
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // !Global Middlewares
 
 app.use(
   cors({
-    origin: ['https://tradehub-server.onrender.com/'],
+    origin: ['https://tradehub-3t3s.onrender.com/'],
     methods: ['POST', 'PATCH', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
@@ -83,6 +83,10 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/orders', orderRouter);
 app.use('/api/v1/reviews', reviewRouter);
+
+app.use('/', (req, res) => {
+  res.end('Hello world');
+});
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl} on this server`, 404));
