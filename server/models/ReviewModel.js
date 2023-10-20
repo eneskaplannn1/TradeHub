@@ -4,7 +4,7 @@ const ReviewSchema = new mongoose.Schema({
   review: {
     type: String,
     trim: true,
-    require: [true, 'Review cannot be empty'],
+    required: [true, 'Review cannot be empty'],
   },
   rating: {
     type: Number,
@@ -18,12 +18,12 @@ const ReviewSchema = new mongoose.Schema({
   product: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Product',
-    require: [true, 'A review must have a Product'],
+    required: [true, 'A review must have a Product'],
   },
   customer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    require: [true, 'A review must have a Customer'],
+    required: [true, 'A review must have a Customer'],
   },
 });
 
@@ -33,7 +33,11 @@ ReviewSchema.pre(/^find/, function (next) {
   this.populate({
     path: 'product',
     select: 'category productDesc _id brand ',
+  }).populate({
+    path: 'customer',
+    select: 'name _id',
   });
+
   next();
 });
 

@@ -75,7 +75,7 @@ const handleValidationErr = (err) => {
 const handleDuplicateVal = (err) => {
   let value;
   let message;
-  console.log(Object.values(err)[2].product);
+
   if (Object.values(err)[2].product) {
     message = 'You cannot make more than one comment for a product';
     return new AppError(message, 400);
@@ -92,8 +92,7 @@ const handleExpiredJWT = () =>
 
 module.exports = (err, req, res, next) => {
   let error = Object.assign(err); // ! çözüm 2
-  // console.log(Object.values(err));
-  // console.log(error);
+  console.log(err);
   if (error.name === 'Error') error = handleError(error);
   if (error.name === 'CastError') error = handleCastError(error);
   if (error.name === 'ValidationError') error = handleValidationErr(error);

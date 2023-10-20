@@ -1,11 +1,12 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createReview } from "../services/apiReviews";
 import { toast } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-function useReviews({ onCloseModal, productData }) {
+function useCreateReviews({ onCloseModal, productData }) {
+  const queryClient = useQueryClient();
   const user = useSelector((store) => store.auth.user);
   const [rating, setRating] = useState();
   const handleRating = function (reviewRating) {
@@ -23,6 +24,7 @@ function useReviews({ onCloseModal, productData }) {
     mutationFn: createReview,
     onSuccess: () => {
       toast.success("You successfully commented on the product");
+      queryClient.invalidateQueries(["reviews"]);
       onCloseModal();
     },
     onError: (err) => {
@@ -44,4 +46,4 @@ function useReviews({ onCloseModal, productData }) {
   return { handleSubmitForm, handleSubmit, handleRating, register, errors };
 }
 
-export default useReviews;
+export default useCreateReviews;

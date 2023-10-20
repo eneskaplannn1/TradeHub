@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Button from "../button";
 import StarRating from "../star";
-import useReviews from "../../hooks/useReviews";
+import useCreateReviews from "../../hooks/useCreateReviews";
 
 const StyledReviewFormContainer = styled.div`
   color: black;
@@ -41,9 +41,8 @@ const StyledReviewFormContainer = styled.div`
 `;
 
 function ReviewForm({ productData, onCloseModal }) {
-  const { handleSubmit, handleSubmitForm, handleRating, register } = useReviews(
-    { productData, onCloseModal }
-  );
+  const { handleSubmit, handleSubmitForm, handleRating, register } =
+    useCreateReviews({ productData, onCloseModal });
 
   return (
     <StyledReviewFormContainer>

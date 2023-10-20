@@ -2,7 +2,8 @@ import { styled } from "styled-components";
 import Button from "../../UI/button";
 import { useMutation } from "@tanstack/react-query";
 import { handleOrder } from "../../services/apiOrders";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../../features/product/productSlice";
 
 const StyledItemSidebar = styled.aside`
   display: flex;
@@ -54,6 +55,7 @@ const StyledSummaryFooter = styled.div`
 `;
 
 function ItemSidebar({ cart }) {
+  const dispatch = useDispatch();
   const { _id } = useSelector((store) => store.auth.user);
   const { mutate, isLoading } = useMutation({
     mutationFn: handleOrder,
@@ -62,7 +64,14 @@ function ItemSidebar({ cart }) {
 
   const handlePaymentSession = function () {
     // console.log(cart);
-    mutate({ cart, customerId: _id });
+    mutate(
+      { cart, customerId: _id }
+      // {
+      //   onSuccess: () => {
+      //     dispatch(clearCart());
+      //   },
+      // }
+    );
   };
   return (
     <StyledItemSidebar>

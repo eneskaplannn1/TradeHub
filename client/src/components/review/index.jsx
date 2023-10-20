@@ -3,15 +3,18 @@ import Modal from "../../UI/modal";
 import {
   StyledProductReviewContainer,
   StyledProductReviews,
-  StyledReview,
   StyledReviewHead,
   StyledReviews,
 } from "../../UI/review";
 import ReviewForm from "../../UI/review-form";
 import StarRating from "../../UI/star";
+import useGetReviews from "../../hooks/useGetReviews";
+import UserReview from "../styled-review";
 
-function ReviewContainer({ productData }) {
+function ReviewContainer({ productData, productId }) {
+  const { data } = useGetReviews(true, productId);
   const { ratingsAverage, ratingsQuantity } = productData;
+
   return (
     <StyledProductReviewContainer>
       <h1>Product Reviews</h1>
@@ -41,60 +44,9 @@ function ReviewContainer({ productData }) {
           </Modal>
         </StyledReviewHead>
         <StyledReviews>
-          <StyledReview>
-            <div className="header">
-              <StarRating
-                height={32}
-                width={32}
-                isEditing={false}
-                averageRating={4}
-                maxRating={5}
-              />
-              <div>Best Product Ever</div>
-            </div>
-            <div className="footer">
-              <div>Enes Kaplan</div>
-              <div>
-                | <span style={{ marginLeft: "1rem" }}></span> 24 October 2022
-              </div>
-            </div>
-          </StyledReview>
-          <StyledReview>
-            <div className="header">
-              <StarRating
-                height={32}
-                width={32}
-                isEditing={false}
-                averageRating={4}
-                maxRating={5}
-              />
-              <div>Best Product Ever</div>
-            </div>
-            <div className="footer">
-              <div>Enes Kaplan</div>
-              <div>
-                | <span style={{ marginLeft: "1rem" }}></span> 24 October 2022
-              </div>
-            </div>
-          </StyledReview>
-          <StyledReview>
-            <div className="header">
-              <StarRating
-                height={32}
-                width={32}
-                isEditing={false}
-                averageRating={4}
-                maxRating={5}
-              />
-              <div>Best Product Ever</div>
-            </div>
-            <div className="footer">
-              <div>Enes Kaplan</div>
-              <div>
-                | <span style={{ marginLeft: "1rem" }}></span> 24 October 2022
-              </div>
-            </div>
-          </StyledReview>
+          {data?.data?.data?.document?.map((review) => {
+            return <UserReview key={review?._id} review={review} />;
+          })}
         </StyledReviews>
       </StyledProductReviews>
     </StyledProductReviewContainer>

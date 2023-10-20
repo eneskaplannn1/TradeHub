@@ -4,26 +4,24 @@ const AppError = require('../utils/errFeatures');
 
 exports.getAll = (Model) =>
   catchAsync(async (req, res) => {
-    // products için get all fonksiyonu çok gelişmiş olmalı bunun için de apiFeatures dosyasına derin bir bakış atmak lazım
-
     let filter = {};
-    // Define an array of allowed query parameters
-    const allowedQueryParams = ['category', 'seller', 'customer'];
-    // Loop through the allowed query parameters
+    const allowedQueryParams = ['category', 'seller', 'customer', 'product'];
+
     allowedQueryParams.forEach((param) => {
       if (req.query[param]) {
-        // Add the filter condition dynamically based on the query parameter
         filter[param] = req.query[param];
       }
     });
 
-    const feautures = new ApiFeatures(Model.find(filter), req.query)
+    console.log('filter is:', filter);
+
+    const features = new ApiFeatures(Model.find(filter), req.query)
       .filter()
       .sort()
       .limit()
       .paginate();
 
-    const document = await feautures.query;
+    const document = await features.query;
 
     res.status(200).json({
       status: 'success',
@@ -33,6 +31,7 @@ exports.getAll = (Model) =>
       },
     });
   });
+
 exports.getOne = (Model, ...Populate) => {
   return catchAsync(async (req, res, next) => {
     // get document by id

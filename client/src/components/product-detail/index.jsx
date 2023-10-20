@@ -18,9 +18,9 @@ import StarRating from "../../UI/star";
 import { AiOutlineHeart } from "react-icons/ai";
 import { StyledProductFavorite } from "../../UI/product";
 
-function ProductDetailContainer({ productData, isLoading }) {
+function ProductDetailContainer({ productData = {}, isLoading }) {
+  productData = productData ? productData : {};
   const user = useSelector((store) => store.auth.user);
-
   const dispatch = useDispatch();
   //prettier-ignore
   const {brand,productDesc,price,ratingsAverage,category} = productData;

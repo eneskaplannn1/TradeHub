@@ -3,6 +3,20 @@ import customRequest from "../utils/customRequest";
 const createReview = async function (data) {
   try {
     const res = await customRequest.post(`/reviews`, data);
+    // console.log(res);
+    return res;
+  } catch (err) {
+    console.log(err);
+    throw new Error(err.response.data.message);
+  }
+};
+const getUsersReviews = async function (customerId) {
+  // console.log(customerId);
+  // console.log(productId);
+  try {
+    const res = await customRequest(
+      `/reviews?${customerId ? `customer=${customerId}` : ""}`
+    );
     console.log(res);
     return res;
   } catch (err) {
@@ -10,9 +24,12 @@ const createReview = async function (data) {
     throw new Error(err.response.data.message);
   }
 };
-const getReviews = async function () {
+const getProductReviews = async function (productId) {
+  // console.log(productId);
   try {
-    const res = await customRequest(`/reviews`);
+    const res = await customRequest(
+      `/reviews?${productId ? `product=${productId}` : ""}`
+    );
     console.log(res);
     return res;
   } catch (err) {
@@ -32,4 +49,4 @@ const getReviews = async function () {
 //   }
 // };
 
-export { createReview, getReviews };
+export { createReview, getUsersReviews, getProductReviews };

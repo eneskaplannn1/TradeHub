@@ -37,7 +37,7 @@ function ProductReview({ review }) {
         <StyledProductReviewFooter>
           <img src="/product.jpg" />
           <div>
-            <span>{review?.product?.brand} </span>{" "}
+            <span>{review?.product?.brand} </span>
             {review?.product?.productDesc}
           </div>
           <div>{review?.review}</div>

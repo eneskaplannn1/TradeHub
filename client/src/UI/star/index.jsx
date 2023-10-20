@@ -19,6 +19,7 @@ export default function StarRating({
   const [rating, setRating] = useState(averageRating);
   const [tempRating, setTempRating] = useState();
   // console.log(rating);
+  // console.log(rating);
   return (
     <div style={containerStyle}>
       <div style={starContainerStyle}>

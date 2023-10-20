@@ -19,7 +19,7 @@ function ProductDetail() {
   return (
     <StyledProductDetail>
       <ProductDetailContainer productData={productData} isLoading={isLoading} />
-      <ReviewContainer productData={productData} />
+      <ReviewContainer productData={productData} productId={productId} />
     </StyledProductDetail>
   );
 }
