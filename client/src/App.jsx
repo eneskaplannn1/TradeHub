@@ -8,7 +8,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import RequiredAuth from "./features/auth/requiredAuth";
+// import RequiredAuth from "./features/auth/requiredAuth";
 import { useDispatch } from "react-redux";
 import { logUserIn } from "./features/auth/authSlice";
 import { handleLoginWithCookie } from "./services/apiAuth";
@@ -79,9 +79,9 @@ function App() {
         <Routes>
           <Route
             element={
-              <RequiredAuth allowedRoles={["customer", "seller"]}>
-                <RootLayout />
-              </RequiredAuth>
+              // <RequiredAuth allowedRoles={["customer", "seller"]}>
+              <RootLayout />
+              // </RequiredAuth>
             }
           >
             <Route index element={<Navigate replace to="/products" />} />
