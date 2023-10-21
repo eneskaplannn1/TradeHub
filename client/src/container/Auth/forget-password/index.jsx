@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { StyledContainer } from "../../../UI/Auth";
+import { StyledContainer } from "../../../UI/auth";
 import FormRowVertical from "../../../UI/form/form-row";
 import Button from "../../../UI/button";
 

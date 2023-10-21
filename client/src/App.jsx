@@ -23,14 +23,14 @@ import SignUp from "./pages/Authentication/SignUp";
 import ForgetPassword from "./pages/Authentication/ForgetPassword";
 import Login from "./pages/Authentication/Login";
 import UnAuthorized from "./pages/Authentication/UnAuthorized";
-import PageNotFound from "./pages/Error/pageNotFound";
+import PageNotFound from "./pages/Error/PageNotFound";
 import ProductDetail from "./pages/RootLayout/ProductDetail";
 import OrderDetail from "./pages/RootLayout/OrderDetail";
 import ConfirmAccount from "./pages/Authentication/ConfirmAccount";
 import Reviews from "./pages/RootLayout/Reviews";
 
 import GlobalStyle from "./styles/globalStyles";
-import { StyledAuthContainer } from "./UI/Auth";
+import { StyledAuthContainer } from "./UI/auth";
 import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
