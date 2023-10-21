@@ -94,14 +94,6 @@ app.use('/api/v1/products', productRouter);
 app.use('/api/v1/orders', orderRouter);
 app.use('/api/v1/reviews', reviewRouter);
 
-app.use('/', (req, res, next) => {
-  res.status(200).render('home');
-});
-
-app.all('*', (req, res, next) => {
-  next(new AppError(`Cant find ${req.originalUrl} on this server`, 404));
-});
-
 //! Error Handling
 app.use(globalErrorHandler);
 
