@@ -22,7 +22,7 @@ const orderController = require('./controllers/orderController');
 const path = require('path');
 const reviewRouter = require('./routes/reviewRoutes');
 
-// app.set('view engine', 'pug');
+app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // !Global Middlewares
@@ -95,8 +95,7 @@ app.use('/api/v1/orders', orderRouter);
 app.use('/api/v1/reviews', reviewRouter);
 
 app.use('/', (req, res, next) => {
-  console.log(1);
-  next();
+  res.status(200).render('home');
 });
 
 app.all('*', (req, res, next) => {
