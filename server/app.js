@@ -29,7 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(
   cors({
-    origin: ['https://tradehub-3t3s.onrender.com/'],
+    origin: ['http://localhost:5173'],
     methods: ['POST', 'PATCH', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
