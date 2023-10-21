@@ -8,7 +8,7 @@ import {
   StyledAuthHead,
   StyledContainer,
   StyledFooter,
-} from "../../../UI/Auth";
+} from "../../../UI/auth";
 import FormRowVertical from "../../../UI/form/form-row";
 import Input from "../../../UI/form/input/input";
 import Button from "../../../UI/button";
