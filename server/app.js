@@ -47,13 +47,13 @@ app.use(
 
 // Limit request from same IP
 
-const limiter = rateLimit({
-  max: 5000,
-  windowMs: 60 * 60 * 1000,
-  message: 'Too many request from this IP , please try again in an  hours',
-});
+// const limiter = rateLimit({
+//   max: 5000,
+//   windowMs: 60 * 60 * 1000,
+//   message: 'Too many request from this IP , please try again in an  hours',
+// });
 
-app.use('/api', limiter);
+// app.use('/api', limiter);
 
 // Data sanizitation against NoSQL query injection
 app.use(mongoSanitize());

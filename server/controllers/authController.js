@@ -111,7 +111,7 @@ const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
-    httpOnly: false,
+    httpOnly: true,
     withCredentials: true,
     SameSite: 'None',
   };

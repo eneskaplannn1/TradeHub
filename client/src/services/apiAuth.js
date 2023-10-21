@@ -38,7 +38,9 @@ const handleSignUp = async (data) => {
 };
 const handleLoginWithCookie = async function () {
   try {
-    const res = await customRequest.get("/users/logUserIn");
+    const res = await customRequest.get("/users/logUserIn", {
+      withCredentials: true,
+    });
     console.log(res);
     console.log(2);
     return res;
