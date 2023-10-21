@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const customRequest = axios.create({
-  baseURL: "https://eduprotrack-itgu.onrender.com/api/v1",
+  baseURL: "https://tradehub-3t3s.onrender.com/api/v1/",
   withCredentials: true,
 });
 // process.env.NODE_ENV === "production"
-//   ? "https://eduprotrack-itgu.onrender.com/api/v1"
+//   ? "https://tradehub-3t3s.onrender.com/api/v1/"
 //   : "http://localhost:3001/api/v1",
 
 export default customRequest;
