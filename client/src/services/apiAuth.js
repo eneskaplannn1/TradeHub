@@ -2,10 +2,11 @@ import customRequest from "../utils/customRequest";
 
 const handleLogin = async (data) => {
   try {
+    console.log(data);
     const res = await customRequest.post("/users/login", data, {
       withCredentials: true,
     });
-    // console.log(res);
+    console.log(res);
 
     return res;
   } catch (err) {
@@ -39,6 +40,7 @@ const handleLoginWithCookie = async function () {
   try {
     const res = await customRequest.get("/users/logUserIn");
     console.log(res);
+    console.log(2);
     return res;
   } catch (err) {
     // console.log(err.response.data);

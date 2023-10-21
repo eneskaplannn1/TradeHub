@@ -135,12 +135,13 @@ exports.login = catchAsync(async (req, res, next) => {
 
   // checking if user exists and verifying password
   let isCorrectPassword;
-
+  console.log(req.body);
   const user = await User.findOne({ email }).select('+password');
   if (user) {
     isCorrectPassword = await user.correctPassword(password, user.password);
   }
 
+  console.log(user);
   if (!user || !isCorrectPassword) {
     // If the user or password is incorrect, return an error
     return next(new AppError('incorrect email or password', 401));
@@ -220,7 +221,7 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
   if (req.cookies.jwt) {
     token = req.cookies.jwt;
   }
-
+  console.log(token);
   // If no token is found, throw an error indicating that the user is not logged in
   if (!token) {
     next(

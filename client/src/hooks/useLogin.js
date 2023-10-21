@@ -11,7 +11,6 @@ function useLogin() {
   const dispatch = useDispatch();
   const location = useLocation();
   const { user } = useSelector((store) => store.auth);
-  console.log(user);
 
   if (user) navigate(location?.state?.from ? location.state.from : "/");
 
@@ -32,13 +31,12 @@ function useLogin() {
     onSuccess: (data) => {
       if (!data) return;
       // console.log(data.data.data.user);
-      dispatch(logUserIn(data.data.data.user));
+      dispatch(logUserIn(data?.data?.data?.user));
       navigate("/");
       toast.success("Logged in successfully");
       // console.log(2);
     },
     onError: (err) => {
-      console.log(3);
       // console.log(err.message);
       toast.error(err.message);
     },
