@@ -37,7 +37,9 @@ const handleSignUp = async (data) => {
 };
 const handleLoginWithCookie = async function () {
   try {
-    return await customRequest.get("/users/logUserIn");
+    const res = await customRequest.get("/users/logUserIn");
+    console.log(res);
+    return res;
   } catch (err) {
     // console.log(err.response.data);
     throw new Error(err.response.data.message);

@@ -11,6 +11,7 @@ function useLogin() {
   const dispatch = useDispatch();
   const location = useLocation();
   const { user } = useSelector((store) => store.auth);
+  console.log(user);
 
   if (user) navigate(location?.state?.from ? location.state.from : "/");
 

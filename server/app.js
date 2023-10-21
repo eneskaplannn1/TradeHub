@@ -95,7 +95,7 @@ app.use('/api/v1/orders', orderRouter);
 app.use('/api/v1/reviews', reviewRouter);
 
 app.use('/', (req, res) => {
-  res.end('Hello world');
+  res.end();
 });
 
 app.all('*', (req, res, next) => {
