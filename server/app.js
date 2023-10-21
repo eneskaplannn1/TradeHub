@@ -94,8 +94,9 @@ app.use('/api/v1/products', productRouter);
 app.use('/api/v1/orders', orderRouter);
 app.use('/api/v1/reviews', reviewRouter);
 
-app.use('/', (req, res) => {
-  res.end();
+app.use('/', (req, res, next) => {
+  console.log(1);
+  next();
 });
 
 app.all('*', (req, res, next) => {
