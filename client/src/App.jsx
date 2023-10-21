@@ -41,9 +41,9 @@ function App() {
   const { data } = useQuery({
     queryFn: handleLoginWithCookie,
     queryKey: ["login"],
-    retry: 2,
   });
 
+  console.log(data?.data);
   if (data?.data) {
     dispatch(logUserIn(data?.data));
   }

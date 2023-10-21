@@ -43,7 +43,7 @@ const handleLoginWithCookie = async function () {
     console.log(2);
     return res;
   } catch (err) {
-    // console.log(err.response.data);
+    console.log(err);
     throw new Error(err.response.data.message);
   }
 };
