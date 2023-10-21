@@ -41,6 +41,7 @@ function App() {
   const { data } = useQuery({
     queryFn: handleLoginWithCookie,
     queryKey: ["login"],
+    retry: 2,
   });
 
   if (data?.data) {

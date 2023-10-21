@@ -9,7 +9,6 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
 
 const AppError = require('./utils/errFeatures');
 const globalErrorHandler = require('./controllers/errorController');
@@ -49,7 +48,7 @@ app.use(
 // Limit request from same IP
 
 const limiter = rateLimit({
-  max: 1000,
+  max: 5000,
   windowMs: 60 * 60 * 1000,
   message: 'Too many request from this IP , please try again in an  hours',
 });
