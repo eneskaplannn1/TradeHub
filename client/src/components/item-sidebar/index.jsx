@@ -55,7 +55,6 @@ const StyledSummaryFooter = styled.div`
 `;
 
 function ItemSidebar({ cart }) {
-  const dispatch = useDispatch();
   const { _id } = useSelector((store) => store.auth.user);
   const { mutate, isLoading } = useMutation({
     mutationFn: handleOrder,
@@ -63,15 +62,7 @@ function ItemSidebar({ cart }) {
   });
 
   const handlePaymentSession = function () {
-    // console.log(cart);
-    mutate(
-      { cart, customerId: _id }
-      // {
-      //   onSuccess: () => {
-      //     dispatch(clearCart());
-      //   },
-      // }
-    );
+    mutate({ cart, customerId: _id });
   };
   return (
     <StyledItemSidebar>

@@ -16,6 +16,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRoutes');
 const orderRouter = require('./routes/orderRoutes');
 const productRouter = require('./routes/productRoutes');
+const orderController = require('./controllers/orderController');
 // const bookingRouter = require("./routes/bookingRouter");
 
 const path = require('path');
@@ -54,6 +55,12 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 
+app.use(
+  express.raw({
+    type: 'application/json',
+  })
+);
+
 // Data sanizitation against NoSQL query injection
 app.use(mongoSanitize());
 
@@ -69,6 +76,8 @@ app.use(
   })
 );
 
+app.route('/webhook-checkout').post(orderController.webHookCheckout);
+
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
 
@@ -79,6 +88,7 @@ app.use(cookieParser());
 // app.use(morgan('dev'));
 
 // ! Routes
+
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/orders', orderRouter);
