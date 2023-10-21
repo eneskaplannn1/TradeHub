@@ -129,7 +129,7 @@ const createSendToken = (user, statusCode, res) => {
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
-
+  console.log(req.body);
   if (!email || !password)
     return next(new AppError('please provide email and password', 404));
 
@@ -221,10 +221,10 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
   if (req.cookies.jwt) {
     token = req.cookies.jwt;
   }
-  console.log(token);
+  // console.log(token);
   // If no token is found, throw an error indicating that the user is not logged in
   if (!token) {
-    next(
+    return next(
       new AppError('You are not logged in! Please log in to get access', 401)
     );
   }

@@ -1,8 +1,8 @@
 import customRequest from "../utils/customRequest";
 
 const handleLogin = async (data) => {
+  console.log(data);
   try {
-    console.log(data);
     const res = await customRequest.post("/users/login", data, {
       withCredentials: true,
     });

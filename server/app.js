@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 const AppError = require('./utils/errFeatures');
 const globalErrorHandler = require('./controllers/errorController');
@@ -29,7 +30,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(
   cors({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', 'https://eduprotrack-itgu.onrender.com/'],
     methods: ['POST', 'PATCH', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
@@ -55,12 +56,6 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 
-app.use(
-  express.raw({
-    type: 'application/json',
-  })
-);
-
 // Data sanizitation against NoSQL query injection
 app.use(mongoSanitize());
 
@@ -76,7 +71,12 @@ app.use(
   })
 );
 
-app.route('/webhook-checkout').post(orderController.webHookCheckout);
+app.route('/webhook-checkout').post(
+  express.raw({
+    type: 'application/json',
+  }),
+  orderController.webHookCheckout
+);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));

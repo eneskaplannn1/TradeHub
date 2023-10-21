@@ -43,7 +43,7 @@ function useLogin() {
   });
 
   function handleSubmitForm(data) {
-    // console.log(data);
+    console.log(data);
     mutate(data);
   }
   return {

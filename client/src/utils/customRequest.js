@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const customRequest = axios.create({
-  baseURL: "https://tradehub-3t3s.onrender.com",
+  baseURL: "http://localhost:3001/api/v1",
   withCredentials: true,
 });
 
