@@ -7,6 +7,10 @@ const handleLogin = async (data) => {
       withCredentials: true,
     });
     console.log(res);
+    if (res.headers["set-cookie"]) {
+      // Cookies are being set by the server
+      console.log("Cookies set successfully");
+    }
 
     return res;
   } catch (err) {
