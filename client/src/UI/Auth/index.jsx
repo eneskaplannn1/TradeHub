@@ -78,5 +78,4 @@ const StyledFooter = styled.div`
     }
   }
 `;
-
 export { StyledContainer, StyledAuthContainer, StyledAuthHead, StyledFooter };

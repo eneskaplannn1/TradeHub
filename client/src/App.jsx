@@ -30,7 +30,7 @@ import ConfirmAccount from "./pages/Authentication/ConfirmAccount";
 import Reviews from "./pages/RootLayout/Reviews";
 
 import GlobalStyle from "./styles/globalStyles";
-import { StyledAuthContainer } from "./UI/auth/index";
+import { StyledAuthContainer } from "./UI/auth/index.jsx";
 
 import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
