@@ -9,10 +9,9 @@ import { clearCart } from "../../../features/product/productSlice";
 function OrderContainer() {
   const dispatch = useDispatch();
   const urlParams = new URLSearchParams(window.location.search);
-  const clear = urlParams.get("clear");
+  const checkoutSuccess = urlParams.get("checkoutSuccess");
 
-  if (clear) {
-    console.log(1);
+  if (checkoutSuccess) {
     dispatch(clearCart());
   }
 

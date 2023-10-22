@@ -19,7 +19,7 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
     },
   });
 
-  console.log(customer.id);
+  console.log('hello world');
   // console.log(user);
   const transformedProducts = req.body.cart.products.map((product) => {
     return {
@@ -37,16 +37,15 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `http://localhost:5173/account/orders`,
+    success_url: `http://localhost:5173/account/orders?checkoutSuccess=true`,
     cancel_url: `http://localhost:5173/cart`, // ! handle here later
-    customer_email: user.email, //! handle later
     customer: customer.id,
     // client_reference_id: '651da76a1d1dc9be6197c1cb', //! handle later
     mode: 'payment',
     line_items: transformedProducts,
   });
 
-  console.log('session completed successfully');
+  // console.log(session);
 
   res.status(200).json({
     status: 'success',
@@ -56,7 +55,7 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
 
 const createOrderCheckout = async function (data) {
   try {
-    const customer = await stripe.customers.retrieve('cus_OrsOVG7aKaziAz');
+    const customer = await stripe.customers.retrieve(data.customer);
     const items = JSON.parse(customer.metadata.cart);
 
     const totalPrice = items.totalPrice;
@@ -68,7 +67,7 @@ const createOrderCheckout = async function (data) {
     });
 
     const newOrder = await Order.create({
-      totalPrice,
+      totalPrice: totalPrice.toFixed(2),
       products: productIds,
       customer: `${customer.metadata.customer}`,
     });
@@ -103,7 +102,9 @@ exports.webHookCheckout = catchAsync(async (req, res, next) => {
     data = req.body.data.object;
     eventType = req.body.type;
   }
-  createOrderCheckout(data);
+  if (eventType === 'checkout.session.completed') {
+    createOrderCheckout(data);
+  }
 
   res.status(200).json({ received: true });
 });
