@@ -78,4 +78,5 @@ const StyledFooter = styled.div`
     }
   }
 `;
-export { StyledContainer, StyledAuthContainer, StyledAuthHead, StyledFooter };
+export default StyledAuthContainer;
+export { StyledContainer, StyledAuthHead, StyledFooter };

@@ -35,7 +35,7 @@ import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
-import { StyledAuthContainer } from "./UI/auth/index";
+import StyledAuthContainer from "./UI/auth/index";
 
 function App() {
   const dispatch = useDispatch();
