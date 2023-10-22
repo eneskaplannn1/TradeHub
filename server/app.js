@@ -29,7 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(
   cors({
-    origin: 'https://client-t0uz.onrender.com/login',
+    origin: 'https://client-t0uz.onrender.com',
     methods: ['POST', 'PATCH', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
