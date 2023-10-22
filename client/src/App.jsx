@@ -35,7 +35,6 @@ import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
-import StyledAuthContainer from "./UI/auth/index";
 
 function App() {
   const dispatch = useDispatch();
@@ -120,13 +119,7 @@ function App() {
           </Route>
 
           {/* Authentication routes */}
-          <Route
-            element={
-              <StyledAuthContainer>
-                <Outlet />
-              </StyledAuthContainer>
-            }
-          >
+          <Route element={<Outlet />}>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="confirmAccount" element={<ConfirmAccount />} />
