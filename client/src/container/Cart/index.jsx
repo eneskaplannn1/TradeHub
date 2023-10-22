@@ -3,9 +3,7 @@ import { StyledItemContainer } from "../../UI/item";
 // import Item from "../../components/item";
 import ItemSidebar from "../../components/item-sidebar";
 import Item from "../../components/item";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { setCartData } from "../../features/product/productSlice";
+import { useSelector } from "react-redux";
 import NoProduct from "../../components/product/no-product";
 
 const StyledCartContainer = styled.section`
@@ -16,13 +14,6 @@ const StyledCartContainer = styled.section`
 `;
 
 function CartContainer() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const cartData = JSON.parse(localStorage.getItem("cart"));
-    if (cartData) dispatch(setCartData(cartData));
-  }, [dispatch]);
-
   const { cart } = useSelector((store) => store.cart);
 
   return (

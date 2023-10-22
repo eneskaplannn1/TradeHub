@@ -35,7 +35,7 @@ import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
-import StyledAuthContainer from "./UI/auth/index";
+import { StyledAuthContainer } from "./UI/auth";
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +44,6 @@ function App() {
     queryKey: ["login"],
   });
 
-  console.log(data?.data);
   if (data?.data) {
     dispatch(logUserIn(data?.data));
   }

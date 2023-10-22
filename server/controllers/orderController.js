@@ -2,7 +2,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const factory = require('../controllers/factoryController');
 const Order = require('../models/OrderModel');
 const User = require('../models/UserModel');
-const Product = require('../models/ProductModel');
 const catchAsync = require('../utils/catchAsync');
 
 exports.getAllOrders = factory.getAll(Order);
@@ -11,37 +10,8 @@ exports.createOrder = factory.createOne(Order);
 exports.updateOrder = factory.updateOne(Order);
 exports.deleteOrder = factory.deleteOne(Order);
 
-exports.saleDetails = catchAsync((req, res, next) => {
-  // in order to complete this functionality first I have to create order datas //! done (but i need to create more orders)
-
-  // with this part , sellers will be able to see total number of sales ,
-  // total income of sales and even later maybe I will let customers to have differeny product categories
-  // then I will match by their categories and seller will have much more control
-
-  const sales = Order.aggregate([
-    //! handle this later
-
-    // {
-    //   $match: {
-    //     seller: req.query.sellerId,
-    //   },
-    // },
-    {
-      $group: {
-        seller: req.query.sellerId,
-      },
-    },
-  ]);
-
-  res.status(200).json({
-    status: 'message',
-    sales,
-  });
-});
-
-exports.getCheckoutSession = catchAsync(async (req, res, next) => {
+exports.getCheckoutSession = catchAsync(async (req, res) => {
   const user = await User.findById(req.body.customerId);
-
   const customer = await stripe.customers.create({
     metadata: {
       customer: req.body.customerId,
@@ -49,6 +19,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     },
   });
 
+  console.log(customer.id);
   // console.log(user);
   const transformedProducts = req.body.cart.products.map((product) => {
     return {
@@ -74,7 +45,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     mode: 'payment',
     line_items: transformedProducts,
   });
-  // console.log(session);
+
+  console.log('session completed successfully');
 
   res.status(200).json({
     status: 'success',
@@ -82,40 +54,56 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
-const createOrderCheckout = async function (session) {
-  const customer = await stripe.customers.retrieve(session.customer);
-  console.log(customer);
+const createOrderCheckout = async function (data) {
+  try {
+    const customer = await stripe.customers.retrieve('cus_OrsOVG7aKaziAz');
+    const items = JSON.parse(customer.metadata.cart);
 
-  const totalPrice = customer.metadata.cart.totalPrice;
-  const productIds = customer.metadata.cart.map((cartItem) => {
-    return cartItem.productId;
-  });
+    const totalPrice = items.totalPrice;
+    const productIds = items.products.map((cartItem) => {
+      return {
+        product: cartItem.productId,
+        quantity: cartItem.quantity,
+      };
+    });
 
-  const newOrder = Order.create({
-    totalPrice,
-    products: productIds,
-    customer: customer.metadata.customer,
-  });
-  console.log(newOrder);
+    const newOrder = await Order.create({
+      totalPrice,
+      products: productIds,
+      customer: `${customer.metadata.customer}`,
+    });
+
+    console.log(newOrder);
+  } catch (error) {
+    console.error('Error retrieving customer:', error);
+  }
 };
 
 exports.webHookCheckout = catchAsync(async (req, res, next) => {
-  const signature = req.headers['stripe-signature'];
-  let event;
-  try {
-    event = await stripe.webhooks.constructEvent(
-      req.body,
-      signature,
-      process.env.STRIPE_WEBHOOK_SECRET
-    );
-  } catch (err) {
-    console.log(err.message);
-    res.status(400).send('webhook error');
-  }
+  let webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  let data;
+  let eventType;
 
-  if (event.type === 'checkout.session.complete') {
-    createOrderCheckout(event.data.object);
+  if (webhookSecret) {
+    let event;
+    const signature = req.headers['stripe-signature'];
+    try {
+      event = await stripe.webhooks.constructEvent(
+        req.body,
+        signature,
+        webhookSecret
+      );
+    } catch (err) {
+      console.log(`⚠️  Webhook signature verification failed:  ${err}`);
+      return res.sendStatus(400);
+    }
+    data = event.data.object;
+    eventType = event.type;
+  } else {
+    data = req.body.data.object;
+    eventType = req.body.type;
   }
+  createOrderCheckout(data);
 
   res.status(200).json({ received: true });
 });

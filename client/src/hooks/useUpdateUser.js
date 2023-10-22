@@ -1,15 +1,17 @@
 import { useForm } from "react-hook-form";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
 import { updateUserData } from "../services/apiUser";
 import { toast } from "react-hot-toast";
 
 function useUpdateUser() {
+  const queryClient = useQueryClient();
   const user = useSelector((store) => store.auth.user);
   const { mutate, isLoading } = useMutation({
     mutationFn: updateUserData,
     mutationKey: ["update-user"],
-    onSuccess: () => {
+    onSuccess: async () => {
+      queryClient.invalidateQueries(["login"]);
       toast.success("user updated successfully");
     },
     onError: (err) => toast.error(err.message),

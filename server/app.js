@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 // const morgan = require('morgan');
 
-const rateLimit = require('express-rate-limit');
+// const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
@@ -25,27 +25,22 @@ const reviewRouter = require('./routes/reviewRoutes');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-// !Global Middlewares
-
 app.use(
   cors({
-    origin: 'https://client-t0uz.onrender.com',
+    origin: true,
     methods: ['POST', 'PATCH', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
 );
 
-// Serving Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// set Security HTTP header
 app.use(
   helmet({
     contentSecurityPolicy: false,
   })
 );
-
-// Limit request from same IP
+app.use(cookieParser());
 
 // const limiter = rateLimit({
 //   max: 5000,
@@ -55,13 +50,10 @@ app.use(
 
 // app.use('/api', limiter);
 
-// Data sanizitation against NoSQL query injection
 app.use(mongoSanitize());
 
-// Data sanizitation against xss query injection
 app.use(xss());
 
-//html parameter pollution
 app.use(
   hpp({
     whitelist: [
@@ -70,21 +62,13 @@ app.use(
   })
 );
 
-app.route('/webhook-checkout').post(
-  express.raw({
-    type: 'application/json',
-  }),
+app.post(
+  '/webhook-checkout',
+  express.raw({ type: 'application/json' }),
   orderController.webHookCheckout
 );
 
-// Body parser, reading data from body into req.body
-app.use(express.json({ limit: '10kb' }));
-
-// populates cookies from headers we can  access cookies with writing req.cookies instead of typing req.body.headers
-app.use(cookieParser());
-
-//morgan: This middleware function logs incoming requests and responses to the console, providing detailed information about each request and response.
-// app.use(morgan('dev'));
+app.use(express.json());
 
 // ! Routes
 

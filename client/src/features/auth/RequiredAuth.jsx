@@ -4,8 +4,6 @@ import { Navigate, useLocation } from "react-router-dom";
 function RequiredAuth({ allowedRoles, children }) {
   const user = useSelector((store) => store.auth.user);
   const location = useLocation();
-  console.log(user?.role);
-  console.log(user);
   return allowedRoles.includes(user?.role) ? (
     children
   ) : user ? (

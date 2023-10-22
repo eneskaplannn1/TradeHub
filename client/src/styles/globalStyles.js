@@ -57,7 +57,6 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
   /* Creating animations for dark mode */
   transition: background-color 0.3s, border 0.3s;
 }

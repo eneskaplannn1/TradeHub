@@ -3,7 +3,7 @@ const OrderController = require('./../controllers/orderController');
 const orderRouter = express.Router();
 
 // get-total-sales . this route will be spesific to seller to analyze order amounts and prices
-orderRouter.route('/sale-details/:sellerId').get(OrderController.saleDetails);
+// orderRouter.route('/sale-details/:sellerId').get(OrderController.saleDetails);
 
 orderRouter.route('/create-order').post(OrderController.getCheckoutSession);
 

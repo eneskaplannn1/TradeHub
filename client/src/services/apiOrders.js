@@ -6,10 +6,11 @@ const handleOrder = async function ({ cart, customerId }) {
       cart,
       customerId,
     });
+    console.log(2);
     window.location.assign(res.data.session.url);
     return res;
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     throw new Error(err);
   }
 };

@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -17,9 +17,10 @@ import FormRowVertical from "../../../UI/form/form-row";
 import Input from "../../../UI/form/input/input";
 import Button from "../../../UI/button";
 import { handleSignUp } from "../../../services/apiAuth";
-import { verifyAccount } from "../../../features/auth/authSlice";
+import { logUserIn, verifyAccount } from "../../../features/auth/authSlice";
 
 function SignUpContainer() {
+  const queryClient = useQueryClient();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -33,13 +34,14 @@ function SignUpContainer() {
   const { mutate, isLoading } = useMutation({
     mutationFn: handleSignUp,
     mutationKey: ["signup"],
-    onSuccess: (data) => {
-      // console.log(data.data.newUser.email);
-      toast.success(
-        "Your account created successfully , in order to login check your email "
-      );
-      navigate("/confirmAccount");
-      dispatch(verifyAccount(data.data.newUser.email));
+    onSuccess: async (data) => {
+      toast.success("Your account created successfully ");
+      dispatch(logUserIn(data.data.newUser));
+      await queryClient.invalidateQueries(["login"]);
+      navigate("/");
+
+      // navigate("/confirmAccount");
+      // dispatch(verifyAccount(data.data.newUser.email));
     },
     onError: (err) => {
       toast.error(err.message);
@@ -58,7 +60,11 @@ function SignUpContainer() {
         <strong>Create account!</strong>
       </StyledAuthHead>
       <form onSubmit={handleSubmit(handleSubmitForm)}>
-        <FormRowVertical label="Name" error={errors?.name?.message}>
+        <FormRowVertical
+          label="Name"
+          error={errors?.name?.message}
+          variation="flex"
+        >
           <Input
             id="name"
             type="text"
@@ -66,7 +72,11 @@ function SignUpContainer() {
           />
           <BsPerson />
         </FormRowVertical>
-        <FormRowVertical label="Email" error={errors?.email?.message}>
+        <FormRowVertical
+          label="Email"
+          error={errors?.email?.message}
+          variation="flex"
+        >
           <Input
             id="email"
             type="email"
@@ -74,7 +84,11 @@ function SignUpContainer() {
           />
           <IoMailOpenOutline />
         </FormRowVertical>
-        <FormRowVertical label="Password" error={errors?.password?.message}>
+        <FormRowVertical
+          label="Password"
+          error={errors?.password?.message}
+          variation="flex"
+        >
           <Input
             id="password"
             type={`${showPassword ? "text" : "password"}`}

@@ -63,6 +63,8 @@ exports.signup = catchAsync(async (req, res, next) => {
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
+    role: 'customer',
+    favorites: [],
   });
 
   // create special token and add it to newUser object
@@ -74,16 +76,16 @@ exports.signup = catchAsync(async (req, res, next) => {
 
   // send non-special token to users email
   try {
-    const url = `${req.protocol}://${req.get('host')}/verify-account/${token}`;
+    // const url = `${req.protocol}://${req.get('host')}/verify-account/${token}`;
     // await new Email(newUser, url).verifyAccount();
-    res.status(200).json({
-      status: 'success',
-      newUser,
-    });
+    // res.status(200).json({
+    //   status: 'success',
+    //   newUser,
+    // });
+    createSendToken(newUser, 201, res);
   } catch (err) {
     console.log(err);
   }
-  createSendToken(newUser, 201, res);
 });
 
 exports.verifyAccount = catchAsync(async (req, res, next) => {
@@ -111,10 +113,9 @@ const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
-    httpOnly: true,
+    httpOnly: false,
     withCredentials: true,
     SameSite: 'None',
-    secure: false,
   };
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
