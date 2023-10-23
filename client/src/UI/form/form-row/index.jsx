@@ -25,6 +25,11 @@ const StyledFormRow = styled.div`
     color: var(--color-blue-800);
     text-decoration: underline;
   }
+
+  span {
+    justify-content: left;
+  }
+
   &:focus-within {
     label {
       color: var(--color-blue-600);

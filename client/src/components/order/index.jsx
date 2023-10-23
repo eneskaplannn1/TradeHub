@@ -6,11 +6,11 @@ const StyledOrder = styled.div`
   margin-bottom: 2rem;
 `;
 
-function Order() {
+function Order({ order }) {
   return (
     <StyledOrder>
-      <OrderHead />
-      <OrderFooter />
+      <OrderHead order={order} />
+      <OrderFooter order={order} />
     </StyledOrder>
   );
 }

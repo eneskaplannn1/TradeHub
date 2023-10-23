@@ -1,12 +1,13 @@
-import SearchBar from "../../../UI/search-bar";
-import StyledBox from "../../../components/box";
-import StyledBoxTemplate from "../../../components/box-template.jsx/index.jsx";
-import StyledOrderFilter from "../../../UI/order/order-filter";
 import Order from "../../../components/order/index";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../../../features/product/productSlice";
+import OrderFilter from "../../../UI/order/order-filter";
+import { useQuery } from "@tanstack/react-query";
+import { getOrders } from "../../../services/apiOrders";
+import NoProduct from "../../../components/product/no-product";
 
 function OrderContainer() {
+  const { _id } = useSelector((store) => store.auth.user);
   const dispatch = useDispatch();
   const urlParams = new URLSearchParams(window.location.search);
   const checkoutSuccess = urlParams.get("checkoutSuccess");
@@ -15,39 +16,24 @@ function OrderContainer() {
     dispatch(clearCart());
   }
 
+  const { data, isLoading } = useQuery({
+    queryKey: ["orders"],
+    queryFn: () => getOrders(_id),
+  });
+  // console.log(data?.data?.data?.document);
+
   return (
     <>
-      <StyledBoxTemplate>
-        <StyledBox variation="main">
-          <h5>Siparişlerim</h5>
-          <SearchBar />
-          <select>
-            <option>All orders</option>
-            <option>Last month</option>
-            <option>Last 3 month</option>
-            <option>2022</option>
-          </select>
-        </StyledBox>
-      </StyledBoxTemplate>
-      <StyledOrderFilter>
-        <ul>
-          <li className="active">
-            <StyledBoxTemplate className="active">All</StyledBoxTemplate>
-          </li>
-          <li>
-            <StyledBoxTemplate>Ongoing Orders</StyledBoxTemplate>
-          </li>
-          {/* <li>
-            <StyledBoxTemplate>All</StyledBoxTemplate>
-          </li>
-          <li>
-            <StyledBoxTemplate>All</StyledBoxTemplate>
-          </li> */}
-        </ul>
-      </StyledOrderFilter>
-      <Order />
-      <Order />
-      <Order />
+      {data.data.data.document.length === 0 ? (
+        <NoProduct cart={true} />
+      ) : (
+        <>
+          <OrderFilter />
+          {data?.data?.data?.document?.map((order) => {
+            return <Order key={order._id} order={order} />;
+          })}
+        </>
+      )}
     </>
   );
 }

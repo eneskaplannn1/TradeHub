@@ -5,13 +5,11 @@ const handleLogin = async (data) => {
     const res = await customRequest.post("/users/login", data, {
       withCredentials: true,
     });
-    // console.log(res);
-    if (res.headers["set-cookie"]) {
-      console.log("Cookies set successfully");
-    }
+    console.log(res);
 
     return res;
   } catch (err) {
+    console.log(err);
     throw new Error(err.response.data.message);
   }
 };

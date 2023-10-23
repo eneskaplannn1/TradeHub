@@ -21,7 +21,7 @@ const OrderSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Order must have a total price.'],
   },
-  createdAt: { 
+  createdAt: {
     type: Date,
     default: Date.now(),
   },
@@ -36,6 +36,16 @@ const OrderSchema = new mongoose.Schema({
   //   ref: 'Adress',
   //   required: [true, 'Order must have a address!'],
   // },
+});
+
+OrderSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: 'products.product',
+  }).populate({
+    path: 'customer',
+    select: 'name _id',
+  });
+  next();
 });
 
 const Order = mongoose.model('Order', OrderSchema);

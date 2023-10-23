@@ -12,6 +12,7 @@ exports.deleteOrder = factory.deleteOne(Order);
 
 exports.getCheckoutSession = catchAsync(async (req, res) => {
   const user = await User.findById(req.body.customerId);
+  console.log(req.body.cart);
   const customer = await stripe.customers.create({
     metadata: {
       customer: req.body.customerId,
@@ -46,7 +47,7 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
   });
 
   // console.log(session);
-
+  console.log(session);
   res.status(200).json({
     status: 'success',
     session,

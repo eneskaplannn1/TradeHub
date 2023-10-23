@@ -2,7 +2,35 @@ import { styled } from "styled-components";
 import Button from "../../UI/button";
 import StyledBoxTemplate from "../box-template.jsx";
 import { NavLink } from "react-router-dom";
+import formatDate from "../../utils/formatDate";
 
+function OrderHead({ order }) {
+  return (
+    <StyledBoxTemplate>
+      <StyledOrderHead>
+        <ul>
+          <li>
+            <div>Order date</div>
+            <div>{formatDate(order?.createdAt)} </div>
+          </li>
+          <li>
+            <div>Customer </div>
+            <div>{order?.customer.name}</div>
+          </li>
+          <li>
+            <div>Total Price </div>
+            <div>{order?.totalPrice} </div>
+          </li>
+          <NavLink to={`${order?._id}`}>
+            <Button variation="orange">Sipariş Detayı</Button>
+          </NavLink>
+        </ul>
+      </StyledOrderHead>
+    </StyledBoxTemplate>
+  );
+}
+
+export default OrderHead;
 const StyledOrderHead = styled.div`
   background-color: var(--color-zinc-50);
   ul {
@@ -24,31 +52,3 @@ const StyledOrderHead = styled.div`
     }
   }
 `;
-
-function OrderHead() {
-  return (
-    <StyledBoxTemplate>
-      <StyledOrderHead>
-        <ul>
-          <li>
-            <div>Sipariş Tarihi</div>
-            <div>11 temmuz 2021</div>
-          </li>
-          <li>
-            <div>Alıcı </div>
-            <div>Enes Kaplan</div>
-          </li>
-          <li>
-            <div>Tutar </div>
-            <div>300TL</div>
-          </li>
-          <NavLink to="id">
-            <Button variation="orange">Sipariş Detayı</Button>
-          </NavLink>
-        </ul>
-      </StyledOrderHead>
-    </StyledBoxTemplate>
-  );
-}
-
-export default OrderHead;

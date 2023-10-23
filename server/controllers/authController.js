@@ -111,6 +111,7 @@ const signToken = (id) => {
 
 const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
+
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
     httpOnly: false,
@@ -131,10 +132,9 @@ const createSendToken = (user, statusCode, res) => {
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(req.body);
   if (!email || !password)
     return next(new AppError('please provide email and password', 404));
-
+  console.log(req.body);
   // checking if user exists and verifying password
   let isCorrectPassword;
   console.log(req.body);
@@ -143,14 +143,13 @@ exports.login = catchAsync(async (req, res, next) => {
     isCorrectPassword = await user.correctPassword(password, user.password);
   }
 
-  console.log(user);
   if (!user || !isCorrectPassword) {
     // If the user or password is incorrect, return an error
     return next(new AppError('incorrect email or password', 401));
   }
 
   // as the name says
-
+  console.log('user is: ', user);
   createSendToken(user, 200, res);
 });
 

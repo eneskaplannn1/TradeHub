@@ -29,13 +29,17 @@ const StyledNoProduct = styled.div`
   justify-content: space-between;
 `;
 
-function NoProduct() {
+function NoProduct({ cart }) {
   return (
     <StyledNoProduct>
       <div className="icon">
         <AiOutlineShoppingCart />
       </div>
-      <div>There is no product in your cart </div>
+      <div>
+        {cart
+          ? "You did not purchased anything yet "
+          : "There is no product in your cart "}
+      </div>
       <NavLink to="/">
         <Button variation="orange">Start shopping</Button>
       </NavLink>

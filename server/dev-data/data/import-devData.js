@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './config.env' });
+require('dotenv').config({ path: '.env' });
 
 const connectToDatabase = require('../../utils/connectDB');
 const User = require('../../models/UserModel');
@@ -40,8 +40,9 @@ const importData = async () => {
 const DeleteDatas = async () => {
   try {
     // await User.deleteMany();
-    await Product.deleteMany();
-    await Review.deleteMany();
+    // await Product.deleteMany();
+    // await Review.deleteMany();
+    await Order.deleteMany();
     console.log('Data Deleted');
 
     process.exit();
