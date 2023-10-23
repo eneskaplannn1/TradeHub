@@ -1,16 +1,16 @@
-const express = require("express");
-const ReviewController = require("./../controllers/reviewController");
+const express = require('express');
+const ReviewController = require('./../controllers/reviewController');
 const reviewRouter = express.Router();
 
 // get all reviews of spesific product-seller
 
 reviewRouter
-  .route("/")
+  .route('/')
   .get(ReviewController.getAllReviews)
-  .post(ReviewController.createReview);
+  .post(ReviewController.checkIsOrdered, ReviewController.createReview);
 
 reviewRouter
-  .route("/:id")
+  .route('/:id')
   .get(ReviewController.getReview)
   .patch(ReviewController.updateReview)
   .delete(ReviewController.deleteReview);

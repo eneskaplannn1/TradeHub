@@ -57,6 +57,7 @@ const createOrderCheckout = async function (data) {
   try {
     const customer = await stripe.customers.retrieve(data.customer);
     const items = JSON.parse(customer.metadata.cart);
+    console.log(customer.metadata);
 
     const totalPrice = items.totalPrice;
     const productIds = items.products.map((cartItem) => {

@@ -20,7 +20,7 @@ function OrderHead({ order }) {
           <div>{order?.totalPrice} </div>
         </li>
         <NavLink to={`${order?._id}`}>
-          <Button variation="orange">Sipariş Detayı</Button>
+          <Button variation="orange">See Order Details</Button>
         </NavLink>
       </ul>
     </StyledOrderHead>

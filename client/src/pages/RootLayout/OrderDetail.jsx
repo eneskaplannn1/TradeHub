@@ -14,7 +14,7 @@ function OrderDetail() {
     queryKey: ["orders", orderId],
     queryFn: () => getOrder(orderId),
   });
-  console.log(data);
+  // console.log(data);
 
   return (
     <StyledOrderDetail>

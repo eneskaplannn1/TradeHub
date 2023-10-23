@@ -2,9 +2,10 @@ import customRequest from "../utils/customRequest";
 
 const createReview = async function (data) {
   try {
-    return await customRequest.post(`/reviews`, data);
-    // console.log(res);
+    const res = await customRequest.post(`/reviews`, data);
+    console.log(res);
   } catch (err) {
+    console.log(err);
     throw new Error(err.response.data.message);
   }
 };

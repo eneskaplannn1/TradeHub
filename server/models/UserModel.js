@@ -41,7 +41,7 @@ const UserSchema = new mongoose.Schema(
         ref: 'Product',
       },
     ],
-    bookings: [
+    orders: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Product',

@@ -6,7 +6,7 @@ function checkIsNewProduct(createdAt) {
   return (
     new Date(
       `${productCreatedAt.getFullYear()}-${productCreatedAt.getMonth()}-${productCreatedAt.getDate()}`
-    ) >
+    ) <
     new Date(
       `${sevenDaysAgo.getFullYear()}-${sevenDaysAgo.getMonth()}-${sevenDaysAgo.getDate()}`
     )

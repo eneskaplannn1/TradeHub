@@ -6,7 +6,7 @@ import StyledBox from "../../../components/box";
 function OrderFilter() {
   return (
     <>
-      <StyledBoxTemplate>
+      <StyledOrderHead>
         <StyledBox variation="main">
           <h5>My orders</h5>
           <SearchBar />
@@ -17,7 +17,7 @@ function OrderFilter() {
             <option>2022</option>
           </select>
         </StyledBox>
-      </StyledBoxTemplate>
+      </StyledOrderHead>
       <StyledOrderFilter>
         <ul>
           <li className="active">
@@ -33,6 +33,11 @@ function OrderFilter() {
 }
 
 export default OrderFilter;
+
+const StyledOrderHead = styled.div`
+  border: 1px solid var(--color-zinc-200);
+  border-radius: 8px;
+`;
 
 const StyledOrderFilter = styled.div`
   margin: 2rem 1rem;

@@ -3,6 +3,39 @@ import Button from "../button";
 import StarRating from "../star";
 import useCreateReviews from "../../hooks/useCreateReviews";
 
+function ReviewForm({ productData, onCloseModal }) {
+  const { handleSubmit, handleSubmitForm, handleRating, register } =
+    useCreateReviews({ productData, onCloseModal });
+
+  return (
+    <StyledReviewFormContainer>
+      <h3>
+        Make a review about <span>{productData.productDesc}</span>{" "}
+      </h3>
+      <form onSubmit={handleSubmit(handleSubmitForm)}>
+        <label htmlFor="review">Review</label>
+        <input id="review" type="text" {...register("review")} />
+        <h3>Rate the product</h3>
+        <StarRating
+          maxRating={5}
+          width={80}
+          height={80}
+          isEditing={true}
+          handleRating={handleRating}
+        />
+        <div className="button-container">
+          <Button variation="red" onClick={onCloseModal}>
+            Cancel
+          </Button>
+          <Button variation="green">Confirm</Button>
+        </div>
+      </form>
+    </StyledReviewFormContainer>
+  );
+}
+
+export default ReviewForm;
+
 const StyledReviewFormContainer = styled.div`
   color: black;
   padding: 1rem 2rem;
@@ -39,36 +72,3 @@ const StyledReviewFormContainer = styled.div`
     gap: 1rem;
   }
 `;
-
-function ReviewForm({ productData, onCloseModal }) {
-  const { handleSubmit, handleSubmitForm, handleRating, register } =
-    useCreateReviews({ productData, onCloseModal });
-
-  return (
-    <StyledReviewFormContainer>
-      <h3>
-        Make a review about <span>{productData.productDesc}</span>{" "}
-      </h3>
-      <form onSubmit={handleSubmit(handleSubmitForm)}>
-        <label htmlFor="review">Review</label>
-        <input id="review" type="text" {...register("review")} />
-        <h3>Rate the product</h3>
-        <StarRating
-          maxRating={5}
-          width={80}
-          height={80}
-          isEditing={true}
-          handleRating={handleRating}
-        />
-        <div className="button-container">
-          <Button variation="red" onClick={onCloseModal}>
-            Cancel
-          </Button>
-          <Button variation="green">Confirm</Button>
-        </div>
-      </form>
-    </StyledReviewFormContainer>
-  );
-}
-
-export default ReviewForm;
