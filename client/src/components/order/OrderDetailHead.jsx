@@ -3,33 +3,34 @@ import Button from "../../UI/button";
 import { NavLink } from "react-router-dom";
 import formatDate from "../../utils/formatDate";
 
-function OrderHead({ order }) {
+function OrderDetailHead({ order }) {
   return (
-    <StyledOrderHead>
+    <StyledOrderDetailHead>
       <ul>
+        <li>
+          <div>Order Number</div>
+          <div>{order?._id} </div>
+        </li>
         <li>
           <div>Order date</div>
           <div>{formatDate(order?.createdAt)} </div>
         </li>
         <li>
           <div>Customer </div>
-          <div>{order?.customer.name}</div>
+          <div>{order?.customer?.name}</div>
         </li>
         <li>
           <div>Total Price </div>
           <div>{order?.totalPrice} </div>
         </li>
-        <NavLink to={`${order?._id}`}>
-          <Button variation="orange">Sipariş Detayı</Button>
-        </NavLink>
       </ul>
-    </StyledOrderHead>
+    </StyledOrderDetailHead>
   );
 }
 
-export default OrderHead;
+export default OrderDetailHead;
 
-const StyledOrderHead = styled.div`
+const StyledOrderDetailHead = styled.div`
   background-color: var(--color-zinc-50);
 
   ul {

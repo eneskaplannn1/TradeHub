@@ -12,7 +12,7 @@ exports.deleteOrder = factory.deleteOne(Order);
 
 exports.getCheckoutSession = catchAsync(async (req, res) => {
   const user = await User.findById(req.body.customerId);
-  console.log(req.body.cart);
+  console.log(req.body);
   const customer = await stripe.customers.create({
     metadata: {
       customer: req.body.customerId,
@@ -20,7 +20,6 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
     },
   });
 
-  console.log('hello world');
   // console.log(user);
   const transformedProducts = req.body.cart.products.map((product) => {
     return {

@@ -24,5 +24,14 @@ const getOrders = async function (customerId) {
     throw new Error(err);
   }
 };
+const getOrder = async function (orderId) {
+  try {
+    const res = await customRequest(`/orders/${orderId}`);
+    return res;
+  } catch (err) {
+    console.log(err);
+    throw new Error(err);
+  }
+};
 
-export { handleOrder, getOrders };
+export { handleOrder, getOrders, getOrder };

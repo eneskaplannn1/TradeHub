@@ -41,6 +41,12 @@ const UserSchema = new mongoose.Schema(
         ref: 'Product',
       },
     ],
+    bookings: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+      },
+    ],
   },
   {
     toJSON: { virtuals: true }, // virtual değerini postmanda göstermek için
