@@ -1,5 +1,6 @@
 import { StyledReview } from "../../UI/review";
 import StarRating from "../../UI/star";
+import formatDate from "../../utils/formatDate";
 
 function UserReview({ review }) {
   //   console.log(review);
@@ -18,7 +19,8 @@ function UserReview({ review }) {
       <div className="footer">
         <div>{review?.customer?.name}</div>
         <div>
-          | <span style={{ marginLeft: "1rem" }}></span> {review.createdAt}
+          | <span style={{ marginLeft: "1rem" }}></span>{" "}
+          {formatDate(review.createdAt)}
         </div>
       </div>
     </StyledReview>

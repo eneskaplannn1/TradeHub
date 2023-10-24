@@ -5,7 +5,7 @@ export default function formatDate(date, later) {
   if (later) {
     const threeDaysLater = new Date(originalDate);
     threeDaysLater.setDate(originalDate.getDate() + 3);
-    return new Intl.DateTimeFormat("fr-CA").format(new Date(threeDaysLater));
+    return new Intl.DateTimeFormat("en-US").format(new Date(threeDaysLater));
   }
-  return new Intl.DateTimeFormat("fr-CA").format(new Date(date));
+  return new Intl.DateTimeFormat("en-US").format(new Date(date));
 }

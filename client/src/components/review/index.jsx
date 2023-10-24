@@ -12,25 +12,27 @@ import useGetReviews from "../../hooks/useGetReviews";
 import UserReview from "../styled-review";
 import NoReview from "./noReview";
 
-function ReviewContainer({ productData, productId }) {
+function ReviewContainer({ productData, productId, isLoading }) {
   const { data } = useGetReviews(true, productId);
   // console.log(productData);
+
+  if (isLoading) return "hello world";
   return (
     <StyledProductReviewContainer>
       <h1>Product Reviews</h1>
       <StyledProductReviews>
         {data?.data?.data?.document.length === 0 ? (
-          <NoReview productData={productData} />
+          <NoReview productData={productData.ratingsAverage} />
         ) : (
           <>
             <StyledReviewHead>
               <div className="rating">
-                <span>{productData?.ratingsAverage}</span>
+                <span>{productData.ratingsAverage}</span>
                 <StarRating
                   maxRating={5}
                   width={40}
                   height={40}
-                  averageRating={productData?.ratingsAverage}
+                  averageRating={productData.ratingsAverage}
                 />
               </div>
               <div>| {productData?.ratingsQuantity} Review </div>

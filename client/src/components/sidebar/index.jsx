@@ -6,20 +6,15 @@ import { AiOutlineInbox, AiOutlineUser } from "react-icons/ai";
 import { TbMessages } from "react-icons/tb";
 import { SlLocationPin } from "react-icons/sl";
 import StyledBoxTemplate from "../box-template.jsx";
-
-const StyledSidebar = styled.aside`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0 0.4rem;
-`;
+import { useSelector } from "react-redux";
 
 function Sidebar() {
+  const { name } = useSelector((store) => store.auth.user);
   return (
     <StyledSidebar>
       <StyledBoxTemplate>
         <StyledBox variation="bar">
-          <h4>Enes Kaplan </h4>
+          <h4>{name} </h4>
         </StyledBox>
       </StyledBoxTemplate>
       <StyledBoxTemplate>
@@ -57,3 +52,10 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
+const StyledSidebar = styled.aside`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 0.4rem;
+`;

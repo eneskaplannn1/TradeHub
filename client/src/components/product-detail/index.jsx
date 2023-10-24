@@ -23,8 +23,8 @@ function ProductDetailContainer({ productData = {}, isLoading }) {
   const user = useSelector((store) => store.auth.user);
   const dispatch = useDispatch();
   //prettier-ignore
-  const {brand,productDesc,price,ratingsAverage,category} = productData;
-
+  const {brand,productDesc,price,ratingsAverage,ratingsQuantity,category,} = productData;
+  console.log(productData);
   const { handleAddFavorites } = useFavorites({ product: productData });
 
   const handleAddCart = function () {
@@ -42,7 +42,6 @@ function ProductDetailContainer({ productData = {}, isLoading }) {
   };
 
   const selected = user.favorites.includes(productData._id);
-  // console.log(productData);
 
   return (
     <StyledProductDetail>
@@ -71,12 +70,12 @@ function ProductDetailContainer({ productData = {}, isLoading }) {
               />
             </div>
             <div>
-              <span>2000</span> reviews
+              <span>{ratingsQuantity}</span> reviews
             </div>
-            <div className="hearth">
+            {/* <div className="hearth">
               <AiOutlineHeart />
               <span>2000</span> favorites
-            </div>
+            </div> */}
           </StyledReviewSummary>
           <StyledProductPrice>{price} USD</StyledProductPrice>
           <StyledButtonContainer>
