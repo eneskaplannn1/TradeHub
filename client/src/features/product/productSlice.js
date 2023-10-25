@@ -7,7 +7,10 @@ const initialState = {
         products: [],
         totalPrice: 0,
       },
-  searchResults: [],
+  search: {
+    searchResults: [],
+    searchKey: null,
+  },
 };
 
 const productSlice = createSlice({
@@ -66,7 +69,9 @@ const productSlice = createSlice({
       state.cart = action.payload;
     },
     setSearchResults(state, action) {
-      state.searchResults = action.payload;
+      console.log(action.payload);
+      state.search.searchResults = action.payload.searchResults;
+      state.search.searchKey = action.payload.searchKey;
     },
     clearSearchResults(state) {
       state.searchResults = [];

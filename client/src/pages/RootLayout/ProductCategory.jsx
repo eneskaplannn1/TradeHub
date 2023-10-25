@@ -9,7 +9,8 @@ import useProductCategory from "../../hooks/useProductCategory";
 import { useSelector } from "react-redux";
 
 function ProductCategory() {
-  const { searchResults } = useSelector((store) => store.cart);
+  const { searchResults } = useSelector((store) => store.cart.search);
+  console.log(searchResults);
   const { category } = useParams();
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);
