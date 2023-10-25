@@ -24,6 +24,11 @@ function FavoriteContainer() {
     <StyledFavoriteContainer>
       <StyledBoxTemplate>
         <h1>Favorite List</h1>
+        {data?.data?.data?.doc?.favorites?.length === 0 ? (
+          <h1>There is no product in your favorite list</h1>
+        ) : (
+          ""
+        )}
       </StyledBoxTemplate>
       <StyledProductContainer>
         {isLoading

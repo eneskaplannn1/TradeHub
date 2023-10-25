@@ -20,7 +20,6 @@ function Product({ product }) {
 
   const { handleAddFavorites } = useFavorites({ product });
   const selected = user.favorites.includes(product._id);
-
   return (
     <ProductSummary>
       <ProductHead>

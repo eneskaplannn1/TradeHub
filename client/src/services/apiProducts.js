@@ -68,11 +68,21 @@ const addProductToFavorites = async function (productId) {
   }
 };
 
-const searchProduct = async function (search) {
-  if (!search) return;
+const searchProduct = async function ({ inputValue: search, category }) {
+  if (category && search === "") {
+    return await customRequest(
+      `/products?${category ? `category=${category}` : ""}`
+    );
+  }
   try {
     const res = await customRequest(
-      `/products${search ? `?search=${search}` : ""}`
+      `/products${search ? `?search=${search}` : ""}${
+        search && category
+          ? `&category=${category}`
+          : category
+          ? `?category=${category}`
+          : ""
+      }`
     );
     return res;
   } catch (err) {

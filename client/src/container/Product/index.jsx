@@ -17,7 +17,7 @@ function ProductContainer() {
 
   const { data, isLoading } = useQuery({
     queryFn: () => getAllProducts(page),
-    queryKey: ["products", page, search],
+    queryKey: ["products", page],
   });
 
   return (

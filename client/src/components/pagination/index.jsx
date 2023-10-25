@@ -30,7 +30,6 @@ function Pagination({ results }) {
   let page = searchParams.get("page");
   if (!page) page = 1;
 
-  console.log(page);
   return (
     <StyledPagination>
       <a href={`${location.pathname}?page=${Number(page) - 1}`}>
