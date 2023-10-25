@@ -74,7 +74,6 @@ const searchProduct = async function (search) {
     const res = await customRequest(
       `/products${search ? `?search=${search}` : ""}`
     );
-    console.log(res);
     return res;
   } catch (err) {
     throw new Error(err);
