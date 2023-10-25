@@ -30,10 +30,11 @@ function Pagination({ results }) {
   let page = searchParams.get("page");
   if (!page) page = 1;
 
+  console.log(page);
   return (
     <StyledPagination>
       <a href={`${location.pathname}?page=${Number(page) - 1}`}>
-        <Button variation="orange" disabled={page === "1"}>
+        <Button variation="orange" disabled={page === 1 || page === "1"}>
           <FaArrowLeft /> Previous Page
         </Button>
       </a>

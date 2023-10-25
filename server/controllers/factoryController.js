@@ -4,6 +4,10 @@ const AppError = require('../utils/errFeatures');
 
 exports.getAll = (Model) =>
   catchAsync(async (req, res) => {
+    // const today = new Date();
+    // const currentYear = today.getFullYear();
+    // const currentMonth = today.getMonth() + 1;
+
     let filter = {};
     const allowedQueryParams = ['category', 'seller', 'customer', 'product'];
 
@@ -13,13 +17,46 @@ exports.getAll = (Model) =>
       }
     });
 
-    console.log('filter is:', filter);
+    // allowedQueryParams.forEach((param) => {
+    //   if (req.query.filter) {
+    //     if (req.query.filter == 'All') {
+    //       filter = {};
+    //     }
+    //     if (req.query.filter == 'last-month') {
+    //       filter = {
+    //         createdAt: {
+    //           $gte: new Date(`${currentYear}-${currentMonth}-01`),
+    //           $lte: new Date(`${currentYear}-${currentMonth + 1}-01`),
+    //         },
+    //       };
+    //     }
+    //     if (req.query.filter == 'last-3-month') {
+    //       filter = {
+    //         createdAt: {
+    //           $gte: new Date(`${currentYear}-${currentMonth - 2}-01`),
+    //           $lte: new Date(`${currentYear}-${currentMonth + 1}-01`),
+    //         },
+    //       };
+    //     }
+    //     if (req.query.filter == '2022') {
+    //       filter = {
+    //         createdAt: {
+    //           $gte: new Date(`2022-01-01`),
+    //           $lte: new Date(`2022-12-31`),
+    //         },
+    //       };
+    //     }
+    //   } else if (req.query[param] && !req.query.filter) {
+    //     filter[param] = req.query[param];
+    //   }
+    // });
 
     const features = new ApiFeatures(Model.find(filter), req.query)
       .filter()
       .sort()
       .limit()
-      .paginate();
+      .paginate()
+      .search();
 
     const document = await features.query;
 

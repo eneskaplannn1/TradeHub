@@ -3,18 +3,21 @@ import StyledBoxTemplate from "../../../components/box-template.jsx";
 import SearchBar from "../../search-bar";
 import StyledBox from "../../../components/box";
 
-function OrderFilter() {
+function OrderFilter({ onFilterChange }) {
+  const handleSelectChange = (event) => {
+    onFilterChange(event.target.value); // Call the callback function with the selected value
+  };
   return (
     <>
       <StyledOrderHead>
         <StyledBox variation="main">
           <h5>My orders</h5>
           <SearchBar />
-          <select>
-            <option>All orders</option>
-            <option>Last month</option>
-            <option>Last 3 month</option>
-            <option>2022</option>
+          <select value={undefined} onChange={handleSelectChange}>
+            <option value="all">All orders</option>
+            <option value="last-month">Last month</option>
+            <option value="last-3-month">Last 3 months</option>
+            <option value="2022">2022</option>
           </select>
         </StyledBox>
       </StyledOrderHead>

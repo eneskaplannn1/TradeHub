@@ -40,9 +40,9 @@ const importData = async () => {
 const DeleteDatas = async () => {
   try {
     // await User.deleteMany();
-    // await Product.deleteMany();
+    await Product.deleteMany();
     // await Review.deleteMany();
-    await Order.deleteMany();
+    // await Order.deleteMany();
     console.log('Data Deleted');
 
     process.exit();

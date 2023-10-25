@@ -14,10 +14,13 @@ const handleOrder = async function ({ cart, customerId }) {
     throw new Error(err);
   }
 };
-const getOrders = async function (customerId) {
+const getOrders = async function ({ customerId, filter = "All" }) {
+  console.log(filter);
   try {
-    const res = await customRequest(`/orders?customer=${customerId}`);
-    // console.log(res);
+    const res = await customRequest(
+      `/orders?customer=${customerId}${filter ? `&filter=${filter}` : ""}`
+    );
+    console.log(res);
     return res;
   } catch (err) {
     console.log(err);

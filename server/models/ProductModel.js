@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const ProductSchema = new mongoose.Schema(
   {
     brand: String,
-    productDesc: String,
+    productDesc: {
+      type: String,
+      index: 1,
+    },
     price: Number,
     quantity: Number,
     discount: Number,

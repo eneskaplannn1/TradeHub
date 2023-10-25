@@ -7,6 +7,7 @@ const initialState = {
         products: [],
         totalPrice: 0,
       },
+  searchResults: [],
 };
 
 const productSlice = createSlice({
@@ -64,6 +65,12 @@ const productSlice = createSlice({
     setCartData(state, action) {
       state.cart = action.payload;
     },
+    setSearchResults(state, action) {
+      state.searchResults = action.payload;
+    },
+    clearSearchResults(state) {
+      state.searchResults = [];
+    },
   },
 });
 
@@ -72,6 +79,8 @@ export const {
   removeProductFromCart,
   setCartData,
   clearCart,
+  setSearchResults,
+  clearSearchResults,
 } = productSlice.actions;
 
 export default productSlice.reducer;

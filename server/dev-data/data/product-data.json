@@ -204,6 +204,7 @@
     "price": 129.99,
     "quantity": 50,
     "discount": 10,
+    "category": "sneakers",
     "seller": "651c13579e355fab64a43148",
     "photo": "default.jpg"
   },
@@ -369,7 +370,7 @@
     "quantity": 30,
     "discount": 5,
     "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
+    "category": "electronic",
     "photo": "default.jpg"
   },
   {
@@ -380,7 +381,7 @@
     "quantity": 40,
     "discount": 0,
     "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
+    "category": "electronic",
     "photo": "default.jpg"
   },
   {
@@ -391,7 +392,7 @@
     "quantity": 35,
     "discount": 15,
     "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
+    "category": "electronic",
     "photo": "default.jpg"
   },
   {
@@ -446,7 +447,7 @@
     "quantity": 75,
     "discount": 5,
     "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
+    "category": "clothing",
     "photo": "default.jpg"
   },
   {
@@ -457,7 +458,7 @@
     "quantity": 45,
     "discount": 10,
     "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
+    "category": "sneakers",
     "photo": "default.jpg"
   },
   {
@@ -479,7 +480,7 @@
     "quantity": 50,
     "discount": 15,
     "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
+    "category": "electronic",
     "photo": "default.jpg"
   },
   {

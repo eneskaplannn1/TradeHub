@@ -1,6 +1,40 @@
 import { styled } from "styled-components";
 import Input from "../form/input/input";
 import { ImSearch } from "react-icons/im";
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { searchProduct } from "../../services/apiProducts";
+import { setSearchResults } from "../../features/product/productSlice";
+import { useDispatch } from "react-redux";
+
+function SearchBar() {
+  const dispatch = useDispatch();
+  const [inputValue, setInputValue] = useState();
+
+  useQuery({
+    queryFn: () => searchProduct(inputValue),
+    queryKey: ["search", inputValue],
+    onSuccess: (data) => {
+      dispatch(setSearchResults(data.data.data.document));
+    },
+  });
+
+  return (
+    <StyledSearchBar>
+      <Input
+        placeholder="Aradığınız ürün, kategori ve markayı yazınız"
+        variation="searchBar"
+        type="text"
+        onChange={(e) => {
+          setInputValue(e.target.value);
+        }}
+      />
+      <ImSearch />
+    </StyledSearchBar>
+  );
+}
+
+export default SearchBar;
 
 const StyledSearchBar = styled.div`
   position: relative;
@@ -18,18 +52,3 @@ const StyledSearchBar = styled.div`
     color: var(--color-orange-700);
   }
 `;
-
-function SearchBar() {
-  return (
-    <StyledSearchBar>
-      <Input
-        placeholder="Aradığınız ürün, kategori ve markayı yazınız"
-        variation="searchBar"
-        type="text"
-      />
-      <ImSearch />
-    </StyledSearchBar>
-  );
-}
-
-export default SearchBar;

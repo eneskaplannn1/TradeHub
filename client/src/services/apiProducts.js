@@ -68,6 +68,19 @@ const addProductToFavorites = async function (productId) {
   }
 };
 
+const searchProduct = async function (search) {
+  if (!search) return;
+  try {
+    const res = await customRequest(
+      `/products${search ? `?search=${search}` : ""}`
+    );
+    console.log(res);
+    return res;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
 export {
   getAllProducts,
   getProductsByCategory,
@@ -76,4 +89,5 @@ export {
   getProduct,
   addProductToFavorites,
   getUsersFavorites,
+  searchProduct,
 };

@@ -13,6 +13,7 @@ class ApiFeatures {
     //1B)adv filtering
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+
     this.query = this.query.find(JSON.parse(queryStr));
 
     return this;
@@ -20,7 +21,9 @@ class ApiFeatures {
 
   search() {
     if (this.queryString.search) {
-      // implement the search logic
+      this.query = this.query.find({
+        productDesc: { $regex: this.queryString.search, $options: 'i' },
+      });
     }
     return this;
   }
@@ -47,6 +50,7 @@ class ApiFeatures {
   paginate() {
     const page = this.queryString.page || 1;
     const limit = this.queryString.limit || 20;
+    console.log(this.queryString.page);
 
     const skip = (page - 1) * limit;
     this.query = this.query.skip(skip).limit(limit);
