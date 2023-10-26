@@ -128,7 +128,6 @@ function Open({ children, opens: opendWindowName }) {
 function Window({ children, name, variation, position }) {
   const { openName, close } = useContext(modalContext);
   // const ref = useOutsideClick(close);
-
   if (name !== openName) return;
   return createPortal(
     <StyledOverlay>
@@ -137,7 +136,9 @@ function Window({ children, name, variation, position }) {
           <ImCross />
         </button>
         <div className="content">
-          {cloneElement(children, { onCloseModal: close })}
+          {cloneElement(children, {
+            onCloseModal: close,
+          })}
         </div>
       </StyledModal>
     </StyledOverlay>,

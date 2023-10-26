@@ -8,7 +8,11 @@ exports.checkIsOrdered = catchAsync(async (req, res, next) => {
   const productId = req.body.product; // Assuming you have the product ID in the request body
   const orders = await Order.find({
     customer: req.body.customer,
-    'products.product': productId, // Use dot notation to access the product field within the array
+    products: {
+      $elemMatch: {
+        product: productId,
+      },
+    },
   });
 
   console.log(orders);

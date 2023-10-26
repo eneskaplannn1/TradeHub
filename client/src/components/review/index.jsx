@@ -14,15 +14,17 @@ import NoReview from "./noReview";
 
 function ReviewContainer({ productData, productId, isLoading }) {
   const { data } = useGetReviews(true, productId);
-  // console.log(productData);
+  if (isLoading) return "Hello world";
 
-  if (isLoading) return "hello world";
   return (
     <StyledProductReviewContainer>
       <h1>Product Reviews</h1>
       <StyledProductReviews>
         {data?.data?.data?.document.length === 0 ? (
-          <NoReview productData={productData.ratingsAverage} />
+          <NoReview
+            productData={productData.ratingsAverage}
+            productId={productId}
+          />
         ) : (
           <>
             <StyledReviewHead>
@@ -45,7 +47,7 @@ function ReviewContainer({ productData, productId, isLoading }) {
                   variation="medium"
                   name="create-review"
                 >
-                  <ReviewForm productData={productData} />
+                  <ReviewForm productData={productData} productId={productId} />
                 </Modal.Window>
               </Modal>
             </StyledReviewHead>

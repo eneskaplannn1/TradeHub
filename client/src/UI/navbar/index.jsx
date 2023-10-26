@@ -63,14 +63,25 @@ function Navbar() {
 export default Navbar;
 
 const StyledNavbar = styled.nav`
+  .active {
+    border-bottom: 4px solid var(--color-orange-800);
+  }
+
   ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 0 1rem;
-    font-size: 21px;
+    font-size: 24px;
 
+    font-weight: 500;
+
+    svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     li {
       transition: all 0.2s ease;
 
@@ -85,6 +96,7 @@ const StyledNavbar = styled.nav`
       &:hover {
         cursor: pointer;
         color: var(--color-orange-800);
+        border-bottom: 4px solid var(--color-orange-800);
       }
     }
   }

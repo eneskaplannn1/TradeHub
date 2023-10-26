@@ -17,7 +17,6 @@ function useSearchBar() {
     queryKey: ["search", inputValue, category],
     onSuccess: async (data) => {
       if (category) await queryClient.invalidateQueries(["products", category]);
-      console.log(data.data.data.document);
       dispatch(
         setSearchResults({
           searchResults: data.data.data.document || [],

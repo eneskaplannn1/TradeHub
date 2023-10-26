@@ -10,10 +10,12 @@ const StyledProductDetail = styled.div``;
 
 function ProductDetail() {
   const { productId } = useParams();
+
   const { data, isLoading } = useQuery({
     queryKey: ["product", productId],
     queryFn: () => getProduct(productId),
   });
+
   const productData = data?.data?.data?.doc || {};
 
   return (

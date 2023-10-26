@@ -4,7 +4,6 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 function Pagination({ results, searchKey, searchResults }) {
-  console.log(results);
   const location = useLocation();
 
   const search = useLocation().search;

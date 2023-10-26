@@ -18,7 +18,7 @@ export default Header;
 const StyledHeader = styled.header`
   width: 100vw;
   display: grid;
-  grid-template-columns: 1.6fr 2fr 2fr;
+  grid-template-columns: 1.2fr 2.8fr 2.4fr;
   height: 6.4rem;
   padding: 0 2rem;
   align-items: center;

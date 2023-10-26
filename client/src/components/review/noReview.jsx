@@ -1,7 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import Button from "../../UI/button";
 import Modal from "../../UI/modal";
 import ReviewForm from "../../UI/review-form";
@@ -16,7 +14,7 @@ const StyledNoReview = styled.div`
   align-items: center;
 `;
 
-function NoReview({ productData }) {
+function NoReview({ productData, productId }) {
   return (
     <StyledNoReview>
       <div>This product has no review </div>
@@ -29,7 +27,7 @@ function NoReview({ productData }) {
           variation="medium"
           name="create-review"
         >
-          <ReviewForm productData={productData} />
+          <ReviewForm productData={productData} productId={productId} />
         </Modal.Window>
       </Modal>
     </StyledNoReview>

@@ -60,13 +60,9 @@ ReviewSchema.statics.calculateAverageRatigs = async function (productId) {
     ratingsAverage: stats[0].averageRating,
     ratingsQuantity: stats[0].nRatings,
   });
-
-  console.log(stats);
-  console.log(doc);
 };
 
 ReviewSchema.post('save', function () {
-  console.log(this.product);
   this.constructor.calculateAverageRatigs(this.product);
 });
 

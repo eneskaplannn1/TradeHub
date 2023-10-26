@@ -3,8 +3,8 @@ import Input from "../form/input/input";
 import { ImSearch } from "react-icons/im";
 import useSearchBar from "../../hooks/useSearchBar";
 
-function SearchBar() {
-  const { setInputValue } = useSearchBar();
+function SearchBar({ order }) {
+  const { setInputValue } = useSearchBar(order);
   return (
     <StyledSearchBar>
       <Input

@@ -53,7 +53,7 @@ exports.getBestRatedProducts = catchAsync(async (req, res, next) => {
     {
       $match: {
         ratingsAverage: {
-          $gte: 4.8,
+          $gte: 4,
         },
       },
     },

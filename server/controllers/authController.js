@@ -32,7 +32,6 @@ exports.sendEmail = async (req, res, next) => {
       html: '<h1>Deneme<h1/>',
     },
     (error, body) => {
-      console.log(2);
       if (error) {
         console.log(error);
         console.log(error.message);
@@ -134,10 +133,8 @@ exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password)
     return next(new AppError('please provide email and password', 404));
-  console.log(req.body);
   // checking if user exists and verifying password
   let isCorrectPassword;
-  console.log(req.body);
   const user = await User.findOne({ email }).select('+password');
   if (user) {
     isCorrectPassword = await user.correctPassword(password, user.password);
@@ -149,7 +146,6 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   // as the name says
-  console.log('user is: ', user);
   createSendToken(user, 200, res);
 });
 

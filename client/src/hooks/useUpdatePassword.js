@@ -13,7 +13,6 @@ function useUpdatePassword() {
       reset();
     },
     onError: (err) => {
-      console.log(err);
       toast.error(err.message);
     },
   });

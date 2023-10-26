@@ -67,7 +67,7 @@ UserSchema.virtual('reviews', {
 
 UserSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 9);
+  this.password = await bcrypt.hash(this.password, 1);
   next();
 });
 

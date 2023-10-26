@@ -4,18 +4,6 @@ import ProductReview from "../../../components/product-review/index.jsx";
 import useGetReviews from "../../../hooks/useGetReviews";
 import Skeleton from "../../../components/skeleton/index.jsx";
 
-const StyledReviewContainer = styled.main`
-  padding: 2rem 2rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-
-  h1 {
-    text-align: left;
-  }
-`;
-
 function ReviewContainer() {
   const { data, isLoading, user } = useGetReviews();
 
@@ -39,10 +27,22 @@ function ReviewContainer() {
               return <ProductReview review={review} key={review._id} />;
             })
           )}
-        </StyledReviewContainer>{" "}
+        </StyledReviewContainer>
       </>
     </>
   );
 }
 
 export default ReviewContainer;
+
+const StyledReviewContainer = styled.main`
+  padding: 2rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  h1 {
+    text-align: left;
+  }
+`;

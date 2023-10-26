@@ -5,14 +5,15 @@ import StyledBox from "../../../components/box";
 
 function OrderFilter({ onFilterChange }) {
   const handleSelectChange = (event) => {
-    onFilterChange(event.target.value); // Call the callback function with the selected value
+    onFilterChange(event.target.value);
   };
+
   return (
     <>
       <StyledOrderHead>
         <StyledBox variation="main">
           <h5>My orders</h5>
-          <SearchBar />
+          <SearchBar order={true} />
           <select value={undefined} onChange={handleSelectChange}>
             <option value="all">All orders</option>
             <option value="last-month">Last month</option>

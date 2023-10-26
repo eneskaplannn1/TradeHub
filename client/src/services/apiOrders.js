@@ -6,24 +6,20 @@ const handleOrder = async function ({ cart, customerId }) {
       cart,
       customerId,
     });
-    console.log(2);
+
     window.location.assign(res.data.session.url);
+
     return res;
   } catch (err) {
     console.log(err);
     throw new Error(err);
   }
 };
-const getOrders = async function ({ customerId, filter = "All" }) {
-  console.log(filter);
+const getOrders = async function (customerId) {
   try {
-    const res = await customRequest(
-      `/orders?customer=${customerId}${filter ? `&filter=${filter}` : ""}`
-    );
-    console.log(res);
+    const res = await customRequest(`/orders?customer=${customerId}`);
     return res;
   } catch (err) {
-    console.log(err);
     throw new Error(err);
   }
 };
@@ -32,7 +28,6 @@ const getOrder = async function (orderId) {
     const res = await customRequest(`/orders/${orderId}`);
     return res;
   } catch (err) {
-    console.log(err);
     throw new Error(err);
   }
 };

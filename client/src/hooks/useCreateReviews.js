@@ -5,10 +5,12 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-function useCreateReviews({ onCloseModal, productData }) {
+function useCreateReviews({ onCloseModal, productData, productId }) {
   const queryClient = useQueryClient();
   const user = useSelector((store) => store.auth.user);
+
   const [rating, setRating] = useState();
+
   const handleRating = function (reviewRating) {
     setRating(reviewRating);
   };
@@ -26,7 +28,6 @@ function useCreateReviews({ onCloseModal, productData }) {
       toast.success("You successfully commented on the product");
       await queryClient.invalidateQueries(["reviews"]);
       await queryClient.invalidateQueries(["product", productData._id]);
-
       onCloseModal();
     },
     onError: (err) => {
@@ -37,10 +38,11 @@ function useCreateReviews({ onCloseModal, productData }) {
   const handleSubmitForm = function (data) {
     if (!rating)
       return toast.error("Cannot create a review .Please rate the product");
+
     mutate({
       ...data,
       rating,
-      product: productData._id,
+      product: productId,
       customer: user._id,
     });
   };

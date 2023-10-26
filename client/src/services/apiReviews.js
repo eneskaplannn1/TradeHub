@@ -2,16 +2,13 @@ import customRequest from "../utils/customRequest";
 
 const createReview = async function (data) {
   try {
-    const res = await customRequest.post(`/reviews`, data);
-    console.log(res);
+    return await customRequest.post(`/reviews`, data);
   } catch (err) {
     console.log(err);
     throw new Error(err.response.data.message);
   }
 };
 const getUsersReviews = async function (customerId) {
-  // console.log(customerId);
-  // console.log(productId);
   try {
     return await customRequest(
       `/reviews?${customerId ? `customer=${customerId}` : ""}`
@@ -21,8 +18,8 @@ const getUsersReviews = async function (customerId) {
   }
 };
 const getProductReviews = async function (productId) {
-  // console.log(productId);
   try {
+    // console.log(productId);
     return await customRequest(
       `/reviews?${productId ? `product=${productId}` : ""}`
     );

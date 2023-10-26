@@ -30,14 +30,11 @@ function useLogin() {
     mutationKey: ["login"],
     onSuccess: (data) => {
       if (!data) return;
-      console.log(data.data.data.user);
       dispatch(logUserIn(data?.data?.data?.user));
       navigate("/");
       toast.success("Logged in successfully");
-      // console.log(2);
     },
     onError: (err) => {
-      // console.log(err.message);
       toast.error(err.message);
     },
   });

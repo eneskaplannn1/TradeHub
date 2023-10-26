@@ -24,7 +24,7 @@ function ProductDetailContainer({ productData = {}, isLoading }) {
   const dispatch = useDispatch();
   //prettier-ignore
   const {brand,productDesc,price,ratingsAverage,ratingsQuantity,category,} = productData;
-  console.log(productData);
+
   const { handleAddFavorites } = useFavorites({ product: productData });
 
   const handleAddCart = function () {
