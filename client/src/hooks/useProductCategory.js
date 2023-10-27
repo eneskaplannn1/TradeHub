@@ -14,7 +14,7 @@ function useProductCategory(category, page) {
         ? getNewProducts(page)
         : getProductsByCategory(category, page);
     },
-    queryKey: ["products", category],
+    queryKey: ["products", category, page],
   });
   return { data, isLoading };
 }

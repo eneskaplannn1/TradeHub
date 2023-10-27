@@ -40,7 +40,7 @@ function ProductContainer() {
             ? searchResults.map((prod, index) => {
                 return <Product product={prod} key={index} />;
               })
-            : data?.data?.data?.document?.map((prod, index) => {
+            : data?.dat?.data?.document?.map((prod, index) => {
                 return <Product product={prod} key={index} />;
               })}
         </StyledProductContainer>

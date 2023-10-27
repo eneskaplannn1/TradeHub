@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Button from "../../UI/button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Pagination({ results, searchKey, searchResults }) {
   const location = useLocation();
