@@ -99,7 +99,6 @@ const handleExpiredJWT = () =>
   new AppError('Your session has been expired', 401);
 
 module.exports = (err, req, res, next) => {
-  console.log('fuck');
   let error = Object.assign(err); // ! çözüm 2
   if (error.name === 'Error') error = handleError(error);
   if (error.name === 'CastError') error = handleCastError(error);

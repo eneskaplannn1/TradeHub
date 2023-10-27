@@ -7,9 +7,12 @@ import Skeleton from "../../components/skeleton";
 
 import useProductCategory from "../../hooks/useProductCategory";
 import { useSelector } from "react-redux";
+import ProductNotFound from "../../UI/product-not-found";
 
 function ProductCategory() {
-  const { searchResults } = useSelector((store) => store.cart.search);
+  const { searchResults, searchKey } = useSelector(
+    (store) => store.cart.search
+  );
   const { category } = useParams();
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);
@@ -22,20 +25,26 @@ function ProductCategory() {
 
   return (
     <>
-      <StyledProductContainer>
-        {isLoading
-          ? Array(20)
-              .fill(null)
-              .map((_, index) => <Skeleton key={index} height={480} />)
-          : searchResults.length === 0
-          ? data?.data?.data?.document?.map((prod, index) => {
-              return <Product product={prod} key={index} />;
-            })
-          : searchResults.map((prod, index) => {
-              return <Product product={prod} key={index} />;
-            })}
-      </StyledProductContainer>
-      <Pagination results={data?.data?.data?.document?.length} />
+      {searchResults.length === 0 && searchKey ? (
+        <ProductNotFound searchKey={searchKey} />
+      ) : (
+        <>
+          <StyledProductContainer>
+            {isLoading
+              ? Array(20)
+                  .fill(null)
+                  .map((_, index) => <Skeleton key={index} height={480} />)
+              : searchResults.length === 0
+              ? data?.data?.data?.document?.map((prod, index) => {
+                  return <Product product={prod} key={index} />;
+                })
+              : searchResults.map((prod, index) => {
+                  return <Product product={prod} key={index} />;
+                })}
+          </StyledProductContainer>
+          <Pagination results={data?.data?.data?.document?.length} />
+        </>
+      )}
     </>
   );
 }
