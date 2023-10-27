@@ -50,17 +50,25 @@ const sendErrorProduction = (err, req, res) => {
 };
 
 function handleError(err) {
-  if (err.message.startsWith('i')) {
+  if (err.type === 'validation') {
     const message = `invalid email or password`;
     return new AppError(message, 401);
   }
-  if (err.message.startsWith('U')) {
+  if (err.type === 'update-password') {
     const message = `User changed their password. Please log in again`;
     return new AppError(message, 401);
   }
-  const message = `Your password is incorrect`;
+  if (err.type === 'create-review') {
+    const message = 'You must buy this product to review it';
+    return new AppError(message, 401);
+  }
+  if (err.type === 'wrong-update-credentials') {
+    const message = 'Your current password is wrong. Try again!';
+    return new AppError(message, 401);
+  }
   return new AppError(message, 401);
 }
+
 function handleCastError(error) {
   const message = `invalid ${error.path} for ${error.value}`;
   return new AppError(message, 404);
@@ -92,8 +100,6 @@ const handleExpiredJWT = () =>
 
 module.exports = (err, req, res, next) => {
   let error = Object.assign(err); // ! çözüm 2
-  console.log(err);
-
   if (error.name === 'Error') error = handleError(error);
   if (error.name === 'CastError') error = handleCastError(error);
   if (error.name === 'ValidationError') error = handleValidationErr(error);

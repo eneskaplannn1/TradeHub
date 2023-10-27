@@ -19,7 +19,6 @@ const getUsersReviews = async function (customerId) {
 };
 const getProductReviews = async function (productId) {
   try {
-    // console.log(productId);
     return await customRequest(
       `/reviews?${productId ? `product=${productId}` : ""}`
     );

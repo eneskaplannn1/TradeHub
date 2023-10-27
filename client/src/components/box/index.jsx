@@ -27,9 +27,9 @@ const variations = {
   `,
   main: css`
     padding: 2rem 1rem;
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: 2fr 6fr 3fr;
+    /* grid-template-columns: 2fr 6fr 3fr; */
     gap: 1rem;
   `,
 };

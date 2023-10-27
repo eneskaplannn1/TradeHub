@@ -15,7 +15,6 @@ exports.deleteProduct = factory.deleteOne(Product);
 
 exports.addFavorites = catchAsync(async (req, res, next) => {
   // productın idsini almam lazım
-
   const { productId } = req.params;
 
   // productId, kullanıcının favorites dizisinde zaten var mı kontrol edin
@@ -32,6 +31,7 @@ exports.addFavorites = catchAsync(async (req, res, next) => {
       $push: { favorites: productId },
     });
   }
+
   res.status(200).json({
     status: 'success',
     updatedUser,

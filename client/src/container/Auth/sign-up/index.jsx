@@ -50,7 +50,6 @@ function SignUpContainer() {
 
   const handleSubmitForm = function (data) {
     mutate(data);
-    // console.log(data);
   };
 
   return (

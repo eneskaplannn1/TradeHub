@@ -34,7 +34,8 @@
     "stripe": "^7.63.1",
     "util": "^0.12.5",
     "validator": "^13.9.0",
-    "xss-clean": "^0.1.1"
+    "xss-clean": "^0.1.1",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

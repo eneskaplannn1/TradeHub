@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
-import { useSelector } from "react-redux";
 import { updateUserPassword } from "../services/apiUser";
 import { toast } from "react-hot-toast";
 

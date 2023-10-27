@@ -4,17 +4,10 @@ import OrderFilter from "../../../UI/order/order-filter";
 import { useQuery } from "@tanstack/react-query";
 import { getOrders } from "../../../services/apiOrders";
 import StyledOrder from "../../../UI/order";
-import { useState } from "react";
 import useCheckoutSuccess from "../../../hooks/useCheckoutSuccess";
 import Skeleton from "../../../components/skeleton";
 
 function OrderContainer() {
-  const [selectedFilter, setSelectedFilter] = useState(); // Initialize the selected filter state
-
-  const handleFilterChange = (selectedValue) => {
-    setSelectedFilter(selectedValue);
-  };
-
   const { _id } = useSelector((store) => store.auth.user);
 
   const { data, isLoading } = useQuery({
@@ -26,7 +19,7 @@ function OrderContainer() {
 
   return (
     <div style={{ padding: "1rem" }}>
-      <OrderFilter onFilterChange={handleFilterChange} />
+      <OrderFilter />
       <StyledOrder>
         {isLoading
           ? Array(20)

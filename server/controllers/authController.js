@@ -142,7 +142,7 @@ exports.login = catchAsync(async (req, res, next) => {
 
   if (!user || !isCorrectPassword) {
     // If the user or password is incorrect, return an error
-    return next(new AppError('incorrect email or password', 401));
+    return next(new AppError('incorrect email or password', 401, 'validation'));
   }
 
   // as the name says
@@ -180,7 +180,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   const decoded = await jwt.verify(token, process.env.JWT_SECRET);
 
   // Find the user in the database based on the decoded user id
-  const user = await User.findOne({ _id: decoded.id });
+  const user = await User.findOne({ _id: decoded.id }).select('+password');
 
   // If no user is found with the decoded id, throw an error indicating that the user does not exist
   if (!user) {
@@ -201,7 +201,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 
   // Set the user object in the request and response locals for future use
   req.user = user;
-  res.locals.user = user;
+  // res.locals.user = user;
 
   // Call the next middleware
   return next();
@@ -242,7 +242,11 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
   const userChangedPasswordAfter = await user.changedPasswordAfter(decoded.iat);
   if (userChangedPasswordAfter) {
     return next(
-      new AppError('User changed their password. Please log in again', 404)
+      new AppError(
+        'User changed their password. Please log in again',
+        404,
+        'update-password'
+      )
     );
   }
   res.status(200).json(user);
@@ -352,18 +356,22 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 });
 
 exports.updatePassword = catchAsync(async (req, res, next) => {
-  const user = await User.findById(req.user._id).select('+password');
-  console.log(user);
-  if (!user) next(new AppError('No user found with corresponding id', 404));
+  const user = req.user;
 
-  // console.log(user);
   const isPasswordCorrect = await user.correctPassword(
     req.body.password,
     user.password
   );
+  console.log(isPasswordCorrect);
 
   if (!isPasswordCorrect)
-    return next(new AppError('Your password is incorrect', 401));
+    return next(
+      new AppError(
+        'Your password is incorrect',
+        401,
+        'wrong-update-credentials'
+      )
+    );
 
   user.password = req.body.newPassword;
   await user.save();

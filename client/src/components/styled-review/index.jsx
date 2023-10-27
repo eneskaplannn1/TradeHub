@@ -3,7 +3,6 @@ import StarRating from "../../UI/star";
 import formatDate from "../../utils/formatDate";
 
 function UserReview({ review }) {
-  //   console.log(review);
   return (
     <StyledReview>
       <div className="header">

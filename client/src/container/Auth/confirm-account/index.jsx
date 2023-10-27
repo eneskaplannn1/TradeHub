@@ -16,7 +16,6 @@ const StyledBody = styled.div`
 
 function ConfirmAccountContainer() {
   const { verifyUserEmail } = useSelector((state) => state.auth);
-  // console.log(verifyUserEmail);
   return (
     <StyledContainer variation="md">
       <StyledAuthHead>

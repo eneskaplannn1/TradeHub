@@ -39,14 +39,13 @@ import { StyledAuthContainer } from "./UI/auth";
 
 function App() {
   const dispatch = useDispatch();
-  const { data } = useQuery({
+  useQuery({
     queryFn: handleLoginWithCookie,
     queryKey: ["login"],
+    onSuccess: (data) => {
+      dispatch(logUserIn(data?.data));
+    },
   });
-
-  if (data?.data) {
-    dispatch(logUserIn(data?.data));
-  }
 
   return (
     <>

@@ -4,7 +4,6 @@ import StarRating from "../star";
 import useCreateReviews from "../../hooks/useCreateReviews";
 
 function ReviewForm({ productData, onCloseModal, productId }) {
-  console.log(productId);
   const { handleSubmit, handleSubmitForm, handleRating, register } =
     useCreateReviews({ productData, onCloseModal, productId });
 

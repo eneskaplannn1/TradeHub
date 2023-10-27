@@ -1,7 +1,8 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const zlib = require('zlib');
+
 const factory = require('../controllers/factoryController');
 const Order = require('../models/OrderModel');
-const User = require('../models/UserModel');
 const catchAsync = require('../utils/catchAsync');
 
 exports.getAllOrders = factory.getAll(Order);
@@ -11,12 +12,14 @@ exports.updateOrder = factory.updateOne(Order);
 exports.deleteOrder = factory.deleteOne(Order);
 
 exports.getCheckoutSession = catchAsync(async (req, res) => {
-  const user = await User.findById(req.body.customerId);
-  console.log(req.body);
+  const compressedCart = zlib
+    .deflateSync(JSON.stringify(req.body.cart))
+    .toString('base64');
+  console.log(compressedCart);
   const customer = await stripe.customers.create({
     metadata: {
       customer: req.body.customerId,
-      cart: JSON.stringify(req.body.cart),
+      cart: compressedCart,
     },
   });
 
@@ -55,17 +58,20 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
 const createOrderCheckout = async function (data) {
   try {
     const customer = await stripe.customers.retrieve(data.customer);
-    const items = JSON.parse(customer.metadata.cart);
+    // const items = JSON.parse(customer.metadata.cart);
+    const decompressedCart = JSON.parse(
+      zlib.inflateSync(Buffer.from(customer.metadata.cart, 'base64')).toString()
+    );
 
-    const totalPrice = items.totalPrice;
-    const productIds = items.products.map((cartItem) => {
+    const totalPrice = decompressedCart.totalPrice;
+    const productIds = decompressedCart.products.map((cartItem) => {
       return {
         product: cartItem.productId,
         quantity: cartItem.quantity,
       };
     });
 
-    const newOrder = await Order.create({
+    await Order.create({
       totalPrice: totalPrice.toFixed(2),
       products: productIds,
       customer: `${customer.metadata.customer}`,
