@@ -21,12 +21,16 @@ function Sidebar() {
         <StyledBox variation="bar">
           <ul>
             <li>
-              <AiOutlineInbox />
-              <NavLink to="/account/orders">Tüm Siparişlerim</NavLink>
+              <NavLink to="/account/orders">
+                <AiOutlineInbox />
+                All Orders
+              </NavLink>
             </li>
             <li>
-              <TbMessages />
-              <NavLink to="/account/reviews">Değerlendirmelerim</NavLink>
+              <NavLink to="/account/reviews">
+                <TbMessages />
+                My Reviews
+              </NavLink>
             </li>
           </ul>
         </StyledBox>
@@ -35,14 +39,16 @@ function Sidebar() {
         <StyledBox variation="bar">
           <ul>
             <li>
-              <AiOutlineUser />
               <NavLink to="/account/user-information">
-                Kullanıcı Bilgilerim
+                <AiOutlineUser />
+                Account Information
               </NavLink>
             </li>
             <li>
-              <SlLocationPin />
-              <NavLink to="/account/user-address">Adres Bilgilerim</NavLink>
+              <NavLink to="/account/user-address">
+                <SlLocationPin />
+                Address Information
+              </NavLink>
             </li>
           </ul>
         </StyledBox>

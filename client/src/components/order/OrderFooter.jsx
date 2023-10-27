@@ -21,7 +21,7 @@ function OrderFooter({ order }) {
             )}`}
       </p>
       <div className="image">
-        {order?.products?.map((product) => {
+        {order?.products?.slice(0, 4).map((product) => {
           return (
             <img
               key={product._id}
@@ -37,21 +37,22 @@ function OrderFooter({ order }) {
 export default OrderFooter;
 
 const StyledOrderFooter = styled.div`
-  width: 100%;
   padding: 2rem 1rem;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.8fr;
   align-items: center;
   padding: 1rem;
 
-  justify-content: space-between;
   font-size: 16px;
   .image {
+    position: relative;
+    justify-self: center;
     position: relative;
     display: flex;
 
     img {
-      margin: 0 -12px;
+      margin: 0 -10px;
       width: 120px;
       height: 120px;
       border-radius: 50%;

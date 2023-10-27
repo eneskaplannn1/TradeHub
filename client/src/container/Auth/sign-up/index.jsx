@@ -91,7 +91,13 @@ function SignUpContainer() {
           <Input
             id="password"
             type={`${showPassword ? "text" : "password"}`}
-            {...register("password", { required: "Enter your password" })}
+            {...register("password", {
+              required: "Enter your password",
+              minLength: {
+                value: 8,
+                message: "Password must be at least 8 characters",
+              },
+            })}
           />
           <AiFillEye onClick={() => setShowPassword((prev) => !prev)} />
         </FormRowVertical>

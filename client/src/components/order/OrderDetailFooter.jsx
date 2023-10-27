@@ -1,8 +1,10 @@
+import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
 function OrderDetailFooter({ product }) {
   return (
     <StyledOrderDetailFooter>
+      <NavLink to={`/product/${product?.product?._id}`}></NavLink>
       <div className="image">
         <img
           key={product?.product?._id}
@@ -18,16 +20,23 @@ function OrderDetailFooter({ product }) {
 export default OrderDetailFooter;
 
 const StyledOrderDetailFooter = styled.div`
-  border-bottom: 1px solid var(--color-zinc-200);
-
-  width: 100%;
-  padding: 1rem 3rem;
-
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
 
   font-size: 16px;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid var(--color-zinc-200);
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
 
   .image {
     position: relative;

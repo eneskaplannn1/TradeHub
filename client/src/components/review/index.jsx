@@ -9,12 +9,12 @@ import {
 import ReviewForm from "../../UI/review-form";
 import StarRating from "../../UI/star";
 import useGetReviews from "../../hooks/useGetReviews";
+import Skeleton from "../skeleton";
 import UserReview from "../styled-review";
 import NoReview from "./noReview";
 
 function ReviewContainer({ productData, productId, isLoading }) {
   const { data } = useGetReviews(true, productId);
-  if (isLoading) return "Hello world";
 
   return (
     <StyledProductReviewContainer>
@@ -52,9 +52,15 @@ function ReviewContainer({ productData, productId, isLoading }) {
               </Modal>
             </StyledReviewHead>
             <StyledReviews>
-              {data?.data?.data?.document?.map((review) => {
-                return <UserReview key={review?._id} review={review} />;
-              })}
+              {isLoading
+                ? Array(5)
+                    .fill(null)
+                    .map((_, i) => {
+                      return <Skeleton width={920} height={100} key={i} />;
+                    })
+                : data?.data?.data?.document?.map((review) => {
+                    return <UserReview key={review?._id} review={review} />;
+                  })}
             </StyledReviews>
           </>
         )}

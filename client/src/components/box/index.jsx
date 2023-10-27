@@ -2,7 +2,10 @@ import { css, styled } from "styled-components";
 
 const variations = {
   bar: css`
+    .active {
+    }
     padding: 0.4rem 0.6rem;
+
     ul {
       display: flex;
       flex-direction: column;
@@ -10,14 +13,18 @@ const variations = {
       gap: 0.5rem;
 
       li {
-        color: var(--color-zinc-500);
-        font-size: 1.2rem;
-        padding: 0.3rem;
+        transition: all 0.2s ease;
 
-        display: flex;
-        align-items: center;
-        gap: 0.2rem;
+        color: var(--color-zinc-500);
+        font-size: 1.3rem;
+        padding: 0.3rem;
         border-radius: 8px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+        }
         &:hover {
           background-color: var(--color-orange-200);
           border-radius: 8px;

@@ -66,7 +66,7 @@ function handleError(err) {
     const message = 'Your current password is wrong. Try again!';
     return new AppError(message, 401);
   }
-  return new AppError(message, 401);
+  return new AppError('fuck you', 401);
 }
 
 function handleCastError(error) {
@@ -99,6 +99,7 @@ const handleExpiredJWT = () =>
   new AppError('Your session has been expired', 401);
 
 module.exports = (err, req, res, next) => {
+  console.log('fuck');
   let error = Object.assign(err); // ! çözüm 2
   if (error.name === 'Error') error = handleError(error);
   if (error.name === 'CastError') error = handleCastError(error);

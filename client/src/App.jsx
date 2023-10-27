@@ -35,7 +35,7 @@ import Layout from "./components/layout";
 import Address from "./pages/RootLayout/Address";
 import Account from "./pages/RootLayout/Account";
 import ProductCategory from "./pages/RootLayout/ProductCategory";
-import { StyledAuthContainer } from "./UI/auth";
+import AuthContainer from "./container/Auth/AuthContainer";
 
 function App() {
   const dispatch = useDispatch();
@@ -78,7 +78,7 @@ function App() {
         <Routes>
           <Route
             element={
-              <RequiredAuth allowedRoles={["customer", "seller"]}>
+              <RequiredAuth allowedRoles={["customer"]}>
                 <RootLayout />
               </RequiredAuth>
             }
@@ -120,9 +120,9 @@ function App() {
           {/* Authentication routes */}
           <Route
             element={
-              <StyledAuthContainer>
+              <AuthContainer>
                 <Outlet />
-              </StyledAuthContainer>
+              </AuthContainer>
             }
           >
             <Route path="login" element={<Login />} />

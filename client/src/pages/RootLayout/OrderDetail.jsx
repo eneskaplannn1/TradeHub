@@ -34,6 +34,9 @@ const StyledOrderDetail = styled.div`
   padding: 1rem;
 
   .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     border: 1px solid var(--color-zinc-200);
     border-radius: 6px;
   }

@@ -6,6 +6,9 @@ const StyledProductReviewContainer = styled.div`
 `;
 const StyledProductReviews = styled.div`
   border: 1px solid var(--color-zinc-200);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   span {
     font-weight: bold;
