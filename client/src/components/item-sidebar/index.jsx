@@ -18,6 +18,8 @@ function ItemSidebar({ cart }) {
   const handlePaymentSession = function () {
     mutate({ cart, customerId: _id });
   };
+
+  console.log(cart);
   return (
     <StyledItemSidebar>
       <StyledOrderSummary>
@@ -43,7 +45,11 @@ function ItemSidebar({ cart }) {
           {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(0)) : 0}$
         </StyledSummaryFooter>
       </StyledOrderSummary>
-      <Button onClick={() => handlePaymentSession()} variation="orange">
+      <Button
+        onClick={() => handlePaymentSession()}
+        disabled={cart.products.length === 0 ? true : false}
+        variation="orange"
+      >
         {isLoading ? "Processing checkout.." : "Proceed to checkout"}
       </Button>
     </StyledItemSidebar>

@@ -14,7 +14,6 @@ function OrderContainer() {
     queryKey: ["orders"],
     queryFn: () => getOrders(_id),
   });
-
   useCheckoutSuccess();
 
   return (

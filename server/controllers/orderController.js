@@ -58,7 +58,6 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
 const createOrderCheckout = async function (data) {
   try {
     const customer = await stripe.customers.retrieve(data.customer);
-    // const items = JSON.parse(customer.metadata.cart);
     const decompressedCart = JSON.parse(
       zlib.inflateSync(Buffer.from(customer.metadata.cart, 'base64')).toString()
     );

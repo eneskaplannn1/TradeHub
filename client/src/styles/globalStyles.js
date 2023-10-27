@@ -9,12 +9,12 @@ const GlobalStyle = createGlobalStyle`
   --color-orange-100: #ffd8a8;
   --color-orange-200: #ffc078;
   --color-orange-300: #ffa94d;
-  --color-orange-400: #ff922b;  
-  --color-orange-500: #fd7e14;
-  --color-orange-600: #f76707;
-  --color-orange-700: #e8590c;
-  --color-orange-800: #d9480f;
-  --color-orange-900: #d9480f;
+  --color-orange-400: #fb923c;  
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-orange-700: #ea580c;
+  --color-orange-800: #ea580c;
+  --color-orange-900: #ea580c;
 
   --color-zinc-0: #fff;
   --color-zinc-50: #f1f3f5;
