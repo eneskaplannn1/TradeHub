@@ -1,37 +1,32 @@
 import { styled } from "styled-components";
 import Button from "../../UI/button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { NavLink, useLocation } from "react-router-dom";
 
-function Pagination({ results, searchKey, searchResults }) {
-  const location = useLocation();
-
-  const search = useLocation().search;
-  const searchParams = new URLSearchParams(search);
-  let page = searchParams.get("page");
-  if (!page) page = 1;
-
+function Pagination({
+  results,
+  searchKey,
+  searchResults,
+  setCurrentPage,
+  currentPage,
+}) {
   return (
     <StyledPagination>
-      <a href={`${location.pathname}?page=${Number(page) - 1}`}>
-        <Button variation="orange" disabled={page === 1 || page === "1"}>
-          <FaArrowLeft /> Previous Page
-        </Button>
-      </a>
-      <a href={`${location.pathname}?page=${Number(page) + 1}`}>
-        <Button
-          variation="orange"
-          disabled={
-            searchKey && searchResults === 0
-              ? true
-              : results < 20
-              ? true
-              : false
-          }
-        >
-          Next Page <FaArrowRight />
-        </Button>
-      </a>
+      <Button
+        onClick={() => setCurrentPage(Number(currentPage) - 1)}
+        variation="orange"
+        disabled={currentPage === 1 || currentPage === "1"}
+      >
+        <FaArrowLeft /> Previous Page
+      </Button>
+      <Button
+        onClick={() => setCurrentPage(Number(currentPage) + 1)}
+        variation="orange"
+        disabled={
+          searchKey && searchResults === 0 ? true : results < 20 ? true : false
+        }
+      >
+        Next Page <FaArrowRight />
+      </Button>
     </StyledPagination>
   );
 }

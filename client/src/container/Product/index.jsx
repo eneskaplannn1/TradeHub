@@ -8,21 +8,23 @@ import Product from "../../components/product";
 import Skeleton from "../../components/skeleton";
 import { useSelector } from "react-redux";
 import { styled } from "styled-components";
+import { useEffect, useState } from "react";
 
 function ProductContainer() {
   const { searchResults, searchKey } = useSelector(
     (store) => store.cart.search
   );
 
-  const search = useLocation().search;
-  const searchParams = new URLSearchParams(search);
-  let page = searchParams.get("page");
-  if (!page) page = 1;
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const { data, isLoading } = useQuery({
-    queryFn: () => getAllProducts(page),
-    queryKey: ["products", page],
-  });
+  const { data, isLoading, isError } = useQuery(["products", currentPage], () =>
+    getAllProducts(currentPage)
+  );
+
+  if (isError) {
+    // Handle errors here
+    return <div>Error loading products.</div>;
+  }
 
   return (
     <>
@@ -36,12 +38,12 @@ function ProductContainer() {
             ? Array(20)
                 .fill(null)
                 .map((_, index) => <Skeleton key={index} height={480} />)
-            : searchResults.length !== 0
-            ? searchResults.map((prod, index) => {
-                return <Product product={prod} key={index} />;
+            : searchResults.length !== 0 && searchKey !== ""
+            ? searchResults.map((prod) => {
+                return <Product product={prod} key={prod._id} />;
               })
-            : data?.dat?.data?.document?.map((prod, index) => {
-                return <Product product={prod} key={index} />;
+            : data?.data?.data?.document?.map((prod) => {
+                return <Product product={prod} key={prod._id} />;
               })}
         </StyledProductContainer>
       )}
@@ -50,6 +52,8 @@ function ProductContainer() {
         results={data?.data?.data?.document?.length}
         searchKey={searchKey}
         searchResults={searchResults.length}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
       />
     </>
   );

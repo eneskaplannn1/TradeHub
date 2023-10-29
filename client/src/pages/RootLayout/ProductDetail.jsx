@@ -6,8 +6,6 @@ import ReviewContainer from "../../components/review";
 import ProductDetailContainer from "../../components/product-detail";
 import { styled } from "styled-components";
 
-const StyledProductDetail = styled.div``;
-
 function ProductDetail() {
   const { productId } = useParams();
 
@@ -31,3 +29,5 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
+
+const StyledProductDetail = styled.div``;
