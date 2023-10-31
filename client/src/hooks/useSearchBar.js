@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { setSearchResults } from "../features/product/productSlice";
 
+let first = true;
+
 function useSearchBar() {
   const { category } = useParams();
   const queryClient = useQueryClient();
@@ -16,6 +18,10 @@ function useSearchBar() {
     queryFn: () => searchProduct({ inputValue, category }),
     queryKey: ["search", inputValue, category],
     onSuccess: async (data) => {
+      if (first && !inputValue) {
+        first = false;
+        return;
+      }
       if (category) await queryClient.invalidateQueries(["products", category]);
       dispatch(
         setSearchResults({
