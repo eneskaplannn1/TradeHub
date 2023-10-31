@@ -16,7 +16,9 @@ const handleOrder = async function ({ cart, customerId }) {
 };
 const getOrders = async function (customerId) {
   try {
-    const res = await customRequest(`/orders?customer=${customerId}`);
+    const res = await customRequest(
+      `/orders?customer=${customerId}&sort=-createdAt`
+    );
     return res;
   } catch (err) {
     throw new Error(err);

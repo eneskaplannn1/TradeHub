@@ -31,8 +31,7 @@ class ApiFeatures {
     if (this.queryString.sort) {
       const sortBy = this.queryString.sort.split(',').join(' ');
       this.query = this.query.sort(sortBy);
-    } else {
-      this.query = this.query.sort('-createdAt');
+      console.log(this.queryString.sort);
     }
     return this;
   }
@@ -48,8 +47,8 @@ class ApiFeatures {
   }
 
   paginate() {
-    const page = this.queryString.page || 1;
-    const limit = this.queryString.limit || 20;
+    const page = this.queryString.page * 1 || 1;
+    const limit = this.queryString.limit * 1 || 20;
 
     const skip = (page - 1) * limit;
     this.query = this.query.skip(skip).limit(limit);

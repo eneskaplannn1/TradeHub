@@ -1,36 +1,46 @@
 import { styled } from "styled-components";
 import Button from "../../UI/button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
 
-function Pagination({ results, searchKey, searchResults }) {
-  const location = useLocation();
-  const search = useLocation().search;
-  const searchParams = new URLSearchParams(search);
-  let page = searchParams.get("page");
-  if (!page) page = 1;
-
+function Pagination({
+  results,
+  searchKey,
+  searchResults,
+  currentPage,
+  onPageChange,
+}) {
+  const handlePrevClick = () => {
+    onPageChange(currentPage - 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "instant", // Bu, kaydırmanın yavaşça gerçekleşmesini sağlar.
+    });
+  };
+  const handleNextClick = () => {
+    onPageChange(currentPage + 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Bu, kaydırmanın yavaşça gerçekleşmesini sağlar.
+    });
+  };
   return (
     <StyledPagination>
-      <a href={`${location.pathname}?page=${Number(page) - 1}`}>
-        <Button variation="orange" disabled={page === 1 || page === "1"}>
-          <FaArrowLeft /> Previous Page
-        </Button>
-      </a>
-      <a href={`${location.pathname}?page=${Number(page) + 1}`}>
-        <Button
-          variation="orange"
-          disabled={
-            searchKey && searchResults === 0
-              ? true
-              : results < 20
-              ? true
-              : false
-          }
-        >
-          Next Page <FaArrowRight />
-        </Button>
-      </a>
+      <Button
+        variation="orange"
+        disabled={currentPage === 1 || currentPage === "1"}
+        onClick={handlePrevClick}
+      >
+        <FaArrowLeft /> Previous Page
+      </Button>
+      <Button
+        variation="orange"
+        disabled={
+          searchKey && searchResults === 0 ? true : results < 20 ? true : false
+        }
+        onClick={handleNextClick}
+      >
+        Next Page <FaArrowRight />
+      </Button>
     </StyledPagination>
   );
 }

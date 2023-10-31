@@ -11,7 +11,9 @@ const createReview = async function (data) {
 const getUsersReviews = async function (customerId) {
   try {
     return await customRequest(
-      `/reviews?${customerId ? `customer=${customerId}` : ""}`
+      `/reviews?${customerId ? `customer=${customerId}` : ""}${
+        customerId ? "&sort=-createdAt" : "?-createdAt"
+      }`
     );
   } catch (err) {
     throw new Error(err.response.data.message);
@@ -20,7 +22,9 @@ const getUsersReviews = async function (customerId) {
 const getProductReviews = async function (productId) {
   try {
     return await customRequest(
-      `/reviews?${productId ? `product=${productId}` : ""}`
+      `/reviews?${productId ? `product=${productId}` : ""}${
+        productId ? "&sort=-createdAt" : "?-createdAt"
+      }`
     );
   } catch (err) {
     throw new Error(err.response.data.message);

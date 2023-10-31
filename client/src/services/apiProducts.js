@@ -4,7 +4,11 @@ const getAllProducts = async function (page) {
   console.log(`/products${page ? "?page=" + page : ""}`);
   try {
     const res = await customRequest(`/products${page ? "?page=" + page : ""}`);
-    console.log(res.data.data.document[0]);
+    console.log(
+      res.data.data.document.map((product) => {
+        return product.productDesc;
+      })
+    );
     return res;
   } catch (err) {
     throw new Error(err);

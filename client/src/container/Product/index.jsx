@@ -7,23 +7,19 @@ import Product from "../../components/product";
 import Skeleton from "../../components/skeleton";
 import { useSelector } from "react-redux";
 import { styled } from "styled-components";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 function ProductContainer() {
   const { searchResults, searchKey } = useSelector(
     (store) => store.cart.search
   );
-  // const [currentPage, setCurrentPage] = useState(1);
-  // console.log(currentPage);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const search = useLocation().search;
-  const searchParams = new URLSearchParams(search);
-  let page = searchParams.get("page");
-  if (!page) page = 1;
-
-  const { data, isLoading } = useQuery(["products", page], () =>
-    getAllProducts(page)
-  );
+  const { data, isLoading, isFetching } = useQuery({
+    queryKey: ["products", currentPage],
+    queryFn: () => getAllProducts(currentPage),
+    keepPreviousData: true,
+  });
 
   if (isLoading) {
     return (
@@ -36,8 +32,6 @@ function ProductContainer() {
       </StyledProductContainer>
     );
   }
-
-  const products = [...data.data.data.document];
 
   return (
     <>
@@ -55,7 +49,7 @@ function ProductContainer() {
             ? searchResults.map((prod) => {
                 return <Product product={prod} key={prod._id} />;
               })
-            : products.map((prod) => {
+            : data.data.data.document.map((prod) => {
                 return <Product product={prod} key={prod._id} />;
               })}
         </StyledProductContainer>
@@ -66,8 +60,11 @@ function ProductContainer() {
           results={data?.data?.data?.document?.length}
           searchKey={searchKey}
           searchResults={searchResults.length}
+          currentPage={currentPage}
+          onPageChange={(page) => setCurrentPage(page)}
         />
       )}
+      {isFetching ? "fuck" : null}
     </>
   );
 }
