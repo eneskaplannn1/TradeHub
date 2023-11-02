@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import StyledBoxTemplate from "../box-template.jsx";
+import StyledBoxTemplate from "../../ui/BoxTemplate";
 import { NavLink } from "react-router-dom";
 
 function UserProductReviewRow({ review }) {

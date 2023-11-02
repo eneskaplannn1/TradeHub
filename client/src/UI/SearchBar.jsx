@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Input from "../form/input/input";
+import Input from "../ui/Input";
 import { ImSearch } from "react-icons/im";
-import useSearchBar from "../../hooks/useSearchBar";
+import useSearchBar from "../hooks/useSearchBar";
 
 function SearchBar({ order }) {
   const { setInputValue } = useSearchBar(order);

@@ -4,11 +4,7 @@ const getAllProducts = async function (page) {
   console.log(`/products${page ? "?page=" + page : ""}`);
   try {
     const res = await customRequest(`/products${page ? "?page=" + page : ""}`);
-    console.log(
-      res.data.data.document.map((product) => {
-        return product.productDesc;
-      })
-    );
+
     return res;
   } catch (err) {
     throw new Error(err);
@@ -17,6 +13,7 @@ const getAllProducts = async function (page) {
 const getProduct = async function (id) {
   try {
     const res = await customRequest(`/products/${id}`);
+    console.log(res);
     return res;
   } catch (err) {
     throw new Error(err);

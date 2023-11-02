@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
-import { getOrders } from "../../../services/apiOrders";
-import useCheckoutSuccess from "../../../hooks/useCheckoutSuccess";
+import { getOrders } from "../../services/apiOrders";
+
+import useCheckoutSuccess from "../../hooks/useCheckoutSuccess";
 
 import { styled } from "styled-components";
 import OrderFilter from "../../ui/OrderFilter";

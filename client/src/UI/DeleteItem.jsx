@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { removeProductFromCart } from "../../features/product/productSlice";
+import { removeProductFromCart } from "../features/product/productSlice";
 import { toast } from "react-hot-toast";
 import { styled } from "styled-components";
 import Button from "./Button";

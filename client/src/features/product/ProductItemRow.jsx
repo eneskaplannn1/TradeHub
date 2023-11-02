@@ -1,9 +1,10 @@
-import Counter from "../../UI/Counter";
-import Modal from "../../UI/Modal";
+import Counter from "../../ui/Counter";
+import Modal from "../../ui/Modal";
 
 import { BsTrash } from "react-icons/bs";
 
 import { styled } from "styled-components";
+import DeleteItem from "../../ui/DeleteItem";
 
 function ProductItemRow({ product }) {
   return (

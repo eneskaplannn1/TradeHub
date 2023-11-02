@@ -1,4 +1,4 @@
-import useGetReviews from "../../../hooks/useGetReviews.js";
+import useGetReviews from "../../hooks/useGetReviews";
 
 import { styled } from "styled-components";
 import StyledBoxTemplate from "../../ui/BoxTemplate.jsx";
@@ -13,7 +13,7 @@ function UserProductReviews() {
       <StyledBoxTemplate>
         <h1>{user?.name + "'s"} reviews</h1>
       </StyledBoxTemplate>
-      <UserProductReviews>
+      <StyledReviewContainer>
         {isLoading ? (
           Array(3)
             .fill(null)
@@ -27,12 +27,12 @@ function UserProductReviews() {
             return <UserProductReviewRow review={review} key={review._id} />;
           })
         )}
-      </UserProductReviews>
+      </StyledReviewContainer>
     </>
   );
 }
 
-export default UsersReviews;
+export default UserProductReviews;
 
 const StyledReviewContainer = styled.main`
   padding: 2rem 2rem;

@@ -1,10 +1,10 @@
 import { styled } from "styled-components";
-import Button from "../button";
+import Button from "./Button";
 import { useDispatch } from "react-redux";
 import {
   addProductToCart,
   removeProductFromCart,
-} from "../../features/product/productSlice";
+} from "../features/product/productSlice";
 
 const StyledCounter = styled.div`
   display: flex;

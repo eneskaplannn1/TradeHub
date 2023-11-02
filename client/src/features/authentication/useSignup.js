@@ -1,5 +1,5 @@
-import { handleSignUp } from "../../../services/apiAuth";
-import { logUserIn } from "../../../features/auth/authSlice";
+import { handleSignUp } from "../../services/apiAuth";
+import { logUserIn } from "./authSlice";
 import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";

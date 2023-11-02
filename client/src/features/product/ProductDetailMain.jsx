@@ -8,8 +8,7 @@ import Button from "../../ui/Button";
 import StarRating from "../../ui/StarRating";
 
 import { AiOutlineHeart } from "react-icons/ai";
-import { StyledProductFavorite } from "../../ui/product";
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 
 function ProductDetailMain({ productData = {}, isLoading }) {
   const user = useSelector((store) => store.auth.user);
@@ -171,4 +170,39 @@ const StyledButtonContainer = styled.div`
   button {
     height: 50px;
   }
+`;
+const StyledProductFavorite = styled.button`
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  right: 0.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  border: 1px solid var(--color-zinc-800);
+
+  .selected {
+    background-color: var(--color-orange-700);
+  }
+
+  &:hover {
+    border: 1px solid var(--color-zinc-0);
+    color: var(--color-zinc-0);
+    background-color: var(--color-orange-700);
+  }
+
+  ${(props) =>
+    props.selected
+      ? css`
+          background-color: var(--color-orange-700);
+          color: var(--color-zinc-0);
+          border: 1px solid var(--color-zinc-0);
+        `
+      : css``}
 `;

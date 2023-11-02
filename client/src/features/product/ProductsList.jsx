@@ -7,6 +7,7 @@ import { styled } from "styled-components";
 import Pagination from "../../UI/Pagination";
 import Product from "./Product";
 import Skeleton from "../../ui/Skeleton";
+import StyledProductContainer from "../../ui/product";
 
 function ProductsList() {
   const { searchResults, searchKey } = useSelector(
@@ -22,13 +23,13 @@ function ProductsList() {
 
   if (isLoading) {
     return (
-      <StyledProductList>
+      <StyledProductContainer>
         {Array(20)
           .fill(null)
           .map((_, index) => {
             <Skeleton key={index} height={480} />;
           })}
-      </StyledProductList>
+      </StyledProductContainer>
     );
   }
 
@@ -39,7 +40,7 @@ function ProductsList() {
           There is no product matched with <span>{searchKey}</span>
         </StyledHeader>
       ) : (
-        <StyledProductList>
+        <StyledProductContainer>
           {isLoading
             ? Array(20)
                 .fill(null)
@@ -51,7 +52,7 @@ function ProductsList() {
             : data.data.data.document.map((prod) => {
                 return <Product product={prod} key={prod._id} />;
               })}
-        </StyledProductList>
+        </StyledProductContainer>
       )}
 
       {!searchKey && (

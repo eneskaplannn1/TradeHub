@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
-import { StyledContainer } from "../../../UI/auth";
-import FormRowVertical from "../../../UI/form/form-row";
-import Button from "../../../UI/button";
+import { StyledAuthContainer } from "../../UI/auth";
+import FormRowVertical from "../../ui/FormRow";
+import Button from "../../ui/Button";
 
 function ForgetPassword() {
   return (
-    <StyledContainer variation="sm">
+    <StyledAuthContainer variation="sm">
       <StyledHead>
         <h4>Password assistance</h4>
         <p>
@@ -19,7 +19,7 @@ function ForgetPassword() {
         </FormRowVertical>
         <Button variation="orange">Continue</Button>
       </form>
-    </StyledContainer>
+    </StyledAuthContainer>
   );
 }
 

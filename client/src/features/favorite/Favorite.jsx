@@ -1,13 +1,13 @@
-import { getUsersFavorites } from "../../../services/apiProducts";
+import { getUsersFavorites } from "../../services/apiProducts";
 
 import { styled } from "styled-components";
 import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 
-import { StyledProductContainer } from "../../../UI/product";
 import Skeleton from "../../ui/Skeleton";
 import Product from "../product/Product";
 import StyledBoxTemplate from "../../UI/BoxTemplate";
+import StyledProductContainer from "../../ui/product";
 
 function UserFavoritesList() {
   const user = useSelector((store) => store.auth.user);

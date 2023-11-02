@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { handleLogin } from "../../services/apiAuth";
-import { logUserIn } from "../features/auth/authSlice";
+import { logUserIn } from "./authSlice";
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";

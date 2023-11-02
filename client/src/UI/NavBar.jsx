@@ -1,8 +1,8 @@
 import { useMutation } from "@tanstack/react-query";
 import { NavLink, useNavigate } from "react-router-dom";
-import { handleLogout } from "../../services/apiAuth";
+import { handleLogout } from "../services/apiAuth";
 import { useDispatch } from "react-redux";
-import { logout } from "../../features/auth/authSlice";
+import { logout } from "../features/authentication/authSlice";
 import { toast } from "react-hot-toast";
 
 import { styled } from "styled-components";

@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { getOrder } from "../../services/apiOrders";
 
 import { styled } from "styled-components";
-import OrderDetailHead from "../../components/order/OrderDetailHead";
-import OrderDetailFooter from "../../components/order/OrderDetailFooter";
+import OrderDetailHead from "./OrderDetailHead";
+import OrderDetailFooter from "./OrderDetailFooter";
 
 function OrderDetail() {
   const { orderDetail: orderId } = useParams();

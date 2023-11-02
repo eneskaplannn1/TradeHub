@@ -8,7 +8,6 @@ import ProductDetailReviews from "../review/ProductDetailReviews";
 
 function ProductDetail() {
   const { productId } = useParams();
-
   const { data, isLoading } = useQuery({
     queryKey: ["product", productId],
     queryFn: () => getProduct(productId),
@@ -17,24 +16,15 @@ function ProductDetail() {
   const productData = data?.data?.data?.doc || {};
 
   return (
-    <StyledProductDetail>
+    <>
       <ProductDetailMain productData={productData} isLoading={isLoading} />
       <ProductDetailReviews
         productData={productData}
         productId={productId}
         isLoading={isLoading}
       />
-    </StyledProductDetail>
+    </>
   );
 }
 
 export default ProductDetail;
-
-const StyledProductDetail = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 2rem;
-
-  padding-left: 5rem;
-  padding-right: 15rem;
-`;

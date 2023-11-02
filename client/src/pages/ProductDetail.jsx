@@ -1,7 +1,7 @@
-import { ProductDetail } from "../features/product/ProductDetail";
+import ProductDetail from "../features/product/ProductDetail";
 
 function ProductDetailPage() {
-  <ProductDetail />;
+  return <ProductDetail />;
 }
 
 export default ProductDetailPage;

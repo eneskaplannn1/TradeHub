@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { styled } from "styled-components";
 
-import { NoProduct } from "../../ui/NoProduct";
+import NoProduct from "../../ui/NoProduct";
 
 import CartSidebar from "./CartSidebar";
 import ProductItemRow from "../product/ProductItemRow";
@@ -32,4 +32,10 @@ const StyledCartContainer = styled.section`
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
+`;
+
+const StyledItemContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 `;

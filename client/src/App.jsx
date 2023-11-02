@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import RequiredAuth from "./features/authentication/RequiredAuth";
 import { useDispatch } from "react-redux";
-import { logUserIn } from "./features/auth/authSlice";
+import { logUserIn } from "./features/authentication/authSlice";
 import { handleLoginWithCookie } from "./services/apiAuth";
 
 import GlobalStyle from "./styles/globalStyles";
@@ -26,16 +26,16 @@ import PageNotFound from "./pages/PageNotFound";
 import ConfirmAccount from "./pages/ConfirmAccount";
 import Reviews from "./pages/Reviews";
 
-import Address from "./pages/Address";
 import Account from "./pages/Account";
 import ProductCategory from "./pages/ProductCategory";
-import AuthContainer from "./container/Auth/AuthContainer.jsx";
 
 import RootLayout from "./ui/RootLayout";
 import AccountLayout from "./ui/AccountLayout";
 import ProductDetailPage from "./pages/ProductDetail";
 import ShoppingCart from "./pages/Cart";
 import OrderDetailPage from "./pages/OrderDetail";
+import AuthContainer from "./features/authentication/AuthContainer";
+import AddressPage from "./pages/Address";
 
 function App() {
   const dispatch = useDispatch();
@@ -111,7 +111,7 @@ function App() {
                   element={<OrderDetailPage />}
                 />
                 <Route path="/account/reviews" element={<Reviews />} />
-                <Route path="/account/user-address" element={<Address />} />
+                <Route path="/account/user-address" element={<AddressPage />} />
                 <Route path="/account/user-information" element={<Account />} />
               </Route>
             </Route>

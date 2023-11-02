@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Button from "../button";
-import StarRating from "../star";
-import useCreateReviews from "../../hooks/useCreateReviews";
+import Button from "./Button";
+import StarRating from "./StarRating";
+import useCreateReviews from "../hooks/useCreateReviews";
 
 function ReviewForm({ productData, onCloseModal, productId }) {
   const { handleSubmit, handleSubmitForm, handleRating, register } =

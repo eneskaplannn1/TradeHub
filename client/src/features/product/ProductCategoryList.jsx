@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 import ProductNotFound from "../../UI/ProductNotFound";
 import Skeleton from "../../ui/Skeleton";
 import Product from "./Product";
-import Pagination from "../../UI/Pagination";
+import Pagination from "../../ui/Pagination";
+import StyledProductContainer from "../../ui/product";
 
 function ProductCategoryList() {
   const { searchResults, searchKey } = useSelector(

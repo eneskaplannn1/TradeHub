@@ -1,7 +1,8 @@
 import useUpdatePassword from "./useUpdatePassword";
 
 import Button from "../../ui/Button";
-import Input from "../../ıi/Input";
+import Input from "../../ui/Input";
+
 import StyledForm from "../../ui/Form";
 import FormRowVertical from "../../ui/FormRow";
 function UpdatePasswordForm() {

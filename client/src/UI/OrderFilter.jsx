@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import StyledBox from "../../../components/box";
+import StyledBox from "./Box";
 import { useSelector } from "react-redux";
 
 function OrderFilter() {

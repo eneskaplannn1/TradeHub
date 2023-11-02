@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Header from "../../components/header";
 import { styled } from "styled-components";
-import ProductList from "../../components/product-list";
+import Header from "./Header";
+import ProductList from "./ProductCategoryList";
 
 function RootLayout() {
   return (

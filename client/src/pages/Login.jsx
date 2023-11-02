@@ -10,7 +10,7 @@ import { CiLogin } from "react-icons/ci";
 
 function Login() {
   return (
-    <StyledAuthContainer>
+    <StyledAuthContainer variation="md">
       <StyledAuthHead>
         <CiLogin />
         <strong>Welcome!</strong>

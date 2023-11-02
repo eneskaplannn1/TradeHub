@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Button from "../UI/button";
 import { BsTrash } from "react-icons/bs";
-import StyledBoxTemplate from "../box-template.jsx/index.jsx";
+import Button from "../../ui/Button";
+import StyledBoxTemplate from "../../ui/BoxTemplate";
 
 const StyledAddress = styled.div`
   h5 {

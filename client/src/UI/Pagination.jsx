@@ -1,4 +1,4 @@
-import Button from "../../UI/Button";
+import Button from "./Button";
 import { styled } from "styled-components";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
