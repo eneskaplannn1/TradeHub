@@ -36,12 +36,10 @@ function ProductList() {
 export default ProductList;
 
 const StyledProductCategoryList = styled.div`
-  width: 100vw;
-  padding: 0 12rem 1rem;
+  padding: 0 8rem;
   height: 3.2rem;
 
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
 
   ul {
     display: flex;
@@ -50,10 +48,36 @@ const StyledProductCategoryList = styled.div`
   }
   li {
     border-bottom: 3px solid var(--color-zinc-0);
+    font-weight: 600;
 
     &:hover {
       border-bottom: 3px solid var(--color-orange-700);
       color: var(--color-orange-700);
+    }
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+
+  @media (max-width: 1050px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 32px;
+    height: 6.4rem;
+
+    li {
+      border-bottom: 6px solid var(--color-zinc-0);
+
+      &:hover {
+        border-bottom: 6px solid var(--color-orange-700);
+        color: var(--color-orange-700);
+      }
     }
   }
 `;

@@ -18,6 +18,5 @@ function RootLayout() {
 export default RootLayout;
 
 const StyledMain = styled.main`
-  padding: 1rem 8rem;
-  max-width: 2000px;
+  padding: 0rem 8rem;
 `;

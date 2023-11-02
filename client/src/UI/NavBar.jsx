@@ -68,31 +68,24 @@ const StyledNavbar = styled.nav`
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 1rem;
+    padding: 0 2rem;
     font-size: 24px;
 
     font-weight: 500;
+  }
+  li {
+    transition: all 0.2s ease;
 
-    svg {
+    a,
+    button {
+      gap: 0.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    li {
-      transition: all 0.2s ease;
-
-      a,
-      button {
-        gap: 0.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &:hover {
-        color: var(--color-orange-800);
-      }
+    &:hover {
+      color: var(--color-orange-800);
     }
   }
 `;

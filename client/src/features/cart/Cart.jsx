@@ -32,6 +32,18 @@ const StyledCartContainer = styled.section`
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
+
+  @media (max-width: 1100px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  @media (max-width: 900px) {
+    img {
+      display: none;
+    }
+    font-size: 16px;
+  }
 `;
 
 const StyledItemContainer = styled.div`

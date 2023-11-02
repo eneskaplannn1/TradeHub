@@ -36,9 +36,9 @@ function ProductsList() {
   return (
     <>
       {searchResults.length === 0 && searchKey ? (
-        <StyledHeader>
-          There is no product matched with <span>{searchKey}</span>
-        </StyledHeader>
+        <h2>
+          There is no product matched with <StyledSpan>{searchKey}</StyledSpan>
+        </h2>
       ) : (
         <StyledProductContainer>
           {isLoading
@@ -69,12 +69,9 @@ function ProductsList() {
   );
 }
 
-const StyledHeader = styled.h2`
-  margin: 5rem 0;
-  span {
-    color: var(--color-orange-600);
-    font-weight: bold;
-  }
+const StyledSpan = styled.span`
+  color: var(--color-orange-600);
+  font-weight: bold;
 `;
 
 export default ProductsList;

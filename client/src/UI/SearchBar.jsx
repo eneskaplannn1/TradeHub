@@ -6,7 +6,7 @@ import useSearchBar from "../hooks/useSearchBar";
 function SearchBar({ order }) {
   const { setInputValue } = useSearchBar(order);
   return (
-    <StyledSearchBar>
+    <StyledSearchBar className="searchBar">
       <Input
         placeholder="Aradığınız ürün, kategori ve markayı yazınız"
         variation="searchBar"
@@ -27,7 +27,7 @@ const StyledSearchBar = styled.div`
 
   input {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   svg {
