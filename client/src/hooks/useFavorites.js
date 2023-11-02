@@ -1,7 +1,10 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addProductToFavorites } from "../services/apiProducts";
+import { updateUsersFavorites } from "../features/authentication/authSlice";
+import { useDispatch } from "react-redux";
 
 function useFavorites({ product }) {
+  const dispatch = useDispatch();
   const queryClient = useQueryClient();
 
   const { mutate } = useMutation({
@@ -14,6 +17,7 @@ function useFavorites({ product }) {
   });
 
   const handleAddFavorites = function () {
+    dispatch(updateUsersFavorites({ id: product._id }));
     mutate(product?._id);
   };
 

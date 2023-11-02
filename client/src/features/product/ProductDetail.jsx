@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getProduct } from "../../services/apiProducts";
 
-import { styled } from "styled-components";
 import ProductDetailMain from "./ProductDetailMain";
 import ProductDetailReviews from "../review/ProductDetailReviews";
 

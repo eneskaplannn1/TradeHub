@@ -18,9 +18,24 @@ const userSlice = createSlice({
     verifyAccount(state, action) {
       state.verifyUserEmail = action.payload;
     },
+    updateUsersFavorites(state, action) {
+      const productId = action.payload.id;
+
+      console.log(state.user.favorites.includes(productId));
+
+      if (state.user.favorites.includes(productId)) {
+        const index = state.user.favorites.indexOf(productId);
+        if (index !== -1) {
+          state.user.favorites.splice(index, 1);
+        }
+      } else {
+        state.user.favorites.push(productId);
+      }
+    },
   },
 });
 
-export const { logUserIn, logout, verifyAccount } = userSlice.actions;
+export const { logUserIn, logout, verifyAccount, updateUsersFavorites } =
+  userSlice.actions;
 
 export default userSlice.reducer;

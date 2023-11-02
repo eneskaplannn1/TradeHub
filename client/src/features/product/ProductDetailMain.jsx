@@ -118,7 +118,6 @@ const StyledImageContainer = styled.div`
 `;
 
 const StyledProductInfo = styled.div`
-  height: fit-content;
   border: 1px solid var(--color-zinc-200);
   border-radius: var(--border-radius-lg);
   padding: 1rem 0.7rem 2rem;
