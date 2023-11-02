@@ -1,7 +1,7 @@
-import ForgetPasswordContainer from "../../container/Auth/forget-password";
+import ForgetPassword from "../features/authentication/ForgetPassword";
 
-function ForgetPassword() {
-  return <ForgetPasswordContainer />;
+function ForgetPasswordPage() {
+  return <ForgetPassword />;
 }
 
-export default ForgetPassword;
+export default ForgetPasswordPage;

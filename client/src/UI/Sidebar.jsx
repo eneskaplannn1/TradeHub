@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import StyledBox from "./Box";
-import StyledBoxTemplate from "../box-template.jsx";
+import StyledBoxTemplate from "./BoxTemplate";
 import { styled } from "styled-components";
 import { AiOutlineInbox, AiOutlineUser } from "react-icons/ai";
 import { TbMessages } from "react-icons/tb";

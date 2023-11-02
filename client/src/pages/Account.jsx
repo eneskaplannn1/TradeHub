@@ -1,7 +1,7 @@
-import AccontContainer from "../container/RootLayout/Account";
+import UpdateAccount from "../features/account/UpdateAccount";
 
 function Account() {
-  return <AccontContainer />;
+  return <UpdateAccount />;
 }
 
 export default Account;

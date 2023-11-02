@@ -1,7 +1,7 @@
-import FavoriteContainer from "../../container/RootLayout/Favorite";
+import UserFavoritesList from "../features/favorite/Favorite";
 
 function Favorites() {
-  return <FavoriteContainer />;
+  return <UserFavoritesList />;
 }
 
 export default Favorites;

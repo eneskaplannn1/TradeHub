@@ -1,7 +1,7 @@
-import ReviewContainer from "../../container/RootLayout/ReviewContainer";
+import UserProductReviews from "../features/review/UserProductReviews";
 
 function Reviews() {
-  return <ReviewContainer />;
+  return <UserProductReviews />;
 }
 
 export default Reviews;

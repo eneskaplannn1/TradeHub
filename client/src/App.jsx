@@ -8,7 +8,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import RequiredAuth from "./features/auth/RequiredAuth";
+import RequiredAuth from "./features/authentication/RequiredAuth";
 import { useDispatch } from "react-redux";
 import { logUserIn } from "./features/auth/authSlice";
 import { handleLoginWithCookie } from "./services/apiAuth";
@@ -16,16 +16,13 @@ import { handleLoginWithCookie } from "./services/apiAuth";
 import GlobalStyle from "./styles/globalStyles";
 
 import Products from "./pages/Products";
-import Cart from "./pages/Cart";
 import Orders from "./pages/Orders";
 import Favorites from "./pages/Favorites";
-import SignUp from "./pages/Authentication/SignUp";
-import ForgetPassword from "./pages/Authentication/ForgetPassword";
-import Login from "./pages/Authentication/Login";
-import UnAuthorized from "./pages/Authentication/UnAuthorized";
+import SignUp from "./pages/SignUp";
+import ForgetPasswordPage from "./pages/ForgetPassword";
+import Login from "./pages/Login";
+import UnAuthorized from "./pages/UnAuthorized";
 import PageNotFound from "./pages/PageNotFound";
-import ProductDetail from "./pages/ProductDetail";
-import OrderDetail from "./pages/OrderDetail";
 import ConfirmAccount from "./pages/ConfirmAccount";
 import Reviews from "./pages/Reviews";
 
@@ -36,6 +33,9 @@ import AuthContainer from "./container/Auth/AuthContainer.jsx";
 
 import RootLayout from "./ui/RootLayout";
 import AccountLayout from "./ui/AccountLayout";
+import ProductDetailPage from "./pages/ProductDetail";
+import ShoppingCart from "./pages/Cart";
+import OrderDetailPage from "./pages/OrderDetail";
 
 function App() {
   const dispatch = useDispatch();
@@ -95,11 +95,11 @@ function App() {
             <Route
               path="/product/:productId"
               index
-              element={<ProductDetail />}
+              element={<ProductDetailPage />}
             />
 
             {/* Product route */}
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/cart" element={<ShoppingCart />} />
             <Route path="/favorites" element={<Favorites />} />
             {/* Account and Spesific Routes */}
 
@@ -108,7 +108,7 @@ function App() {
                 <Route index path="/account/orders" element={<Orders />} />
                 <Route
                   path="/account/orders/:orderDetail"
-                  element={<OrderDetail />}
+                  element={<OrderDetailPage />}
                 />
                 <Route path="/account/reviews" element={<Reviews />} />
                 <Route path="/account/user-address" element={<Address />} />
@@ -128,7 +128,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="confirmAccount" element={<ConfirmAccount />} />
-            <Route path="forgetPassword" element={<ForgetPassword />} />
+            <Route path="forgetPassword" element={<ForgetPasswordPage />} />
             <Route path="unAuthorized" element={<UnAuthorized />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />

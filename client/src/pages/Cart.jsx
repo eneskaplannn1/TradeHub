@@ -1,7 +1,7 @@
-import CartContainer from "../../container/Cart";
+import Cart from "../features/cart/Cart";
 
-function Cart() {
-  return <CartContainer />;
+function ShoppingCart() {
+  return <Cart />;
 }
 
-export default Cart;
+export default ShoppingCart;

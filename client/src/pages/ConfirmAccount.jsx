@@ -1,7 +1,7 @@
-import ConfirmAccountContainer from "../container/Auth/confirm-account";
+import ConfirmNewUserAccount from "../features/authentication/ConfirmAccount";
 
 function ConfirmAccount() {
-  return <ConfirmAccountContainer />;
+  return <ConfirmNewUserAccount />;
 }
 
 export default ConfirmAccount;

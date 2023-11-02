@@ -1,13 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { styled } from "styled-components";
-import Sidebar from "../sidebar";
-import StyledBoxTemplate from "../box-template.jsx";
-
-const StyledAccoutLayout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1.6rem;
-`;
+import StyledBoxTemplate from "./BoxTemplate";
+import Sidebar from "./Sidebar.jsx";
 
 function AccountLayout() {
   return (
@@ -23,3 +17,9 @@ function AccountLayout() {
 }
 
 export default AccountLayout;
+
+const StyledAccoutLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.6rem;
+`;

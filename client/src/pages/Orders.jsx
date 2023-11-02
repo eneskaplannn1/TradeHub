@@ -1,7 +1,7 @@
-import OrderContainer from "../../container/RootLayout/OrderContainer";
+import OrderTable from "../features/order/OrderTable";
 
 function Orders() {
-  return <OrderContainer />;
+  return <OrderTable />;
 }
 
 export default Orders;

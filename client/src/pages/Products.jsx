@@ -1,7 +1,9 @@
-import ProductContainer from "../../container/Product";
+// import ProductContainer from "../../container/Product";
+
+import ProductsList from "../features/product/ProductsList";
 
 function Products() {
-  return <ProductContainer />;
+  return <ProductsList />;
 }
 
 export default Products;
