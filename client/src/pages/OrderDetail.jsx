@@ -6,8 +6,6 @@ import { styled } from "styled-components";
 import OrderDetailHead from "../../components/order/OrderDetailHead";
 import OrderDetailFooter from "../../components/order/OrderDetailFooter";
 
-// orderdaki her bir ürün için
-
 function OrderDetail() {
   const { orderDetail: orderId } = useParams();
   const { data, isLoading } = useQuery({

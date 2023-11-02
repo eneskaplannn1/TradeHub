@@ -1,8 +1,7 @@
-import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-
 import checkIsNewProduct from "../../utils/checkNewProduct";
 import useFavorites from "../../hooks/useFavorites";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 import { BsBox } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -148,7 +147,6 @@ const StyledProductFooter = styled.div`
     }
   }
 `;
-
 const StyledCargoHead = styled.div`
   width: auto;
   height: auto;
@@ -163,7 +161,6 @@ const StyledCargoHead = styled.div`
   padding: 0.4rem;
   gap: 0.2rem;
 `;
-
 const StyledProductFavorite = styled.button`
   z-index: 100;
   cursor: pointer;

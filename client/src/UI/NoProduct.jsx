@@ -1,8 +1,7 @@
+import Button from "./Button";
 import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
-
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import Button from "../../UI/button";
 
 const StyledNoProduct = styled.div`
   border: 1px solid var(--color-zinc-200);

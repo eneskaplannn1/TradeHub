@@ -1,9 +1,9 @@
 import useUpdatePassword from "../../hooks/useUpdatePassword";
 
-import Button from "../../UI/Button";
-import Input from "../../UI/form/input/input";
-import StyledForm from "../../UI/Form";
-import FormRowVertical from "../../UI/form/form-row";
+import Button from "../../ui/Button";
+import Input from "../../ui/form/input/input";
+import StyledForm from "../../ui/Form";
+import FormRowVertical from "../../ui/form/form-row";
 
 function UpdatePasswordForm() {
   const {

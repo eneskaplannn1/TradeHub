@@ -3,11 +3,11 @@ import { addProductToCart } from "../../features/product/productSlice";
 import { toast } from "react-hot-toast";
 import useFavorites from "../../hooks/useFavorites";
 
-import Skeleton from "../../components/skeleton";
-import Button from "../../UI/button";
-import StarRating from "../../UI/star";
+import Skeleton from "../../ui/Skeleton";
+import Button from "../../ui/Button";
+import StarRating from "../../ui/StarRating";
 import { AiOutlineHeart } from "react-icons/ai";
-import { StyledProductFavorite } from "../../UI/product";
+import { StyledProductFavorite } from "../../ui/product";
 import { styled } from "styled-components";
 
 function ProductDetailContainer({ productData = {}, isLoading }) {

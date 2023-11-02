@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 function ProductList() {
   return (
-    <StyledProductList>
+    <StyledProductCategoryList>
       <nav>
         <ul>
           <li>
@@ -29,13 +29,13 @@ function ProductList() {
           </li>
         </ul>
       </nav>
-    </StyledProductList>
+    </StyledProductCategoryList>
   );
 }
 
 export default ProductList;
 
-const StyledProductList = styled.div`
+const StyledProductCategoryList = styled.div`
   width: 100vw;
   padding: 0 12rem 1rem;
   height: 3.2rem;
@@ -43,20 +43,17 @@ const StyledProductList = styled.div`
   font-size: 18px;
   font-weight: 600;
 
-  nav {
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  li {
+    border-bottom: 3px solid var(--color-zinc-0);
 
-      li {
-        border-bottom: 3px solid var(--color-zinc-0);
-
-        &:hover {
-          border-bottom: 3px solid var(--color-orange-700);
-          color: var(--color-orange-700);
-        }
-      }
+    &:hover {
+      border-bottom: 3px solid var(--color-orange-700);
+      color: var(--color-orange-700);
     }
   }
 `;

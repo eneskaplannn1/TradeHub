@@ -13,29 +13,29 @@ import { useDispatch } from "react-redux";
 import { logUserIn } from "./features/auth/authSlice";
 import { handleLoginWithCookie } from "./services/apiAuth";
 
-import RootLayout from "./pages/RootLayout/RootLayout";
-import Products from "./pages/RootLayout/Products";
-import Cart from "./pages/RootLayout/Cart";
-import Orders from "./pages/RootLayout/Orders";
-import Favorites from "./pages/RootLayout/Favorites";
+import GlobalStyle from "./styles/globalStyles";
 
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import Orders from "./pages/Orders";
+import Favorites from "./pages/Favorites";
 import SignUp from "./pages/Authentication/SignUp";
 import ForgetPassword from "./pages/Authentication/ForgetPassword";
 import Login from "./pages/Authentication/Login";
 import UnAuthorized from "./pages/Authentication/UnAuthorized";
-import PageNotFound from "./pages/Error/PageNotFound";
-import ProductDetail from "./pages/RootLayout/ProductDetail";
-import OrderDetail from "./pages/RootLayout/OrderDetail";
-import ConfirmAccount from "./pages/Authentication/ConfirmAccount";
-import Reviews from "./pages/RootLayout/Reviews";
+import PageNotFound from "./pages/PageNotFound";
+import ProductDetail from "./pages/ProductDetail";
+import OrderDetail from "./pages/OrderDetail";
+import ConfirmAccount from "./pages/ConfirmAccount";
+import Reviews from "./pages/Reviews";
 
-import GlobalStyle from "./styles/globalStyles";
-
-import Layout from "./components/layout";
-import Address from "./pages/RootLayout/Address";
-import Account from "./pages/RootLayout/Account";
-import ProductCategory from "./pages/RootLayout/ProductCategory";
+import Address from "./pages/Address";
+import Account from "./pages/Account";
+import ProductCategory from "./pages/ProductCategory";
 import AuthContainer from "./container/Auth/AuthContainer.jsx";
+
+import RootLayout from "./ui/RootLayout";
+import AccountLayout from "./ui/AccountLayout";
 
 function App() {
   const dispatch = useDispatch();
@@ -103,7 +103,7 @@ function App() {
             <Route path="/favorites" element={<Favorites />} />
             {/* Account and Spesific Routes */}
 
-            <Route element={<Layout />}>
+            <Route element={<AccountLayout />}>
               <Route path="/account">
                 <Route index path="/account/orders" element={<Orders />} />
                 <Route

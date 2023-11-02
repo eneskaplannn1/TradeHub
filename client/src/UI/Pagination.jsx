@@ -1,5 +1,5 @@
+import Button from "../../UI/Button";
 import { styled } from "styled-components";
-import Button from "../../UI/button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function Pagination({
@@ -46,6 +46,7 @@ function Pagination({
 }
 
 export default Pagination;
+
 const StyledPagination = styled.div`
   display: flex;
   justify-content: flex-end;

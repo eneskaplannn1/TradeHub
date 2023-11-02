@@ -8,10 +8,10 @@ import {
   StyledAuthContainer,
   StyledAuthHead,
   StyledAuthFooter,
-} from "../../../UI/auth";
-import FormRowVertical from "../../../UI/form/form-row";
-import Input from "../../../UI/form/input/input";
-import Button from "../../../UI/button";
+} from "../../../ui/auth";
+import FormRowVertical from "../../../ui/form/form-row";
+import Input from "../../../ui/form/input/input";
+import Button from "../../../ui/Button";
 
 import useLogin from "../../../hooks/useLogin";
 

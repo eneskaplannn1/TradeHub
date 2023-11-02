@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Logo from "../../UI/logo";
-import SearchBar from "../../UI/search-bar";
-import Navbar from "../../UI/navbar";
+import Logo from "./Logo";
+import SearchBar from "./SearchBar";
+import Navbar from "./NavBar";
 
 function Header() {
   return (

@@ -1,13 +1,13 @@
 import { useLocation, useParams } from "react-router-dom";
 
-import { StyledProductContainer } from "../../ui/product";
+import { StyledProductContainer } from "../../UI/product";
 import Pagination from "../../components/pagination";
 import Product from "../../components/product";
 import Skeleton from "../../components/skeleton";
 
 import useProductCategory from "../../hooks/useProductCategory";
 import { useSelector } from "react-redux";
-import ProductNotFound from "../../ui/product-not-found";
+import ProductNotFound from "../../UI/product-not-found";
 
 function ProductCategory() {
   const { searchResults, searchKey } = useSelector(

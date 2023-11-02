@@ -1,8 +1,8 @@
-import Button from "../../UI/button";
-import Modal from "../../UI/Modal";
+import Button from "../../ui/Button";
+import Modal from "../../ui/Modal";
 
-import ReviewForm from "../../UI/review-form";
-import StarRating from "../../UI/star";
+import ReviewForm from "../../ui/review-form";
+import StarRating from "../../ui/star";
 import useGetReviews from "../../hooks/useGetReviews";
 import Skeleton from "../skeleton";
 import UserReview from "../styled-review";

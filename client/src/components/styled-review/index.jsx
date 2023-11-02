@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import StarRating from "../../UI/star";
+import StarRating from "../../ui/star";
 import formatDate from "../../utils/formatDate";
 
 function UserReview({ review }) {

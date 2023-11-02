@@ -2,8 +2,6 @@ import { css, styled } from "styled-components";
 
 const variations = {
   bar: css`
-    .active {
-    }
     padding: 0.4rem 0.6rem;
 
     ul {
@@ -32,6 +30,7 @@ const variations = {
       }
     }
   `,
+
   main: css`
     padding: 2rem 1rem;
     display: flex;

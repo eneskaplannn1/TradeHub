@@ -1,9 +1,9 @@
 import useUpdateUser from "../../hooks/useUpdateUser";
 
-import StyledForm from "../../UI/Form";
-import Button from "../../UI/Button";
-import Input from "../../UI/form/input/input";
-import FormRowVertical from "../../UI/form/form-row";
+import StyledForm from "../../ui/Form";
+import Button from "../../ui/Button";
+import Input from "../../ui/form/input/input";
+import FormRowVertical from "../../ui/form/form-row";
 
 function UpdateUserDataForm() {
   const { handleSubmit, isLoading, handleSubmitForm, errors, register } =

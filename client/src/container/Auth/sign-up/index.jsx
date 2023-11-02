@@ -5,10 +5,10 @@ import {
   StyledAuthContainer,
   StyledAuthHead,
   StyledAuthFooter,
-} from "../../../UI/Auth";
-import FormRowVertical from "../../../UI/form/form-row";
-import Input from "../../../UI/Input";
-import Button from "../../../UI/Button";
+} from "../../../ui/auth";
+import FormRowVertical from "../../../ui/form/form-row";
+import Input from "../../../ui/Input";
+import Button from "../../../ui/Button";
 import { BsPerson } from "react-icons/bs";
 import { AiFillEye } from "react-icons/ai";
 import { IoPersonCircleSharp, IoMailOpenOutline } from "react-icons/io5";

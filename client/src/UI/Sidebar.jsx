@@ -1,12 +1,12 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { styled } from "styled-components";
-import StyledBox from "../box";
 
+import StyledBox from "./Box";
+import StyledBoxTemplate from "../box-template.jsx";
+import { styled } from "styled-components";
 import { AiOutlineInbox, AiOutlineUser } from "react-icons/ai";
 import { TbMessages } from "react-icons/tb";
 import { SlLocationPin } from "react-icons/sl";
-import StyledBoxTemplate from "../box-template.jsx";
-import { useSelector } from "react-redux";
 
 function Sidebar() {
   const { name } = useSelector((store) => store.auth.user);

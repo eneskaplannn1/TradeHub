@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { useSelector } from "react-redux";
 import { TfiEmail } from "react-icons/tfi";
-import { StyledAuthContainer, StyledAuthHead } from "../../../UI/auth";
+import { StyledAuthContainer, StyledAuthHead } from "../../../ui/auth";
 
 const StyledBody = styled.div`
   h5 {
