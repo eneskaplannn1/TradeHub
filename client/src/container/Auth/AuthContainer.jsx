@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { StyledAuthContainer } from "../../UI/auth";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { StyledAuthContainer } from "../../UI/auth/index";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function AuthContainer({ children }) {
   const navigate = useNavigate();
