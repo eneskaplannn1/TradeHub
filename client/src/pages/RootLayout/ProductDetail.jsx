@@ -30,4 +30,11 @@ function ProductDetail() {
 
 export default ProductDetail;
 
-const StyledProductDetail = styled.div``;
+const StyledProductDetail = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2rem;
+
+  padding-left: 5rem;
+  padding-right: 15rem;
+`;

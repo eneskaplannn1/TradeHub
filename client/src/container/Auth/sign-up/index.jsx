@@ -1,59 +1,28 @@
-import { useForm } from "react-hook-form";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { toast } from "react-hot-toast";
-import { NavLink, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-
+import useSignUp from "../../../hooks/useSignUp";
 import { useState } from "react";
+
+import {
+  StyledAuthContainer,
+  StyledAuthHead,
+  StyledAuthFooter,
+} from "../../../UI/Auth";
+import FormRowVertical from "../../../UI/form/form-row";
+import Input from "../../../UI/Input";
+import Button from "../../../UI/Button";
 import { BsPerson } from "react-icons/bs";
 import { AiFillEye } from "react-icons/ai";
 import { IoPersonCircleSharp, IoMailOpenOutline } from "react-icons/io5";
-import {
-  StyledAuthHead,
-  StyledContainer,
-  StyledFooter,
-} from "../../../UI/auth";
-import FormRowVertical from "../../../UI/form/form-row";
-import Input from "../../../UI/form/input/input";
-import Button from "../../../UI/button";
-import { handleSignUp } from "../../../services/apiAuth";
-import { logUserIn, verifyAccount } from "../../../features/auth/authSlice";
+
+import { NavLink } from "react-router-dom";
 
 function SignUpContainer() {
-  const queryClient = useQueryClient();
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm();
-
-  const { mutate, isLoading } = useMutation({
-    mutationFn: handleSignUp,
-    mutationKey: ["signup"],
-    onSuccess: async (data) => {
-      toast.success("Your account created successfully ");
-      dispatch(logUserIn(data.data.newUser));
-      await queryClient.invalidateQueries(["login"]);
-      navigate("/");
-
-      // navigate("/confirmAccount");
-      // dispatch(verifyAccount(data.data.newUser.email));
-    },
-    onError: (err) => {
-      toast.error(err.message);
-    },
-  });
-
-  const handleSubmitForm = function (data) {
-    mutate(data);
-  };
+  const { errors, handleSubmit, handleSubmitForm, register, isLoading } =
+    useSignUp();
 
   return (
-    <StyledContainer variation="md">
+    <StyledAuthContainer variation="md">
       <StyledAuthHead>
         <IoPersonCircleSharp />
         <strong>Create account!</strong>
@@ -104,12 +73,12 @@ function SignUpContainer() {
         <Button variation="blue">
           {isLoading ? "Creating account..." : "Create Account"}
         </Button>
-        <StyledFooter>
+        <StyledAuthFooter>
           <p>Have an account ?</p>
           <NavLink to="/login">Sign in now</NavLink>
-        </StyledFooter>
+        </StyledAuthFooter>
       </form>
-    </StyledContainer>
+    </StyledAuthContainer>
   );
 }
 

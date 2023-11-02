@@ -1,18 +1,5 @@
 import { styled } from "styled-components";
 
-const StyledAccountContainer = styled.div`
-  h1 {
-    border: 1px solid var(--color-zinc-200);
-  }
-`;
-
-const StyledUpdateAccountContainer = styled.div`
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /* Add some spacing between the forms */
-`;
-
 const StyledForm = styled.div`
   border: 1px solid var(--color-zinc-300);
   padding: 1rem;
@@ -37,4 +24,4 @@ const StyledForm = styled.div`
   }
 `;
 
-export { StyledForm, StyledAccountContainer, StyledUpdateAccountContainer };
+export default StyledForm;

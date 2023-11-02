@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import StyledBoxTemplate from "../../../components/box-template.jsx";
+import StyledBoxTemplate from "../../../components/box-template.jsx/index.jsx";
 import Address from "../../../components/address/index.jsx";
 
 const StyledAddressContainer = styled.main`

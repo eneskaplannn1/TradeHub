@@ -12,17 +12,7 @@ const variations = {
   `,
 };
 
-const StyledAuthContainer = styled.main`
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-zinc-50);
-`;
-
-const StyledContainer = styled.div`
+const StyledAuthContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -63,7 +53,7 @@ const StyledAuthHead = styled.div`
   }
 `;
 
-const StyledFooter = styled.div`
+const StyledAuthFooter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,4 +68,4 @@ const StyledFooter = styled.div`
     }
   }
 `;
-export { StyledContainer, StyledAuthHead, StyledFooter, StyledAuthContainer };
+export { StyledAuthContainer, StyledAuthHead, StyledAuthFooter };

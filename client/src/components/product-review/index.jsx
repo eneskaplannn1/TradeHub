@@ -2,6 +2,33 @@ import styled from "styled-components";
 import StyledBoxTemplate from "../box-template.jsx";
 import { NavLink } from "react-router-dom";
 
+function ProductReview({ review }) {
+  return (
+    <>
+      <StyledBoxTemplate>
+        <StyledProductReview>
+          <StyledProductReviewHead>
+            <div>Image</div>
+            <div>Brand</div>
+            <div>Review</div>
+          </StyledProductReviewHead>
+          <StyledProductReviewFooter>
+            <img src={`/productImage/${review?.product?.category}.png`} />
+            <div>
+              <span>{review?.product?.brand} </span>
+              {review?.product?.productDesc}
+            </div>
+            <div>{review?.review}</div>
+          </StyledProductReviewFooter>
+          <NavLink to={`/product/${review?.product?._id}`}></NavLink>
+        </StyledProductReview>
+      </StyledBoxTemplate>
+    </>
+  );
+}
+
+export default ProductReview;
+
 const StyledProductReview = styled.div`
   padding: 1rem 2rem;
   position: relative;
@@ -37,30 +64,3 @@ const StyledProductReviewFooter = styled.div`
     border-radius: 50%;
   }
 `;
-
-function ProductReview({ review }) {
-  return (
-    <>
-      <StyledBoxTemplate>
-        <StyledProductReview>
-          <StyledProductReviewHead>
-            <div>Image</div>
-            <div>Brand</div>
-            <div>Review</div>
-          </StyledProductReviewHead>
-          <StyledProductReviewFooter>
-            <img src={`/productImage/${review?.product?.category}.png`} />
-            <div>
-              <span>{review?.product?.brand} </span>
-              {review?.product?.productDesc}
-            </div>
-            <div>{review?.review}</div>
-          </StyledProductReviewFooter>
-          <NavLink to={`/product/${review?.product?._id}`}></NavLink>
-        </StyledProductReview>
-      </StyledBoxTemplate>
-    </>
-  );
-}
-
-export default ProductReview;

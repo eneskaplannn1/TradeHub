@@ -1,10 +1,11 @@
-import Order from "../../../components/order/index";
 import { useSelector } from "react-redux";
-import OrderFilter from "../../../UI/order/order-filter";
 import { useQuery } from "@tanstack/react-query";
 import { getOrders } from "../../../services/apiOrders";
-import StyledOrder from "../../../UI/order";
 import useCheckoutSuccess from "../../../hooks/useCheckoutSuccess";
+
+import { styled } from "styled-components";
+import Order from "../../../components/order/index";
+import OrderFilter from "../../../UI/order/order-filter";
 import Skeleton from "../../../components/skeleton";
 
 function OrderContainer() {
@@ -35,3 +36,14 @@ function OrderContainer() {
 }
 
 export default OrderContainer;
+
+const StyledOrder = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .orderContainer {
+    border: 1px solid var(--color-zinc-200);
+    border-radius: 8px;
+  }
+`;

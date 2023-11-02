@@ -5,9 +5,9 @@ import { IoMailOpenOutline } from "react-icons/io5";
 
 import { NavLink } from "react-router-dom";
 import {
+  StyledAuthContainer,
   StyledAuthHead,
-  StyledContainer,
-  StyledFooter,
+  StyledAuthFooter,
 } from "../../../UI/auth";
 import FormRowVertical from "../../../UI/form/form-row";
 import Input from "../../../UI/form/input/input";
@@ -22,7 +22,7 @@ function LoginContainer() {
     useLogin();
 
   return (
-    <StyledContainer variation="md">
+    <StyledAuthContainer variation="md">
       <StyledAuthHead>
         <CiLogin />
         <strong>Welcome!</strong>
@@ -65,11 +65,11 @@ function LoginContainer() {
           </Button>
         </FormRowVertical>
       </form>
-      <StyledFooter>
+      <StyledAuthFooter>
         <p>Dont you have an account ?</p>
         <NavLink to="/signup">Sign up now</NavLink>
-      </StyledFooter>
-    </StyledContainer>
+      </StyledAuthFooter>
+    </StyledAuthContainer>
   );
 }
 

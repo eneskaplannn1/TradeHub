@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import StyledBoxTemplate from "../../../components/box-template.jsx";
+import StyledBoxTemplate from "../../../components/box-template.jsx/index.jsx";
 import ProductReview from "../../../components/product-review/index.jsx";
-import useGetReviews from "../../../hooks/useGetReviews";
+import useGetReviews from "../../../hooks/useGetReviews.js";
 import Skeleton from "../../../components/skeleton/index.jsx";
 
 function ReviewContainer() {

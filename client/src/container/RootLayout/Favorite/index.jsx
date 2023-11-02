@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Product from "../../../components/product";
-import StyledBoxTemplate from "../../../components/box-template.jsx";
+import StyledBoxTemplate from "../../../components/box-template.jsx/index.jsx";
 import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import { getUsersFavorites } from "../../../services/apiProducts";

@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { StyledAuthContainer } from "../../UI/auth/index";
 import { useLocation, useNavigate } from "react-router-dom";
+import { styled } from "styled-components";
 
 function AuthContainer({ children }) {
   const navigate = useNavigate();
@@ -13,3 +13,13 @@ function AuthContainer({ children }) {
 }
 
 export default AuthContainer;
+
+const StyledAuthContainer = styled.main`
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-zinc-50);
+`;

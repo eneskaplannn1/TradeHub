@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { useSelector } from "react-redux";
 import { TfiEmail } from "react-icons/tfi";
-import { StyledAuthHead, StyledContainer } from "../../../UI/auth";
+import { StyledAuthContainer, StyledAuthHead } from "../../../UI/auth";
 
 const StyledBody = styled.div`
   h5 {
@@ -17,7 +17,7 @@ const StyledBody = styled.div`
 function ConfirmAccountContainer() {
   const { verifyUserEmail } = useSelector((state) => state.auth);
   return (
-    <StyledContainer variation="md">
+    <StyledAuthContainer variation="md">
       <StyledAuthHead>
         <TfiEmail />
         <strong>VERIFY YOUR EMAIL ADDRESS</strong>
@@ -31,7 +31,7 @@ function ConfirmAccountContainer() {
           verify your email address. The code will be expired in 5 min.
         </p>
       </StyledBody>
-    </StyledContainer>
+    </StyledAuthContainer>
   );
 }
 

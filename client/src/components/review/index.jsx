@@ -1,17 +1,13 @@
 import Button from "../../UI/button";
-import Modal from "../../UI/modal";
-import {
-  StyledProductReviewContainer,
-  StyledProductReviews,
-  StyledReviewHead,
-  StyledReviews,
-} from "../../UI/review";
+import Modal from "../../UI/Modal";
+
 import ReviewForm from "../../UI/review-form";
 import StarRating from "../../UI/star";
 import useGetReviews from "../../hooks/useGetReviews";
 import Skeleton from "../skeleton";
 import UserReview from "../styled-review";
 import NoReview from "./noReview";
+import { styled } from "styled-components";
 
 function ReviewContainer({ productData, productId, isLoading }) {
   const { data } = useGetReviews(true, productId);
@@ -70,3 +66,37 @@ function ReviewContainer({ productData, productId, isLoading }) {
 }
 
 export default ReviewContainer;
+
+const StyledProductReviewContainer = styled.div`
+  padding-left: 5rem;
+  padding-right: 15rem;
+`;
+const StyledProductReviews = styled.div`
+  border: 1px solid var(--color-zinc-200);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  span {
+    font-weight: bold;
+  }
+`;
+const StyledReviewHead = styled.div`
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid var(--color-zinc-200);
+
+  .rating {
+    display: flex;
+    gap: 1rem;
+  }
+`;
+const StyledReviews = styled.div`
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;

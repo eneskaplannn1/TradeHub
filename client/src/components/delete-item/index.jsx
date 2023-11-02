@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import Button from "../../UI/button";
-import { StyledDeleteItemTemplate } from "../../UI/item";
 import { removeProductFromCart } from "../../features/product/productSlice";
 import { toast } from "react-hot-toast";
+import { styled } from "styled-components";
 
 function DeleteItem({ onCloseModal, product }) {
   const dispatch = useDispatch();
@@ -30,3 +30,21 @@ function DeleteItem({ onCloseModal, product }) {
 }
 
 export default DeleteItem;
+
+const StyledDeleteItemTemplate = styled.div`
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    color: var(--color-orange-800);
+  }
+  .container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+`;

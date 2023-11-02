@@ -1,4 +1,4 @@
-import { StyledReview } from "../../UI/review";
+import { styled } from "styled-components";
 import StarRating from "../../UI/star";
 import formatDate from "../../utils/formatDate";
 
@@ -18,7 +18,7 @@ function UserReview({ review }) {
       <div className="footer">
         <div>{review?.customer?.name}</div>
         <div>
-          | <span style={{ marginLeft: "1rem" }}></span>{" "}
+          | <span style={{ marginLeft: "1rem" }}></span>
           {formatDate(review.createdAt)}
         </div>
       </div>
@@ -27,3 +27,23 @@ function UserReview({ review }) {
 }
 
 export default UserReview;
+
+const StyledReview = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  .header {
+    font-size: 22px;
+    color: var(--color-zinc-700);
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .footer {
+    display: flex;
+    gap: 2rem;
+
+    font-size: 22px;
+    color: var(--color-zinc-500);
+  }
+`;

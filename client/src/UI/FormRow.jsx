@@ -1,5 +1,17 @@
 import { css, styled } from "styled-components";
 
+function FormRowVertical({ label, error, children, variation }) {
+  return (
+    <StyledFormRow variation={variation}>
+      {label && <Label htmlFor={label.toLowerCase()}>{label}</Label>}
+      {children}
+      {error && <Error>{error}</Error>}
+    </StyledFormRow>
+  );
+}
+
+export default FormRowVertical;
+
 const variations = {
   flex: css`
     display: flex;
@@ -63,15 +75,3 @@ const Error = styled.span`
   font-size: 1.3rem;
   color: var(--color-red-700);
 `;
-
-function FormRowVertical({ label, error, children, variation }) {
-  return (
-    <StyledFormRow variation={variation}>
-      {label && <Label htmlFor={label.toLowerCase()}>{label}</Label>}
-      {children}
-      {error && <Error>{error}</Error>}
-    </StyledFormRow>
-  );
-}
-
-export default FormRowVertical;
