@@ -11,8 +11,9 @@ function Product({ product }) {
   const user = useSelector((store) => store.auth.user);
   const isNew = checkIsNewProduct(product?.createdAt);
 
-  const { handleAddFavorites } = useFavorites({ product });
+  const { handleAddFavorites, favIsHighlighted } = useFavorites({ product });
   const selected = user.favorites.includes(product._id);
+
   return (
     <ProductSummary>
       <ProductHead>
@@ -28,7 +29,11 @@ function Product({ product }) {
             </span>
           </div>
         )}
-        <StyledProductFavorite selected={selected} onClick={handleAddFavorites}>
+        <StyledProductFavorite
+          className={favIsHighlighted ? "bump" : ""}
+          selected={selected}
+          onClick={handleAddFavorites}
+        >
           <AiOutlineHeart />
         </StyledProductFavorite>
       </ProductHead>
@@ -69,6 +74,10 @@ const ProductSummary = styled.div`
     top: 0;
     height: 100%;
     width: 100%;
+  }
+  .bump {
+    transition: 0.4s ease;
+    scale: 1.6;
   }
 `;
 const ProductHead = styled.div`
