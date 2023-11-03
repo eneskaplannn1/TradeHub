@@ -29,13 +29,13 @@ import Reviews from "./pages/Reviews";
 import Account from "./pages/Account";
 import ProductCategory from "./pages/ProductCategory";
 
-import AccountLayout from "./ui/AccountLayout";
 import ProductDetailPage from "./pages/ProductDetail";
 import ShoppingCart from "./pages/Cart";
 import OrderDetailPage from "./pages/OrderDetail";
 import AuthContainer from "./features/authentication/AuthContainer";
 import AddressPage from "./pages/Address";
 import MainLayout from "./ui/MainLayout";
+import UserDetailLayout from "./ui/UserDetailLayout";
 
 function App() {
   const dispatch = useDispatch();
@@ -103,7 +103,7 @@ function App() {
             <Route path="/favorites" element={<Favorites />} />
             {/* Account and Spesific Routes */}
 
-            <Route element={<AccountLayout />}>
+            <Route element={<UserDetailLayout />}>
               <Route path="/account">
                 <Route index path="/account/orders" element={<Orders />} />
                 <Route

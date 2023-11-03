@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import StyledBoxTemplate from "./BoxTemplate";
 import Sidebar from "./Sidebar";
 
-function AccountLayout() {
+function UserDetailLayout() {
   return (
     <StyledAccoutLayout>
       <Sidebar />
@@ -16,7 +16,7 @@ function AccountLayout() {
   );
 }
 
-export default AccountLayout;
+export default UserDetailLayout;
 
 const StyledAccoutLayout = styled.div`
   display: grid;
