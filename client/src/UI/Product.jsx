@@ -7,13 +7,13 @@ const StyledProductContainer = styled.div`
   padding: 1rem;
   gap: 2rem;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1400px) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;

@@ -49,11 +49,11 @@ function Navbar() {
             My Cart
           </NavLink>
         </li>
-        <li>
-          <button onClick={handleLogoutUser}>
+        <li onClick={handleLogoutUser}>
+          <NavLink to={"/logout"}>
             <HiArrowRightOnRectangle />
             Log out
-          </button>
+          </NavLink>
         </li>
       </ul>
     </StyledNavbar>
@@ -86,6 +86,23 @@ const StyledNavbar = styled.nav`
 
     &:hover {
       color: var(--color-orange-800);
+    }
+  }
+
+  @media (max-width: 550px) {
+    li {
+      font-size: 16px;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+      a,
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
   }
 `;

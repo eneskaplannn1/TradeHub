@@ -23,25 +23,28 @@ function Pagination({
       behavior: "smooth", // Bu, kaydırmanın yavaşça gerçekleşmesini sağlar.
     });
   };
-  return (
-    <StyledPagination>
-      <Button
-        variation="orange"
-        disabled={currentPage === 1 || currentPage === "1"}
-        onClick={handlePrevClick}
-      >
-        <FaArrowLeft /> Previous Page
-      </Button>
-      <Button
-        variation="orange"
-        disabled={
-          searchKey && searchResults === 0 ? true : results < 20 ? true : false
-        }
-        onClick={handleNextClick}
-      >
-        Next Page <FaArrowRight />
-      </Button>
-    </StyledPagination>
+
+  return results >= 20 ? (
+    <>
+      <StyledPagination>
+        <Button
+          variation="orange"
+          disabled={currentPage === 1 || currentPage === "1"}
+          onClick={handlePrevClick}
+        >
+          <FaArrowLeft /> Previous Page
+        </Button>
+        <Button
+          variation="orange"
+          disabled={searchKey && searchResults === 0 ? true : false}
+          onClick={handleNextClick}
+        >
+          Next Page <FaArrowRight />
+        </Button>
+      </StyledPagination>{" "}
+    </>
+  ) : (
+    <></>
   );
 }
 

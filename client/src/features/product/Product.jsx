@@ -59,7 +59,6 @@ const ProductSummary = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: 2fr 10fr 3.6fr;
-  width: 100%;
 
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-zinc-100);

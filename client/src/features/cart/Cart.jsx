@@ -28,21 +28,13 @@ function Cart() {
 export default Cart;
 
 const StyledCartContainer = styled.section`
-  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1250px) {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-  }
-  @media (max-width: 900px) {
-    img {
-      display: none;
-    }
-    font-size: 16px;
   }
 `;
 
