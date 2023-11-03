@@ -1,33 +1,24 @@
-import { css, styled } from "styled-components";
-
-const variations = {
-  sm: css`
-    width: 25rem;
-  `,
-  md: css`
-    width: 37.5rem;
-  `,
-  lg: css`
-    width: 50rem;
-  `,
-};
+import { styled } from "styled-components";
 
 const StyledAuthContainer = styled.div`
+  width: 40%;
+
   display: flex;
   flex-direction: column;
 
+  text-align: center;
   padding: 2.5rem 0.8rem;
 
   background-color: var(--color-zinc-0);
-  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius-sm);
-
-  text-align: center;
-
-  ${(props) => variations[props.variation]}
+  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.3);
 
   button {
     margin: 1rem 0;
+  }
+
+  @media (max-width: 900px) {
+    width: 80%;
   }
 `;
 

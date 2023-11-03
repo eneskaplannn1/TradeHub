@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { styled } from "styled-components";
-import StyledBoxTemplate from "./BoxTemplate";
 import Sidebar from "./Sidebar";
 
 function UserDetailLayout() {
@@ -8,9 +7,7 @@ function UserDetailLayout() {
     <StyledAccoutLayout>
       <Sidebar />
       <section>
-        <StyledBoxTemplate>
-          <Outlet />
-        </StyledBoxTemplate>
+        <Outlet />
       </section>
     </StyledAccoutLayout>
   );
@@ -22,4 +19,19 @@ const StyledAccoutLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.6rem;
+
+  section {
+    border: 1px solid var(--color-zinc-200);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  @media (max-width: 1050px) {
+    display: flex;
+    flex-direction: column;
+
+    .user {
+      display: none;
+    }
+  }
 `;

@@ -23,13 +23,13 @@ function UserFavoritesList() {
       {isLoading ? (
         Array(20)
           .fill(null)
-          .map((_, index) => <Skeleton key={index} height={480} width={300} />)
+          .map((_, index) => <Skeleton key={index} height={480} width={400} />)
       ) : (
         <>
           <StyledBoxTemplate>
             <h1>Favorite List</h1>
             {data?.data?.data?.doc?.favorites?.length === 0 && (
-              <h1>There is no product in your favorite list</h1>
+              <h2>There is no product in your favorite list</h2>
             )}
           </StyledBoxTemplate>
           <StyledProductContainer>

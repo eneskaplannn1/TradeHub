@@ -116,6 +116,7 @@ const createSendToken = (user, statusCode, res) => {
     httpOnly: true,
     withCredentials: true,
     SameSite: 'None',
+    secure: true,
   };
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
@@ -220,7 +221,6 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
   }
   // console.log(token);
   // If no token is found, throw an error indicating that the user is not logged in
-  console.log(req.cookies, 231231231231232312312312312323123123123123);
   if (!token) {
     return next(
       new AppError(

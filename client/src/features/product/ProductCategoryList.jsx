@@ -12,6 +12,7 @@ function ProductCategoryList() {
   const { searchResults, searchKey } = useSelector(
     (store) => store.cart.search
   );
+
   const { category } = useParams();
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);

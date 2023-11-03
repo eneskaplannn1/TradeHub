@@ -15,7 +15,6 @@ function AuthContainer({ children }) {
 export default AuthContainer;
 
 const StyledAuthContainer = styled.main`
-  width: 100vw;
   height: 100vh;
 
   display: flex;
