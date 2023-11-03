@@ -36,6 +36,7 @@ import ShoppingCart from "./pages/Cart";
 import OrderDetailPage from "./pages/OrderDetail";
 import AuthContainer from "./features/authentication/AuthContainer";
 import AddressPage from "./pages/Address";
+import MainLayout from "./ui/MainLayout";
 
 function App() {
   const dispatch = useDispatch();
@@ -79,7 +80,7 @@ function App() {
           <Route
             element={
               <RequiredAuth allowedRoles={["customer"]}>
-                <RootLayout />
+                <MainLayout />
               </RequiredAuth>
             }
           >
