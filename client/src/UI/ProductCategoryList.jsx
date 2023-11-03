@@ -36,8 +36,8 @@ function ProductList() {
 export default ProductList;
 
 const StyledProductCategoryList = styled.div`
-  padding: 0 8rem;
-  height: 3.2rem;
+  padding: 0 8rem 1rem;
+  height: 4rem;
 
   font-size: 22px;
 
@@ -65,6 +65,10 @@ const StyledProductCategoryList = styled.div`
   }
   @media (max-width: 1200px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 1400px) {
+    padding: 0 3rem;
   }
 
   @media (min-width: 1920px) {

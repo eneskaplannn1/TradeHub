@@ -8,7 +8,7 @@ import ProductList from "./ProductCategoryList";
 const StyledMain = styled.main`
   padding: 0rem 8rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1400px) {
     padding: 0 3rem;
   }
 `;

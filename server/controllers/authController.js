@@ -113,7 +113,7 @@ const createSendToken = (user, statusCode, res) => {
 
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
-    httpOnly: false,
+    httpOnly: true,
     withCredentials: true,
     SameSite: 'None',
   };
@@ -220,9 +220,14 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
   }
   // console.log(token);
   // If no token is found, throw an error indicating that the user is not logged in
+  console.log(req.cookies, 231231231231232312312312312323123123123123);
   if (!token) {
     return next(
-      new AppError('You are not logged in! Please log in to get access', 401)
+      new AppError(
+        'You are not logged in! Please log in to get access',
+        401,
+        'no-jwt'
+      )
     );
   }
   // Verify the token using the JWT_SECRET and decode its payload
@@ -230,7 +235,7 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
 
   // Find the user in the database based on the decoded user id
   const user = await User.findOne({ _id: decoded.id });
-
+  console.log(user);
   // If no user is found with the decoded id, throw an error indicating that the user does not exist
   if (!user) {
     return next(

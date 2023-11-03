@@ -21,8 +21,6 @@ const userSlice = createSlice({
     updateUsersFavorites(state, action) {
       const productId = action.payload.id;
 
-      console.log(state.user.favorites.includes(productId));
-
       if (state.user.favorites.includes(productId)) {
         const index = state.user.favorites.indexOf(productId);
         if (index !== -1) {

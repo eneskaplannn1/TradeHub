@@ -66,7 +66,10 @@ function handleError(err) {
     const message = 'Your current password is wrong. Try again!';
     return new AppError(message, 401);
   }
-  return new AppError('fuck you', 401);
+  if (err.type === 'no-jwt') {
+    const message = 'Your do not logged in';
+    return new AppError(message, 401);
+  }
 }
 
 function handleCastError(error) {

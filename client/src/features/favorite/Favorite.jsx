@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import Skeleton from "../../ui/Skeleton";
 import Product from "../product/Product";
-import StyledBoxTemplate from "../../UI/BoxTemplate";
+import StyledBoxTemplate from "../../ui/BoxTemplate";
 import StyledProductContainer from "../../ui/product";
 
 function UserFavoritesList() {
@@ -20,21 +20,29 @@ function UserFavoritesList() {
 
   return (
     <StyledFavoriteContainer>
-      <StyledBoxTemplate>
-        <h1>Favorite List</h1>
-        {data?.data?.data?.doc?.favorites?.length === 0 && (
-          <h1>There is no product in your favorite list</h1>
-        )}
-      </StyledBoxTemplate>
-      <StyledProductContainer>
-        {isLoading
-          ? Array(20)
-              .fill(null)
-              .map((_, index) => <Skeleton key={index} height={480} />)
-          : data?.data?.data?.doc?.favorites?.map((favorite, index) => {
-              return <Product product={favorite} key={index} />;
-            })}
-      </StyledProductContainer>
+      {isLoading ? (
+        Array(20)
+          .fill(null)
+          .map((_, index) => <Skeleton key={index} height={480} width={300} />)
+      ) : (
+        <>
+          <StyledBoxTemplate>
+            <h1>Favorite List</h1>
+            {data?.data?.data?.doc?.favorites?.length === 0 && (
+              <h1>There is no product in your favorite list</h1>
+            )}
+          </StyledBoxTemplate>
+          <StyledProductContainer>
+            {isLoading
+              ? Array(20)
+                  .fill(null)
+                  .map((_, index) => <Skeleton key={index} height={480} />)
+              : data?.data?.data?.doc?.favorites?.map((favorite, index) => {
+                  return <Product product={favorite} key={index} />;
+                })}
+          </StyledProductContainer>
+        </>
+      )}
     </StyledFavoriteContainer>
   );
 }

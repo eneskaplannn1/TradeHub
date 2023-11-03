@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Address from "../features/address/Address.jsx";
-import StyledBoxTemplate from "../UI/BoxTemplate.jsx";
+import StyledBoxTemplate from "../ui/BoxTemplate.jsx";
 
 function AddressPage() {
   return (

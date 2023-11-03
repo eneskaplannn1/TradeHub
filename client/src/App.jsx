@@ -9,7 +9,7 @@ import {
   Routes,
 } from "react-router-dom";
 import RequiredAuth from "./features/authentication/RequiredAuth";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logUserIn } from "./features/authentication/authSlice";
 import { handleLoginWithCookie } from "./services/apiAuth";
 
@@ -38,9 +38,13 @@ import MainLayout from "./ui/MainLayout";
 import UserDetailLayout from "./ui/UserDetailLayout";
 
 function App() {
+  const user = useSelector((store) => store.auth.user);
   const dispatch = useDispatch();
   useQuery({
-    queryFn: handleLoginWithCookie,
+    queryFn: () => {
+      if (user) return;
+      return handleLoginWithCookie();
+    },
     queryKey: ["login"],
     onSuccess: (data) => {
       dispatch(logUserIn(data?.data));
