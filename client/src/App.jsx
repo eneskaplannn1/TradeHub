@@ -29,7 +29,6 @@ import Reviews from "./pages/Reviews";
 import Account from "./pages/Account";
 import ProductCategory from "./pages/ProductCategory";
 
-import RootLayout from "./ui/RootLayout";
 import AccountLayout from "./ui/AccountLayout";
 import ProductDetailPage from "./pages/ProductDetail";
 import ShoppingCart from "./pages/Cart";
