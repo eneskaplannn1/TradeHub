@@ -56,7 +56,7 @@ function App() {
       <ReactQueryDevtools initialIsOpen={false} />
       <GlobalStyle />
       <Toaster
-        position="top-right"
+        position="bottom-right"
         gutter={12}
         containerStyle={{ margin: "12px" }}
         toastOptions={{
