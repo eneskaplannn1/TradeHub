@@ -117,7 +117,6 @@ const createSendToken = (user, statusCode, res) => {
     sameSite: 'None',
     secure: true,
   };
-  console.log(cookie);
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
   user.password = undefined;
