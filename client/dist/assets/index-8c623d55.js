@@ -1071,18 +1071,16 @@ button {
   span {
     color: var(--color-red-700);
   }
-`;function Yj(){var a,u,d,f,p,g;const{searchResults:e,searchKey:t}=De(m=>m.cart.search),{category:r}=Kl(),n=nr().search;let o=new URLSearchParams(n).get("page");o||(o=1),Number(o)<1&&(o=1);const{data:s,isLoading:l}=Wj(r,o);return c.jsx(c.Fragment,{children:e.length===0&&t?c.jsx(Kj,{searchKey:t}):c.jsxs(c.Fragment,{children:[c.jsx(jl,{children:l?Array(20).fill(null).map((m,x)=>c.jsx(Er,{height:480},x)):e.length===0?(d=(u=(a=s==null?void 0:s.data)==null?void 0:a.data)==null?void 0:u.document)==null?void 0:d.map((m,x)=>c.jsx(_o,{product:m},x)):e.map((m,x)=>c.jsx(_o,{product:m},x))}),c.jsx(f1,{results:(g=(p=(f=s==null?void 0:s.data)==null?void 0:f.data)==null?void 0:p.document)==null?void 0:g.length})]})})}function Jj(){return c.jsx(Yj,{})}const Xj={display:"flex",alignItems:"center"},Zj={display:"flex"};function ka({maxRating:e,width:t,height:r,isEditing:n,averageRating:i=0,handleRating:o}){const[s,l]=C.useState(i),[a,u]=C.useState();return c.jsxs("div",{style:Xj,children:[c.jsx("div",{style:Zj,children:Array.from({length:e},(d,f)=>c.jsx(eb,{onHandleClick:()=>{n&&l(f+1),n&&o(f+1)},handleMouseEnter:()=>{n&&u(f+1)},handleMouseLeave:()=>{n&&u(0)},full:a?a>=f+1:s>=f+1,width:t,height:r},f))}),c.jsx("p",{children:n?a||s:""})]})}function eb({onHandleClick:e,full:t,handleMouseLeave:r,handleMouseEnter:n,width:i,height:o}){return c.jsx("span",{onClick:e,onMouseEnter:n,onMouseLeave:r,style:{height:o,width:i},children:t?c.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"#fff600",stroke:"#6b6464",children:c.jsx("path",{d:"M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"})}):c.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"#000",children:c.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"{2}",d:"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"})})})}function tb({productData:e={},isLoading:t}){const r=De(m=>m.auth.user),n=ir(),{brand:i,productDesc:o,price:s,ratingsAverage:l,ratingsQuantity:a,category:u}=e,{handleAddFavorites:d,favIsHighlighted:f}=h1({product:e}),p=function(){n(v1({productId:e._id,brand:i,productDesc:o,category:u,price:s,quantity:1})),ne.success("Product added to cart successfully")},g=r.favorites.includes(e._id);return c.jsxs(rb,{children:[t?c.jsx(Er,{width:359,height:500}):c.jsx(nb,{className:"image-container",children:c.jsx("img",{loading:"lazy",src:`/productImage/${u}.png`})}),t?c.jsx(Er,{width:540,height:300}):c.jsxs(ib,{children:[c.jsxs(ob,{children:[c.jsx("img",{className:"image",loading:"lazy",src:`/productImage/${u}.png`}),c.jsxs("div",{children:[c.jsx("span",{children:i})," ",o]})]}),c.jsxs(sb,{children:[c.jsxs("div",{className:"rating",children:[c.jsx("span",{children:l}),c.jsx(ka,{maxRating:5,height:24,width:24,averageRating:l})]}),c.jsxs("div",{children:[c.jsx("span",{children:a})," reviews"]})]}),c.jsxs(lb,{children:[s," USD"]}),c.jsxs(ab,{children:[c.jsx(ve,{size:"xsmall",variation:"orange",onClick:()=>p(),children:"Add to the card"}),c.jsx(ub,{className:f?"bump":"",selected:g,onClick:d,children:c.jsx(Rf,{})})]})]})]})}const rb=N.div`
+`;function Yj(){var a,u,d,f,p,g;const{searchResults:e,searchKey:t}=De(m=>m.cart.search),{category:r}=Kl(),n=nr().search;let o=new URLSearchParams(n).get("page");o||(o=1),Number(o)<1&&(o=1);const{data:s,isLoading:l}=Wj(r,o);return c.jsx(c.Fragment,{children:e.length===0&&t?c.jsx(Kj,{searchKey:t}):c.jsxs(c.Fragment,{children:[c.jsx(jl,{children:l?Array(20).fill(null).map((m,x)=>c.jsx(Er,{height:480},x)):e.length===0?(d=(u=(a=s==null?void 0:s.data)==null?void 0:a.data)==null?void 0:u.document)==null?void 0:d.map((m,x)=>c.jsx(_o,{product:m},x)):e.map((m,x)=>c.jsx(_o,{product:m},x))}),c.jsx(f1,{results:(g=(p=(f=s==null?void 0:s.data)==null?void 0:f.data)==null?void 0:p.document)==null?void 0:g.length})]})})}function Jj(){return c.jsx(Yj,{})}const Xj={display:"flex",alignItems:"center"},Zj={display:"flex"};function ka({maxRating:e,width:t,height:r,isEditing:n,averageRating:i=0,handleRating:o}){const[s,l]=C.useState(i),[a,u]=C.useState();return c.jsxs("div",{style:Xj,children:[c.jsx("div",{style:Zj,children:Array.from({length:e},(d,f)=>c.jsx(eb,{onHandleClick:()=>{n&&l(f+1),n&&o(f+1)},handleMouseEnter:()=>{n&&u(f+1)},handleMouseLeave:()=>{n&&u(0)},full:a?a>=f+1:s>=f+1,width:t,height:r},f))}),c.jsx("p",{children:n?a||s:""})]})}function eb({onHandleClick:e,full:t,handleMouseLeave:r,handleMouseEnter:n,width:i,height:o}){return c.jsx("span",{onClick:e,onMouseEnter:n,onMouseLeave:r,style:{height:o,width:i},children:t?c.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 20 20",fill:"#fff600",stroke:"#6b6464",children:c.jsx("path",{d:"M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"})}):c.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",stroke:"#000",children:c.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"{2}",d:"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"})})})}function tb({productData:e={},isLoading:t}){const r=De(m=>m.auth.user),n=ir(),{brand:i,productDesc:o,price:s,ratingsAverage:l,ratingsQuantity:a,category:u}=e,{handleAddFavorites:d,favIsHighlighted:f}=h1({product:e}),p=function(){n(v1({productId:e._id,brand:i,productDesc:o,category:u,price:s,quantity:1})),ne.success("Product added to cart successfully")},g=r.favorites.includes(e._id);return c.jsxs(rb,{children:[t?c.jsx(Er,{width:359,height:500}):c.jsx(nb,{className:"image-container",children:c.jsx("img",{loading:"lazy",src:`/productImage/${u}.png`})}),t?c.jsx(Er,{width:540,height:300}):c.jsxs(ib,{children:[c.jsxs(ob,{children:[c.jsx("img",{className:"image",src:`/productImage/${u}.png`}),c.jsxs("div",{children:[c.jsx("span",{children:i})," ",o]})]}),c.jsxs(sb,{children:[c.jsxs("div",{className:"rating",children:[c.jsx("span",{children:l}),c.jsx(ka,{maxRating:5,height:24,width:24,averageRating:l})]}),c.jsxs("div",{children:[c.jsx("span",{children:a})," reviews"]})]}),c.jsxs(lb,{children:[s," USD"]}),c.jsxs(ab,{children:[c.jsx(ve,{size:"xsmall",variation:"orange",onClick:()=>p(),children:"Add to the card"}),c.jsx(ub,{className:f?"bump":"",selected:g,onClick:d,children:c.jsx(Rf,{})})]})]})]})}const rb=N.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 2rem;
+
   @media (max-width: 700px) {
-    grid-template-columns: 1fr;
+    display: flex;
+
     .image-container {
       display: none;
-    }
-    .image {
-      display: block;
-      width: 100px;
     }
   }
 `,nb=N.div`
@@ -1100,6 +1098,15 @@ button {
   gap: 1rem;
   font-size: 24px;
   font-weight: 200;
+  img {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    img {
+      display: block;
+      width: 100px;
+    }
+  }
 `,sb=N.div`
   margin-top: 2rem;
   display: flex;
@@ -1347,10 +1354,6 @@ button {
 `;function kb(){var i,o;const{productId:e}=Kl(),{data:t,isLoading:r}=jr({queryKey:["product",e],queryFn:()=>IE(e)}),n=((o=(i=t==null?void 0:t.data)==null?void 0:i.data)==null?void 0:o.doc)||{};return c.jsxs(Rb,{children:[c.jsx(tb,{productData:n,isLoading:r}),c.jsx(Cb,{productData:n,productId:e,isLoading:r})]})}const Rb=N.div`
   margin-bottom: 5rem;
   padding-right: 15rem;
-
-  .image {
-    display: none;
-  }
 
   @media (max-width: 1200px) {
     padding-right: 5rem;

@@ -28,16 +28,16 @@ function Sidebar() {
               My Reviews
             </NavLink>
           </li>
-        </ul>
-      </StyledBox>
-      <StyledBox variation="bar">
-        <ul>
           <li>
             <NavLink to="/account/user-information">
               <AiOutlineUser />
               Account Information
             </NavLink>
           </li>
+        </ul>
+      </StyledBox>
+      {/* <StyledBox variation="bar">
+        <ul>
           <li>
             <NavLink to="/account/user-address">
               <SlLocationPin />
@@ -45,7 +45,7 @@ function Sidebar() {
             </NavLink>
           </li>
         </ul>
-      </StyledBox>
+      </StyledBox> */}
     </StyledSidebar>
   );
 }

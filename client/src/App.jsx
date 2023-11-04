@@ -111,7 +111,7 @@ function App() {
                   element={<OrderDetailPage />}
                 />
                 <Route path="/account/reviews" element={<Reviews />} />
-                <Route path="/account/user-address" element={<AddressPage />} />
+                {/* <Route path="/account/user-address" element={<AddressPage />} /> */}
                 <Route path="/account/user-information" element={<Account />} />
               </Route>
             </Route>

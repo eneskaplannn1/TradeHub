@@ -31,13 +31,19 @@ const variations = {
       }
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 1050px) {
+      width: 100%;
+      ul {
+        justify-content: space-between;
+        flex-direction: row;
+      }
       li {
         font-size: 16px;
       }
     }
-    @media (max-width: 700px) {
-      ul {
+    @media (max-width: 630px) {
+      li > a {
+        display: flex;
         flex-direction: column;
       }
     }
