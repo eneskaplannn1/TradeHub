@@ -57,11 +57,7 @@ function ProductDetailMain({ productData = {}, isLoading }) {
       ) : (
         <StyledProductInfo>
           <StyledProductDescription>
-            <img
-              className="image"
-              loading="lazy"
-              src={`/productImage/${category}.png`}
-            />
+            <img className="image" src={`/productImage/${category}.png`} />
             <div>
               <span>{brand}</span> {productDesc}
             </div>
@@ -113,14 +109,12 @@ const StyledProductDetail = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 2rem;
+
   @media (max-width: 700px) {
-    grid-template-columns: 1fr;
+    display: flex;
+
     .image-container {
       display: none;
-    }
-    .image {
-      display: block;
-      width: 100px;
     }
   }
 `;
@@ -144,6 +138,15 @@ const StyledProductDescription = styled.div`
   gap: 1rem;
   font-size: 24px;
   font-weight: 200;
+  img {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    img {
+      display: block;
+      width: 100px;
+    }
+  }
 `;
 
 const StyledReviewSummary = styled.div`

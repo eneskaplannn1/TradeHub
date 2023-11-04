@@ -33,10 +33,6 @@ const Container = styled.div`
   margin-bottom: 5rem;
   padding-right: 15rem;
 
-  .image {
-    display: none;
-  }
-
   @media (max-width: 1200px) {
     padding-right: 5rem;
   }

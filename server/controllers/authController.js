@@ -234,7 +234,6 @@ exports.logUserIn = catchAsync(async (req, res, next) => {
 
   // Find the user in the database based on the decoded user id
   const user = await User.findOne({ _id: decoded.id });
-  console.log(user);
   // If no user is found with the decoded id, throw an error indicating that the user does not exist
   if (!user) {
     return next(
@@ -379,7 +378,6 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
   user.password = req.body.newPassword;
   await user.save();
-  console.log(user);
   // ! log user in send jwt
   createSendToken(user, 200, res);
 });
