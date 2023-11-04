@@ -11,7 +11,7 @@ function useUpdateUser() {
     mutationFn: updateUserData,
     mutationKey: ["update-user"],
     onSuccess: async () => {
-      queryClient.invalidateQueries(["login"]);
+      await queryClient.invalidateQueries(["login"]);
       toast.success("user updated successfully");
     },
     onError: (err) => toast.error(err.message),

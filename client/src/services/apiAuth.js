@@ -6,7 +6,6 @@ const handleLogin = async (data) => {
     const res = await customRequest.post("/users/login", data, {
       withCredentials: true,
     });
-    console.log(res);
 
     return res;
   } catch (err) {
@@ -17,7 +16,9 @@ const handleLogin = async (data) => {
 
 const handleLogout = async () => {
   try {
-    return await customRequest.post("/users/logout");
+    const res = await customRequest.post("/users/logout");
+    console.log(res);
+    return res;
   } catch (err) {
     throw new Error(err);
   }

@@ -1,7 +1,6 @@
 import customRequest from "../utils/customRequest";
 
 const getAllProducts = async function (page) {
-  console.log(`/products${page ? "?page=" + page : ""}`);
   try {
     const res = await customRequest(`/products${page ? "?page=" + page : ""}`);
 
@@ -13,7 +12,6 @@ const getAllProducts = async function (page) {
 const getProduct = async function (id) {
   try {
     const res = await customRequest(`/products/${id}`);
-    console.log(res);
     return res;
   } catch (err) {
     throw new Error(err);

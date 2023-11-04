@@ -23,7 +23,9 @@ function ProductDetailMain({ productData = {}, isLoading }) {
     category,
   } = productData;
 
-  const { handleAddFavorites } = useFavorites({ product: productData });
+  const { handleAddFavorites, favIsHighlighted } = useFavorites({
+    product: productData,
+  });
 
   const handleAddCart = function () {
     dispatch(
@@ -46,7 +48,7 @@ function ProductDetailMain({ productData = {}, isLoading }) {
       {isLoading ? (
         <Skeleton width={359} height={500} />
       ) : (
-        <StyledImageContainer>
+        <StyledImageContainer className="image-container">
           <img loading="lazy" src={`/productImage/${category}.png`} />
         </StyledImageContainer>
       )}
@@ -55,7 +57,14 @@ function ProductDetailMain({ productData = {}, isLoading }) {
       ) : (
         <StyledProductInfo>
           <StyledProductDescription>
-            <span>{brand}</span> {productDesc}
+            <img
+              className="image"
+              loading="lazy"
+              src={`/productImage/${category}.png`}
+            />
+            <div>
+              <span>{brand}</span> {productDesc}
+            </div>
           </StyledProductDescription>
           <StyledReviewSummary>
             <div className="rating">
@@ -85,6 +94,7 @@ function ProductDetailMain({ productData = {}, isLoading }) {
               Add to the card
             </Button>
             <StyledProductFavorite
+              className={favIsHighlighted ? "bump" : ""}
               selected={selected}
               onClick={handleAddFavorites}
             >
@@ -103,18 +113,21 @@ const StyledProductDetail = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 2rem;
-
-  padding-left: 5rem;
-  padding-right: 15rem;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    .image-container {
+      display: none;
+    }
+    .image {
+      display: block;
+      width: 100px;
+    }
+  }
 `;
 
 const StyledImageContainer = styled.div`
   height: 500px;
   border: 1px solid var(--color-zinc-200);
-  img {
-    width: 100%;
-    height: 500px;
-  }
 `;
 
 const StyledProductInfo = styled.div`
@@ -127,6 +140,8 @@ const StyledProductInfo = styled.div`
 `;
 
 const StyledProductDescription = styled.div`
+  display: flex;
+  gap: 1rem;
   font-size: 24px;
   font-weight: 200;
 `;
@@ -168,6 +183,10 @@ const StyledButtonContainer = styled.div`
   gap: 2rem;
   button {
     height: 50px;
+  }
+  .bump {
+    transition: 0.4s ease;
+    scale: 1.6;
   }
 `;
 const StyledProductFavorite = styled.button`

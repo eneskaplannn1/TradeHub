@@ -13,5 +13,11 @@ function OrderDetailPage() {
 export default OrderDetailPage;
 
 const StyledOrderDetail = styled.div`
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h1 {
+    text-align: center;
+  }
 `;

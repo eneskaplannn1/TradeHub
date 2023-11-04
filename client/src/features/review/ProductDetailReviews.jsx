@@ -14,7 +14,7 @@ function ProductDetailReviews({ productData, productId, isLoading }) {
   const { data } = useGetReviews(true, productId);
 
   return (
-    <StyledProductReviewContainer>
+    <>
       <h1>Product Reviews</h1>
       <StyledProductReviews>
         {data?.data?.data?.document.length === 0 ? (
@@ -62,42 +62,51 @@ function ProductDetailReviews({ productData, productId, isLoading }) {
           </>
         )}
       </StyledProductReviews>
-    </StyledProductReviewContainer>
+    </>
   );
 }
 
 export default ProductDetailReviews;
 
-const StyledProductReviewContainer = styled.div`
-  padding-left: 5rem;
-  padding-right: 15rem;
-`;
 const StyledProductReviews = styled.div`
-  border: 1px solid var(--color-zinc-200);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  border: 1px solid var(--color-zinc-200);
 
   span {
     font-weight: bold;
   }
 `;
 const StyledReviewHead = styled.div`
-  padding: 3rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+
+  padding: 2rem;
+
   border-bottom: 1px solid var(--color-zinc-200);
 
   .rating {
     display: flex;
+    align-items: center;
     gap: 1rem;
   }
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
+
 const StyledReviews = styled.div`
-  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  padding: 1rem 2rem;
 `;

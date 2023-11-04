@@ -18,8 +18,7 @@ const variations = {
     }
   `,
   update: css`
-    font-size: 1.3rem;
-    padding: 0.3rem;
+    padding: 0.3rem 0;
     border: 1px solid var(--color-zinc-300);
 
     &:focus {

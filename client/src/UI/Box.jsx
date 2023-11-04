@@ -8,7 +8,7 @@ const variations = {
 
     ul {
       display: flex;
-
+      flex-direction: column;
       justify-content: flex-start;
       gap: 0.5rem;
     }

@@ -1,30 +1,33 @@
 import { styled } from "styled-components";
 import UpdateUserDataForm from "./UpdateUserData";
 import UpdatePasswordForm from "./UpdateUserPassword";
+import { useSelector } from "react-redux";
 
 function UpdateAccount() {
   return (
-    <StyledContainer>
-      <h1>{`Enes Kaplan's Account`}</h1>
+    <>
+      <StyledHeader>{`${useSelector(
+        (store) => store.auth.user.name
+      )}'s Account`}</StyledHeader>
 
       <StyledUpdateAccountContainer>
         <UpdateUserDataForm />
         <UpdatePasswordForm />
       </StyledUpdateAccountContainer>
-    </StyledContainer>
+    </>
   );
 }
 
 export default UpdateAccount;
 
-const StyledContainer = styled.div`
-  h1 {
-    border: 1px solid var(--color-zinc-200);
-  }
+const StyledHeader = styled.h1`
+  border: 1px solid var(--color-zinc-200);
+  border-radius: 8px;
+  padding: 1rem;
 `;
 
 const StyledUpdateAccountContainer = styled.div`
-  padding: 1rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 2rem; /* Add some spacing between the forms */

@@ -20,7 +20,7 @@ function ProductItemRow({ product }) {
         </div>
         <Counter quantity={product?.quantity} product={product} />
         <div className="price">
-          {(product?.price * product?.quantity).toFixed(0)} $
+          {(product?.price * product?.quantity).toFixed(2)} $
         </div>
         <Modal>
           <Modal.Open opens="delete-product">
@@ -98,7 +98,16 @@ const StyledItemBody = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    .price {
+      justify-self: start;
+    }
+    button {
+      justify-self: center;
+    }
+    text-align: left;
+    gap: 1rem;
     img {
       display: none;
     }

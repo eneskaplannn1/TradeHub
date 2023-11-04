@@ -46,4 +46,10 @@ const StyledReview = styled.div`
     font-size: 22px;
     color: var(--color-zinc-500);
   }
+
+  @media (max-width: 700px) {
+    .footer {
+      font-size: 16px;
+    }
+  }
 `;

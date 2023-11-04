@@ -20,12 +20,6 @@ const StyledAccoutLayout = styled.div`
   grid-template-columns: 1fr 3fr;
   gap: 1.6rem;
 
-  section {
-    border: 1px solid var(--color-zinc-200);
-    border-radius: 8px;
-    padding: 1rem;
-  }
-
   @media (max-width: 1050px) {
     display: flex;
     flex-direction: column;

@@ -11,7 +11,8 @@ function CartSidebar({ cart }) {
   const { mutate, isLoading } = useMutation({
     mutationFn: handleOrder,
     mutationKey: ["handleOrder"],
-    onError: () => {
+    onError: (err) => {
+      console.log(err);
       toast.error("Something went wrong");
     },
   });
@@ -28,7 +29,7 @@ function CartSidebar({ cart }) {
           <div>
             <div>Sum of Products</div>
             <div className="number">
-              {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(0)) : 0}$
+              {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(2)) : 0}$
             </div>
           </div>
           <div>
@@ -42,7 +43,7 @@ function CartSidebar({ cart }) {
         </StyledSummaryBody>
         <StyledSummaryFooter>
           <div>Total Price</div>
-          {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(0)) : 0}$
+          {cart.totalPrice ? Math.abs(cart.totalPrice.toFixed(2)) : 0}$
         </StyledSummaryFooter>
       </StyledOrderSummary>
       <Button

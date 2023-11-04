@@ -20,6 +20,7 @@ const variations = {
   grid: css`
     display: grid;
     grid-template-columns: 0.8fr 1.3fr 1fr;
+    align-items: center;
   `,
 };
 
@@ -58,6 +59,15 @@ const StyledFormRow = styled.div`
     color: var(--color-zinc-800);
     opacity: 0.45;
     cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    input {
+      font-size: 18px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 

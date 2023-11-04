@@ -35,13 +35,18 @@ function UserProductReviews() {
 export default UserProductReviews;
 
 const StyledReviewContainer = styled.main`
-  padding: 2rem 2rem;
+  padding: 2rem 0;
 
   display: flex;
   flex-direction: column;
   gap: 4rem;
 
-  h1 {
-    text-align: left;
+  font-size: 20px;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
   }
 `;

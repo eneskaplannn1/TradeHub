@@ -23,7 +23,7 @@ function Navbar() {
   const { mutate } = useMutation({
     mutationFn: handleLogout,
     mutationKey: ["logout"],
-    onSuccess: () => {
+    onSuccess: async () => {
       dispatch(logout());
       toast.loading("Logging out...");
       navigate("/login");
@@ -73,10 +73,10 @@ function Navbar() {
           {cart.products.length !== 0 && <div className="productNum"></div>}
         </li>
         <li onClick={handleLogoutUser}>
-          <NavLink to={"/logout"}>
+          <button onClick={handleLogoutUser}>
             <HiArrowRightOnRectangle />
             Log out
-          </NavLink>
+          </button>
         </li>
       </ul>
     </StyledNavbar>

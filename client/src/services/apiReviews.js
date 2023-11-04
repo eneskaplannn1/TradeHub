@@ -16,6 +16,7 @@ const getUsersReviews = async function (customerId) {
       }`
     );
   } catch (err) {
+    console.log(err);
     throw new Error(err.response.data.message);
   }
 };
@@ -27,6 +28,7 @@ const getProductReviews = async function (productId) {
       }`
     );
   } catch (err) {
+    console.log(err);
     throw new Error(err.response.data.message);
   }
 };

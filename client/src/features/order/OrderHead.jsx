@@ -39,16 +39,28 @@ const StyledOrderHead = styled.div`
     justify-content: space-between;
 
     padding: 1rem;
-    li {
-      font-size: 1rem;
-      display: flex;
-      flex-direction: column;
+  }
 
-      div {
-        &:first-child {
-          font-weight: bold;
-        }
+  li {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      &:first-child {
+        font-weight: bold;
       }
+    }
+  }
+
+  @media (max-width: 750px) {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    button {
+      padding: 0.2rem 0.4rem;
     }
   }
 `;

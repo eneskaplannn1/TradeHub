@@ -14,9 +14,11 @@ function NoProduct({ cart }) {
           ? "You did not purchased anything yet "
           : "There is no product in your cart "}
       </div>
-      <NavLink to="/">
-        <Button variation="orange">Start shopping</Button>
-      </NavLink>
+      <div className="link">
+        <NavLink to="/">
+          <Button variation="orange">Start shopping</Button>
+        </NavLink>
+      </div>
     </StyledNoProduct>
   );
 }
@@ -58,12 +60,8 @@ const StyledNoProduct = styled.div`
     }
   }
   @media (max-width: 650px) {
-    button {
-      display: none;
-    }
-
-    .icon {
-      display: none;
-    }
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
   }
 `;
