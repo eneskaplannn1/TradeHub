@@ -23,8 +23,8 @@ function useSignUp() {
     onSuccess: async (data) => {
       toast.success("Your account created successfully ");
       dispatch(logUserIn(data.data.newUser));
-      await queryClient.invalidateQueries(["login"]);
       navigate("/");
+      await queryClient.invalidateQueries(["login"]);
     },
     onError: (err) => {
       toast.error(err.message);
