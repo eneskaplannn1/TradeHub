@@ -104,16 +104,16 @@ const handleExpiredJWT = () =>
 module.exports = (err, req, res, next) => {
   let error = Object.assign(err); // ! çözüm 2
 
-  res.status(400).json({
-    error,
-  });
+  // res.status(400).json({
+  //   error,
+  // });
 
-  // if (error.name === 'Error') error = handleError(error);
-  // if (error.name === 'CastError') error = handleCastError(error);
-  // if (error.name === 'ValidationError') error = handleValidationErr(error);
-  // if (error.code === 11000) error = handleDuplicateVal(error);
-  // if (error.name === 'JsonWebTokenError') error = handleInvalidJWT(error);
-  // if (error.name === 'TokenExpiredError') error = handleExpiredJWT(error);
+  if (error.name === 'Error') error = handleError(error);
+  if (error.name === 'CastError') error = handleCastError(error);
+  if (error.name === 'ValidationError') error = handleValidationErr(error);
+  if (error.code === 11000) error = handleDuplicateVal(error);
+  if (error.name === 'JsonWebTokenError') error = handleInvalidJWT(error);
+  if (error.name === 'TokenExpiredError') error = handleExpiredJWT(error);
 
-  // sendErrorProduction(error, req, res);
+  sendErrorProduction(error, req, res);
 };
