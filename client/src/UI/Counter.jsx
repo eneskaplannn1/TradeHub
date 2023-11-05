@@ -18,9 +18,15 @@ function Counter({ quantity, product }) {
   const handleIncrement = function () {
     dispatch(addProductToCart(product));
   };
+
   return (
     <StyledCounter>
-      <Button size="xsmall" variation="counter" onClick={handleDecrement}>
+      <Button
+        disabled={quantity === 1 ? true : false}
+        size="xsmall"
+        variation="counter"
+        onClick={handleDecrement}
+      >
         -
       </Button>
       <Button size="amount" variation="amount">

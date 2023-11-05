@@ -8,6 +8,7 @@ import { styled } from "styled-components";
 import OrderFilter from "../../ui/OrderFilter";
 import Skeleton from "../../ui/Skeleton";
 import OrderRow from "./OrderRow";
+import NoProduct from "../../ui/NoProduct";
 
 function OrderTable() {
   const { _id } = useSelector((store) => store.auth.user);
@@ -20,17 +21,22 @@ function OrderTable() {
 
   return (
     <>
-      <OrderFilter />
+      {!isLoading && data?.data?.data?.document.length !== 0 && <OrderFilter />}
+
       <StyledOrder>
-        {isLoading
-          ? Array(20)
-              .fill(null)
-              .map((_, index) => {
-                return <Skeleton width={890} height={240} key={index} />;
-              })
-          : data?.data?.data?.document?.map((order) => {
-              return <OrderRow key={order?._id} order={order} />;
-            })}
+        {isLoading ? (
+          Array(20)
+            .fill(null)
+            .map((_, index) => {
+              return <Skeleton width={890} height={240} key={index} />;
+            })
+        ) : data?.data?.data?.document.length === 0 ? (
+          <NoProduct order={true} />
+        ) : (
+          data?.data?.data?.document?.map((order) => {
+            return <OrderRow key={order?._id} order={order} />;
+          })
+        )}
       </StyledOrder>
     </>
   );

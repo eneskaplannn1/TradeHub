@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-function NoProduct({ cart }) {
+function NoProduct({ cart, order }) {
   return (
     <StyledNoProduct>
       <div className="icon">
@@ -12,7 +12,9 @@ function NoProduct({ cart }) {
       <div>
         {cart
           ? "You did not purchased anything yet "
-          : "There is no product in your cart "}
+          : order
+          ? "You did not ordered anything yet"
+          : "There is no  in your cart "}
       </div>
       <div className="link">
         <NavLink to="/">

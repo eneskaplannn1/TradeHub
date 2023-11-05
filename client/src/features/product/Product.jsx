@@ -77,7 +77,7 @@ const ProductSummary = styled.div`
   }
   .bump {
     transition: 0.4s ease;
-    scale: 1.6;
+    scale: 1.2;
   }
 `;
 const ProductHead = styled.div`
@@ -93,8 +93,8 @@ const ProductHead = styled.div`
     width: 60px;
     height: 60px;
 
-    top: 0.4rem;
-    left: 0.4rem;
+    top: 0.7rem;
+    left: 0.7rem;
 
     background-color: red;
     border-radius: 50%;

@@ -47,7 +47,7 @@ function LoginForm() {
         />
       </FormRowVertical>
       <FormRowVertical variation="flex">
-        <NavLink to="/forgetPassword">Forget Password?</NavLink>
+        {/* <NavLink to="/forgetPassword">Forget Password?</NavLink> */}
         <Button variation="blue">
           {isLoading ? "Logging in..." : "Login"}
         </Button>

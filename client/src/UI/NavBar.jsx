@@ -92,7 +92,7 @@ const StyledNavbar = styled.nav`
     justify-content: space-between;
 
     padding: 0 2rem;
-    font-size: 24px;
+    font-size: 20px;
 
     font-weight: 500;
   }
@@ -113,7 +113,7 @@ const StyledNavbar = styled.nav`
   }
 
   .bump {
-    scale: 1.5;
+    scale: 1.3;
     color: var(--color-orange-800);
   }
 

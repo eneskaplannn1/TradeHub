@@ -189,7 +189,7 @@ const StyledButtonContainer = styled.div`
   }
   .bump {
     transition: 0.4s ease;
-    scale: 1.6;
+    scale: 1.2;
   }
 `;
 const StyledProductFavorite = styled.button`

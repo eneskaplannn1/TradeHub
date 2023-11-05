@@ -5,6 +5,7 @@ import { getOrder } from "../../services/apiOrders";
 import { styled } from "styled-components";
 import OrderDetailHead from "./OrderDetailHead";
 import OrderDetailFooter from "./OrderDetailFooter";
+import Skeleton from "../../ui/Skeleton";
 
 function OrderDetail() {
   const { orderDetail: orderId } = useParams();
@@ -17,10 +18,21 @@ function OrderDetail() {
 
   return (
     <StyledContainer>
-      <OrderDetailHead order={data?.data?.data?.doc || {}} />
-      {data?.data?.data?.doc?.products?.map((product) => {
-        return <OrderDetailFooter key={product._id} product={product} />;
-      })}
+      {isLoading ? (
+        <>
+          <Skeleton width={900} height={160} />
+          <Skeleton width={900} height={160} />
+          <Skeleton width={900} height={160} />
+          <Skeleton width={900} height={160} />
+        </>
+      ) : (
+        <>
+          <OrderDetailHead order={data?.data?.data?.doc || {}} />
+          {data?.data?.data?.doc?.products?.map((product) => {
+            return <OrderDetailFooter key={product._id} product={product} />;
+          })}
+        </>
+      )}
     </StyledContainer>
   );
 }
@@ -28,6 +40,8 @@ function OrderDetail() {
 export default OrderDetail;
 
 const StyledContainer = styled.div`
+  margin-top: 1rem;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;

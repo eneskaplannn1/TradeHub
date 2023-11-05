@@ -21,15 +21,21 @@ function UserFavoritesList() {
   return (
     <StyledFavoriteContainer>
       {isLoading ? (
-        Array(20)
-          .fill(null)
-          .map((_, index) => <Skeleton key={index} height={480} width={400} />)
+        <Container>
+          {Array(20)
+            .fill(null)
+            .map((_, index) => (
+              <Skeleton key={index} height={480} width={300} />
+            ))}
+        </Container>
       ) : (
         <>
           <StyledBoxTemplate>
             <h1>Favorite List</h1>
             {data?.data?.data?.doc?.favorites?.length === 0 && (
-              <h2>There is no product in your favorite list</h2>
+              <h2 style={{ fontSize: "35px", padding: "1rem" }}>
+                There is no product in your favorite list
+              </h2>
             )}
           </StyledBoxTemplate>
           <StyledProductContainer>
@@ -51,4 +57,11 @@ export default UserFavoritesList;
 
 const StyledFavoriteContainer = styled.div`
   padding: 1rem;
+  width: 100%;
+`;
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
 `;
