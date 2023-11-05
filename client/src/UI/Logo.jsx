@@ -5,6 +5,7 @@ const StyledLogo = styled(NavLink)`
   margin: auto;
   display: flex;
   align-items: center;
+
   img {
     height: 6rem;
     opacity: 0.7;

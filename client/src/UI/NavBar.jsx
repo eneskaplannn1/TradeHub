@@ -72,11 +72,9 @@ function Navbar() {
           </NavLink>
           {cart.products.length !== 0 && <div className="productNum"></div>}
         </li>
-        <li onClick={handleLogoutUser}>
-          <button onClick={handleLogoutUser}>
-            <HiArrowRightOnRectangle />
-            Log out
-          </button>
+        <li className="button" onClick={handleLogoutUser}>
+          <HiArrowRightOnRectangle />
+          <button onClick={handleLogoutUser}>Log out</button>
         </li>
       </ul>
     </StyledNavbar>
@@ -99,17 +97,17 @@ const StyledNavbar = styled.nav`
   li {
     transition: all 0.2s ease;
 
-    a,
-    button {
-      gap: 0.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
     &:hover {
       color: var(--color-orange-800);
     }
+  }
+  a,
+  button,
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
   }
 
   .bump {
@@ -118,6 +116,11 @@ const StyledNavbar = styled.nav`
   }
 
   @media (max-width: 550px) {
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     li {
       font-size: 16px;
       svg {
@@ -127,9 +130,9 @@ const StyledNavbar = styled.nav`
       a,
       button {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
       }
     }
   }
