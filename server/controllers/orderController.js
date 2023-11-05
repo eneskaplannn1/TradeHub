@@ -37,11 +37,10 @@ exports.getCheckoutSession = catchAsync(async (req, res) => {
       },
     };
   });
-
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `https://6545568fe081212ffdab8c47--silver-mandazi-ef1a6c.netlify.app/account/orders?checkoutSuccess=true`,
-    cancel_url: `https://6545568fe081212ffdab8c47--silver-mandazi-ef1a6c.netlify.app/cart`, // ! handle here later
+    success_url: `https://tradehub-e-commerce.netlify.app/account/orders?checkoutSuccess=true`,
+    cancel_url: `https://tradehub-e-commerce.netlify.app/cart`, // ! handle here later
     customer: customer.id,
     // client_reference_id: '651da76a1d1dc9be6197c1cb', //! handle later
     mode: 'payment',
