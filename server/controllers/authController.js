@@ -113,8 +113,8 @@ const createSendToken = (user, statusCode, res) => {
 
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN * 1000),
-    httpOnly: true,
     sameSite: 'None',
+    httpOnly: true,
     secure: true,
   };
 
@@ -153,6 +153,8 @@ exports.logout = (req, res) => {
   res.cookie('jwt', 'logout', {
     expires: new Date(Date.now()),
     sameSite: 'None',
+    httpOnly: true,
+    secure: true,
   });
   res.status(200).json({
     status: 'success',
