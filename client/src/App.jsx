@@ -33,7 +33,6 @@ import ProductDetailPage from "./pages/ProductDetail";
 import ShoppingCart from "./pages/Cart";
 import OrderDetailPage from "./pages/OrderDetail";
 import AuthContainer from "./features/authentication/AuthContainer";
-import AddressPage from "./pages/Address";
 import MainLayout from "./ui/MainLayout";
 import UserDetailLayout from "./ui/UserDetailLayout";
 
@@ -53,11 +52,10 @@ function App() {
       <GlobalStyle />
       <Toaster
         position="top-left"
-        gutter={12}
-        containerStyle={{ margin: "12px" }}
+        gutter={16}
         toastOptions={{
           success: {
-            duration: 1000,
+            duration: 1500,
           },
           error: {
             duration: 3500,

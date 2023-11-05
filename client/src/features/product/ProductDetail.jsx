@@ -13,7 +13,7 @@ function ProductDetail() {
     queryFn: () => getProduct(productId),
   });
 
-  const productData = data?.data?.data?.doc || {};
+  const productData = data?.data?.data?.doc;
 
   return (
     <Container>

@@ -5,7 +5,6 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/errFeatures');
 
 exports.checkIsOrdered = catchAsync(async (req, res, next) => {
-  console.log(req.body);
   const productId = req.body.product; // Assuming you have the product ID in the request body
   const orders = await Order.find({
     customer: req.body.customer,
@@ -16,7 +15,6 @@ exports.checkIsOrdered = catchAsync(async (req, res, next) => {
     },
   });
 
-  console.log(orders);
   if (orders.length === 0) {
     return next(
       new AppError(

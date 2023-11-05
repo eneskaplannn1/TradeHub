@@ -13,11 +13,12 @@ export default function StarRating({
   width,
   height,
   isEditing,
-  averageRating = 0,
+  averageRating,
   handleRating,
 }) {
   const [rating, setRating] = useState(averageRating);
   const [tempRating, setTempRating] = useState();
+  console.log(rating);
   // console.log(rating);
   // console.log(rating);
   return (
