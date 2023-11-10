@@ -14,24 +14,14 @@ This is a side project I've dedicated my free time to—an extensive e-commerce 
   - When user logs in server send a jwt to the browser and browser store that jwt in cookie for later sign up
   - Json web token has an expiration time and when the token expires the user must log back into the application
 - Encrypting users password while creating new user (teacher,student,admin)
+
 - Creating connection between Multiple Mongoose Models (Product,Order,User,Review)
 
-  - and Model (one-to-many relationship),
-  - and Model (one-to-many relationship),
-  - and Model (one-to-one),
-  - and Model (Many-to-One relationship),
-  - and Model (Many-to-Many relationship),
-  - and Model (Many-to-One relationship),
-  - and Model (Many-to-One),
+  - Order and Product Model (one-to-many relationship),
+  - User and Order (one-to-many relationship),
+  - Product and Review (one-to-many relationship),
+  - User and Review Model (Many-to-Many relationship),
   - are interconnected.
-
-- Product Features
-
-- Order Features
-
-- Review Features
-
-- User Features
 
 ## Technologies Used
 
@@ -112,8 +102,8 @@ Important: Before starting the Node.js server, make sure to fill in the fields i
 ```bash
 cd server
 npm install
-node ./dev-data/data/import-devData.js --import # this code is responsible for creating teacher,homework student and class datas into mongoDB database
-npm start # (runs nodemon at localhost:3000)
+node ./dev-data/data/import-devData.js --import # this code is responsible for creating reviews,products and  user data into mongoDB database
+npm start # (runs nodemon at localhost:3000) make sure in customRequst.jsx, which located client folder file, setting baseURL to localhost:3000/api/v1
 ```
 
 ## Contributing
