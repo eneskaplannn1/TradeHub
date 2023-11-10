@@ -8,6 +8,10 @@
 
 This is a side project I've dedicated my free time to—an extensive e-commerce application developed using the MERN stack (MongoDB, Express, React, and Node.js). The application revolves around products, their reviews, orders, and user interactions. Within the system, users have the capability to add products to their cart. Upon completing their shopping, they can seamlessly handle orders using Stripe, a payment library integrated into the platform. Additionally, users can curate a list of favorite products and submit reviews for items they've ordered. To maintain authenticity, users are restricted from submitting more than one review per product to prevent duplicates. Please bear in mind that, given the nature of this being a personal project, flawless performance is not guaranteed. I would highly appreciate your feedback and any reports on encountered issues.
 
+## See live version of TradeHub
+
+## [(https://tradehub-e-commerce.netlify.app)]
+
 ## Key Features
 
 - Authentication using jsonwebtoken (jwt)
