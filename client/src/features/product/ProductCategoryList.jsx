@@ -7,19 +7,16 @@ import Skeleton from "../../ui/Skeleton";
 import Product from "./Product";
 import Pagination from "../../ui/Pagination";
 import StyledProductContainer from "../../ui/product";
+import { useState } from "react";
 
 function ProductCategoryList() {
+  const [page, setPage] = useState(1);
+  console.log(page);
   const { searchResults, searchKey } = useSelector(
     (store) => store.cart.search
   );
 
   const { category } = useParams();
-  const search = useLocation().search;
-  const searchParams = new URLSearchParams(search);
-  let page = searchParams.get("page");
-
-  if (!page) page = 1;
-  if (Number(page) < 1) page = 1;
 
   const { data, isLoading } = useProductCategory(category, page);
 
@@ -42,7 +39,11 @@ function ProductCategoryList() {
                   return <Product product={prod} key={index} />;
                 })}
           </StyledProductContainer>
-          <Pagination results={data?.data?.data?.document?.length} />
+          <Pagination
+            currentPage={page}
+            results={data?.data?.data?.document?.length}
+            onPageChange={setPage}
+          />
         </>
       )}
     </>

@@ -24,8 +24,8 @@ function Navbar() {
     mutationFn: handleLogout,
     mutationKey: ["logout"],
     onSuccess: async () => {
-      dispatch(logout());
       toast.loading("Logging out...");
+      dispatch(logout());
       navigate("/login");
     },
   });

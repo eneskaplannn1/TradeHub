@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import Header from "./Header";
 
 import ProductList from "./ProductCategoryList";
+import Footer from "./Footer";
 
 const StyledMain = styled.main`
   padding: 0rem 8rem;
@@ -21,6 +22,7 @@ function MainLayout() {
       <StyledMain>
         <Outlet />
       </StyledMain>
+      <Footer />
     </>
   );
 }

@@ -88,6 +88,7 @@ exports.getProductsCreatedOver7DaysAgo = catchAsync(async (req, res, next) => {
   if (req.query.page) {
     page = req.query.page;
   }
+  console.log(page);
   const skip = (page - 1) * limit;
   const products = await Product.aggregate([
     {

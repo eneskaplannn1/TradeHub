@@ -48,6 +48,7 @@ const getBestRatedProducts = async function (page) {
   }
 };
 const getNewProducts = async function (page) {
+  console.log("hello wırld", page);
   try {
     const res = await customRequest(
       `/products/get-latest-products?page=${page}`

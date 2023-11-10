@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import { BsBox } from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
 import { css, styled } from "styled-components";
+import FavoriteProduct from "../../ui/FavoriteProduct";
 
 function Product({ product }) {
   const user = useSelector((store) => store.auth.user);
@@ -25,23 +25,21 @@ function Product({ product }) {
         ) : (
           <div className="new">
             <span>
-              Yeni <br /> ürün
+              New <br /> Product
             </span>
           </div>
         )}
-        <StyledProductFavorite
-          className={favIsHighlighted ? "bump" : ""}
+        <FavoriteProduct
+          favIsHighlighted={favIsHighlighted}
           selected={selected}
-          onClick={handleAddFavorites}
-        >
-          <AiOutlineHeart />
-        </StyledProductFavorite>
+          handleAddFavorites={handleAddFavorites}
+        />
       </ProductHead>
       <StyledProductImage>
         {isNew && !product?.cargoCharge && (
           <div className="new">
             <span>
-              Yeni <br /> ürün
+              New <br /> Product
             </span>
           </div>
         )}
@@ -65,6 +63,7 @@ const ProductSummary = styled.div`
   display: grid;
   grid-template-rows: 2fr 10fr 3.6fr;
 
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-zinc-100);
 
@@ -118,8 +117,8 @@ const StyledProductImage = styled.div`
     width: 60px;
     height: 60px;
 
-    top: 0.4rem;
-    left: 0.4rem;
+    top: 0.5rem;
+    left: 0.5rem;
 
     background-color: red;
     border-radius: 50%;
@@ -136,6 +135,7 @@ const StyledProductImage = styled.div`
   }
 
   img {
+    width: 100%;
     border-radius: var(--border-radius-sm);
     object-fit: cover; /* Resmi div'e tamamen sığdırır ve oranı korur */
   }
@@ -168,39 +168,4 @@ const StyledCargoHead = styled.div`
   font-size: 16px;
   padding: 0.4rem;
   gap: 0.2rem;
-`;
-const StyledProductFavorite = styled.button`
-  z-index: 100;
-  cursor: pointer;
-  position: absolute;
-  right: 0.4rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-
-  border: 1px solid var(--color-zinc-800);
-
-  .selected {
-    background-color: var(--color-orange-700);
-  }
-
-  &:hover {
-    border: 1px solid var(--color-zinc-0);
-    color: var(--color-zinc-0);
-    background-color: var(--color-orange-700);
-  }
-
-  ${(props) =>
-    props.selected
-      ? css`
-          background-color: var(--color-orange-700);
-          color: var(--color-zinc-0);
-          border: 1px solid var(--color-zinc-0);
-        `
-      : css``}
 `;

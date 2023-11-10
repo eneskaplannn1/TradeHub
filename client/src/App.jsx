@@ -55,7 +55,7 @@ function App() {
         gutter={16}
         toastOptions={{
           success: {
-            duration: 1500,
+            duration: 2000,
           },
           error: {
             duration: 3500,
@@ -63,6 +63,7 @@ function App() {
           loading: {
             duration: 500,
           },
+
           style: {
             fontSize: "1rem",
             maxWidth: "500px",

@@ -24,33 +24,35 @@ function Pagination({
     });
   };
 
-  return results >= 20 ? (
-    <>
-      <StyledPagination>
-        <Button
-          variation="orange"
-          disabled={currentPage === 1 || currentPage === "1"}
-          onClick={handlePrevClick}
-        >
-          <FaArrowLeft /> Previous Page
-        </Button>
-        <Button
-          variation="orange"
-          disabled={searchKey && searchResults === 0 ? true : false}
-          onClick={handleNextClick}
-        >
-          Next Page <FaArrowRight />
-        </Button>
-      </StyledPagination>{" "}
-    </>
-  ) : (
-    <></>
+  return (
+    results >= 20 && (
+      <>
+        <StyledPagination>
+          <Button
+            variation="orange"
+            disabled={currentPage === 1 || currentPage === "1"}
+            onClick={handlePrevClick}
+          >
+            <FaArrowLeft /> Previous Page
+          </Button>
+          <Button
+            variation="orange"
+            disabled={searchKey && searchResults === 0 ? true : false}
+            onClick={handleNextClick}
+          >
+            Next Page <FaArrowRight />
+          </Button>
+        </StyledPagination>
+      </>
+    )
   );
 }
 
 export default Pagination;
 
 const StyledPagination = styled.div`
+  margin: 2rem 0;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;

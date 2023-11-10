@@ -6,6 +6,8 @@ import { toast } from "react-hot-toast";
 import { styled } from "styled-components";
 import Button from "../../UI/Button";
 
+let initial = true;
+
 function CartSidebar({ cart }) {
   const { _id } = useSelector((store) => store.auth.user);
   const { mutate, isLoading } = useMutation({
@@ -50,6 +52,14 @@ function CartSidebar({ cart }) {
         onClick={() => handlePaymentSession()}
         disabled={cart.products.length === 0 ? true : false}
         variation="orange"
+        onMouseEnter={() => {
+          if (initial) {
+            toast.success(
+              "In checkout page type 4242 4242 4242 4242 for cart number"
+            );
+            initial = false;
+          }
+        }}
       >
         {isLoading ? "Processing checkout.." : "Proceed to checkout"}
       </Button>

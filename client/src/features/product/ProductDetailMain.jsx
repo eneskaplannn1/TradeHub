@@ -7,8 +7,8 @@ import Skeleton from "../../ui/Skeleton";
 import Button from "../../ui/Button";
 import StarRating from "../../ui/StarRating";
 
-import { AiOutlineHeart } from "react-icons/ai";
-import { css, styled } from "styled-components";
+import { styled } from "styled-components";
+import FavoriteProduct from "../../ui/FavoriteProduct";
 
 function ProductDetailMain({ productData = {}, isLoading }) {
   const user = useSelector((store) => store.auth.user);
@@ -75,10 +75,6 @@ function ProductDetailMain({ productData = {}, isLoading }) {
             <div>
               <span>{ratingsQuantity}</span> reviews
             </div>
-            {/* <div className="hearth">
-              <AiOutlineHeart />
-              <span>2000</span> favorites
-            </div> */}
           </StyledReviewSummary>
           <StyledProductPrice>{price} USD</StyledProductPrice>
           <StyledButtonContainer>
@@ -89,13 +85,11 @@ function ProductDetailMain({ productData = {}, isLoading }) {
             >
               Add to the card
             </Button>
-            <StyledProductFavorite
-              className={favIsHighlighted ? "bump" : ""}
+            <FavoriteProduct
+              favIsHighlighted={favIsHighlighted}
               selected={selected}
-              onClick={handleAddFavorites}
-            >
-              <AiOutlineHeart />
-            </StyledProductFavorite>
+              handleAddFavorites={handleAddFavorites}
+            />
           </StyledButtonContainer>
         </StyledProductInfo>
       )}
@@ -120,6 +114,9 @@ const StyledProductDetail = styled.div`
 `;
 
 const StyledImageContainer = styled.div`
+  img {
+    width: 100%;
+  }
   height: 500px;
   border: 1px solid var(--color-zinc-200);
 `;
@@ -191,39 +188,4 @@ const StyledButtonContainer = styled.div`
     transition: 0.4s ease;
     scale: 1.2;
   }
-`;
-const StyledProductFavorite = styled.button`
-  z-index: 100;
-  cursor: pointer;
-  position: absolute;
-  right: 0.4rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-
-  border: 1px solid var(--color-zinc-800);
-
-  .selected {
-    background-color: var(--color-orange-700);
-  }
-
-  &:hover {
-    border: 1px solid var(--color-zinc-0);
-    color: var(--color-zinc-0);
-    background-color: var(--color-orange-700);
-  }
-
-  ${(props) =>
-    props.selected
-      ? css`
-          background-color: var(--color-orange-700);
-          color: var(--color-zinc-0);
-          border: 1px solid var(--color-zinc-0);
-        `
-      : css``}
 `;

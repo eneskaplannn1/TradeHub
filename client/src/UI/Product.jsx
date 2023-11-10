@@ -15,6 +15,16 @@ const StyledProductContainer = styled.div`
   }
   @media (max-width: 700px) {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 4rem;
+  }
+  @media (max-width: 650px) {
+    padding: 0 2rem;
+  }
+  @media (max-width: 570px) {
+    padding: 0 1rem;
+  }
+  @media (max-width: 501px) {
+    padding: 0;
   }
 `;
 

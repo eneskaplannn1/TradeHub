@@ -8,7 +8,7 @@ function SearchBar({ order }) {
   return (
     <StyledSearchBar className="searchBar">
       <Input
-        placeholder="Aradığınız ürün, kategori ve markayı yazınız"
+        placeholder="Enter the product, category and brand you are looking for"
         variation="searchBar"
         type="text"
         onChange={(e) => {

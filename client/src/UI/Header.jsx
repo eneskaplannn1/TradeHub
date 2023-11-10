@@ -20,6 +20,7 @@ const StyledHeader = styled.header`
   grid-template-columns: 1.2fr 2.8fr 2.4fr;
   align-items: center;
 
+  margin-bottom: 1rem;
   padding: 0 2rem;
 
   @media (max-width: 1500px) {
@@ -32,7 +33,7 @@ const StyledHeader = styled.header`
   @media (max-width: 1100px) {
     grid-template-columns: 1fr 1fr;
 
-    a {
+    .logo {
       display: none;
     }
 
@@ -55,7 +56,7 @@ const StyledHeader = styled.header`
     .searchBar {
       display: none;
     }
-    a {
+    .logo {
       display: block;
     }
   }

@@ -7,7 +7,7 @@ const StyledLogo = styled(NavLink)`
   align-items: center;
 
   img {
-    height: 6rem;
+    height: 8rem;
     opacity: 0.7;
     transition: 0.4s ease;
     &:hover {
@@ -18,7 +18,7 @@ const StyledLogo = styled(NavLink)`
 
 function Logo() {
   return (
-    <StyledLogo to="/">
+    <StyledLogo className="logo" to="/">
       <img src="/logomak_logo.png" />
     </StyledLogo>
   );

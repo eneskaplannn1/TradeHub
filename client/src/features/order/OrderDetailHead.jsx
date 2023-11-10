@@ -51,4 +51,15 @@ const StyledOrderDetailHead = styled.div`
       }
     }
   }
+
+  @media (max-width: 750px) {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    button {
+      padding: 0.2rem 0.4rem;
+    }
+  }
 `;

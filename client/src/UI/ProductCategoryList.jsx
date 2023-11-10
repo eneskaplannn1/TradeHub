@@ -36,8 +36,8 @@ function ProductList() {
 export default ProductList;
 
 const StyledProductCategoryList = styled.div`
+  margin-bottom: 1rem;
   padding: 0 8rem 1rem;
-  height: 4rem;
 
   font-size: 22px;
 
@@ -48,11 +48,25 @@ const StyledProductCategoryList = styled.div`
   }
   li {
     border-bottom: 3px solid var(--color-zinc-0);
-    font-weight: 600;
+    font-weight: 500;
 
     &:hover {
       border-bottom: 3px solid var(--color-orange-700);
       color: var(--color-orange-700);
+    }
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 32px;
+    height: 6.4rem;
+
+    li {
+      border-bottom: 6px solid var(--color-zinc-0);
+
+      &:hover {
+        border-bottom: 6px solid var(--color-orange-700);
+        color: var(--color-orange-700);
+      }
     }
   }
 
@@ -69,19 +83,5 @@ const StyledProductCategoryList = styled.div`
 
   @media (max-width: 1400px) {
     padding: 0 3rem;
-  }
-
-  @media (min-width: 1920px) {
-    font-size: 32px;
-    height: 6.4rem;
-
-    li {
-      border-bottom: 6px solid var(--color-zinc-0);
-
-      &:hover {
-        border-bottom: 6px solid var(--color-orange-700);
-        color: var(--color-orange-700);
-      }
-    }
   }
 `;

@@ -49,4 +49,10 @@ const StyledOrderDetailFooter = styled.div`
       border-radius: 50%;
     }
   }
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    .image {
+      display: none;
+    }
+  }
 `;
