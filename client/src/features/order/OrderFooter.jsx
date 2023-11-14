@@ -26,7 +26,7 @@ function OrderFooter({ order }) {
           return (
             <img
               key={product._id}
-              src={`/productImage/${product?.product?.category}.png`}
+              src={`/productImage/${product?.product?.photo}`}
             />
           );
         })}

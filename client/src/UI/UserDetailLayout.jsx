@@ -16,6 +16,8 @@ function UserDetailLayout() {
 export default UserDetailLayout;
 
 const StyledAccoutLayout = styled.div`
+  max-width: 2000px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.6rem;

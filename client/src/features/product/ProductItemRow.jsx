@@ -7,6 +7,7 @@ import { styled } from "styled-components";
 import DeleteItem from "../../ui/DeleteItem";
 
 function ProductItemRow({ product }) {
+  console.log(product);
   return (
     <StyledItem>
       <StyledItemHead>
@@ -14,7 +15,7 @@ function ProductItemRow({ product }) {
         <span>{product?.brand}</span>
       </StyledItemHead>
       <StyledItemBody>
-        <img loading="lazy" src={`/productImage/${product?.category}.png`} />
+        <img loading="lazy" src={`/productImage/${product?.photo}`} />
         <div className="product">
           <span>{product?.brand}</span> {product?.productDesc}
         </div>

@@ -28,6 +28,8 @@ function Cart() {
 export default Cart;
 
 const StyledCartContainer = styled.section`
+  max-width: 1500px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;

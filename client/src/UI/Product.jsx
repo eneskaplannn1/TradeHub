@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 
 const StyledProductContainer = styled.div`
+  max-width: 2000px;
+  margin: 0 auto;
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(4, 1fr);

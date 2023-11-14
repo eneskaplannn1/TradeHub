@@ -1,533 +1,5 @@
 [
   {
-    "_id": "651da76a1d1dc9be6197c1c6",
-    "brand": "Adidas",
-    "productDesc": "Adidas Ultraboost Running Shoes",
-    "price": 149.99,
-    "quantity": 40,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1c7",
-    "brand": "Levi's",
-    "productDesc": "Levi's 501 Original Fit Jeans",
-    "price": 59.99,
-    "quantity": 100,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1c8",
-    "brand": "H&M",
-    "productDesc": "H&M Slim Fit Suit",
-    "price": 199.99,
-    "quantity": 20,
-    "discount": 0,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1c9",
-    "brand": "Zara",
-    "productDesc": "Zara Trench Coat",
-    "price": 89.99,
-    "quantity": 60,
-    "discount": 20,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ca",
-    "brand": "GAP",
-    "productDesc": "GAP Crewneck Sweater",
-    "price": 39.99,
-    "quantity": 75,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1c5",
-    "brand": "Nike",
-    "productDesc": "Nike Air Max 270 Sneakers",
-    "price": 129.99,
-    "quantity": 50,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1cd",
-    "brand": "Calvin Klein",
-    "productDesc": "Calvin Klein Boxer Briefs (3-Pack)",
-    "price": 24.99,
-    "quantity": 150,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ce",
-    "brand": "Puma",
-    "productDesc": "Puma Essential Hoodie",
-    "price": 44.99,
-    "quantity": 40,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1cf",
-    "brand": "Forever 21",
-    "productDesc": "Forever 21 Floral Dress",
-    "price": 29.99,
-    "quantity": 70,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d0",
-    "brand": "Under Armour",
-    "productDesc": "Under Armour HeatGear Leggings",
-    "price": 34.99,
-    "quantity": 60,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d1",
-    "brand": "Old Navy",
-    "productDesc": "Old Navy High-Rise Jeans",
-    "price": 34.99,
-    "quantity": 90,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43147",
-    "category": "sneakers",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d2",
-    "brand": "ASOS",
-    "productDesc": "ASOS Bomber Jacket",
-    "price": 49.99,
-    "quantity": 50,
-    "discount": 12,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d3",
-    "brand": "Gap Kids",
-    "productDesc": "Gap Kids Graphic T-Shirt",
-    "price": 14.99,
-    "quantity": 80,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d4",
-    "brand": "Zara Kids",
-    "productDesc": "Zara Kids Denim Shorts",
-    "price": 19.99,
-    "quantity": 100,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d5",
-    "brand": "H&M Kids",
-    "productDesc": "H&M Kids Hoodie",
-    "price": 24.99,
-    "quantity": 60,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d7",
-    "brand": "Uniqlo",
-    "productDesc": "Uniqlo Ultra Light Down Jacket",
-    "price": 59.99,
-    "quantity": 30,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d6",
-    "brand": "Columbia",
-    "productDesc": "Columbia Waterproof Jacket",
-    "price": 79.99,
-    "quantity": 40,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d8",
-    "brand": "American Eagle",
-    "productDesc": "American Eagle Plaid Shirt",
-    "price": 39.99,
-    "quantity": 50,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43147",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1d9",
-    "brand": "Nike",
-    "productDesc": "Nike Air Max 270 Sneakers",
-    "price": 129.99,
-    "quantity": 50,
-    "discount": 10,
-    "category": "sneakers",
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1da",
-    "brand": "Adidas",
-    "productDesc": "Adidas Ultraboost Running Shoes",
-    "category": "sneakers",
-    "price": 149.99,
-    "quantity": 40,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1db",
-    "brand": "Puma",
-    "productDesc": "Puma RS-X Retro Sneakers",
-    "category": "sneakers",
-    "price": 79.99,
-    "quantity": 60,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1cb",
-    "brand": "Tommy Hilfiger",
-    "productDesc": "Tommy Hilfiger Polo Shirt",
-    "category": "clothing",
-    "price": 49.99,
-    "quantity": 50,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43147",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1cc",
-    "brand": "Ralph Lauren",
-    "category": "clothing",
-    "productDesc": "Ralph Lauren Classic Fit Shirt",
-    "price": 79.99,
-    "quantity": 30,
-    "discount": 12,
-    "seller": "651c13579e355fab64a43147",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1de",
-    "brand": "Reebok",
-    "category": "sneakers",
-    "productDesc": "Reebok Classic Leather Sneakers",
-    "price": 64.99,
-    "quantity": 90,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1df",
-    "brand": "Vans",
-    "category": "sneakers",
-    "productDesc": "Vans Old Skool Skate Shoes",
-    "price": 59.99,
-    "quantity": 80,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e0",
-    "brand": "Skechers",
-    "category": "sneakers",
-    "productDesc": "Skechers D'Lites Sneakers",
-    "price": 49.99,
-    "quantity": 110,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e1",
-    "brand": "Fila",
-    "category": "sneakers",
-    "productDesc": "Fila Disruptor II Sneakers",
-    "price": 69.99,
-    "quantity": 70,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e2",
-    "brand": "Under Armour",
-    "category": "sneakers",
-    "productDesc": "Under Armour Charged Assert 8 Running Shoes",
-    "price": 74.99,
-    "quantity": 100,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e3",
-    "brand": "ASICS",
-    "category": "sneakers",
-    "productDesc": "ASICS Gel-Kayano 27 Running Shoes",
-    "price": 159.99,
-    "quantity": 60,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e4",
-    "brand": "Brooks",
-    "category": "sneakers",
-    "productDesc": "Brooks Ghost 13 Running Shoes",
-    "price": 129.99,
-    "quantity": 50,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e5",
-    "brand": "Saucony",
-    "category": "sneakers",
-    "productDesc": "Saucony Kinvara 12 Running Shoes",
-    "price": 109.99,
-    "quantity": 40,
-    "discount": 12,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e6",
-    "brand": "Merrell",
-    "category": "sneakers",
-    "productDesc": "Merrell Moab 2 Vent Hiking Shoes",
-    "price": 99.99,
-    "quantity": 55,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e7",
-    "brand": "Fitbit",
-    "productDesc": "Fitbit Charge 4 Fitness Tracker",
-    "price": 149.99,
-    "quantity": 50,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e8",
-    "brand": "Garmin",
-    "productDesc": "Garmin Forerunner 945 Smartwatch",
-    "price": 549.99,
-    "quantity": 30,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43146",
-    "category": "electronic",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1e9",
-    "brand": "Apple",
-    "productDesc": "Apple Watch Series 6",
-    "price": 399.99,
-    "quantity": 40,
-    "discount": 0,
-    "seller": "651c13579e355fab64a43146",
-    "category": "electronic",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ea",
-    "brand": "Fitbit",
-    "productDesc": "Fitbit Versa 3 Smartwatch",
-    "price": 199.99,
-    "quantity": 35,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43146",
-    "category": "electronic",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1eb",
-    "brand": "Xiaomi",
-    "productDesc": "Xiaomi Mi Band 6 Fitness Tracker",
-    "price": 39.99,
-    "quantity": 60,
-    "discount": 20,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ec",
-    "brand": "Bowflex",
-    "productDesc": "Bowflex SelectTech 552 Dumbbells",
-    "price": 299.99,
-    "quantity": 20,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ed",
-    "brand": "NordicTrack",
-    "productDesc": "NordicTrack T Series Treadmill",
-    "price": 899.99,
-    "quantity": 15,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ee",
-    "brand": "Reebok",
-    "productDesc": "Reebok Step Aerobic Platform",
-    "price": 49.99,
-    "quantity": 40,
-    "discount": 12,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1ef",
-    "brand": "Under Armour",
-    "productDesc": "Under Armour HeatGear Compression Shirt",
-    "price": 34.99,
-    "quantity": 75,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43146",
-    "category": "clothing",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f0",
-    "brand": "Nike",
-    "productDesc": "Nike Free RN 5.0 Running Shoes",
-    "price": 99.99,
-    "quantity": 45,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43146",
-    "category": "sneakers",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f1",
-    "brand": "ProForm",
-    "productDesc": "ProForm Hybrid Trainer Elliptical",
-    "price": 499.99,
-    "quantity": 20,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f2",
-    "brand": "JBL",
-    "productDesc": "JBL Endurance Peak II Wireless Earbuds",
-    "price": 79.99,
-    "quantity": 50,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43146",
-    "category": "electronic",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f3",
-    "brand": "GoFit",
-    "productDesc": "GoFit Adjustable Ankle Weights",
-    "price": 19.99,
-    "quantity": 100,
-    "discount": 0,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f4",
-    "brand": "Polar",
-    "productDesc": "Polar H10 Heart Rate Monitor",
-    "price": 89.99,
-    "quantity": 25,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f5",
-    "brand": "Everlast",
-    "productDesc": "Everlast Powercore Dual Bag and Stand",
-    "price": 199.99,
-    "quantity": 15,
-    "discount": 10,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f6",
-    "brand": "Gaiam",
-    "productDesc": "Gaiam Essentials Thick Yoga Mat",
-    "price": 29.99,
-    "quantity": 60,
-    "discount": 5,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "default.jpg"
-  },
-  {
     "_id": "651da76a1d1dc9be6197c1dc",
     "brand": "New Balance",
     "category": "sneakers",
@@ -536,7 +8,7 @@
     "quantity": 30,
     "discount": 8,
     "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
+    "photo": "newbalance.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1dd",
@@ -547,7 +19,7 @@
     "quantity": 120,
     "discount": 12,
     "seller": "651c13579e355fab64a43148",
-    "photo": "default.jpg"
+    "photo": "conv.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1f9",
@@ -558,7 +30,7 @@
     "discount": 15,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
-    "photo": "default.jpg"
+    "photo": "thera.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1fa",
@@ -569,7 +41,7 @@
     "discount": 8,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
-    "photo": "default.jpg"
+    "photo": "trigger.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1fb",
@@ -580,7 +52,7 @@
     "discount": 10,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-    "photo": "default.jpg"
+    "photo": "sams.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1fc",
@@ -591,7 +63,7 @@
     "discount": 5,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-    "photo": "default.jpg"
+    "photo": "i13.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1fd",
@@ -603,7 +75,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "ps5.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1fe",
@@ -615,7 +87,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "doll.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1ff",
@@ -627,7 +99,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "oled.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c200",
@@ -639,7 +111,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "log.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c201",
@@ -651,7 +123,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "i9.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c202",
@@ -663,7 +135,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "canavar.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c203",
@@ -675,7 +147,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "bose.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c204",
@@ -687,7 +159,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "ech.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c205",
@@ -699,7 +171,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "sony.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c206",
@@ -711,7 +183,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "xbox.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c207",
@@ -723,7 +195,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "cam2.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c209",
@@ -735,7 +207,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "s.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c208",
@@ -747,7 +219,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "macbook.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c20a",
@@ -759,7 +231,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "google.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c20b",
@@ -771,7 +243,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "spectre.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c20c",
@@ -783,7 +255,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "boseso.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c20d",
@@ -795,7 +267,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "amdr.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c20f",
@@ -807,7 +279,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "drone.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c20e",
@@ -818,8 +290,7 @@
     "discount": 8,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-
-    "photo": "default.jpg"
+    "photo": "gop.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c210",
@@ -830,8 +301,7 @@
     "discount": 10,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-
-    "photo": "default.jpg"
+    "photo": "kindle.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c211",
@@ -843,7 +313,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "razer.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c212",
@@ -855,7 +325,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "asus.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c213",
@@ -867,7 +337,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "fitbit.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c215",
@@ -879,7 +349,7 @@
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
 
-    "photo": "default.jpg"
+    "photo": "play.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c214",
@@ -890,8 +360,7 @@
     "discount": 8,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-
-    "photo": "default.jpg"
+    "photo": "ankerp.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c217",
@@ -902,8 +371,7 @@
     "discount": 12,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-
-    "photo": "default.jpg"
+    "photo": "logi.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c216",
@@ -914,8 +382,7 @@
     "discount": 10,
     "category": "electronic",
     "seller": "651c13579e355fab64a43145",
-
-    "photo": "default.jpg"
+    "photo": "saatg.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c218",
@@ -926,7 +393,7 @@
     "discount": 5,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "loreal.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c219",
@@ -937,7 +404,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "maybeline.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c21a",
@@ -948,7 +415,7 @@
     "discount": 8,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "revlon.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1f7",
@@ -959,7 +426,7 @@
     "discount": 12,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
-    "photo": "default.jpg"
+    "photo": "yarraq.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c21d",
@@ -970,7 +437,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "nyxprof.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c21c",
@@ -981,7 +448,7 @@
     "discount": 15,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "covergirl.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c21e",
@@ -992,7 +459,7 @@
     "discount": 5,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "clin.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c21f",
@@ -1003,7 +470,7 @@
     "discount": 8,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "estee.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c1f8",
@@ -1014,7 +481,328 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43146",
     "category": "fitness",
-    "photo": "default.jpg"
+    "photo": "matrix.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d6",
+    "brand": "Columbia",
+    "productDesc": "Columbia Waterproof Jacket",
+    "price": 79.99,
+    "quantity": 40,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "columbia-y.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d8",
+    "brand": "American Eagle",
+    "productDesc": "American Eagle Plaid Shirt",
+    "price": 39.99,
+    "quantity": 50,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "plaid-t.webp"
+  },
+
+  {
+    "_id": "651da76a1d1dc9be6197c1db",
+    "brand": "Puma",
+    "productDesc": "Puma RS-X Retro Sneakers",
+    "category": "sneakers",
+    "price": 79.99,
+    "quantity": 60,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "puma-rx.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1cb",
+    "brand": "Tommy Hilfiger",
+    "productDesc": "Tommy Hilfiger Polo Shirt",
+    "category": "clothing",
+    "price": 49.99,
+    "quantity": 50,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43147",
+    "photo": "polo-o.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1cc",
+    "brand": "Ralph Lauren",
+    "category": "clothing",
+    "productDesc": "Ralph Lauren Classic Fit Shirt",
+    "price": 79.99,
+    "quantity": 30,
+    "discount": 12,
+    "seller": "651c13579e355fab64a43147",
+    "photo": "polo-la.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1de",
+    "brand": "Reebok",
+    "category": "sneakers",
+    "productDesc": "Reebok Classic Leather Sneakers",
+    "price": 64.99,
+    "quantity": 90,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "rebook-l.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1df",
+    "brand": "Vans",
+    "category": "sneakers",
+    "productDesc": "Vans Old Skool Skate Shoes",
+    "price": 59.99,
+    "quantity": 80,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "old-s.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e0",
+    "brand": "Skechers",
+    "category": "sneakers",
+    "productDesc": "Skechers D'Lites Sneakers",
+    "price": 49.99,
+    "quantity": 110,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "sketch.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e1",
+    "brand": "Fila",
+    "category": "sneakers",
+    "productDesc": "Fila Disruptor II Sneakers",
+    "price": 69.99,
+    "quantity": 70,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "fila.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e2",
+    "brand": "Under Armour",
+    "category": "sneakers",
+    "productDesc": "Under Armour Charged Assert 8 Running Shoes",
+    "price": 74.99,
+    "quantity": 100,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "under-ar.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e3",
+    "brand": "ASICS",
+    "category": "sneakers",
+    "productDesc": "ASICS Gel-Kayano 27 Running Shoes",
+    "price": 159.99,
+    "quantity": 60,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "asics.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e4",
+    "brand": "Brooks",
+    "category": "sneakers",
+    "productDesc": "Brooks Ghost 13 Running Shoes",
+    "price": 129.99,
+    "quantity": 50,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "brooks.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e5",
+    "brand": "Saucony",
+    "category": "sneakers",
+    "productDesc": "Saucony Kinvara 12 Running Shoes",
+    "price": 109.99,
+    "quantity": 40,
+    "discount": 12,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "skec.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e6",
+    "brand": "Merrell",
+    "category": "sneakers",
+    "productDesc": "Merrell Moab 2 Vent Hiking Shoes",
+    "price": 99.99,
+    "quantity": 55,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "merrel.webp"
+  },
+
+  {
+    "_id": "651da76a1d1dc9be6197c1e8",
+    "brand": "Garmin",
+    "productDesc": "Garmin Forerunner 945 Smartwatch",
+    "price": 549.99,
+    "quantity": 30,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43146",
+    "category": "electronic",
+    "photo": "garmins.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1e9",
+    "brand": "Apple",
+    "productDesc": "Apple Watch Series 6",
+    "price": 399.99,
+    "quantity": 40,
+    "discount": 0,
+    "seller": "651c13579e355fab64a43146",
+    "category": "electronic",
+    "photo": "applewatch.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ea",
+    "brand": "Fitbit",
+    "productDesc": "Fitbit Versa 3 Smartwatch",
+    "price": 199.99,
+    "quantity": 35,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43146",
+    "category": "electronic",
+    "photo": "fitbit-s.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1eb",
+    "brand": "Xiaomi",
+    "productDesc": "Xiaomi Mi Band 6 Fitness Tracker",
+    "price": 39.99,
+    "quantity": 60,
+    "discount": 20,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "xiaomisaat.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ec",
+    "brand": "Bowflex",
+    "productDesc": "Bowflex SelectTech 552 Dumbbells",
+    "price": 299.99,
+    "quantity": 20,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "boxflex.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ed",
+    "brand": "NordicTrack",
+    "productDesc": "NordicTrack T Series Treadmill",
+    "price": 899.99,
+    "quantity": 15,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "treadmill.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ee",
+    "brand": "Reebok",
+    "productDesc": "Reebok Step Aerobic Platform",
+    "price": 49.99,
+    "quantity": 40,
+    "discount": 12,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "reebok.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ef",
+    "brand": "Under Armour",
+    "productDesc": "Under Armour HeatGear Compression Shirt",
+    "price": 34.99,
+    "quantity": 75,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43146",
+    "category": "clothing",
+    "photo": "ua.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f0",
+    "brand": "Nike",
+    "productDesc": "Nike Free RN 5.0 Running Shoes",
+    "price": 99.99,
+    "quantity": 45,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43146",
+    "category": "sneakers",
+    "photo": "nieka.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f1",
+    "brand": "ProForm",
+    "productDesc": "ProForm Hybrid Trainer Elliptical",
+    "price": 499.99,
+    "quantity": 20,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "treadmill2.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f2",
+    "brand": "JBL",
+    "productDesc": "JBL Endurance Peak II Wireless Earbuds",
+    "price": 79.99,
+    "quantity": 50,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43146",
+    "category": "electronic",
+    "photo": "jbl.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f3",
+    "brand": "GoFit",
+    "productDesc": "GoFit Adjustable Ankle Weights",
+    "price": 19.99,
+    "quantity": 100,
+    "discount": 0,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "aw.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f4",
+    "brand": "Polar",
+    "productDesc": "Polar H10 Heart Rate Monitor",
+    "price": 89.99,
+    "quantity": 25,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "polar.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f5",
+    "brand": "Everlast",
+    "productDesc": "Everlast Powercore Dual Bag and Stand",
+    "price": 199.99,
+    "quantity": 15,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "everlast.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f6",
+    "brand": "Gaiam",
+    "productDesc": "Gaiam Essentials Thick Yoga Mat",
+    "price": 29.99,
+    "quantity": 60,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "gaiam.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c221",
@@ -1025,7 +813,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "nude.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c222",
@@ -1036,7 +824,7 @@
     "discount": 15,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "olay.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c223",
@@ -1047,7 +835,7 @@
     "discount": 8,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "macru.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c224",
@@ -1058,7 +846,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "sex.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c226",
@@ -1069,7 +857,7 @@
     "discount": 8,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "tarte.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c225",
@@ -1080,7 +868,7 @@
     "discount": 12,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "poreless.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c227",
@@ -1091,7 +879,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "kylie.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c22a",
@@ -1102,7 +890,7 @@
     "discount": 12,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "floral.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c228",
@@ -1113,7 +901,7 @@
     "discount": 5,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "nars.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c229",
@@ -1124,7 +912,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "phy.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c22c",
@@ -1135,7 +923,7 @@
     "discount": 20,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "cam.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c22b",
@@ -1146,7 +934,183 @@
     "discount": 15,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "rimmel.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1c6",
+    "brand": "Adidas",
+    "productDesc": "Adidas Ultraboost Running Shoes",
+    "price": 149.99,
+    "quantity": 40,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43147",
+    "category": "sneakers",
+    "photo": "adidas-ultra.jpg"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1c7",
+    "brand": "Levi's",
+    "productDesc": "Levi's 501 Original Fit Jeans",
+    "price": 59.99,
+    "quantity": 100,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "levifit.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1c8",
+    "brand": "H&M",
+    "productDesc": "H&M Slim Fit Suit",
+    "price": 199.99,
+    "quantity": 20,
+    "discount": 0,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "hm.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1c9",
+    "brand": "Zara",
+    "productDesc": "Zara Trench Coat",
+    "price": 89.99,
+    "quantity": 60,
+    "discount": 20,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "zara-trench.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ca",
+    "brand": "GAP",
+    "productDesc": "GAP Crewneck Sweater",
+    "price": 39.99,
+    "quantity": 75,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "gap.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1c5",
+    "brand": "Nike",
+    "productDesc": "Nike Air Max 270 Sneakers",
+    "price": 129.99,
+    "quantity": 50,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43147",
+    "category": "sneakers",
+    "photo": "nike-air.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1cd",
+    "brand": "Calvin Klein",
+    "productDesc": "Calvin Klein Boxer Briefs (3-Pack)",
+    "price": 24.99,
+    "quantity": 150,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "calvin-3.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1ce",
+    "brand": "Puma",
+    "productDesc": "Puma Essential Hoodie",
+    "price": 44.99,
+    "quantity": 40,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "puma-h.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1cf",
+    "brand": "Forever 21",
+    "productDesc": "Forever 21 Floral Dress",
+    "price": 29.99,
+    "quantity": 70,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "sexdoll.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d0",
+    "brand": "Under Armour",
+    "productDesc": "Under Armour HeatGear Leggings",
+    "price": 34.99,
+    "quantity": 60,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "under-armour-leg.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d1",
+    "brand": "Old Navy",
+    "productDesc": "old-navy",
+    "price": 34.99,
+    "quantity": 90,
+    "discount": 5,
+    "seller": "651c13579e355fab64a43147",
+    "category": "sneakers",
+    "photo": "old-navy.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d2",
+    "brand": "ASOS",
+    "productDesc": "ASOS Bomber Jacket",
+    "price": 49.99,
+    "quantity": 50,
+    "discount": 12,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "bomber.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d3",
+    "brand": "Gap Kids",
+    "productDesc": "Gap Kids Graphic T-Shirt",
+    "price": 14.99,
+    "quantity": 80,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "gap-t.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d4",
+    "brand": "Zara Kids",
+    "productDesc": "Zara Kids Denim Shorts",
+    "price": 19.99,
+    "quantity": 100,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "zara-d.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d5",
+    "brand": "H&M Kids",
+    "productDesc": "H&M Kids Hoodie",
+    "price": 24.99,
+    "quantity": 60,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "hm-hod.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1d7",
+    "brand": "Uniqlo",
+    "productDesc": "Uniqlo Ultra Light Down Jacket",
+    "price": 59.99,
+    "quantity": 30,
+    "discount": 10,
+    "seller": "651c13579e355fab64a43147",
+    "category": "clothing",
+    "photo": "puma-pack.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c22d",
@@ -1157,7 +1121,7 @@
     "discount": 10,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "essence.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c22e",
@@ -1168,7 +1132,7 @@
     "discount": 8,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "physc.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c22f",
@@ -1179,7 +1143,7 @@
     "discount": 5,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "inter-milan.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c21b",
@@ -1190,7 +1154,7 @@
     "discount": 12,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "neu.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c220",
@@ -1201,6 +1165,6 @@
     "discount": 0,
     "seller": "651c13579e355fab64a43144",
     "category": "cosmetic",
-    "photo": "default.jpg"
+    "photo": "burt.webp"
   }
 ]

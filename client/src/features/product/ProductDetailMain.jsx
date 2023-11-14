@@ -21,6 +21,7 @@ function ProductDetailMain({ productData = {}, isLoading }) {
     ratingsAverage,
     ratingsQuantity,
     category,
+    photo,
   } = productData;
 
   const { handleAddFavorites, favIsHighlighted } = useFavorites({
@@ -36,6 +37,7 @@ function ProductDetailMain({ productData = {}, isLoading }) {
         category,
         price,
         quantity: 1,
+        photo,
       })
     );
     toast.success("Product added to cart successfully");
@@ -45,61 +47,54 @@ function ProductDetailMain({ productData = {}, isLoading }) {
 
   return (
     <StyledProductDetail>
-      {isLoading ? (
-        <Skeleton width={359} height={500} />
-      ) : (
-        <StyledImageContainer className="image-container">
-          <img loading="lazy" src={`/productImage/${category}.png`} />
-        </StyledImageContainer>
-      )}
-      {isLoading ? (
-        <Skeleton width={540} height={300} />
-      ) : (
-        <StyledProductInfo>
-          <StyledProductDescription>
-            <img className="image" src={`/productImage/${category}.png`} />
-            <div>
-              <span>{brand}</span> {productDesc}
-            </div>
-          </StyledProductDescription>
-          <StyledReviewSummary>
-            <div className="rating">
-              <span>{ratingsAverage}</span>
-              <StarRating
-                maxRating={5}
-                height={24}
-                width={24}
-                averageRating={ratingsAverage}
-              />
-            </div>
-            <div>
-              <span>{ratingsQuantity}</span> reviews
-            </div>
-          </StyledReviewSummary>
-          <StyledProductPrice>{price} USD</StyledProductPrice>
-          <StyledButtonContainer>
-            <Button
-              size="xsmall"
-              variation="orange"
-              onClick={() => handleAddCart()}
-            >
-              Add to the card
-            </Button>
-            <FavoriteProduct
-              favIsHighlighted={favIsHighlighted}
-              selected={selected}
-              handleAddFavorites={handleAddFavorites}
+      <StyledImageContainer className="image-container">
+        <img loading="lazy" src={`/productImage/${photo}`} />
+      </StyledImageContainer>
+
+      <StyledProductInfo>
+        <StyledProductDescription>
+          <img className="image" src={`/productImage/${photo}`} />
+          <div>
+            <span>{brand}</span> {productDesc}
+          </div>
+        </StyledProductDescription>
+        <StyledReviewSummary>
+          <div className="rating">
+            <span>{ratingsAverage}</span>
+            <StarRating
+              maxRating={5}
+              height={24}
+              width={24}
+              averageRating={ratingsAverage}
             />
-          </StyledButtonContainer>
-        </StyledProductInfo>
-      )}
+          </div>
+          <div>
+            <span>{ratingsQuantity}</span> reviews
+          </div>
+        </StyledReviewSummary>
+        <StyledProductPrice>{price} USD</StyledProductPrice>
+        <StyledButtonContainer>
+          <Button
+            size="xsmall"
+            variation="orange"
+            onClick={() => handleAddCart()}
+          >
+            Add to the card
+          </Button>
+          <FavoriteProduct
+            favIsHighlighted={favIsHighlighted}
+            selected={selected}
+            handleAddFavorites={handleAddFavorites}
+          />
+        </StyledButtonContainer>
+      </StyledProductInfo>
     </StyledProductDetail>
   );
 }
 
 export default ProductDetailMain;
 
-const StyledProductDetail = styled.div`
+export const StyledProductDetail = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 2rem;

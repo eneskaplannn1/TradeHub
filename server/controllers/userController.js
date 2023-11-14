@@ -7,7 +7,7 @@ exports.getUser = factory.getOne(
   User,
   {
     path: 'favorites',
-    select: '_id brand productDesc price createdAt category cargoCharge',
+    select: '_id brand productDesc price createdAt category cargoCharge photo',
   },
   {
     path: 'reviews',

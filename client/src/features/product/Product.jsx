@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import { BsBox } from "react-icons/bs";
-import { css, styled } from "styled-components";
+import { styled } from "styled-components";
 import FavoriteProduct from "../../ui/FavoriteProduct";
 
 function Product({ product }) {
@@ -43,7 +43,7 @@ function Product({ product }) {
             </span>
           </div>
         )}
-        <img src={`/productImage/${product?.category}.png`} />
+        <img src={`/productImage/${product?.photo}`} />
       </StyledProductImage>
       <StyledProductFooter>
         <p>
@@ -61,7 +61,7 @@ export default Product;
 const ProductSummary = styled.div`
   position: relative;
   display: grid;
-  grid-template-rows: 2fr 10fr 3.6fr;
+  grid-template-rows: 2fr 12fr 3.6fr;
 
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius-lg);
