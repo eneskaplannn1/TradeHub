@@ -90,7 +90,6 @@ const StyledNavbar = styled.nav`
     justify-content: space-between;
 
     padding: 0 2rem;
-    font-size: 20px;
 
     font-weight: 500;
   }

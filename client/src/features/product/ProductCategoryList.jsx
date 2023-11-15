@@ -1,5 +1,5 @@
 import useProductCategory from "../../hooks/useProductCategory";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import ProductNotFound from "../../UI/ProductNotFound";

@@ -54,9 +54,10 @@ function CartSidebar({ cart }) {
         variation="orange"
         onMouseEnter={() => {
           if (initial) {
-            toast.success(
-              "In checkout page type 4242 4242 4242 4242 for cart number"
-            );
+            toast("In checkout page type 4242 4242 4242 4242 for cart number", {
+              duration: 5000,
+              position: "bottom-right",
+            });
             initial = false;
           }
         }}

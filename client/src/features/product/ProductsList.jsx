@@ -27,7 +27,7 @@ function ProductsList() {
         {Array(20)
           .fill(null)
           .map((_, index) => {
-            <Skeleton key={index} height={480} />;
+            return <Skeleton key={index} height={480} />;
           })}
       </StyledProductContainer>
     );

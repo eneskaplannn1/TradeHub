@@ -1,5 +1,5 @@
 const express = require('express');
-const ReviewController = require('./../controllers/reviewController');
+const ReviewController = require('../controllers/reviewController');
 const reviewRouter = express.Router();
 
 // get all reviews of spesific product-seller

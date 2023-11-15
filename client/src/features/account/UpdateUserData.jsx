@@ -22,7 +22,6 @@ function UpdateUserDataForm() {
             id="name"
             variation="update"
             type="text"
-            placeholder="Enter your name"
             error
             {...register("name", { required: "Enter your name" })}
           />
@@ -36,7 +35,6 @@ function UpdateUserDataForm() {
             id="email"
             variation="update"
             type="email"
-            placeholder="Enter your email"
             {...register("email", { required: "Enter your email" })}
           />
         </FormRowVertical>

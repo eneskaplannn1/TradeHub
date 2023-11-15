@@ -1,5 +1,5 @@
 const express = require('express');
-const OrderController = require('./../controllers/orderController');
+const OrderController = require('../controllers/orderController');
 const orderRouter = express.Router();
 
 // get-total-sales . this route will be spesific to seller to analyze order amounts and prices

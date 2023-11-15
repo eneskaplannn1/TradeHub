@@ -16,7 +16,6 @@ const variations = {
       transition: all 0.2s ease;
 
       color: var(--color-zinc-500);
-      font-size: 1.3rem;
       padding: 0.3rem;
       border-radius: 8px;
 
@@ -31,14 +30,22 @@ const variations = {
       }
     }
 
+    @media screen and (min-width: 1600px) and (max-width: 2500px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 1300px) and (max-width: 1600px) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 1050px) and (max-width: 1300px) {
+      font-size: 20px;
+    }
     @media (max-width: 1050px) {
+      font-size: 20px;
       width: 100%;
       ul {
         justify-content: space-between;
         flex-direction: row;
-      }
-      li {
-        font-size: 16px;
       }
     }
     @media (max-width: 630px) {

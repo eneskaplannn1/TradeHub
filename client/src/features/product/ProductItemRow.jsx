@@ -7,7 +7,6 @@ import { styled } from "styled-components";
 import DeleteItem from "../../ui/DeleteItem";
 
 function ProductItemRow({ product }) {
-  console.log(product);
   return (
     <StyledItem>
       <StyledItemHead>
@@ -68,6 +67,10 @@ const StyledItemBody = styled.div`
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
+
+  img {
+    width: 100px;
+  }
 
   .product {
     font-size: 18px;

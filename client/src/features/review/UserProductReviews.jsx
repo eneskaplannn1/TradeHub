@@ -41,12 +41,25 @@ const StyledReviewContainer = styled.main`
   flex-direction: column;
   gap: 4rem;
 
-  font-size: 20px;
-
-  @media (max-width: 1000px) {
+  @media screen and (min-width: 2500px) and (max-width: 3000px) {
+    font-size: 34px;
+    img {
+      width: 200px;
+    }
+  }
+  @media screen and (min-width: 1900px) and (max-width: 2500px) {
+    font-size: 28px;
+    img {
+      width: 150px;
+    }
+  }
+  @media screen and (min-width: 1600px) and (max-width: 1900px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1600px) {
     font-size: 16px;
   }
-  @media (max-width: 600px) {
-    font-size: 12px;
+  @media (max-width: 1000px) {
+    font-size: 14px;
   }
 `;

@@ -32,7 +32,6 @@ export default OrderHead;
 
 const StyledOrderHead = styled.div`
   background-color: var(--color-zinc-50);
-
   ul {
     display: flex;
     align-items: center;
@@ -42,7 +41,6 @@ const StyledOrderHead = styled.div`
   }
 
   li {
-    font-size: 1rem;
     display: flex;
     flex-direction: column;
 

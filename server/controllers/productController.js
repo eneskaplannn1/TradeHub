@@ -1,4 +1,4 @@
-const factory = require('../controllers/factoryController');
+const factory = require('./factoryController');
 const Product = require('../models/ProductModel');
 const User = require('../models/UserModel');
 const catchAsync = require('../utils/catchAsync');

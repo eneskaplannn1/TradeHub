@@ -45,7 +45,6 @@ const StyledOrderFooter = styled.div`
   align-items: center;
   padding: 1rem;
 
-  font-size: 16px;
   .image {
     position: relative;
     justify-self: center;

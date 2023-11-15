@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const zlib = require('zlib');
 
-const factory = require('../controllers/factoryController');
+const factory = require('./factoryController');
 const Order = require('../models/OrderModel');
 const catchAsync = require('../utils/catchAsync');
 

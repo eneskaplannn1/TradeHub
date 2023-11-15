@@ -3,14 +3,13 @@ import { addProductToCart } from "../../features/product/productSlice";
 import { toast } from "react-hot-toast";
 import useFavorites from "../../hooks/useFavorites";
 
-import Skeleton from "../../ui/Skeleton";
 import Button from "../../ui/Button";
 import StarRating from "../../ui/StarRating";
 
 import { styled } from "styled-components";
 import FavoriteProduct from "../../ui/FavoriteProduct";
 
-function ProductDetailMain({ productData = {}, isLoading }) {
+function ProductDetailMain({ productData = {} }) {
   const user = useSelector((store) => store.auth.user);
   const dispatch = useDispatch();
 
@@ -48,7 +47,7 @@ function ProductDetailMain({ productData = {}, isLoading }) {
   return (
     <StyledProductDetail>
       <StyledImageContainer className="image-container">
-        <img loading="lazy" src={`/productImage/${photo}`} />
+        <img loading="lazy" alt="produt image" src={`/productImage/${photo}`} />
       </StyledImageContainer>
 
       <StyledProductInfo>
@@ -97,6 +96,7 @@ export default ProductDetailMain;
 export const StyledProductDetail = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto;
   gap: 2rem;
 
   @media (max-width: 700px) {
@@ -109,11 +109,24 @@ export const StyledProductDetail = styled.div`
 `;
 
 const StyledImageContainer = styled.div`
-  img {
-    width: 100%;
-  }
-  height: 500px;
+  display: flex;
   border: 1px solid var(--color-zinc-200);
+
+  img {
+    justify-self: flex-start;
+    width: 100%;
+    height: 100%;
+
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+
+    border-radius: var(--border-radius-sm);
+    -webkit-object-fit: cover;
+    object-fit: cover; /* Resmi div'e tamamen sığdırır ve oranı korur */
+  }
 `;
 
 const StyledProductInfo = styled.div`

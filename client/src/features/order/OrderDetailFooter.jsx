@@ -2,13 +2,14 @@ import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
 function OrderDetailFooter({ product }) {
+  console.log(product.product.photo);
   return (
     <StyledOrderDetailFooter>
       <NavLink to={`/product/${product?.product?._id}`}></NavLink>
       <div className="image">
         <img
           key={product?.product?._id}
-          src={`/productImage/${product?.product?.category}.png`}
+          src={`/productImage/${product?.product?.photo}`}
         />
       </div>
       <div> {product?.product?.brand} </div>

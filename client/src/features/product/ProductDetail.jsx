@@ -26,7 +26,7 @@ function ProductDetail() {
 
   return (
     <Container>
-      <ProductDetailMain productData={productData} isLoading={isLoading} />
+      <ProductDetailMain productData={productData} />
       <ProductDetailReviews
         productData={productData}
         productId={productId}

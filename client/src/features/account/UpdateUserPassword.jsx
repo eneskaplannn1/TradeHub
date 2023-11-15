@@ -28,7 +28,6 @@ function UpdatePasswordForm() {
             id="password"
             variation="update"
             type="password"
-            placeholder="Enter your current password"
             {...register("password", { required: "Enter your password" })}
           />
         </FormRowVertical>
@@ -41,7 +40,6 @@ function UpdatePasswordForm() {
             id="newPassword"
             variation="update"
             type="password"
-            placeholder="Enter your new password"
             {...register("newPassword", {
               required: "Enter your new password",
               minLength: {
@@ -62,7 +60,6 @@ function UpdatePasswordForm() {
             id="confirmPass"
             variation="update"
             type="password"
-            placeholder="Confirm your new password"
             {...register("confirmPass", {
               required: "Enter confirm password",
               validate: (value) =>

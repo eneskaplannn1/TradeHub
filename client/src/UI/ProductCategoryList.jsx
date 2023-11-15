@@ -38,8 +38,7 @@ export default ProductList;
 const StyledProductCategoryList = styled.div`
   margin-bottom: 1rem;
   padding: 0 8rem 1rem;
-
-  font-size: 22px;
+  height: 6rem;
 
   ul {
     display: flex;
@@ -56,9 +55,11 @@ const StyledProductCategoryList = styled.div`
     }
   }
 
-  @media (min-width: 1920px) {
+  @media (min-width: 2200px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1920px) and (max-width: 2200px) {
     font-size: 32px;
-    height: 6.4rem;
 
     li {
       border-bottom: 6px solid var(--color-zinc-0);
@@ -69,6 +70,17 @@ const StyledProductCategoryList = styled.div`
       }
     }
   }
+  @media screen and (min-width: 1800px) and (max-width: 1920px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1400px) and (max-width: 1800px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 900px) and (max-width: 1400px) {
+    font-size: 18px;
+    height: 4rem;
+    margin-top: 2rem;
+  }
 
   @media (max-width: 900px) {
     display: none;
@@ -76,12 +88,5 @@ const StyledProductCategoryList = styled.div`
 
   @media (max-width: 1050px) {
     font-size: 16px;
-  }
-  @media (max-width: 1200px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 1400px) {
-    padding: 0 3rem;
   }
 `;

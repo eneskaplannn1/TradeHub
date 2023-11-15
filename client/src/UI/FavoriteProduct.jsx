@@ -30,6 +30,11 @@ const StyledFavoriteProduct = styled.button`
 
   border: 1px solid var(--color-zinc-800);
 
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
   .selected {
     background-color: var(--color-orange-700);
   }
@@ -54,4 +59,26 @@ const StyledFavoriteProduct = styled.button`
           }
         `
       : css``}
+
+  @media screen and (min-width: 1600px) and (max-width:2000px) {
+    width: 75px;
+    height: 75px;
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+
+    top: 10px;
+  }
+  @media (min-width: 2000px) {
+    width: 100px;
+    height: 100px;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    top: 15px;
+  }
 `;

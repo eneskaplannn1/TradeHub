@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const StyledProductContainer = styled.div`
-  max-width: 2000px;
+  max-width: 2400px;
   margin: 0 auto;
   display: grid;
   justify-content: space-between;

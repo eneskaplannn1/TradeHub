@@ -48,4 +48,29 @@ const StyledOrder = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media screen and (min-width: 2500px) and (max-width: 3000px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 2200px) and (max-width: 2500px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1900px) and (max-width: 2200px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1700px) and (max-width: 1900px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1500px) and (max-width: 1700px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1500px) {
+    font-size: 13px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+    font-size: 10px;
+  }
+  /* @media screen and (min-width: 1900px) and (max-width: 2200px) {
+    font-size: 22px;
+  } */
 `;

@@ -78,6 +78,22 @@ const ProductSummary = styled.div`
     transition: 0.4s ease;
     scale: 1.2;
   }
+
+  @media screen and (min-width: 2200px) and (max-width: 3000px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1920px) and (max-width: 2200px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1600px) and (max-width: 1920px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 800px) and (max-width: 1600px) {
+    font-size: 18px;
+  }
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
 `;
 const ProductHead = styled.div`
   height: 100%;
@@ -111,6 +127,7 @@ const ProductHead = styled.div`
 `;
 const StyledProductImage = styled.div`
   position: relative;
+  display: flex;
 
   .new {
     position: absolute;
@@ -135,14 +152,22 @@ const StyledProductImage = styled.div`
   }
 
   img {
-    width: 100%;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
+
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+
     border-radius: var(--border-radius-sm);
+    -webkit-object-fit: cover;
     object-fit: cover; /* Resmi div'e tamamen sığdırır ve oranı korur */
   }
 `;
 const StyledProductFooter = styled.div`
   p {
-    font-size: 20px;
     padding: 0.4rem 0.6rem;
     &:first-of-type {
       span {
@@ -165,7 +190,6 @@ const StyledCargoHead = styled.div`
   color: var(--color-zinc-0);
 
   border-radius: var(--border-radius-sm);
-  font-size: 16px;
   padding: 0.4rem;
   gap: 0.2rem;
 `;

@@ -36,16 +36,6 @@ function Sidebar() {
           </li>
         </ul>
       </StyledBox>
-      {/* <StyledBox variation="bar">
-        <ul>
-          <li>
-            <NavLink to="/account/user-address">
-              <SlLocationPin />
-              Address Information
-            </NavLink>
-          </li>
-        </ul>
-      </StyledBox> */}
     </StyledSidebar>
   );
 }
