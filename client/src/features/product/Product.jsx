@@ -126,6 +126,7 @@ const ProductHead = styled.div`
   }
 `;
 const StyledProductImage = styled.div`
+  margin-top: 2rem;
   position: relative;
   display: flex;
 

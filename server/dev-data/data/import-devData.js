@@ -19,6 +19,9 @@ const products = JSON.parse(
 const orders = JSON.parse(
   fs.readFileSync(`${__dirname}/order-data.json`, 'utf-8')
 );
+const reviews = JSON.parse(
+  fs.readFileSync(`${__dirname}/review-data.json`, 'utf-8')
+);
 
 // console.log(__dirname);
 connectToDatabase();
@@ -28,7 +31,8 @@ const importData = async () => {
     console.log('Creating data');
     // await User.create(user, { validateBeforeSave: false });
     // await Order.create(orders, { validateBeforeSave: false });
-    await Product.create(products, { validateBeforeSave: false });
+    // await Product.create(products, { validateBeforeSave: false });
+    await Review.create(reviews);
 
     console.log('Data created');
     process.exit();
@@ -40,9 +44,10 @@ const importData = async () => {
 const DeleteDatas = async () => {
   try {
     // await User.deleteMany();
-    await Product.deleteMany();
+    // await Product.deleteMany();
     // await Review.deleteMany();
     // await Order.deleteMany();
+    await Review.deleteMany();
     console.log('Data Deleted');
 
     process.exit();

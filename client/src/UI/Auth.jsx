@@ -17,8 +17,16 @@ const StyledAuthContainer = styled.div`
     margin: 1rem 0;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
+    width: 60%;
+  }
+  @media (max-width: 750px) {
     width: 80%;
+  }
+  @media (max-width: 550px) {
+    svg {
+      display: none;
+    }
   }
 `;
 

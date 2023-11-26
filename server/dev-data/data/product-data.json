@@ -1,49 +1,5 @@
 [
   {
-    "_id": "651da76a1d1dc9be6197c1dc",
-    "brand": "New Balance",
-    "category": "sneakers",
-    "productDesc": "New Balance 990v5 Sneakers",
-    "price": 174.99,
-    "quantity": 30,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "newbalance.webp"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1dd",
-    "brand": "Converse",
-    "category": "sneakers",
-    "productDesc": "Converse Chuck Taylor All Star High Top",
-    "price": 54.99,
-    "quantity": 120,
-    "discount": 12,
-    "seller": "651c13579e355fab64a43148",
-    "photo": "conv.webp"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1f9",
-    "brand": "TheraBand",
-    "productDesc": "TheraBand Resistance Bands Set",
-    "price": 29.99,
-    "quantity": 50,
-    "discount": 15,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "thera.webp"
-  },
-  {
-    "_id": "651da76a1d1dc9be6197c1fa",
-    "brand": "TriggerPoint",
-    "productDesc": "TriggerPoint GRID Foam Roller",
-    "price": 34.99,
-    "quantity": 40,
-    "discount": 8,
-    "seller": "651c13579e355fab64a43146",
-    "category": "fitness",
-    "photo": "trigger.webp"
-  },
-  {
     "_id": "651da76a1d1dc9be6197c1fb",
     "brand": "Samsung",
     "productDesc": "Samsung Galaxy S21",
@@ -112,6 +68,51 @@
     "seller": "651c13579e355fab64a43145",
 
     "photo": "log.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1dc",
+    "brand": "New Balance",
+    "category": "sneakers",
+    "productDesc": "New Balance 990v5 Sneakers",
+    "price": 174.99,
+    "quantity": 30,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "newbalance.webp"
+  },
+
+  {
+    "_id": "651da76a1d1dc9be6197c1dd",
+    "brand": "Converse",
+    "category": "sneakers",
+    "productDesc": "Converse Chuck Taylor All Star High Top",
+    "price": 54.99,
+    "quantity": 120,
+    "discount": 12,
+    "seller": "651c13579e355fab64a43148",
+    "photo": "conv.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1f9",
+    "brand": "TheraBand",
+    "productDesc": "TheraBand Resistance Bands Set",
+    "price": 29.99,
+    "quantity": 50,
+    "discount": 15,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "thera.webp"
+  },
+  {
+    "_id": "651da76a1d1dc9be6197c1fa",
+    "brand": "TriggerPoint",
+    "productDesc": "TriggerPoint GRID Foam Roller",
+    "price": 34.99,
+    "quantity": 40,
+    "discount": 8,
+    "seller": "651c13579e355fab64a43146",
+    "category": "fitness",
+    "photo": "trigger.webp"
   },
   {
     "_id": "651da76a1d1dc9be6197c201",

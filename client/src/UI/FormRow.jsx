@@ -61,13 +61,10 @@ const StyledFormRow = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     input {
       font-size: 18px;
     }
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 `;
 

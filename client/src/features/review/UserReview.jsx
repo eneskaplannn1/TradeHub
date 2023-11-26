@@ -32,12 +32,13 @@ const StyledReview = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+
   .header {
     font-size: 22px;
     color: var(--color-zinc-700);
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    column-gap: 1.2rem;
   }
   .footer {
     display: flex;
@@ -48,6 +49,12 @@ const StyledReview = styled.div`
   }
 
   @media (max-width: 700px) {
+    .header {
+      flex-direction: column;
+      align-items: baseline;
+      font-size: 16px;
+      row-gap: 0.4rem;
+    }
     .footer {
       font-size: 16px;
     }
