@@ -20,7 +20,7 @@ const StyledHeader = styled.header`
   grid-template-columns: 1.2fr 2.8fr 2.4fr;
   align-items: center;
 
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   padding: 0 2rem;
 
   @media (min-width: 2500px) {
@@ -31,7 +31,7 @@ const StyledHeader = styled.header`
     font-size: 30px;
   }
   @media screen and (min-width: 1000px) and (max-width: 1800px) {
-    font-size: 24px;
+    font-size: 21px;
   }
   /* @media screen and (min-width: 550px) and (max-width: 1000px) {
     font-size: 20px;

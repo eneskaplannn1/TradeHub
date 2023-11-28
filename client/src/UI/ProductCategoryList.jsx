@@ -36,8 +36,8 @@ function ProductList() {
 export default ProductList;
 
 const StyledProductCategoryList = styled.div`
-  margin-bottom: 1rem;
   padding: 0 8rem 1rem;
+
   height: 6rem;
 
   ul {

@@ -5,6 +5,9 @@ import { logUserIn } from "./authSlice";
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
+let initial = true;
 
 function useLogin() {
   const navigate = useNavigate();
@@ -13,6 +16,18 @@ function useLogin() {
   const { user } = useSelector((store) => store.auth);
 
   if (user) navigate(location?.state?.from ? location.state.from : "/");
+
+  useEffect(() => {
+    if (initial && !user) {
+      toast.success(
+        "The initial login process may take up to 30 seconds due to the cloud provider.",
+        {
+          style: { fontSize: "20px", width: "450px" },
+        }
+      );
+    }
+    initial = false;
+  }, [user]);
 
   const {
     register,
