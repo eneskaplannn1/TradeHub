@@ -17,18 +17,10 @@ function Product({ product }) {
   return (
     <ProductSummary>
       <ProductHead>
-        {!product?.cargoCharge ? (
-          <StyledCargoHead>
-            <BsBox />
-            <p>Free cargo</p>
-          </StyledCargoHead>
-        ) : (
-          <div className="new">
-            <span>
-              New <br /> Product
-            </span>
-          </div>
-        )}
+        <StyledCargoHead>
+          <BsBox />
+          <p>Free cargo</p>
+        </StyledCargoHead>
         <FavoriteProduct
           favIsHighlighted={favIsHighlighted}
           selected={selected}
@@ -132,10 +124,10 @@ const StyledProductImage = styled.div`
 
   .new {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 
-    top: 0.5rem;
+    top: -1.5rem;
     left: 0.5rem;
 
     background-color: red;

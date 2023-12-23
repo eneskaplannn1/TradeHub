@@ -598,7 +598,7 @@ to {
 
     top: 15px;
   }
-`;function _o({product:e}){const t=Le(s=>s.auth.user),r=iC(e==null?void 0:e.createdAt),{handleAddFavorites:n,favIsHighlighted:i}=p1({product:e}),o=t.favorites.includes(e._id);return c.jsxs(fC,{children:[c.jsxs(hC,{children:[e!=null&&e.cargoCharge?c.jsx("div",{className:"new",children:c.jsxs("span",{children:["New ",c.jsx("br",{})," Product"]})}):c.jsxs(yC,{children:[c.jsx(sC,{}),c.jsx("p",{children:"Free cargo"})]}),c.jsx(v1,{favIsHighlighted:i,selected:o,handleAddFavorites:n})]}),c.jsxs(pC,{children:[r&&!(e!=null&&e.cargoCharge)&&c.jsx("div",{className:"new",children:c.jsxs("span",{children:["New ",c.jsx("br",{})," Product"]})}),c.jsx("img",{src:`/productImage/${e==null?void 0:e.photo}`})]}),c.jsxs(mC,{children:[c.jsxs("p",{children:[c.jsx("span",{children:e==null?void 0:e.brand})," ",e==null?void 0:e.productDesc]}),c.jsxs("p",{children:[e==null?void 0:e.price,"$"]})]}),c.jsx(we,{className:"navigation",to:`/product/${e==null?void 0:e._id}`})]})}const fC=F.div`
+`;function _o({product:e}){const t=Le(s=>s.auth.user),r=iC(e==null?void 0:e.createdAt),{handleAddFavorites:n,favIsHighlighted:i}=p1({product:e}),o=t.favorites.includes(e._id);return c.jsxs(fC,{children:[c.jsxs(hC,{children:[c.jsxs(yC,{children:[c.jsx(sC,{}),c.jsx("p",{children:"Free cargo"})]}),c.jsx(v1,{favIsHighlighted:i,selected:o,handleAddFavorites:n})]}),c.jsxs(pC,{children:[r&&!(e!=null&&e.cargoCharge)&&c.jsx("div",{className:"new",children:c.jsxs("span",{children:["New ",c.jsx("br",{})," Product"]})}),c.jsx("img",{src:`/productImage/${e==null?void 0:e.photo}`})]}),c.jsxs(mC,{children:[c.jsxs("p",{children:[c.jsx("span",{children:e==null?void 0:e.brand})," ",e==null?void 0:e.productDesc]}),c.jsxs("p",{children:[e==null?void 0:e.price,"$"]})]}),c.jsx(we,{className:"navigation",to:`/product/${e==null?void 0:e._id}`})]})}const fC=F.div`
   position: relative;
   display: grid;
   grid-template-rows: 2fr 12fr 3.6fr;
@@ -670,10 +670,10 @@ to {
 
   .new {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 
-    top: 0.5rem;
+    top: -1.5rem;
     left: 0.5rem;
 
     background-color: red;
