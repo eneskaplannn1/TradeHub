@@ -6,14 +6,6 @@ import Header from "./Header";
 import ProductList from "./ProductCategoryList";
 import Footer from "./Footer";
 
-const StyledMain = styled.main`
-  padding: 0rem 8rem;
-
-  @media (max-width: 1400px) {
-    padding: 0 3rem;
-  }
-`;
-
 function MainLayout() {
   return (
     <>
@@ -28,3 +20,12 @@ function MainLayout() {
 }
 
 export default MainLayout;
+
+const StyledMain = styled.main`
+  padding: 0rem 8rem;
+  min-height: calc(100vh - 14rem);
+
+  @media (max-width: 1400px) {
+    padding: 0 3rem;
+  }
+`;
