@@ -28,10 +28,10 @@ const StyledHeader = styled.header`
   }
 
   @media screen and (min-width: 1800px) and (max-width: 2500px) {
-    font-size: 30px;
+    font-size: 26px;
   }
   @media screen and (min-width: 1000px) and (max-width: 1800px) {
-    font-size: 21px;
+    font-size: 23px;
   }
   /* @media screen and (min-width: 550px) and (max-width: 1000px) {
     font-size: 20px;
