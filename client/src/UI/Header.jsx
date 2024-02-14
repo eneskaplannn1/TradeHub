@@ -28,14 +28,14 @@ const StyledHeader = styled.header`
   }
 
   @media screen and (min-width: 1800px) and (max-width: 2500px) {
-    font-size: 26px;
+    font-size: 26 px;
   }
   @media screen and (min-width: 1000px) and (max-width: 1800px) {
     font-size: 23px;
   }
-  /* @media screen and (min-width: 550px) and (max-width: 1000px) {
-    font-size: 20px;
-  } */
+  @media screen and (min-width: 300px) and (max-width: 1000px) {
+    font-size: 16px;
+  }
   @media (max-width: 1500px) {
     grid-template-columns: 0.8fr 1.6fr 2.4fr;
     li {

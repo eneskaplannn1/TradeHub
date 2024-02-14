@@ -18,7 +18,7 @@ const variations = {
     }
   `,
   update: css`
-    padding: 0.3rem 0;
+    padding: 0.5rem;
     border: 1px solid var(--color-zinc-300);
 
     &:focus {
@@ -43,6 +43,8 @@ const Input = styled.input`
   border-radius: var(--border-radius-lg);
 
   color: black;
+
+  padding: 0.2rem 0.4rem;
 
   ${(props) => variations[props.variation]}
 `;

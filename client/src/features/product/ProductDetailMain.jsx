@@ -187,10 +187,11 @@ const StyledButtonContainer = styled.div`
   padding: 0 0.4rem;
   position: relative;
   display: grid;
+  align-items: center;
   grid-template-columns: 8fr 1fr;
   gap: 2rem;
   button {
-    height: 50px;
+    height: 60px;
   }
   .bump {
     transition: 0.4s ease;

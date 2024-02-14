@@ -20,7 +20,7 @@ const StyledOverlay = styled.div`
 
 const positions = {
   marginTop: css`
-    margin-top: 50vh;
+    margin-top: 30vh;
   `,
 };
 

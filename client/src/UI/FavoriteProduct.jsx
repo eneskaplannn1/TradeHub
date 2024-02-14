@@ -1,12 +1,18 @@
+import { useEffect, useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { css, styled } from "styled-components";
 
 function FavoriteProduct({ favIsHighlighted, selected, handleAddFavorites }) {
+  const [clicked, setIsClicked] = useState(false);
+  const [hover, setHover] = useState(false);
+
   return (
     <StyledFavoriteProduct
       className={favIsHighlighted ? "bump" : ""}
       selected={selected}
-      onClick={handleAddFavorites}
+      onClick={() => {
+        handleAddFavorites();
+      }}
     >
       <AiOutlineHeart />
     </StyledFavoriteProduct>
@@ -19,8 +25,8 @@ const StyledFavoriteProduct = styled.button`
   z-index: 100;
   cursor: pointer;
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   right: 0.4rem;
   border-radius: 50%;
 

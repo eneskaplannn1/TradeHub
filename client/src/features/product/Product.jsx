@@ -94,6 +94,7 @@ const ProductHead = styled.div`
   position: relative;
 
   padding: 0.2rem 0.4rem;
+  margin-top: 0.5rem;
 
   .new {
     position: absolute;

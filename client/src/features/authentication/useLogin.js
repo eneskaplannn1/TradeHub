@@ -35,7 +35,7 @@ function useLogin() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "benjamin_anderson@gmail.com",
+      email: "eneskaplannn1@gmail.com",
       password: "pass1234",
     },
   });
